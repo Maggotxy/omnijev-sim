@@ -1,10 +1,30 @@
 # OmniJev Closed-Loop Robot Simulation
 
-云端模型参与任务规划与动作放行，经典控制器驱动 MuJoCo / LIBERO 中的 Franka Panda 机械臂。项目包含历史抓放演示，以及 Gemini 2.5 Flash / Gemini + OmniJev / OmniJev 三组受控实验。
+现有 OmniJev 充当局部决策小脑，g.92.run 的 Gemini 3.8 Flash 在后台充当视觉任务大脑。持续 MuJoCo 物理中可以伸入人手、引入自由物体、移动目标或遮挡相机，观察条件概率、动作仲裁和下一次电机控制。模型权重固定，自然语言条件、经验检索与阈值在运行时管理。
 
-> **Unofficial research demo.** 模型读取当前仿真画面，输出选择或概率；运动由经典技能执行。实验使用仿真物体位姿与抓取验证辅助，视频按仿真时间播放。真实耗时与 API 延迟单独记录。
+## 连续反射仿真
 
-## 三组实验
+物理以 500 Hz 运行，电机控制为 20 Hz，模型和渲染异步处理最新观察。推理期间世界继续运动；过期软件保护与模型动作分别显示和统计。Panda 资源已随仓库提供，这个模块不依赖 LIBERO 或本地模型权重。
+
+- [启动方法与实时交互说明](docs/reflex.md)
+- [最新两组配对结果与全部失败](docs/reflex-runtime-results-20261013.md)
+- [实验设计与感知边界](docs/reflex-design.md)
+- [Gemini 3.8 Flash 接口实测](docs/model-selection.md)
+- [最终交互操作验收证据](results/reflex_runtime_ui_release_20261013/qa_receipt.json)
+
+```bash
+pip install -r requirements-reflex.txt
+export MUJOCO_GL=osmesa
+export OMNIJEV_KEY=your_authorized_key
+export GEMINI_API_KEY=your_authorized_relay_key
+python -m jev_reflex.live --out out/reflex_interactive --port 8790
+```
+
+Linux 下启动后访问 <http://127.0.0.1:8790>。Windows 连接当前 bxj 部署可运行 `scripts/open-reflex.ps1`。最新六组配对中，视觉大脑组到目标 4/6、纯 OmniJev 2/6，采集到命令中位约 0.89 秒；两组各记录到一次事件后匹配的新命令。模型仍会误判、超时和漏掉干扰，当前数据未建立可靠的通用反射能力。
+
+> **Unofficial research demo.** 模型读取当前仿真画面，输出选择或概率；运动由经典控制器执行。历史抓放实验使用仿真位姿辅助，并按仿真时间回放。新连续反射实验的模型输入仅含画面、触觉与当前动作，录像按真实墙钟回放；两套结果各自记录限制。
+
+## 历史抓放三组实验
 
 | 组别 | 规划 | 动作阶段放行 |
 |---|---|---|
@@ -14,7 +34,7 @@
 
 三组共享官方初始状态、仿真感知辅助和 20 Hz OSC 技能。模型返回 wait 时保持姿态；初始状态指纹、模型响应、逐步动作和官方成功判定均保存。运行方式、接口状态和实验限制见 [comparison.md](docs/comparison.md)。
 
-模型由环境变量明确指定，并记录实际服务端模型名。当前实验使用已验证可用的 `gemini-2.5-flash`。
+模型由环境变量明确指定，并记录实际服务端模型名。这批历史抓放实验使用 `gemini-2.5-flash`。
 
 2026-10-13 实测：同一布局下两个 seed，Gemini + OmniJev 完成 **2/2** 个 episode，Gemini 单独组与 OmniJev 单独组均为 **0/2**。这是使用仿真位姿辅助的小样本结果。查看 [完整结果报告](docs/results-20261013.md)、[seed 1 三栏视频](results/comparison_gemini25_20261013/comparison_seed1.mp4) 和 [seed 7 三栏视频](results/comparison_gemini25_20261013/comparison_seed7.mp4)。
 

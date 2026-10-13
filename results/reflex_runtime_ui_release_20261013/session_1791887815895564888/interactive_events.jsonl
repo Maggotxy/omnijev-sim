@@ -1,0 +1,4 @@
+{"kind": "reflex", "sim_s": 11.200000000000744, "updates": [{"id": "custom_1791887794177", "condition": "A separate human hand is very close to the robot gripper.", "threshold": 0.75, "action": "retreat"}], "bank_version": 1, "source": "operator"}
+{"kind": "hand", "sim_s": 11.25000000000076, "duration_s": 4.571910635365061, "status": "injected", "side": -1, "x": 0.5727165830864759, "z": 0.6294393980557832, "approach_fraction": 0.29849134204308087, "source": "operator"}
+{"kind": "occlusion", "sim_s": 271.40000000057256, "duration_s": 4.692844225586395, "status": "injected", "camera_block_x": 0.35506810809838196, "camera_block_y": 0.06476424362306793, "source": "operator"}
+{"kind": "slider", "sim_s": 271.4500000005728, "duration_s": 3.279456706913873, "status": "injected", "side": 1, "x": 0.5358090225283029, "speed_m_s": 0.5211651122548073, "entry_y_m": 0.34200432814307574, "source": "operator"}

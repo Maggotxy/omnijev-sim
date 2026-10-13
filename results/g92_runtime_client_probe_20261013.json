@@ -1,0 +1,45 @@
+{
+  "plan": {
+    "goal": "green_pad",
+    "stage": "reach_target",
+    "target_visible": true,
+    "target_xy": [
+      0.57,
+      0.62
+    ],
+    "reflex_updates": []
+  },
+  "response": {
+    "text": "{\"goal\":\"green_pad\",\"stage\":\"reach_target\",\"target_visible\":true,\"target_xy\":[0.57,0.62],\"reflex_updates\":[]}",
+    "modelVersion": "gemini-3.8-flash",
+    "usageMetadata": {
+      "promptTokenCount": 1958,
+      "candidatesTokenCount": 38,
+      "totalTokenCount": 2242,
+      "trafficType": "ON_DEMAND",
+      "promptTokensDetails": [
+        {
+          "modality": "IMAGE",
+          "tokenCount": 1089
+        },
+        {
+          "modality": "TEXT",
+          "tokenCount": 869
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 38
+        }
+      ],
+      "thoughtsTokenCount": 246
+    }
+  },
+  "requested_model": "gemini-3.8-flash",
+  "served_model": "gemini-3.8-flash",
+  "image_sha256": "d5655825652d15f7474504102cfe2040a1144931d43e3009247aa274d5818c71",
+  "bank_version_at_observation": 0,
+  "thinking_level": "low",
+  "latency_s": 8.983999999938533
+}

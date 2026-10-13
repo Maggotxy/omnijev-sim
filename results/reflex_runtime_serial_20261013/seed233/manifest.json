@@ -1,0 +1,43 @@
+{
+  "source_sha256": {
+    "__init__.py": "96f68cb4dfa24854834eddd3b27b7982f6bcef9884e41d8f373b3004a21cb770",
+    "render.py": "75e666b03a0330c91efbc479ede1b2f1cfb94686c4f984b8d0230f1f4ea19e12",
+    "world.py": "1d62315ddf6e8903c4b68f53004f3d8a7e65f7883f8c62064a3477c543f9776f",
+    "scenario.py": "df41054d0111a8242b23ba8afdf1282f9cac7cb9f5a81540d0ebfa399c0669aa",
+    "bank.py": "7b923fe3171d75a8fad42e94e73c8aa1587c0e2fd4b7838c4c12b8e3dc4f15ea",
+    "brain.py": "4ba62747959ac29e0a7ea33bc6917470a3e13aa6cfb3e3956810728ce5a4cd29",
+    "run.py": "895db244f621ebdfe25975751ab5fdd78bc6f21a2270ad3099896b8c2343cf2e",
+    "policy.py": "38767b28c6d22652cd9c30b4257f71e22d711644205cd264f3c6a09eb7d2846e",
+    "compose.py": "eacdc082f26f0ce5b4b4be72f43455f2609ace18e97fa27e09e031995588eaf1",
+    "live.py": "0bb027949dd903de12425147c66ce7c2f9cd9cb7f680430e4aa2562706a3067f"
+  },
+  "panda_xml_sha256": "397385372e1fb8d71832335fbece562ea51a46cd93e9a18076bc1d866654b5b3",
+  "arguments": {
+    "out": "out/reflex_runtime_serial_20261013/seed233",
+    "asset_root": "/opt/LIBERO/resources/panda",
+    "scenarios": [
+      "quiet",
+      "hand",
+      "slider",
+      "target",
+      "occlusion",
+      "combined"
+    ],
+    "seeds": [
+      233
+    ],
+    "modes": [
+      "omni",
+      "vlm_omni"
+    ],
+    "seconds": 40.0,
+    "image_size": 320,
+    "render_hz": 8,
+    "api_timeout": 2,
+    "brain_timeout": 15,
+    "brain_interval": 4,
+    "max_brain_age": 12,
+    "max_observation_age": 1.2,
+    "command_ttl": 1.4
+  }
+}

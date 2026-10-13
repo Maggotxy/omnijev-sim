@@ -1,0 +1,18 @@
+{
+  "source_sha256": {
+    "__init__.py": "96f68cb4dfa24854834eddd3b27b7982f6bcef9884e41d8f373b3004a21cb770",
+    "render.py": "75e666b03a0330c91efbc479ede1b2f1cfb94686c4f984b8d0230f1f4ea19e12",
+    "world.py": "9467e5dc92042eb0fc9a9396fe75452fb9b7182876646b0d5ac00008b5a6bc3f",
+    "scenario.py": "df41054d0111a8242b23ba8afdf1282f9cac7cb9f5a81540d0ebfa399c0669aa",
+    "bank.py": "7b923fe3171d75a8fad42e94e73c8aa1587c0e2fd4b7838c4c12b8e3dc4f15ea",
+    "brain.py": "4ba62747959ac29e0a7ea33bc6917470a3e13aa6cfb3e3956810728ce5a4cd29",
+    "run.py": "d62ab9897b532ce949d901998afe65b86380c8d67b2714cfb5619cdd65bb88ff",
+    "policy.py": "38767b28c6d22652cd9c30b4257f71e22d711644205cd264f3c6a09eb7d2846e",
+    "compose.py": "eacdc082f26f0ce5b4b4be72f43455f2609ace18e97fa27e09e031995588eaf1",
+    "live.py": "0bb027949dd903de12425147c66ce7c2f9cd9cb7f680430e4aa2562706a3067f"
+  },
+  "model": "omnijev-0.8b-kk",
+  "brain_model": "gemini-3.8-flash",
+  "port": 8790,
+  "interface": "127.0.0.1 only"
+}

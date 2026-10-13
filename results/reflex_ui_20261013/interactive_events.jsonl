@@ -1,0 +1,22 @@
+{"kind": "hand", "sim_s": 15.500000000001734, "duration_s": 4.482192868142734, "status": "injected", "source": "operator"}
+{"kind": "disable", "sim_s": 26.499999999995637, "source": "operator"}
+{"kind": "reset", "sim_s": 26.79999999999547, "source": "operator"}
+{"kind": "enable", "sim_s": 44.75000000000995, "source": "operator"}
+{"kind": "target", "sim_s": 45.00000000001025, "duration_s": 4.4216736069894695, "status": "injected", "start_y": 0.0734262583137655, "end_y": 0.21816532959895985, "source": "operator"}
+{"kind": "occlusion", "sim_s": 45.050000000010314, "duration_s": 3.081321659124688, "status": "injected", "source": "operator"}
+{"kind": "slider", "sim_s": 45.15000000001044, "duration_s": 3.1349055825293606, "status": "injected", "source": "operator"}
+{"kind": "random", "sim_s": 45.15000000001044, "auto": true, "source": "operator"}
+{"kind": "hand", "sim_s": 45.65000000001105, "duration_s": 4.00050272498809, "status": "injected", "source": "random_environment"}
+{"kind": "slider", "sim_s": 48.50000000001453, "duration_s": 2.7651358520664826, "status": "injected", "source": "random_environment"}
+{"kind": "target", "sim_s": 53.15000000002021, "duration_s": 2.7638261102144797, "status": "injected", "start_y": 0.21816532959895985, "end_y": 0.25, "source": "random_environment"}
+{"kind": "target", "sim_s": 57.90000000002602, "duration_s": 2.8682708104027386, "status": "injected", "start_y": 0.25, "end_y": 0.10671573557560002, "source": "random_environment"}
+{"kind": "target", "sim_s": 59.80000000002834, "status": "already_active", "source": "random_environment"}
+{"kind": "occlusion", "sim_s": 69.70000000001663, "duration_s": 3.163741684859585, "status": "injected", "source": "random_environment"}
+{"kind": "slider", "sim_s": 72.45000000001022, "duration_s": 3.2704946187873056, "status": "injected", "source": "random_environment"}
+{"kind": "hand", "sim_s": 82.39999999998703, "duration_s": 4.662349076456387, "status": "injected", "source": "operator"}
+{"kind": "target", "sim_s": 85.29999999998027, "duration_s": 2.7925239609900765, "status": "injected", "start_y": 0.10671573557560002, "end_y": 0.22141597945750005, "source": "random_environment"}
+{"kind": "occlusion", "sim_s": 90.74999999996757, "duration_s": 4.73080369435724, "status": "injected", "source": "random_environment"}
+{"kind": "slider", "sim_s": 95.99999999995534, "duration_s": 3.9313722643504923, "status": "injected", "source": "random_environment"}
+{"kind": "target", "sim_s": 97.69999999995137, "duration_s": 2.865873187825838, "status": "injected", "start_y": 0.22141597945750005, "end_y": 0.25, "source": "random_environment"}
+{"kind": "hand", "sim_s": 99.39999999994741, "duration_s": 4.791300477254015, "status": "injected", "source": "random_environment"}
+{"kind": "stop", "sim_s": 103.99999999993669, "source": "operator"}

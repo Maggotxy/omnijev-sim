@@ -1,0 +1,1985 @@
+{
+  "episodes": 24,
+  "pairs": 12,
+  "groups": {
+    "omni": {
+      "episodes": 12,
+      "final_goal_count": 0,
+      "matched_events": 0,
+      "events": 26,
+      "api_results": 264,
+      "accepted_results": 8,
+      "api_errors": 164,
+      "error_types": {
+        "URLError: <urlopen error timed out>": 7,
+        "TimeoutError: timed out": 157
+      },
+      "inference_p50_s": 2.015134332701564,
+      "inference_p95_s": 2.02061021970585,
+      "capture_to_motor_p50_s": 0.9423925820738077,
+      "capture_to_motor_p95_s": 1.1236956942826508,
+      "mean_watchdog_fraction": 0.9570833333333333,
+      "brain_results": 0,
+      "brain_accepted": 0,
+      "brain_errors": 0,
+      "brain_inference_p50_s": null,
+      "macro_plan_changes": 0,
+      "bank_versions": 0,
+      "memory_entries": 8,
+      "requests_with_retrieval": 51,
+      "served_models": [
+        "omnijev-0.8b-kk"
+      ],
+      "brain_served_models": []
+    },
+    "vlm_omni": {
+      "episodes": 12,
+      "final_goal_count": 0,
+      "matched_events": 0,
+      "events": 26,
+      "api_results": 268,
+      "accepted_results": 15,
+      "api_errors": 164,
+      "error_types": {
+        "URLError: <urlopen error timed out>": 13,
+        "TimeoutError: timed out": 151
+      },
+      "inference_p50_s": 2.0155149875208735,
+      "inference_p95_s": 2.0226537771523,
+      "capture_to_motor_p50_s": 0.9943968150764704,
+      "capture_to_motor_p95_s": 1.1590166298672557,
+      "mean_watchdog_fraction": 0.9528125,
+      "brain_results": 111,
+      "brain_accepted": 94,
+      "brain_errors": 1,
+      "brain_inference_p50_s": 3.7424061205238104,
+      "macro_plan_changes": 4,
+      "bank_versions": 7,
+      "memory_entries": 15,
+      "requests_with_retrieval": 61,
+      "served_models": [
+        "omnijev-0.8b-kk"
+      ],
+      "brain_served_models": [
+        "gemini-3.8-flash"
+      ]
+    }
+  },
+  "pair_detail": [
+    {
+      "scenario": "combined",
+      "seed": 173,
+      "omni": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.36169157781206834,
+        "peak_human_contact_N": 1440.110960688485,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 43.95258401012834,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 772,
+        "control_steps": 800,
+        "matched_events": 0,
+        "events": 9
+      },
+      "vlm_omni": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.36169157781206834,
+        "peak_human_contact_N": 1440.110960688485,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 43.95258401012834,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 772,
+        "control_steps": 800,
+        "matched_events": 0,
+        "events": 9
+      }
+    },
+    {
+      "scenario": "combined",
+      "seed": 197,
+      "omni": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.23126077560026637,
+        "peak_human_contact_N": 1168.5279934113055,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 115.1003023118734,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 772,
+        "control_steps": 800,
+        "matched_events": 0,
+        "events": 9
+      },
+      "vlm_omni": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.16224690785526266,
+        "peak_human_contact_N": 1245.865453568675,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 143.41518513003305,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 728,
+        "control_steps": 800,
+        "matched_events": 0,
+        "events": 9
+      }
+    },
+    {
+      "scenario": "hand",
+      "seed": 173,
+      "omni": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.15941642316521693,
+        "peak_human_contact_N": 894.7947166129022,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 15.054108467835905,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 763,
+        "control_steps": 800,
+        "matched_events": 0,
+        "events": 1
+      },
+      "vlm_omni": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.17031800721616522,
+        "peak_human_contact_N": 894.7947166129022,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 15.054108467835905,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 772,
+        "control_steps": 800,
+        "matched_events": 0,
+        "events": 1
+      }
+    },
+    {
+      "scenario": "hand",
+      "seed": 197,
+      "omni": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.1439199611871898,
+        "peak_human_contact_N": 44.09869784418932,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 6.896661924172362,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 772,
+        "control_steps": 800,
+        "matched_events": 0,
+        "events": 1
+      },
+      "vlm_omni": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.13720270998877512,
+        "peak_human_contact_N": 44.09869784418932,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 6.896661924172362,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 766,
+        "control_steps": 800,
+        "matched_events": 0,
+        "events": 1
+      }
+    },
+    {
+      "scenario": "occlusion",
+      "seed": 173,
+      "omni": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.1304580915440462,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 756,
+        "control_steps": 800,
+        "matched_events": 0,
+        "events": 1
+      },
+      "vlm_omni": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.1369175397757884,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 763,
+        "control_steps": 800,
+        "matched_events": 0,
+        "events": 1
+      }
+    },
+    {
+      "scenario": "occlusion",
+      "seed": 197,
+      "omni": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.10978108939165748,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 752,
+        "control_steps": 800,
+        "matched_events": 0,
+        "events": 1
+      },
+      "vlm_omni": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.14240477453838524,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 772,
+        "control_steps": 800,
+        "matched_events": 0,
+        "events": 1
+      }
+    },
+    {
+      "scenario": "quiet",
+      "seed": 173,
+      "omni": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.132899143336424,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 762,
+        "control_steps": 800,
+        "matched_events": 0,
+        "events": 0
+      },
+      "vlm_omni": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.11545163758036876,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 741,
+        "control_steps": 800,
+        "matched_events": 0,
+        "events": 0
+      }
+    },
+    {
+      "scenario": "quiet",
+      "seed": 197,
+      "omni": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.11340600903189015,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 751,
+        "control_steps": 800,
+        "matched_events": 0,
+        "events": 0
+      },
+      "vlm_omni": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.1124552911021458,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 745,
+        "control_steps": 800,
+        "matched_events": 0,
+        "events": 0
+      }
+    },
+    {
+      "scenario": "slider",
+      "seed": 173,
+      "omni": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.14637975091125396,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 772,
+        "control_steps": 800,
+        "matched_events": 0,
+        "events": 1
+      },
+      "vlm_omni": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.14637975091125396,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 772,
+        "control_steps": 800,
+        "matched_events": 0,
+        "events": 1
+      }
+    },
+    {
+      "scenario": "slider",
+      "seed": 197,
+      "omni": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.14240477453838463,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 772,
+        "control_steps": 800,
+        "matched_events": 0,
+        "events": 1
+      },
+      "vlm_omni": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.14240477453838463,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 772,
+        "control_steps": 800,
+        "matched_events": 0,
+        "events": 1
+      }
+    },
+    {
+      "scenario": "target",
+      "seed": 173,
+      "omni": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.24338011148662142,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 772,
+        "control_steps": 800,
+        "matched_events": 0,
+        "events": 1
+      },
+      "vlm_omni": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.24338011148662142,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 772,
+        "control_steps": 800,
+        "matched_events": 0,
+        "events": 1
+      }
+    },
+    {
+      "scenario": "target",
+      "seed": 197,
+      "omni": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.23179114789378583,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 772,
+        "control_steps": 800,
+        "matched_events": 0,
+        "events": 1
+      },
+      "vlm_omni": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.23179114789378583,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 772,
+        "control_steps": 800,
+        "matched_events": 0,
+        "events": 1
+      }
+    }
+  ],
+  "events_detail": [
+    {
+      "mode": "omni",
+      "scenario": "combined",
+      "seed": 173,
+      "kind": "slider",
+      "onset_sim_s": 2.5819676922166512,
+      "end_sim_s": 7.882670037939944,
+      "expected": [
+        "brake",
+        "retreat",
+        "lift"
+      ],
+      "side": 1,
+      "x": 0.5066935288247589,
+      "speed_m_s": 0.592253629519003,
+      "entry_y_m": 0.3657126956213304,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null
+    },
+    {
+      "mode": "omni",
+      "scenario": "combined",
+      "seed": 173,
+      "kind": "target",
+      "onset_sim_s": 3.7524861479407745,
+      "end_sim_s": 5.4465403784464925,
+      "expected": [
+        "left"
+      ],
+      "side": -1,
+      "start_y": 0.0734262583137655,
+      "end_y": -0.06628032437355859,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null
+    },
+    {
+      "mode": "omni",
+      "scenario": "combined",
+      "seed": 173,
+      "kind": "hand",
+      "onset_sim_s": 8.84275005997738,
+      "end_sim_s": 13.167717462394585,
+      "expected": [
+        "brake",
+        "retreat",
+        "lift"
+      ],
+      "side": 1,
+      "x": 0.5477251146510929,
+      "z": 0.6097470390678265,
+      "approach_fraction": 0.34971615817019785,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null
+    },
+    {
+      "mode": "omni",
+      "scenario": "combined",
+      "seed": 173,
+      "kind": "occlusion",
+      "onset_sim_s": 11.379118347273621,
+      "end_sim_s": 12.912542098134956,
+      "expected": [
+        "brake"
+      ],
+      "side": 1,
+      "camera_block_x": 0.5427057132793569,
+      "camera_block_y": 0.17680184260706938,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null
+    },
+    {
+      "mode": "omni",
+      "scenario": "combined",
+      "seed": 173,
+      "kind": "occlusion",
+      "onset_sim_s": 16.87911834727362,
+      "end_sim_s": 21.415491036189117,
+      "expected": [
+        "brake"
+      ],
+      "side": 1,
+      "camera_block_x": 0.41499639536880717,
+      "camera_block_y": 0.024532622873134402,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null
+    },
+    {
+      "mode": "omni",
+      "scenario": "combined",
+      "seed": 173,
+      "kind": "occlusion",
+      "onset_sim_s": 22.15022922302135,
+      "end_sim_s": 24.676989062241066,
+      "expected": [
+        "brake"
+      ],
+      "side": -1,
+      "camera_block_x": 0.4087382351422678,
+      "camera_block_y": -0.07254956984826921,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null
+    },
+    {
+      "mode": "omni",
+      "scenario": "combined",
+      "seed": 173,
+      "kind": "occlusion",
+      "onset_sim_s": 25.07105816509239,
+      "end_sim_s": 27.53802577606012,
+      "expected": [
+        "brake"
+      ],
+      "side": 1,
+      "camera_block_x": 0.3831160521144746,
+      "camera_block_y": 0.12682185332208273,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null
+    },
+    {
+      "mode": "omni",
+      "scenario": "combined",
+      "seed": 173,
+      "kind": "occlusion",
+      "onset_sim_s": 27.73802577606012,
+      "end_sim_s": 29.837071806464138,
+      "expected": [
+        "brake"
+      ],
+      "side": 1,
+      "camera_block_x": 0.46557614937433883,
+      "camera_block_y": 0.04123565790352457,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null
+    },
+    {
+      "mode": "omni",
+      "scenario": "combined",
+      "seed": 173,
+      "kind": "hand",
+      "onset_sim_s": 29.473497205711233,
+      "end_sim_s": 33.867133691311196,
+      "expected": [
+        "brake",
+        "retreat",
+        "lift"
+      ],
+      "side": -1,
+      "x": 0.58709579971348,
+      "z": 0.6772195680362747,
+      "approach_fraction": 0.24254642041024838,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null
+    },
+    {
+      "mode": "vlm_omni",
+      "scenario": "combined",
+      "seed": 173,
+      "kind": "slider",
+      "onset_sim_s": 2.5819676922166512,
+      "end_sim_s": 7.882670037939944,
+      "expected": [
+        "brake",
+        "retreat",
+        "lift"
+      ],
+      "side": 1,
+      "x": 0.5066935288247589,
+      "speed_m_s": 0.592253629519003,
+      "entry_y_m": 0.3657126956213304,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null
+    },
+    {
+      "mode": "vlm_omni",
+      "scenario": "combined",
+      "seed": 173,
+      "kind": "target",
+      "onset_sim_s": 3.7524861479407745,
+      "end_sim_s": 5.4465403784464925,
+      "expected": [
+        "left"
+      ],
+      "side": -1,
+      "start_y": 0.0734262583137655,
+      "end_y": -0.06628032437355859,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null
+    },
+    {
+      "mode": "vlm_omni",
+      "scenario": "combined",
+      "seed": 173,
+      "kind": "hand",
+      "onset_sim_s": 8.84275005997738,
+      "end_sim_s": 13.167717462394585,
+      "expected": [
+        "brake",
+        "retreat",
+        "lift"
+      ],
+      "side": 1,
+      "x": 0.5477251146510929,
+      "z": 0.6097470390678265,
+      "approach_fraction": 0.34971615817019785,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null
+    },
+    {
+      "mode": "vlm_omni",
+      "scenario": "combined",
+      "seed": 173,
+      "kind": "occlusion",
+      "onset_sim_s": 11.379118347273621,
+      "end_sim_s": 12.912542098134956,
+      "expected": [
+        "brake"
+      ],
+      "side": 1,
+      "camera_block_x": 0.5427057132793569,
+      "camera_block_y": 0.17680184260706938,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null
+    },
+    {
+      "mode": "vlm_omni",
+      "scenario": "combined",
+      "seed": 173,
+      "kind": "occlusion",
+      "onset_sim_s": 16.87911834727362,
+      "end_sim_s": 21.415491036189117,
+      "expected": [
+        "brake"
+      ],
+      "side": 1,
+      "camera_block_x": 0.41499639536880717,
+      "camera_block_y": 0.024532622873134402,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null
+    },
+    {
+      "mode": "vlm_omni",
+      "scenario": "combined",
+      "seed": 173,
+      "kind": "occlusion",
+      "onset_sim_s": 22.15022922302135,
+      "end_sim_s": 24.676989062241066,
+      "expected": [
+        "brake"
+      ],
+      "side": -1,
+      "camera_block_x": 0.4087382351422678,
+      "camera_block_y": -0.07254956984826921,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null
+    },
+    {
+      "mode": "vlm_omni",
+      "scenario": "combined",
+      "seed": 173,
+      "kind": "occlusion",
+      "onset_sim_s": 25.07105816509239,
+      "end_sim_s": 27.53802577606012,
+      "expected": [
+        "brake"
+      ],
+      "side": 1,
+      "camera_block_x": 0.3831160521144746,
+      "camera_block_y": 0.12682185332208273,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null
+    },
+    {
+      "mode": "vlm_omni",
+      "scenario": "combined",
+      "seed": 173,
+      "kind": "occlusion",
+      "onset_sim_s": 27.73802577606012,
+      "end_sim_s": 29.837071806464138,
+      "expected": [
+        "brake"
+      ],
+      "side": 1,
+      "camera_block_x": 0.46557614937433883,
+      "camera_block_y": 0.04123565790352457,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null
+    },
+    {
+      "mode": "vlm_omni",
+      "scenario": "combined",
+      "seed": 173,
+      "kind": "hand",
+      "onset_sim_s": 29.473497205711233,
+      "end_sim_s": 33.867133691311196,
+      "expected": [
+        "brake",
+        "retreat",
+        "lift"
+      ],
+      "side": -1,
+      "x": 0.58709579971348,
+      "z": 0.6772195680362747,
+      "approach_fraction": 0.24254642041024838,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null
+    },
+    {
+      "mode": "omni",
+      "scenario": "combined",
+      "seed": 197,
+      "kind": "occlusion",
+      "onset_sim_s": 3.6214793659566062,
+      "end_sim_s": 5.180873742765272,
+      "expected": [
+        "brake"
+      ],
+      "side": -1,
+      "camera_block_x": 0.3774746969904414,
+      "camera_block_y": 0.14057100187769367,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null
+    },
+    {
+      "mode": "omni",
+      "scenario": "combined",
+      "seed": 197,
+      "kind": "hand",
+      "onset_sim_s": 9.121479365956606,
+      "end_sim_s": 14.022373752398387,
+      "expected": [
+        "brake",
+        "retreat",
+        "lift"
+      ],
+      "side": 1,
+      "x": 0.5834787896122363,
+      "z": 0.6348975064549048,
+      "approach_fraction": 0.3037382279505788,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null
+    },
+    {
+      "mode": "omni",
+      "scenario": "combined",
+      "seed": 197,
+      "kind": "slider",
+      "onset_sim_s": 10.820302455620471,
+      "end_sim_s": 15.201940700341417,
+      "expected": [
+        "brake",
+        "retreat",
+        "lift"
+      ],
+      "side": -1,
+      "x": 0.6087995648912894,
+      "speed_m_s": 0.4725552920926785,
+      "entry_y_m": 0.3278020943433986,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null
+    },
+    {
+      "mode": "omni",
+      "scenario": "combined",
+      "seed": 197,
+      "kind": "target",
+      "onset_sim_s": 15.908817094354477,
+      "end_sim_s": 21.11529260774475,
+      "expected": [
+        "right"
+      ],
+      "side": 1,
+      "start_y": 0.061324253289724316,
+      "end_y": 0.1542936678083198,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null
+    },
+    {
+      "mode": "omni",
+      "scenario": "combined",
+      "seed": 197,
+      "kind": "occlusion",
+      "onset_sim_s": 16.90944540243406,
+      "end_sim_s": 22.707086529443934,
+      "expected": [
+        "brake"
+      ],
+      "side": 1,
+      "camera_block_x": 0.5350333550485898,
+      "camera_block_y": -0.06686172266458554,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null
+    },
+    {
+      "mode": "omni",
+      "scenario": "combined",
+      "seed": 197,
+      "kind": "hand",
+      "onset_sim_s": 18.00663082056658,
+      "end_sim_s": 22.060983162906822,
+      "expected": [
+        "brake",
+        "retreat",
+        "lift"
+      ],
+      "side": -1,
+      "x": 0.5801069735507824,
+      "z": 0.6834381882226448,
+      "approach_fraction": 0.21801075621444457,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null
+    },
+    {
+      "mode": "omni",
+      "scenario": "combined",
+      "seed": 197,
+      "kind": "slider",
+      "onset_sim_s": 21.420815012318055,
+      "end_sim_s": 25.271890747574698,
+      "expected": [
+        "brake",
+        "retreat",
+        "lift"
+      ],
+      "side": -1,
+      "x": 0.5933198221057143,
+      "speed_m_s": 0.406136493515723,
+      "entry_y_m": 0.3343913000684812,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null
+    },
+    {
+      "mode": "omni",
+      "scenario": "combined",
+      "seed": 197,
+      "kind": "occlusion",
+      "onset_sim_s": 26.693159237352848,
+      "end_sim_s": 31.777684342913062,
+      "expected": [
+        "brake"
+      ],
+      "side": -1,
+      "camera_block_x": 0.6336000292004038,
+      "camera_block_y": -0.04615172095008066,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null
+    },
+    {
+      "mode": "omni",
+      "scenario": "combined",
+      "seed": 197,
+      "kind": "target",
+      "onset_sim_s": 32.193159237352845,
+      "end_sim_s": 36.755115843604685,
+      "expected": [
+        "left"
+      ],
+      "side": -1,
+      "start_y": 0.1542936678083198,
+      "end_y": 0.03521167075387811,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null
+    },
+    {
+      "mode": "vlm_omni",
+      "scenario": "combined",
+      "seed": 197,
+      "kind": "occlusion",
+      "onset_sim_s": 3.6214793659566062,
+      "end_sim_s": 5.180873742765272,
+      "expected": [
+        "brake"
+      ],
+      "side": -1,
+      "camera_block_x": 0.3774746969904414,
+      "camera_block_y": 0.14057100187769367,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null
+    },
+    {
+      "mode": "vlm_omni",
+      "scenario": "combined",
+      "seed": 197,
+      "kind": "hand",
+      "onset_sim_s": 9.121479365956606,
+      "end_sim_s": 14.022373752398387,
+      "expected": [
+        "brake",
+        "retreat",
+        "lift"
+      ],
+      "side": 1,
+      "x": 0.5834787896122363,
+      "z": 0.6348975064549048,
+      "approach_fraction": 0.3037382279505788,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null
+    },
+    {
+      "mode": "vlm_omni",
+      "scenario": "combined",
+      "seed": 197,
+      "kind": "slider",
+      "onset_sim_s": 10.820302455620471,
+      "end_sim_s": 15.201940700341417,
+      "expected": [
+        "brake",
+        "retreat",
+        "lift"
+      ],
+      "side": -1,
+      "x": 0.6087995648912894,
+      "speed_m_s": 0.4725552920926785,
+      "entry_y_m": 0.3278020943433986,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null
+    },
+    {
+      "mode": "vlm_omni",
+      "scenario": "combined",
+      "seed": 197,
+      "kind": "target",
+      "onset_sim_s": 15.908817094354477,
+      "end_sim_s": 21.11529260774475,
+      "expected": [
+        "right"
+      ],
+      "side": 1,
+      "start_y": 0.061324253289724316,
+      "end_y": 0.1542936678083198,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null
+    },
+    {
+      "mode": "vlm_omni",
+      "scenario": "combined",
+      "seed": 197,
+      "kind": "occlusion",
+      "onset_sim_s": 16.90944540243406,
+      "end_sim_s": 22.707086529443934,
+      "expected": [
+        "brake"
+      ],
+      "side": 1,
+      "camera_block_x": 0.5350333550485898,
+      "camera_block_y": -0.06686172266458554,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null
+    },
+    {
+      "mode": "vlm_omni",
+      "scenario": "combined",
+      "seed": 197,
+      "kind": "hand",
+      "onset_sim_s": 18.00663082056658,
+      "end_sim_s": 22.060983162906822,
+      "expected": [
+        "brake",
+        "retreat",
+        "lift"
+      ],
+      "side": -1,
+      "x": 0.5801069735507824,
+      "z": 0.6834381882226448,
+      "approach_fraction": 0.21801075621444457,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null
+    },
+    {
+      "mode": "vlm_omni",
+      "scenario": "combined",
+      "seed": 197,
+      "kind": "slider",
+      "onset_sim_s": 21.420815012318055,
+      "end_sim_s": 25.271890747574698,
+      "expected": [
+        "brake",
+        "retreat",
+        "lift"
+      ],
+      "side": -1,
+      "x": 0.5933198221057143,
+      "speed_m_s": 0.406136493515723,
+      "entry_y_m": 0.3343913000684812,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null
+    },
+    {
+      "mode": "vlm_omni",
+      "scenario": "combined",
+      "seed": 197,
+      "kind": "occlusion",
+      "onset_sim_s": 26.693159237352848,
+      "end_sim_s": 31.777684342913062,
+      "expected": [
+        "brake"
+      ],
+      "side": -1,
+      "camera_block_x": 0.6336000292004038,
+      "camera_block_y": -0.04615172095008066,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null
+    },
+    {
+      "mode": "vlm_omni",
+      "scenario": "combined",
+      "seed": 197,
+      "kind": "target",
+      "onset_sim_s": 32.193159237352845,
+      "end_sim_s": 36.755115843604685,
+      "expected": [
+        "left"
+      ],
+      "side": -1,
+      "start_y": 0.1542936678083198,
+      "end_y": 0.03521167075387811,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null
+    },
+    {
+      "mode": "omni",
+      "scenario": "hand",
+      "seed": 173,
+      "kind": "hand",
+      "onset_sim_s": 2.5819676922166512,
+      "end_sim_s": 6.989393000837978,
+      "expected": [
+        "brake",
+        "retreat",
+        "lift"
+      ],
+      "side": 1,
+      "x": 0.6297904938044021,
+      "z": 0.6777524713545355,
+      "approach_fraction": 0.3750351172861647,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null
+    },
+    {
+      "mode": "vlm_omni",
+      "scenario": "hand",
+      "seed": 173,
+      "kind": "hand",
+      "onset_sim_s": 2.5819676922166512,
+      "end_sim_s": 6.989393000837978,
+      "expected": [
+        "brake",
+        "retreat",
+        "lift"
+      ],
+      "side": 1,
+      "x": 0.6297904938044021,
+      "z": 0.6777524713545355,
+      "approach_fraction": 0.3750351172861647,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null
+    },
+    {
+      "mode": "omni",
+      "scenario": "hand",
+      "seed": 197,
+      "kind": "hand",
+      "onset_sim_s": 3.6214793659566062,
+      "end_sim_s": 8.36399248440885,
+      "expected": [
+        "brake",
+        "retreat",
+        "lift"
+      ],
+      "side": 1,
+      "x": 0.6195275633548941,
+      "z": 0.5798644317234104,
+      "approach_fraction": 0.1879697188404333,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null
+    },
+    {
+      "mode": "vlm_omni",
+      "scenario": "hand",
+      "seed": 197,
+      "kind": "hand",
+      "onset_sim_s": 3.6214793659566062,
+      "end_sim_s": 8.36399248440885,
+      "expected": [
+        "brake",
+        "retreat",
+        "lift"
+      ],
+      "side": 1,
+      "x": 0.6195275633548941,
+      "z": 0.5798644317234104,
+      "approach_fraction": 0.1879697188404333,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null
+    },
+    {
+      "mode": "omni",
+      "scenario": "occlusion",
+      "seed": 173,
+      "kind": "occlusion",
+      "onset_sim_s": 2.5819676922166512,
+      "end_sim_s": 6.989393000837978,
+      "expected": [
+        "brake"
+      ],
+      "side": 1,
+      "camera_block_x": 0.6244762345110053,
+      "camera_block_y": 0.20692737586965432,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null
+    },
+    {
+      "mode": "vlm_omni",
+      "scenario": "occlusion",
+      "seed": 173,
+      "kind": "occlusion",
+      "onset_sim_s": 2.5819676922166512,
+      "end_sim_s": 6.989393000837978,
+      "expected": [
+        "brake"
+      ],
+      "side": 1,
+      "camera_block_x": 0.6244762345110053,
+      "camera_block_y": 0.20692737586965432,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null
+    },
+    {
+      "mode": "omni",
+      "scenario": "occlusion",
+      "seed": 197,
+      "kind": "occlusion",
+      "onset_sim_s": 3.6214793659566062,
+      "end_sim_s": 8.36399248440885,
+      "expected": [
+        "brake"
+      ],
+      "side": 1,
+      "camera_block_x": 0.5988189083872353,
+      "camera_block_y": -0.21725412919855489,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null
+    },
+    {
+      "mode": "vlm_omni",
+      "scenario": "occlusion",
+      "seed": 197,
+      "kind": "occlusion",
+      "onset_sim_s": 3.6214793659566062,
+      "end_sim_s": 8.36399248440885,
+      "expected": [
+        "brake"
+      ],
+      "side": 1,
+      "camera_block_x": 0.5988189083872353,
+      "camera_block_y": -0.21725412919855489,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null
+    },
+    {
+      "mode": "omni",
+      "scenario": "slider",
+      "seed": 173,
+      "kind": "slider",
+      "onset_sim_s": 2.5819676922166512,
+      "end_sim_s": 6.989393000837978,
+      "expected": [
+        "brake",
+        "retreat",
+        "lift"
+      ],
+      "side": 1,
+      "x": 0.6290612433618594,
+      "speed_m_s": 0.8438654937082882,
+      "entry_y_m": 0.3886523260391658,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null
+    },
+    {
+      "mode": "vlm_omni",
+      "scenario": "slider",
+      "seed": 173,
+      "kind": "slider",
+      "onset_sim_s": 2.5819676922166512,
+      "end_sim_s": 6.989393000837978,
+      "expected": [
+        "brake",
+        "retreat",
+        "lift"
+      ],
+      "side": 1,
+      "x": 0.6290612433618594,
+      "speed_m_s": 0.8438654937082882,
+      "entry_y_m": 0.3886523260391658,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null
+    },
+    {
+      "mode": "omni",
+      "scenario": "slider",
+      "seed": 197,
+      "kind": "slider",
+      "onset_sim_s": 3.6214793659566062,
+      "end_sim_s": 8.36399248440885,
+      "expected": [
+        "brake",
+        "retreat",
+        "lift"
+      ],
+      "side": 1,
+      "x": 0.6180652464516723,
+      "speed_m_s": 0.39521197873229774,
+      "entry_y_m": 0.3036225994729242,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null
+    },
+    {
+      "mode": "vlm_omni",
+      "scenario": "slider",
+      "seed": 197,
+      "kind": "slider",
+      "onset_sim_s": 3.6214793659566062,
+      "end_sim_s": 8.36399248440885,
+      "expected": [
+        "brake",
+        "retreat",
+        "lift"
+      ],
+      "side": 1,
+      "x": 0.6180652464516723,
+      "speed_m_s": 0.39521197873229774,
+      "entry_y_m": 0.3036225994729242,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null
+    },
+    {
+      "mode": "omni",
+      "scenario": "target",
+      "seed": 173,
+      "kind": "target",
+      "onset_sim_s": 2.5819676922166512,
+      "end_sim_s": 6.989393000837978,
+      "expected": [
+        "right"
+      ],
+      "side": 1,
+      "start_y": 0.0734262583137655,
+      "end_y": 0.22832150521596656,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null
+    },
+    {
+      "mode": "vlm_omni",
+      "scenario": "target",
+      "seed": 173,
+      "kind": "target",
+      "onset_sim_s": 2.5819676922166512,
+      "end_sim_s": 6.989393000837978,
+      "expected": [
+        "right"
+      ],
+      "side": 1,
+      "start_y": 0.0734262583137655,
+      "end_y": 0.22832150521596656,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null
+    },
+    {
+      "mode": "omni",
+      "scenario": "target",
+      "seed": 197,
+      "kind": "target",
+      "onset_sim_s": 3.6214793659566062,
+      "end_sim_s": 8.36399248440885,
+      "expected": [
+        "right"
+      ],
+      "side": 1,
+      "start_y": 0.061324253289724316,
+      "end_y": 0.2110880349671714,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null
+    },
+    {
+      "mode": "vlm_omni",
+      "scenario": "target",
+      "seed": 197,
+      "kind": "target",
+      "onset_sim_s": 3.6214793659566062,
+      "end_sim_s": 8.36399248440885,
+      "expected": [
+        "right"
+      ],
+      "side": 1,
+      "start_y": 0.061324253289724316,
+      "end_y": 0.2110880349671714,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null
+    }
+  ],
+  "rtf_min": 0.9997161849081982,
+  "rtf_max": 0.9999967761908384,
+  "negative_calibration": {
+    "condition": "human-close retreat",
+    "label": 0,
+    "cohort": "quiet after 2s settling, initial condition unchanged; human outside camera",
+    "samples": 76,
+    "brier": 0.2798348913157895,
+    "ece_10bins": 0.5268552631578947,
+    "threshold_false_positive_fraction": 0,
+    "bins": [
+      {
+        "range": [
+          0.4,
+          0.5
+        ],
+        "count": 25,
+        "mean_p": 0.466792,
+        "observed_frequency": 0
+      },
+      {
+        "range": [
+          0.5,
+          0.6
+        ],
+        "count": 49,
+        "mean_p": 0.5540387755102041,
+        "observed_frequency": 0
+      },
+      {
+        "range": [
+          0.6,
+          0.7
+        ],
+        "count": 2,
+        "mean_p": 0.61165,
+        "observed_frequency": 0
+      }
+    ],
+    "detail": [
+      {
+        "mode": "omni",
+        "seed": 173,
+        "sequence": 47,
+        "p": 0.451,
+        "tau": 0.75
+      },
+      {
+        "mode": "omni",
+        "seed": 173,
+        "sequence": 61,
+        "p": 0.4871,
+        "tau": 0.75
+      },
+      {
+        "mode": "omni",
+        "seed": 173,
+        "sequence": 76,
+        "p": 0.4555,
+        "tau": 0.75
+      },
+      {
+        "mode": "omni",
+        "seed": 173,
+        "sequence": 107,
+        "p": 0.449,
+        "tau": 0.75
+      },
+      {
+        "mode": "omni",
+        "seed": 173,
+        "sequence": 122,
+        "p": 0.4805,
+        "tau": 0.75
+      },
+      {
+        "mode": "omni",
+        "seed": 173,
+        "sequence": 134,
+        "p": 0.4701,
+        "tau": 0.75
+      },
+      {
+        "mode": "omni",
+        "seed": 173,
+        "sequence": 163,
+        "p": 0.4576,
+        "tau": 0.75
+      },
+      {
+        "mode": "omni",
+        "seed": 173,
+        "sequence": 169,
+        "p": 0.4482,
+        "tau": 0.75
+      },
+      {
+        "mode": "omni",
+        "seed": 173,
+        "sequence": 181,
+        "p": 0.4969,
+        "tau": 0.75
+      },
+      {
+        "mode": "omni",
+        "seed": 173,
+        "sequence": 195,
+        "p": 0.4949,
+        "tau": 0.75
+      },
+      {
+        "mode": "omni",
+        "seed": 173,
+        "sequence": 240,
+        "p": 0.4662,
+        "tau": 0.75
+      },
+      {
+        "mode": "omni",
+        "seed": 173,
+        "sequence": 255,
+        "p": 0.4801,
+        "tau": 0.75
+      },
+      {
+        "mode": "omni",
+        "seed": 173,
+        "sequence": 268,
+        "p": 0.4664,
+        "tau": 0.75
+      },
+      {
+        "mode": "omni",
+        "seed": 173,
+        "sequence": 282,
+        "p": 0.4718,
+        "tau": 0.75
+      },
+      {
+        "mode": "omni",
+        "seed": 173,
+        "sequence": 297,
+        "p": 0.4641,
+        "tau": 0.75
+      },
+      {
+        "mode": "omni",
+        "seed": 173,
+        "sequence": 311,
+        "p": 0.5149,
+        "tau": 0.75
+      },
+      {
+        "mode": "omni",
+        "seed": 197,
+        "sequence": 25,
+        "p": 0.4983,
+        "tau": 0.75
+      },
+      {
+        "mode": "omni",
+        "seed": 197,
+        "sequence": 40,
+        "p": 0.412,
+        "tau": 0.75
+      },
+      {
+        "mode": "omni",
+        "seed": 197,
+        "sequence": 46,
+        "p": 0.434,
+        "tau": 0.75
+      },
+      {
+        "mode": "omni",
+        "seed": 197,
+        "sequence": 53,
+        "p": 0.4896,
+        "tau": 0.75
+      },
+      {
+        "mode": "omni",
+        "seed": 197,
+        "sequence": 66,
+        "p": 0.5331,
+        "tau": 0.75
+      },
+      {
+        "mode": "omni",
+        "seed": 197,
+        "sequence": 80,
+        "p": 0.5585,
+        "tau": 0.75
+      },
+      {
+        "mode": "omni",
+        "seed": 197,
+        "sequence": 94,
+        "p": 0.5458,
+        "tau": 0.75
+      },
+      {
+        "mode": "omni",
+        "seed": 197,
+        "sequence": 108,
+        "p": 0.5774,
+        "tau": 0.75
+      },
+      {
+        "mode": "omni",
+        "seed": 197,
+        "sequence": 122,
+        "p": 0.5618,
+        "tau": 0.75
+      },
+      {
+        "mode": "omni",
+        "seed": 197,
+        "sequence": 136,
+        "p": 0.5404,
+        "tau": 0.75
+      },
+      {
+        "mode": "omni",
+        "seed": 197,
+        "sequence": 150,
+        "p": 0.5655,
+        "tau": 0.75
+      },
+      {
+        "mode": "omni",
+        "seed": 197,
+        "sequence": 165,
+        "p": 0.5744,
+        "tau": 0.75
+      },
+      {
+        "mode": "omni",
+        "seed": 197,
+        "sequence": 179,
+        "p": 0.5546,
+        "tau": 0.75
+      },
+      {
+        "mode": "omni",
+        "seed": 197,
+        "sequence": 193,
+        "p": 0.5452,
+        "tau": 0.75
+      },
+      {
+        "mode": "omni",
+        "seed": 197,
+        "sequence": 207,
+        "p": 0.5616,
+        "tau": 0.75
+      },
+      {
+        "mode": "omni",
+        "seed": 197,
+        "sequence": 221,
+        "p": 0.5474,
+        "tau": 0.75
+      },
+      {
+        "mode": "omni",
+        "seed": 197,
+        "sequence": 235,
+        "p": 0.5515,
+        "tau": 0.75
+      },
+      {
+        "mode": "omni",
+        "seed": 197,
+        "sequence": 249,
+        "p": 0.5631,
+        "tau": 0.75
+      },
+      {
+        "mode": "omni",
+        "seed": 197,
+        "sequence": 263,
+        "p": 0.5805,
+        "tau": 0.75
+      },
+      {
+        "mode": "omni",
+        "seed": 197,
+        "sequence": 277,
+        "p": 0.5652,
+        "tau": 0.75
+      },
+      {
+        "mode": "omni",
+        "seed": 197,
+        "sequence": 292,
+        "p": 0.5732,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 173,
+        "sequence": 23,
+        "p": 0.5097,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 173,
+        "sequence": 29,
+        "p": 0.5159,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 173,
+        "sequence": 37,
+        "p": 0.6057,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 173,
+        "sequence": 44,
+        "p": 0.6176,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 173,
+        "sequence": 89,
+        "p": 0.5514,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 173,
+        "sequence": 97,
+        "p": 0.5415,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 173,
+        "sequence": 110,
+        "p": 0.5635,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 173,
+        "sequence": 124,
+        "p": 0.5718,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 173,
+        "sequence": 139,
+        "p": 0.5515,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 173,
+        "sequence": 153,
+        "p": 0.5515,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 173,
+        "sequence": 167,
+        "p": 0.5552,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 173,
+        "sequence": 181,
+        "p": 0.5553,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 173,
+        "sequence": 195,
+        "p": 0.564,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 173,
+        "sequence": 209,
+        "p": 0.5605,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 173,
+        "sequence": 223,
+        "p": 0.5899,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 173,
+        "sequence": 237,
+        "p": 0.5687,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 173,
+        "sequence": 251,
+        "p": 0.5592,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 173,
+        "sequence": 265,
+        "p": 0.5716,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 173,
+        "sequence": 279,
+        "p": 0.5612,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 173,
+        "sequence": 293,
+        "p": 0.5637,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 173,
+        "sequence": 308,
+        "p": 0.5577,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 197,
+        "sequence": 63,
+        "p": 0.4137,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 197,
+        "sequence": 101,
+        "p": 0.4932,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 197,
+        "sequence": 117,
+        "p": 0.471,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 197,
+        "sequence": 129,
+        "p": 0.4836,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 197,
+        "sequence": 157,
+        "p": 0.461,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 197,
+        "sequence": 163,
+        "p": 0.474,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 197,
+        "sequence": 175,
+        "p": 0.5189,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 197,
+        "sequence": 188,
+        "p": 0.5621,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 197,
+        "sequence": 201,
+        "p": 0.5194,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 197,
+        "sequence": 214,
+        "p": 0.5206,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 197,
+        "sequence": 222,
+        "p": 0.5215,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 197,
+        "sequence": 235,
+        "p": 0.5471,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 197,
+        "sequence": 248,
+        "p": 0.5443,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 197,
+        "sequence": 262,
+        "p": 0.5753,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 197,
+        "sequence": 275,
+        "p": 0.5827,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 197,
+        "sequence": 289,
+        "p": 0.5521,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 197,
+        "sequence": 305,
+        "p": 0.5772,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 197,
+        "sequence": 318,
+        "p": 0.5488,
+        "tau": 0.75
+      }
+    ],
+    "scope": "negative-cohort false-alarm check; not balanced calibration; frames correlated"
+  }
+}

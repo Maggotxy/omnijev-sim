@@ -1,0 +1,200 @@
+[
+  {
+    "batch": "reflex_runtime_verified_20261013",
+    "video": "comparison_combined_seed313.mp4",
+    "frames": 801,
+    "fps": 20.0,
+    "size": [
+      1920,
+      800
+    ],
+    "duration_s": 40.05
+  },
+  {
+    "batch": "reflex_runtime_verified_20261013",
+    "video": "comparison_combined_seed337.mp4",
+    "frames": 801,
+    "fps": 20.0,
+    "size": [
+      1920,
+      800
+    ],
+    "duration_s": 40.05
+  },
+  {
+    "batch": "reflex_runtime_verified_20261013",
+    "video": "comparison_hand_seed313.mp4",
+    "frames": 801,
+    "fps": 20.0,
+    "size": [
+      1920,
+      800
+    ],
+    "duration_s": 40.05
+  },
+  {
+    "batch": "reflex_runtime_verified_20261013",
+    "video": "comparison_hand_seed337.mp4",
+    "frames": 801,
+    "fps": 20.0,
+    "size": [
+      1920,
+      800
+    ],
+    "duration_s": 40.05
+  },
+  {
+    "batch": "reflex_runtime_verified_20261013",
+    "video": "comparison_quiet_seed313.mp4",
+    "frames": 801,
+    "fps": 20.0,
+    "size": [
+      1920,
+      800
+    ],
+    "duration_s": 40.05
+  },
+  {
+    "batch": "reflex_runtime_verified_20261013",
+    "video": "comparison_quiet_seed337.mp4",
+    "frames": 801,
+    "fps": 20.0,
+    "size": [
+      1920,
+      800
+    ],
+    "duration_s": 40.05
+  },
+  {
+    "batch": "reflex_runtime_serial_20261013",
+    "video": "comparison_combined_seed233.mp4",
+    "frames": 801,
+    "fps": 20.0,
+    "size": [
+      1920,
+      800
+    ],
+    "duration_s": 40.05
+  },
+  {
+    "batch": "reflex_runtime_serial_20261013",
+    "video": "comparison_combined_seed257.mp4",
+    "frames": 801,
+    "fps": 20.0,
+    "size": [
+      1920,
+      800
+    ],
+    "duration_s": 40.05
+  },
+  {
+    "batch": "reflex_runtime_serial_20261013",
+    "video": "comparison_hand_seed233.mp4",
+    "frames": 801,
+    "fps": 20.0,
+    "size": [
+      1920,
+      800
+    ],
+    "duration_s": 40.05
+  },
+  {
+    "batch": "reflex_runtime_serial_20261013",
+    "video": "comparison_hand_seed257.mp4",
+    "frames": 801,
+    "fps": 20.0,
+    "size": [
+      1920,
+      800
+    ],
+    "duration_s": 40.05
+  },
+  {
+    "batch": "reflex_runtime_serial_20261013",
+    "video": "comparison_occlusion_seed233.mp4",
+    "frames": 801,
+    "fps": 20.0,
+    "size": [
+      1920,
+      800
+    ],
+    "duration_s": 40.05
+  },
+  {
+    "batch": "reflex_runtime_serial_20261013",
+    "video": "comparison_occlusion_seed257.mp4",
+    "frames": 801,
+    "fps": 20.0,
+    "size": [
+      1920,
+      800
+    ],
+    "duration_s": 40.05
+  },
+  {
+    "batch": "reflex_runtime_serial_20261013",
+    "video": "comparison_quiet_seed233.mp4",
+    "frames": 801,
+    "fps": 20.0,
+    "size": [
+      1920,
+      800
+    ],
+    "duration_s": 40.05
+  },
+  {
+    "batch": "reflex_runtime_serial_20261013",
+    "video": "comparison_quiet_seed257.mp4",
+    "frames": 801,
+    "fps": 20.0,
+    "size": [
+      1920,
+      800
+    ],
+    "duration_s": 40.05
+  },
+  {
+    "batch": "reflex_runtime_serial_20261013",
+    "video": "comparison_slider_seed233.mp4",
+    "frames": 801,
+    "fps": 20.0,
+    "size": [
+      1920,
+      800
+    ],
+    "duration_s": 40.05
+  },
+  {
+    "batch": "reflex_runtime_serial_20261013",
+    "video": "comparison_slider_seed257.mp4",
+    "frames": 801,
+    "fps": 20.0,
+    "size": [
+      1920,
+      800
+    ],
+    "duration_s": 40.05
+  },
+  {
+    "batch": "reflex_runtime_serial_20261013",
+    "video": "comparison_target_seed233.mp4",
+    "frames": 801,
+    "fps": 20.0,
+    "size": [
+      1920,
+      800
+    ],
+    "duration_s": 40.05
+  },
+  {
+    "batch": "reflex_runtime_serial_20261013",
+    "video": "comparison_target_seed257.mp4",
+    "frames": 801,
+    "fps": 20.0,
+    "size": [
+      1920,
+      800
+    ],
+    "duration_s": 40.05
+  }
+]

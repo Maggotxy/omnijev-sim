@@ -1,0 +1,41 @@
+{
+  "response": {
+    "short": {
+      "noul": 0.8808,
+      "latency_s": 0.02
+    },
+    "proposition": {
+      "noul": 0.8373,
+      "latency_s": 0.0215
+    },
+    "question_last": {
+      "noul": 0.8159,
+      "latency_s": 0.0216
+    },
+    "touch": {
+      "noul": 0.0994,
+      "latency_s": 0.0234
+    }
+  },
+  "elapsed_s": 0.1918424591422081,
+  "input_sha256": "965f184f2682ede46fbebf6218142265fcf815828051114b3feb8e15c3f095cd",
+  "source_sequence": 77,
+  "questions": {
+    "short": {
+      "type": "noul",
+      "instructions": "Is a human hand near the robot gripper?"
+    },
+    "proposition": {
+      "type": "noul",
+      "instructions": "A separate human skin-colored hand or arm is very close to the robot gripper or entering its immediate path."
+    },
+    "question_last": {
+      "type": "noul",
+      "instructions": "Black gripper is robot; orange ring marks it. Is a separate human hand very close to the gripper?"
+    },
+    "touch": {
+      "type": "noul",
+      "instructions": "Touch forces are [0.0, 9.962, 36.024] N. Does the measured touch force exceed 10 N?"
+    }
+  }
+}

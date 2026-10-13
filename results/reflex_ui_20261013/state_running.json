@@ -1,0 +1,23 @@
+{
+  "status": "running",
+  "world_s": 95.29999999995697,
+  "wall_s": 95.30011988058686,
+  "action": "brake",
+  "model_enabled": true,
+  "observation_age_s": 0.644,
+  "camera_age_s": 0.03954417072236538,
+  "human_contact_N": 0.0,
+  "object_contact_N": 0.0,
+  "human_contact_peak_N": 0.0,
+  "object_contact_peak_N": 0.0,
+  "human_contact_impulse_Ns": 0.0,
+  "object_contact_impulse_Ns": 0.0,
+  "goal_distance_m": 0.07098042701851658,
+  "goal_reached": false,
+  "eef_position_m": [
+    0.5963647066944897,
+    0.29107443046097603,
+    0.42439260405037615
+  ],
+  "auto": true
+}

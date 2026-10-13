@@ -1,0 +1,717 @@
+{
+  "episodes": 6,
+  "pairs": 3,
+  "groups": {
+    "omni": {
+      "episodes": 3,
+      "final_goal_count": 0,
+      "matched_events": 0,
+      "events": 5,
+      "api_results": 94,
+      "accepted_results": 83,
+      "api_errors": 3,
+      "error_types": {
+        "URLError: <urlopen error timed out>": 3
+      },
+      "inference_p50_s": 0.9175431812182069,
+      "inference_p95_s": 1.4444140398874832,
+      "capture_to_motor_p50_s": 1.043814267963171,
+      "capture_to_motor_p95_s": 1.143426437303424,
+      "mean_watchdog_fraction": 0.6133333333333333,
+      "brain_results": 0,
+      "brain_accepted": 0,
+      "brain_errors": 0,
+      "brain_inference_p50_s": null,
+      "macro_plan_changes": 0,
+      "bank_versions": 0,
+      "memory_entries": 83,
+      "requests_with_retrieval": 85,
+      "served_models": [
+        "omnijev-0.8b-kk"
+      ],
+      "brain_served_models": []
+    },
+    "vlm_omni": {
+      "episodes": 3,
+      "final_goal_count": 0,
+      "matched_events": 0,
+      "events": 5,
+      "api_results": 96,
+      "accepted_results": 81,
+      "api_errors": 2,
+      "error_types": {
+        "URLError: <urlopen error timed out>": 2
+      },
+      "inference_p50_s": 0.9175273245200515,
+      "inference_p95_s": 0.9406411210075021,
+      "capture_to_motor_p50_s": 1.045156029984355,
+      "capture_to_motor_p95_s": 1.1431556474417448,
+      "mean_watchdog_fraction": 0.6155555555555555,
+      "brain_results": 16,
+      "brain_accepted": 11,
+      "brain_errors": 2,
+      "brain_inference_p50_s": 4.264489531517029,
+      "macro_plan_changes": 3,
+      "bank_versions": 5,
+      "memory_entries": 81,
+      "requests_with_retrieval": 88,
+      "served_models": [
+        "omnijev-0.8b-kk"
+      ],
+      "brain_served_models": [
+        "gemini-3.8-flash"
+      ]
+    }
+  },
+  "pair_detail": [
+    {
+      "scenario": "combined",
+      "seed": 31,
+      "omni": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.12928971476703963,
+        "peak_human_contact_N": 31.827057358979786,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 12.588363671593322,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 339,
+        "control_steps": 600,
+        "matched_events": 0,
+        "events": 4
+      },
+      "vlm_omni": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.05801595140403966,
+        "peak_human_contact_N": 28.69269392864204,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 10.337508237517103,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 382,
+        "control_steps": 600,
+        "matched_events": 0,
+        "events": 4
+      }
+    },
+    {
+      "scenario": "quiet",
+      "seed": 31,
+      "omni": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.036491398879596994,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 412,
+        "control_steps": 600,
+        "matched_events": 0,
+        "events": 0
+      },
+      "vlm_omni": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.02726490581155064,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 354,
+        "control_steps": 600,
+        "matched_events": 0,
+        "events": 0
+      }
+    },
+    {
+      "scenario": "target",
+      "seed": 31,
+      "omni": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.12833901632553546,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 353,
+        "control_steps": 600,
+        "matched_events": 0,
+        "events": 1
+      },
+      "vlm_omni": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.049152503411962076,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 372,
+        "control_steps": 600,
+        "matched_events": 0,
+        "events": 1
+      }
+    }
+  ],
+  "events_detail": [
+    {
+      "mode": "omni",
+      "scenario": "combined",
+      "seed": 31,
+      "kind": "occlusion",
+      "onset_sim_s": 3.583806173097833,
+      "end_sim_s": 7.641890060057104,
+      "expected": [
+        "brake"
+      ],
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null
+    },
+    {
+      "mode": "omni",
+      "scenario": "combined",
+      "seed": 31,
+      "kind": "target",
+      "onset_sim_s": 4.851224866775678,
+      "end_sim_s": 7.469009968631037,
+      "expected": [
+        "left"
+      ],
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null
+    },
+    {
+      "mode": "omni",
+      "scenario": "combined",
+      "seed": 31,
+      "kind": "slider",
+      "onset_sim_s": 6.3513261034715764,
+      "end_sim_s": 11.10226631804547,
+      "expected": [
+        "brake",
+        "retreat",
+        "lift"
+      ],
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null
+    },
+    {
+      "mode": "omni",
+      "scenario": "combined",
+      "seed": 31,
+      "kind": "hand",
+      "onset_sim_s": 8.064995429937582,
+      "end_sim_s": 11.92263487960835,
+      "expected": [
+        "brake",
+        "retreat",
+        "lift"
+      ],
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null
+    },
+    {
+      "mode": "vlm_omni",
+      "scenario": "combined",
+      "seed": 31,
+      "kind": "occlusion",
+      "onset_sim_s": 3.583806173097833,
+      "end_sim_s": 7.641890060057104,
+      "expected": [
+        "brake"
+      ],
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null
+    },
+    {
+      "mode": "vlm_omni",
+      "scenario": "combined",
+      "seed": 31,
+      "kind": "target",
+      "onset_sim_s": 4.851224866775678,
+      "end_sim_s": 7.469009968631037,
+      "expected": [
+        "left"
+      ],
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null
+    },
+    {
+      "mode": "vlm_omni",
+      "scenario": "combined",
+      "seed": 31,
+      "kind": "slider",
+      "onset_sim_s": 6.3513261034715764,
+      "end_sim_s": 11.10226631804547,
+      "expected": [
+        "brake",
+        "retreat",
+        "lift"
+      ],
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null
+    },
+    {
+      "mode": "vlm_omni",
+      "scenario": "combined",
+      "seed": 31,
+      "kind": "hand",
+      "onset_sim_s": 8.064995429937582,
+      "end_sim_s": 11.92263487960835,
+      "expected": [
+        "brake",
+        "retreat",
+        "lift"
+      ],
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null
+    },
+    {
+      "mode": "omni",
+      "scenario": "target",
+      "seed": 31,
+      "kind": "target",
+      "onset_sim_s": 3.583806173097833,
+      "end_sim_s": 7.4650200879317925,
+      "expected": [
+        "right"
+      ],
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null
+    },
+    {
+      "mode": "vlm_omni",
+      "scenario": "target",
+      "seed": 31,
+      "kind": "target",
+      "onset_sim_s": 3.583806173097833,
+      "end_sim_s": 7.4650200879317925,
+      "expected": [
+        "right"
+      ],
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null
+    }
+  ],
+  "rtf_min": 0.999994063909113,
+  "rtf_max": 0.9999961588056299,
+  "negative_calibration": {
+    "condition": "human-close retreat",
+    "label": 0,
+    "cohort": "quiet after 2s settling, initial condition unchanged; human outside camera",
+    "samples": 53,
+    "brier": 0.1846584849056604,
+    "ece_10bins": 0.4286075471698113,
+    "threshold_false_positive_fraction": 0,
+    "bins": [
+      {
+        "range": [
+          0.3,
+          0.4
+        ],
+        "count": 10,
+        "mean_p": 0.39072,
+        "observed_frequency": 0
+      },
+      {
+        "range": [
+          0.4,
+          0.5
+        ],
+        "count": 43,
+        "mean_p": 0.4374186046511628,
+        "observed_frequency": 0
+      }
+    ],
+    "detail": [
+      {
+        "mode": "omni",
+        "seed": 31,
+        "sequence": 19,
+        "p": 0.4561,
+        "tau": 0.75
+      },
+      {
+        "mode": "omni",
+        "seed": 31,
+        "sequence": 26,
+        "p": 0.4586,
+        "tau": 0.75
+      },
+      {
+        "mode": "omni",
+        "seed": 31,
+        "sequence": 33,
+        "p": 0.4724,
+        "tau": 0.75
+      },
+      {
+        "mode": "omni",
+        "seed": 31,
+        "sequence": 41,
+        "p": 0.4699,
+        "tau": 0.75
+      },
+      {
+        "mode": "omni",
+        "seed": 31,
+        "sequence": 80,
+        "p": 0.4193,
+        "tau": 0.75
+      },
+      {
+        "mode": "omni",
+        "seed": 31,
+        "sequence": 96,
+        "p": 0.4258,
+        "tau": 0.75
+      },
+      {
+        "mode": "omni",
+        "seed": 31,
+        "sequence": 103,
+        "p": 0.4267,
+        "tau": 0.75
+      },
+      {
+        "mode": "omni",
+        "seed": 31,
+        "sequence": 127,
+        "p": 0.4666,
+        "tau": 0.75
+      },
+      {
+        "mode": "omni",
+        "seed": 31,
+        "sequence": 134,
+        "p": 0.4418,
+        "tau": 0.75
+      },
+      {
+        "mode": "omni",
+        "seed": 31,
+        "sequence": 141,
+        "p": 0.437,
+        "tau": 0.75
+      },
+      {
+        "mode": "omni",
+        "seed": 31,
+        "sequence": 149,
+        "p": 0.4451,
+        "tau": 0.75
+      },
+      {
+        "mode": "omni",
+        "seed": 31,
+        "sequence": 156,
+        "p": 0.4359,
+        "tau": 0.75
+      },
+      {
+        "mode": "omni",
+        "seed": 31,
+        "sequence": 163,
+        "p": 0.4213,
+        "tau": 0.75
+      },
+      {
+        "mode": "omni",
+        "seed": 31,
+        "sequence": 171,
+        "p": 0.425,
+        "tau": 0.75
+      },
+      {
+        "mode": "omni",
+        "seed": 31,
+        "sequence": 178,
+        "p": 0.4008,
+        "tau": 0.75
+      },
+      {
+        "mode": "omni",
+        "seed": 31,
+        "sequence": 194,
+        "p": 0.4091,
+        "tau": 0.75
+      },
+      {
+        "mode": "omni",
+        "seed": 31,
+        "sequence": 201,
+        "p": 0.4659,
+        "tau": 0.75
+      },
+      {
+        "mode": "omni",
+        "seed": 31,
+        "sequence": 209,
+        "p": 0.4344,
+        "tau": 0.75
+      },
+      {
+        "mode": "omni",
+        "seed": 31,
+        "sequence": 216,
+        "p": 0.403,
+        "tau": 0.75
+      },
+      {
+        "mode": "omni",
+        "seed": 31,
+        "sequence": 223,
+        "p": 0.3956,
+        "tau": 0.75
+      },
+      {
+        "mode": "omni",
+        "seed": 31,
+        "sequence": 231,
+        "p": 0.3841,
+        "tau": 0.75
+      },
+      {
+        "mode": "omni",
+        "seed": 31,
+        "sequence": 238,
+        "p": 0.4028,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 31,
+        "sequence": 19,
+        "p": 0.464,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 31,
+        "sequence": 26,
+        "p": 0.4629,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 31,
+        "sequence": 34,
+        "p": 0.4791,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 31,
+        "sequence": 41,
+        "p": 0.4718,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 31,
+        "sequence": 48,
+        "p": 0.474,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 31,
+        "sequence": 55,
+        "p": 0.4971,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 31,
+        "sequence": 63,
+        "p": 0.4781,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 31,
+        "sequence": 70,
+        "p": 0.4175,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 31,
+        "sequence": 77,
+        "p": 0.4022,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 31,
+        "sequence": 85,
+        "p": 0.422,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 31,
+        "sequence": 92,
+        "p": 0.4942,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 31,
+        "sequence": 99,
+        "p": 0.4389,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 31,
+        "sequence": 107,
+        "p": 0.419,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 31,
+        "sequence": 114,
+        "p": 0.4507,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 31,
+        "sequence": 121,
+        "p": 0.4127,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 31,
+        "sequence": 129,
+        "p": 0.3887,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 31,
+        "sequence": 136,
+        "p": 0.4028,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 31,
+        "sequence": 144,
+        "p": 0.4197,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 31,
+        "sequence": 151,
+        "p": 0.3808,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 31,
+        "sequence": 158,
+        "p": 0.4226,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 31,
+        "sequence": 166,
+        "p": 0.3903,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 31,
+        "sequence": 173,
+        "p": 0.3991,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 31,
+        "sequence": 181,
+        "p": 0.4052,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 31,
+        "sequence": 188,
+        "p": 0.3916,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 31,
+        "sequence": 195,
+        "p": 0.3849,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 31,
+        "sequence": 203,
+        "p": 0.4036,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 31,
+        "sequence": 210,
+        "p": 0.399,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 31,
+        "sequence": 217,
+        "p": 0.417,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 31,
+        "sequence": 225,
+        "p": 0.3931,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 31,
+        "sequence": 232,
+        "p": 0.4133,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 31,
+        "sequence": 239,
+        "p": 0.4231,
+        "tau": 0.75
+      }
+    ],
+    "scope": "negative-cohort false-alarm check; not balanced calibration; frames correlated"
+  }
+}

@@ -1,0 +1,122 @@
+[
+  {
+    "scenario": "combined",
+    "seed": 73,
+    "video": "comparison_combined_seed73.mp4",
+    "frames": 401,
+    "fps": 20,
+    "width": 1920,
+    "height": 800,
+    "duration_s": 20.05
+  },
+  {
+    "scenario": "combined",
+    "seed": 97,
+    "video": "comparison_combined_seed97.mp4",
+    "frames": 401,
+    "fps": 20,
+    "width": 1920,
+    "height": 800,
+    "duration_s": 20.05
+  },
+  {
+    "scenario": "hand",
+    "seed": 73,
+    "video": "comparison_hand_seed73.mp4",
+    "frames": 401,
+    "fps": 20,
+    "width": 1920,
+    "height": 800,
+    "duration_s": 20.05
+  },
+  {
+    "scenario": "hand",
+    "seed": 97,
+    "video": "comparison_hand_seed97.mp4",
+    "frames": 401,
+    "fps": 20,
+    "width": 1920,
+    "height": 800,
+    "duration_s": 20.05
+  },
+  {
+    "scenario": "occlusion",
+    "seed": 73,
+    "video": "comparison_occlusion_seed73.mp4",
+    "frames": 401,
+    "fps": 20,
+    "width": 1920,
+    "height": 800,
+    "duration_s": 20.05
+  },
+  {
+    "scenario": "occlusion",
+    "seed": 97,
+    "video": "comparison_occlusion_seed97.mp4",
+    "frames": 401,
+    "fps": 20,
+    "width": 1920,
+    "height": 800,
+    "duration_s": 20.05
+  },
+  {
+    "scenario": "quiet",
+    "seed": 73,
+    "video": "comparison_quiet_seed73.mp4",
+    "frames": 401,
+    "fps": 20,
+    "width": 1920,
+    "height": 800,
+    "duration_s": 20.05
+  },
+  {
+    "scenario": "quiet",
+    "seed": 97,
+    "video": "comparison_quiet_seed97.mp4",
+    "frames": 401,
+    "fps": 20,
+    "width": 1920,
+    "height": 800,
+    "duration_s": 20.05
+  },
+  {
+    "scenario": "slider",
+    "seed": 73,
+    "video": "comparison_slider_seed73.mp4",
+    "frames": 401,
+    "fps": 20,
+    "width": 1920,
+    "height": 800,
+    "duration_s": 20.05
+  },
+  {
+    "scenario": "slider",
+    "seed": 97,
+    "video": "comparison_slider_seed97.mp4",
+    "frames": 401,
+    "fps": 20,
+    "width": 1920,
+    "height": 800,
+    "duration_s": 20.05
+  },
+  {
+    "scenario": "target",
+    "seed": 73,
+    "video": "comparison_target_seed73.mp4",
+    "frames": 401,
+    "fps": 20,
+    "width": 1920,
+    "height": 800,
+    "duration_s": 20.05
+  },
+  {
+    "scenario": "target",
+    "seed": 97,
+    "video": "comparison_target_seed97.mp4",
+    "frames": 401,
+    "fps": 20,
+    "width": 1920,
+    "height": 800,
+    "duration_s": 20.05
+  }
+]

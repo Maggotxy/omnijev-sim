@@ -1,0 +1,65 @@
+[
+  {
+    "requested": "gemini-3.8-flash",
+    "served": "gemini-3.8-flash",
+    "status": 200,
+    "latency_s": 7.744,
+    "answer": "```json\n{\"target_x\": 0.57, \"target_y\": 0.62, \"human_near\": false, \"obscured\": false, \"task\": \"move to yellow block\"}\n```",
+    "usage": {
+      "promptTokenCount": 1192,
+      "candidatesTokenCount": 49,
+      "totalTokenCount": 1751,
+      "trafficType": "ON_DEMAND",
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 103
+        },
+        {
+          "modality": "IMAGE",
+          "tokenCount": 1089
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 49
+        }
+      ],
+      "thoughtsTokenCount": 510
+    }
+  },
+  {
+    "requested": "gemini-3.7-flash",
+    "status": 404
+  },
+  {
+    "requested": "gemini-3.5-flash-lite",
+    "served": "gemini-3.5-flash-lite",
+    "status": 200,
+    "latency_s": 2.715,
+    "answer": "```json\n{\"target_x\":0.58,\"target_y\":0.62,\"human_near\":false,\"obscured\":false,\"task\":\"move to target and pick up object\"}\n```",
+    "usage": {
+      "promptTokenCount": 1192,
+      "candidatesTokenCount": 45,
+      "totalTokenCount": 1237,
+      "trafficType": "ON_DEMAND",
+      "promptTokensDetails": [
+        {
+          "modality": "IMAGE",
+          "tokenCount": 1089
+        },
+        {
+          "modality": "TEXT",
+          "tokenCount": 103
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 45
+        }
+      ]
+    }
+  }
+]

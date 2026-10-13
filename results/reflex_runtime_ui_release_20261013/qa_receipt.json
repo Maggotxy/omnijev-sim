@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "kind": "compact-product-qa",
+  "formal_run": false,
+  "release_readiness": "UNASSESSED",
+  "created_at": "2026-10-13T19:12:06.990236+08:00",
+  "profile": "targeted-regression",
+  "result": "PASS",
+  "target": "http://127.0.0.1:8790/",
+  "environment": "bxj MuJoCo OSMesa; Codex in-app browser; loopback SSH tunnel",
+  "source_identity": "UI manifest.json and executed source_snapshot; release_manifest.json; source_verification.json records scoring-only release difference",
+  "authorization_boundary": "User-authorized simulation, existing APIs, own localhost service and private repository",
+  "action": "Start; reject short condition; author condition; inject hand/occlusion/slider; switch to omni; manual Stop; reload and persistent readback",
+  "input": "Synthetic robot scene and natural-language hand-close condition",
+  "expected": "Authored condition becomes an actual model question and visible probability; invalid condition rejected; pure mode and operator Stop persist; files remain traceable",
+  "actual": "Authored ID found in OmniJev requests and probabilities; visible live probability bars; mixed bank advanced to v19; pure run stopped at 189.8s; source and JPEG hashes match; idle endpoint ready",
+  "evidence_root": "D:\\Development\\jev\\omnijev-sim\\results\\reflex_runtime_ui_release_20261013",
+  "evidence": [
+    {
+      "path": "before.png",
+      "sha256": "760a95b6806e50680ebd4bd045d18da542b3154d73b3a746f78e39f196e1e9dc",
+      "size_bytes": 100340
+    },
+    {
+      "path": "invalid_condition.png",
+      "sha256": "f577bdd9ce8679d1f9814fd896a63b8236a86b9ae5db3bf3730e7b12abf0342f",
+      "size_bytes": 176837
+    },
+    {
+      "path": "after_bank.png",
+      "sha256": "70a6faaf10fadcf8f1ec9f27595c4e59c065be126d9452f6160934a93636ebbe",
+      "size_bytes": 196505
+    },
+    {
+      "path": "readback.json",
+      "sha256": "f82bef4cb1a8072364154e4a2c7aae49611bcb62b9c33b032bc26c358cdf4c4e",
+      "size_bytes": 652
+    },
+    {
+      "path": "manifest.json",
+      "sha256": "6f91dfb920ad82a2abcc7903465814d287d9d8cba843931ad6da843abb96985a",
+      "size_bytes": 1069
+    },
+    {
+      "path": "source_verification.json",
+      "sha256": "1adf8eb359254439a0233e9f4ade7f9763268132c3e372412aef8fd626d37eea",
+      "size_bytes": 269
+    },
+    {
+      "path": "state_ready.json",
+      "sha256": "415fb949f6e71c843398315e9bd07d184e912a07f66baebe75a51c617f983115",
+      "size_bytes": 87
+    },
+    {
+      "path": "reflex_runtime_tests_release.log",
+      "sha256": "faec7badc3fc4619d4d96c43ebf1e3ca09bc019463d9c18c3021c28adf178a0d",
+      "size_bytes": 3098
+    }
+  ],
+  "direct_test": {
+    "command": "Real IAB UI journey; persisted API/bank readback; PANDA_ASSET_ROOT=/opt/LIBERO/resources/panda python -m unittest discover -s tests -p test_reflex*.py -v",
+    "result": "PASS"
+  },
+  "adjacent_result": "PASS",
+  "persistence_result": "PASS",
+  "unverified_boundary": "Probability validity, general reflex correctness, all-life realism, biological equivalence and real-robot safety are not established by this UI check; experiment failures are reported separately.",
+  "hard_fail_candidates": []
+}

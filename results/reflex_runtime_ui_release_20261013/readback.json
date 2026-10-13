@@ -1,0 +1,28 @@
+{
+  "checks": "actual model question includes authored condition; probability display; pure-mode operator stop; source and input hashes",
+  "sessions": [
+    {
+      "mode": "vlm_omni",
+      "sim_seconds": 300.0000000007091,
+      "bank_versions": 19,
+      "memory_entries": 128,
+      "accepted_results": 303,
+      "events": [
+        "reflex",
+        "hand",
+        "occlusion",
+        "slider"
+      ]
+    },
+    {
+      "mode": "omni",
+      "sim_seconds": 189.80000000018293,
+      "bank_versions": 0,
+      "memory_entries": 128,
+      "accepted_results": 240,
+      "events": [
+        "stop"
+      ]
+    }
+  ]
+}

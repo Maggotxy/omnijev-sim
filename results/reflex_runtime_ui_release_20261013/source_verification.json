@@ -1,0 +1,8 @@
+{
+  "assets_verified": 67,
+  "release_source_verified": true,
+  "experiment_source_snapshot_verified": true,
+  "release_difference": {
+    "run.py": "Post-episode scorer excludes future scheduled events; sensor, model, physics and motor behavior unchanged"
+  }
+}

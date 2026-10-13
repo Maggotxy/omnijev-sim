@@ -1,0 +1,4 @@
+scenario,seed,omni_final_goal_reached,omni_final_goal_distance_m,omni_peak_human_contact_N,omni_peak_object_contact_N,omni_human_contact_impulse_Ns,omni_object_contact_impulse_Ns,omni_watchdog_ticks,omni_control_steps,omni_matched_events,omni_events,vlm_omni_final_goal_reached,vlm_omni_final_goal_distance_m,vlm_omni_peak_human_contact_N,vlm_omni_peak_object_contact_N,vlm_omni_human_contact_impulse_Ns,vlm_omni_object_contact_impulse_Ns,vlm_omni_watchdog_ticks,vlm_omni_control_steps,vlm_omni_matched_events,vlm_omni_events
+combined,31,False,0.12928971476703963,31.827057358979786,0,12.588363671593322,0.0,339,600,0,4,False,0.05801595140403966,28.69269392864204,0,10.337508237517103,0.0,382,600,0,4
+quiet,31,False,0.036491398879596994,0,0,0.0,0.0,412,600,0,0,False,0.02726490581155064,0,0,0.0,0.0,354,600,0,0
+target,31,False,0.12833901632553546,0,0,0.0,0.0,353,600,0,1,False,0.049152503411962076,0,0,0.0,0.0,372,600,0,1

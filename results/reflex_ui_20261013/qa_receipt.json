@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "kind": "compact-product-qa",
+  "formal_run": false,
+  "release_readiness": "UNASSESSED",
+  "created_at": "2026-10-13T15:20:44.391170+08:00",
+  "profile": "targeted-regression",
+  "result": "PASS",
+  "target": "http://127.0.0.1:8790 / bxj continuous reflex",
+  "environment": "MuJoCo 2.3.7, Python 3.10.22, OSMesa; browser IAB through SSH loopback",
+  "source_identity": "reflex_source archive SHA256 393568ce5ced89768c5b658b521c827b22c98648ad717c0e191b391801a14d9d",
+  "authorization_boundary": "User requested actual continuous reflex simulation and completion; synthetic physics and existing authorized OmniJev endpoint only",
+  "action": "Browser Start, hand, disable, reset, enable, target, occlusion, slider, random, Stop; reload and read saved physics logs",
+  "input": "not_applicable",
+  "expected": "Buttons alter live physical loop; disabling applies nominal motor plan; reset invalidates old model replies; Stop persists logs; unknown command rejected",
+  "actual": "104.05 simulated seconds at RTF 0.9999988; 22 operator/environment events; 365 disabled ticks all continue and target reached; saved result read back after reload; unknown fly command HTTP 400",
+  "evidence_root": "D:\\Development\\jev\\omnijev-sim\\results\\reflex_ui_20261013",
+  "evidence": [
+    {
+      "path": "interactive_events.jsonl",
+      "sha256": "f63cd2382029f4bf5d1a13c43eb1410ea46f90c549bb060e5a86b7eb9235a701",
+      "size_bytes": 2833
+    },
+    {
+      "path": "states.jsonl",
+      "sha256": "99a9ecd055f0b0ff86941bb4936b1b5e21e93a70731f190d715aa76bb00494de",
+      "size_bytes": 1629490
+    },
+    {
+      "path": "applications.jsonl",
+      "sha256": "0e7ba424b8b41bf790f357a6c9cb0818c7be8529503065832a7773e5fd5b7f02",
+      "size_bytes": 516869
+    },
+    {
+      "path": "state_finished.json",
+      "sha256": "33d72338560656087151ca7355352759d86985329677f2ffe7837fa326210af1",
+      "size_bytes": 713
+    },
+    {
+      "path": "invalid_command_status.txt",
+      "sha256": "51d3b054aee5b9fd2b8e3f8cbcce6df1abc2a74f0f2c6b261ab4d6db6f69a47c",
+      "size_bytes": 5
+    },
+    {
+      "path": "live_frame.jpg",
+      "sha256": "5ce638afda6156b435d3af22152111401dcbbf23177393a1b1676f7953b4b515",
+      "size_bytes": 57199
+    },
+    {
+      "path": "result.json",
+      "sha256": "157e7a315d169bde2bd1fc21868f5d5e4403ddf9533efe0cbb0fd5bbf843f754",
+      "size_bytes": 62199
+    }
+  ],
+  "direct_test": {
+    "command": "11 real-MuJoCo unit/integration tests plus persisted UI journey assertions",
+    "result": "PASS"
+  },
+  "adjacent_result": "PASS",
+  "persistence_result": "PASS",
+  "unverified_boundary": "Proves the tested controls and physical persistence; current cloud model made false retreats and has no established general reflex capability. No real robot or human safety certification.",
+  "hard_fail_candidates": []
+}

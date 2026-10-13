@@ -1,0 +1,25 @@
+{
+  "status": "finished",
+  "world_s": 103.99999999993669,
+  "wall_s": 104.00013342872262,
+  "action": "retreat",
+  "model_enabled": true,
+  "observation_age_s": 0.794,
+  "camera_age_s": 0.04349723644554615,
+  "human_contact_N": 0.0,
+  "object_contact_N": 0.0,
+  "human_contact_peak_N": 0.0,
+  "object_contact_peak_N": 0.0,
+  "human_contact_impulse_Ns": 0.0,
+  "object_contact_impulse_Ns": 0.0,
+  "goal_distance_m": 0.07147876085560817,
+  "goal_reached": false,
+  "eef_position_m": [
+    0.5506606188918184,
+    0.28985035888359356,
+    0.5511609015379964
+  ],
+  "auto": true,
+  "saved_path": "out/reflex_interactive_20261013/session_1791875770388893712",
+  "final_goal_reached": false
+}

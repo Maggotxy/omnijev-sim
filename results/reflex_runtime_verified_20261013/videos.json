@@ -1,0 +1,62 @@
+[
+  {
+    "scenario": "combined",
+    "seed": 313,
+    "video": "comparison_combined_seed313.mp4",
+    "frames": 801,
+    "fps": 20,
+    "width": 1920,
+    "height": 800,
+    "duration_s": 40.05
+  },
+  {
+    "scenario": "combined",
+    "seed": 337,
+    "video": "comparison_combined_seed337.mp4",
+    "frames": 801,
+    "fps": 20,
+    "width": 1920,
+    "height": 800,
+    "duration_s": 40.05
+  },
+  {
+    "scenario": "hand",
+    "seed": 313,
+    "video": "comparison_hand_seed313.mp4",
+    "frames": 801,
+    "fps": 20,
+    "width": 1920,
+    "height": 800,
+    "duration_s": 40.05
+  },
+  {
+    "scenario": "hand",
+    "seed": 337,
+    "video": "comparison_hand_seed337.mp4",
+    "frames": 801,
+    "fps": 20,
+    "width": 1920,
+    "height": 800,
+    "duration_s": 40.05
+  },
+  {
+    "scenario": "quiet",
+    "seed": 313,
+    "video": "comparison_quiet_seed313.mp4",
+    "frames": 801,
+    "fps": 20,
+    "width": 1920,
+    "height": 800,
+    "duration_s": 40.05
+  },
+  {
+    "scenario": "quiet",
+    "seed": 337,
+    "video": "comparison_quiet_seed337.mp4",
+    "frames": 801,
+    "fps": 20,
+    "width": 1920,
+    "height": 800,
+    "duration_s": 40.05
+  }
+]

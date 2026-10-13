@@ -1,3 +1,8 @@
 # Preserve executed benchmark source bytes across Windows/Linux checkouts.
 jev_benchmark/*.py text eol=lf
 tests/*.py text eol=lf
+jev_reflex/*.py -text
+# Evidence and executed source snapshots retain exact bytes for recorded hashes.
+results/** -text
+scripts/*.py -text
+resources/panda/** -text

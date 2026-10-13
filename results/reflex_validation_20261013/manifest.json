@@ -1,0 +1,39 @@
+{
+  "source_sha256": {
+    "__init__.py": "96f68cb4dfa24854834eddd3b27b7982f6bcef9884e41d8f373b3004a21cb770",
+    "render.py": "75e666b03a0330c91efbc479ede1b2f1cfb94686c4f984b8d0230f1f4ea19e12",
+    "world.py": "bc590d007c46d757be5c1080c4afe7336b16acc6a3cf0d88a0518e50a75bc704",
+    "scenario.py": "a35e7bd176bc4f7033b4ce21198c38082ab0941d7dbc9de472a38b6e3814c9e2",
+    "run.py": "292a44a71b1bff999af5ae0b81ea8fb09e419d4dee94d4e34beba8305bd33257",
+    "policy.py": "0f112c1cfda1781a64f1995624372fb54a74ab389137768e11b4fcea2b22e664",
+    "compose.py": "b01cb4a52ac10124ba2c1ee70a3a80a915941073cd12e4b3d213a0179c27812a",
+    "live.py": "d4c4d557af225a7fb6ce923d7ae2c57fb9b106a97d891a357aa8b892f397bdd9"
+  },
+  "panda_xml_sha256": "397385372e1fb8d71832335fbece562ea51a46cd93e9a18076bc1d866654b5b3",
+  "arguments": {
+    "out": "out/reflex_validation_20261013",
+    "asset_root": "/opt/LIBERO/resources/panda",
+    "scenarios": [
+      "quiet",
+      "hand",
+      "slider",
+      "target",
+      "occlusion",
+      "combined"
+    ],
+    "seeds": [
+      73,
+      97
+    ],
+    "modes": [
+      "baseline",
+      "reflex"
+    ],
+    "seconds": 20.0,
+    "image_size": 320,
+    "render_hz": 8,
+    "api_timeout": 2,
+    "max_observation_age": 1.2,
+    "command_ttl": 1.4
+  }
+}

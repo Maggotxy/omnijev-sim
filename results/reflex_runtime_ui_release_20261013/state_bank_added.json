@@ -1,0 +1,94 @@
+{
+  "status": "running",
+  "world_s": 109.19999999992457,
+  "wall_s": 109.20011337846518,
+  "action": "watchdog_hold",
+  "model_enabled": true,
+  "observation_age_s": 1.433,
+  "camera_age_s": 0.0338969100266695,
+  "group": "vlm_omni",
+  "brain_status": "reach_target @ 106.4s",
+  "bank_version": 5,
+  "bank": {
+    "version": 5,
+    "reflexes": [
+      {
+        "id": "continue",
+        "action": "continue",
+        "threshold": 0.6,
+        "condition": "The camera view shows the green target pad clearly and the robot gripper can safely continue its planned reach."
+      },
+      {
+        "id": "brake",
+        "action": "brake",
+        "threshold": 0.68,
+        "condition": "The camera workspace is obscured, the green pad is invisible, or physical touch force exceeds 8 N during this open-gripper reach."
+      },
+      {
+        "id": "retreat",
+        "action": "retreat",
+        "threshold": 0.7,
+        "condition": "A separate human skin-colored hand or arm is directly adjacent to or moving toward the robot gripper."
+      },
+      {
+        "id": "lift",
+        "action": "lift",
+        "threshold": 0.75,
+        "condition": "A solid yellow object blocks the robot gripper's immediate reach from below and lifting can avoid it."
+      },
+      {
+        "id": "left",
+        "action": "left",
+        "threshold": 0.65,
+        "condition": "The green or turquoise circular target pad is visibly to image-left of the blue outlined planned landing point."
+      },
+      {
+        "id": "right",
+        "action": "right",
+        "threshold": 0.65,
+        "condition": "The green or turquoise circular target pad is visibly to image-right of the blue outlined planned landing point."
+      },
+      {
+        "id": "custom_1791887794177",
+        "condition": "A separate human hand is very close to the robot gripper.",
+        "threshold": 0.75,
+        "action": "retreat"
+      }
+    ],
+    "arbitration_confidence": 0.12,
+    "score_levels": [
+      "clear and safe",
+      "minor concern",
+      "danger of collision",
+      "immediate emergency"
+    ]
+  },
+  "memory_entries": 120,
+  "reflex_candidate": "continue",
+  "reflex_gate": false,
+  "condition_probabilities": {
+    "continue": 0.0797,
+    "brake": 0.2964,
+    "retreat": 0.3436,
+    "lift": 0.2437,
+    "left": 0.1928,
+    "right": 0.258,
+    "custom_1791887794177": 0.3089
+  },
+  "danger_score": 0.2700063327000633,
+  "human_contact_N": 0.0,
+  "object_contact_N": 0.0,
+  "human_contact_peak_N": 0.0,
+  "object_contact_peak_N": 0.0,
+  "human_contact_impulse_Ns": 0.0,
+  "object_contact_impulse_Ns": 0.0,
+  "goal_distance_m": 0.008811823854049071,
+  "goal_reached": false,
+  "eef_position_m": [
+    0.6027083625644574,
+    0.07592676343241743,
+    0.44004631808713224
+  ],
+  "auto": false,
+  "selected_group": "vlm_omni"
+}
