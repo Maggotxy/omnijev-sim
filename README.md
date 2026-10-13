@@ -1,6 +1,6 @@
 # OmniJev Closed-Loop Robot Simulation
 
-云端模型参与任务规划与动作放行，经典控制器驱动 MuJoCo / LIBERO 中的 Franka Panda 机械臂。项目包含历史抓放演示，以及 Gemini Robotics ER 2 / R2 + OmniJev / OmniJev 三组受控实验。
+云端模型参与任务规划与动作放行，经典控制器驱动 MuJoCo / LIBERO 中的 Franka Panda 机械臂。项目包含历史抓放演示，以及 Gemini 2.5 Flash / Gemini + OmniJev / OmniJev 三组受控实验。
 
 > **Unofficial research demo.** 模型读取当前仿真画面，输出选择或概率；运动由经典技能执行。实验使用仿真物体位姿与抓取验证辅助，视频按仿真时间播放。真实耗时与 API 延迟单独记录。
 
@@ -8,13 +8,15 @@
 
 | 组别 | 规划 | 动作阶段放行 |
 |---|---|---|
-| Gemini R2 | R2 | R2 |
-| R2 + OmniJev | R2 | OmniJev |
+| Gemini 2.5 Flash | Gemini 2.5 Flash | Gemini 2.5 Flash |
+| Gemini + OmniJev | Gemini 2.5 Flash | OmniJev |
 | OmniJev | OmniJev | OmniJev |
 
 三组共享官方初始状态、仿真感知辅助和 20 Hz OSC 技能。模型返回 wait 时保持姿态；初始状态指纹、模型响应、逐步动作和官方成功判定均保存。运行方式、接口状态和实验限制见 [comparison.md](docs/comparison.md)。
 
-2026-10-13：提供的中转端点对 R2 返回 HTTP 404，完整三组实测仍待可用 R2 接口。不可用组别标记为 `unavailable`，不计入成功率。
+模型由环境变量明确指定，并记录实际服务端模型名。当前实验使用已验证可用的 `gemini-2.5-flash`。
+
+2026-10-13 实测：同一布局下两个 seed，Gemini + OmniJev 完成 **2/2** 个 episode，Gemini 单独组与 OmniJev 单独组均为 **0/2**。这是使用仿真位姿辅助的小样本结果。查看 [完整结果报告](docs/results-20261013.md)、[seed 1 三栏视频](results/comparison_gemini25_20261013/comparison_seed1.mp4) 和 [seed 7 三栏视频](results/comparison_gemini25_20261013/comparison_seed7.mp4)。
 
 ## 亮点 | Highlights
 

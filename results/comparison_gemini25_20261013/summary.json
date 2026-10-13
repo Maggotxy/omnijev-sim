@@ -1,0 +1,294 @@
+[
+  {
+    "mode": "gemini",
+    "seed": 1,
+    "init_index": 0,
+    "task_name": "LIVING_ROOM_SCENE2_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket",
+    "task": "put both the alphabet soup and the tomato sauce in the basket",
+    "status": "plan_budget",
+    "success": false,
+    "model_done": false,
+    "error": null,
+    "initial_state_sha256": "747b653b2ca1feeae8f3bd994880ce743730993ea5ce4bd003623e877f26b3bd",
+    "settled_state_sha256": "e2aec41d9990d94f3e48cf60d411e36f052128a014c6ba48290a1067f9d551ff",
+    "final_state_sha256": "1e04c5718f4202c04644b668ae4fcc2fcd24748c6b228801f3550ceb7a50d31f",
+    "sim_seconds": 22.9,
+    "wall_seconds": 166.042,
+    "control_steps": 458,
+    "api_calls": 18,
+    "api_seconds": 104.095,
+    "api_errors": 0,
+    "gate_counts": {
+      "proceed": 10,
+      "wait": 0,
+      "replan": 4
+    },
+    "grasp_failures": 0,
+    "completed": [],
+    "planner": "gemini-2.5-flash",
+    "reflex": "gemini-2.5-flash",
+    "assistance": [
+      "simulator object labels and poses",
+      "object height grasp verification",
+      "placement sensor",
+      "official success evaluator"
+    ],
+    "controller": {
+      "hz": 20,
+      "gain": 9,
+      "speed_clip": 0.7,
+      "grasp_z": 0.48,
+      "release_z": 0.59
+    },
+    "limits": {
+      "plans": 4,
+      "gate_waits": 4,
+      "steps": 2400
+    }
+  },
+  {
+    "mode": "gemini_omni",
+    "seed": 1,
+    "init_index": 0,
+    "task_name": "LIVING_ROOM_SCENE2_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket",
+    "task": "put both the alphabet soup and the tomato sauce in the basket",
+    "status": "success",
+    "success": true,
+    "model_done": false,
+    "error": null,
+    "initial_state_sha256": "747b653b2ca1feeae8f3bd994880ce743730993ea5ce4bd003623e877f26b3bd",
+    "settled_state_sha256": "e2aec41d9990d94f3e48cf60d411e36f052128a014c6ba48290a1067f9d551ff",
+    "final_state_sha256": "ea9d88ca10269c568ef77b1f5c80cecf18a106265fac77f12303f0fafa4f337f",
+    "sim_seconds": 24.2,
+    "wall_seconds": 94.024,
+    "control_steps": 484,
+    "api_calls": 16,
+    "api_seconds": 25.921,
+    "api_errors": 0,
+    "gate_counts": {
+      "proceed": 14,
+      "wait": 0,
+      "replan": 0
+    },
+    "grasp_failures": 0,
+    "completed": [
+      "tomato sauce",
+      "alphabet soup"
+    ],
+    "planner": "gemini-2.5-flash",
+    "reflex": "omnijev-0.8b-kk",
+    "assistance": [
+      "simulator object labels and poses",
+      "object height grasp verification",
+      "placement sensor",
+      "official success evaluator"
+    ],
+    "controller": {
+      "hz": 20,
+      "gain": 9,
+      "speed_clip": 0.7,
+      "grasp_z": 0.48,
+      "release_z": 0.59
+    },
+    "limits": {
+      "plans": 4,
+      "gate_waits": 4,
+      "steps": 2400
+    }
+  },
+  {
+    "mode": "omni",
+    "seed": 1,
+    "init_index": 0,
+    "task_name": "LIVING_ROOM_SCENE2_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket",
+    "task": "put both the alphabet soup and the tomato sauce in the basket",
+    "status": "stopped",
+    "success": false,
+    "model_done": false,
+    "error": "servo_timeout",
+    "initial_state_sha256": "747b653b2ca1feeae8f3bd994880ce743730993ea5ce4bd003623e877f26b3bd",
+    "settled_state_sha256": "e2aec41d9990d94f3e48cf60d411e36f052128a014c6ba48290a1067f9d551ff",
+    "final_state_sha256": "ac315d54c552cbe71ffd60f747118bbc613ca9b7254447b0c5dbf2d9fd54b553",
+    "sim_seconds": 20.3,
+    "wall_seconds": 62.0,
+    "control_steps": 406,
+    "api_calls": 13,
+    "api_seconds": 4.993,
+    "api_errors": 0,
+    "gate_counts": {
+      "proceed": 9,
+      "wait": 0,
+      "replan": 0
+    },
+    "grasp_failures": 0,
+    "completed": [
+      "tomato sauce"
+    ],
+    "planner": "omnijev-0.8b-kk",
+    "reflex": "omnijev-0.8b-kk",
+    "assistance": [
+      "simulator object labels and poses",
+      "object height grasp verification",
+      "placement sensor",
+      "official success evaluator"
+    ],
+    "controller": {
+      "hz": 20,
+      "gain": 9,
+      "speed_clip": 0.7,
+      "grasp_z": 0.48,
+      "release_z": 0.59
+    },
+    "limits": {
+      "plans": 4,
+      "gate_waits": 4,
+      "steps": 2400
+    }
+  },
+  {
+    "mode": "gemini",
+    "seed": 7,
+    "init_index": 0,
+    "task_name": "LIVING_ROOM_SCENE2_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket",
+    "task": "put both the alphabet soup and the tomato sauce in the basket",
+    "status": "plan_budget",
+    "success": false,
+    "model_done": false,
+    "error": null,
+    "initial_state_sha256": "747b653b2ca1feeae8f3bd994880ce743730993ea5ce4bd003623e877f26b3bd",
+    "settled_state_sha256": "3c65da4a71ec161112a427f68f741b29e12bd39e7f82a73460e59917669c0332",
+    "final_state_sha256": "49f7cd25ff1a12ac4e84673542a7fee9bfad68b9b112efc78b92d1455758d8fc",
+    "sim_seconds": 20.7,
+    "wall_seconds": 145.612,
+    "control_steps": 414,
+    "api_calls": 18,
+    "api_seconds": 88.817,
+    "api_errors": 0,
+    "gate_counts": {
+      "proceed": 10,
+      "wait": 0,
+      "replan": 4
+    },
+    "grasp_failures": 0,
+    "completed": [],
+    "planner": "gemini-2.5-flash",
+    "reflex": "gemini-2.5-flash",
+    "assistance": [
+      "simulator object labels and poses",
+      "object height grasp verification",
+      "placement sensor",
+      "official success evaluator"
+    ],
+    "controller": {
+      "hz": 20,
+      "gain": 9,
+      "speed_clip": 0.7,
+      "grasp_z": 0.48,
+      "release_z": 0.59
+    },
+    "limits": {
+      "plans": 4,
+      "gate_waits": 4,
+      "steps": 2400
+    }
+  },
+  {
+    "mode": "gemini_omni",
+    "seed": 7,
+    "init_index": 0,
+    "task_name": "LIVING_ROOM_SCENE2_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket",
+    "task": "put both the alphabet soup and the tomato sauce in the basket",
+    "status": "success",
+    "success": true,
+    "model_done": false,
+    "error": null,
+    "initial_state_sha256": "747b653b2ca1feeae8f3bd994880ce743730993ea5ce4bd003623e877f26b3bd",
+    "settled_state_sha256": "3c65da4a71ec161112a427f68f741b29e12bd39e7f82a73460e59917669c0332",
+    "final_state_sha256": "2364c0a1c71f2f25658704fc03c4d48f343d6712d7a4f6eebcf928dd558b212f",
+    "sim_seconds": 24.2,
+    "wall_seconds": 90.455,
+    "control_steps": 484,
+    "api_calls": 16,
+    "api_seconds": 24.103,
+    "api_errors": 0,
+    "gate_counts": {
+      "proceed": 14,
+      "wait": 0,
+      "replan": 0
+    },
+    "grasp_failures": 0,
+    "completed": [
+      "tomato sauce",
+      "alphabet soup"
+    ],
+    "planner": "gemini-2.5-flash",
+    "reflex": "omnijev-0.8b-kk",
+    "assistance": [
+      "simulator object labels and poses",
+      "object height grasp verification",
+      "placement sensor",
+      "official success evaluator"
+    ],
+    "controller": {
+      "hz": 20,
+      "gain": 9,
+      "speed_clip": 0.7,
+      "grasp_z": 0.48,
+      "release_z": 0.59
+    },
+    "limits": {
+      "plans": 4,
+      "gate_waits": 4,
+      "steps": 2400
+    }
+  },
+  {
+    "mode": "omni",
+    "seed": 7,
+    "init_index": 0,
+    "task_name": "LIVING_ROOM_SCENE2_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket",
+    "task": "put both the alphabet soup and the tomato sauce in the basket",
+    "status": "stopped",
+    "success": false,
+    "model_done": false,
+    "error": "servo_timeout",
+    "initial_state_sha256": "747b653b2ca1feeae8f3bd994880ce743730993ea5ce4bd003623e877f26b3bd",
+    "settled_state_sha256": "3c65da4a71ec161112a427f68f741b29e12bd39e7f82a73460e59917669c0332",
+    "final_state_sha256": "d54908db4ae5f8583953e157a7ba37faea68d5837dc95fe0f723545123eabea1",
+    "sim_seconds": 20.3,
+    "wall_seconds": 60.41,
+    "control_steps": 406,
+    "api_calls": 13,
+    "api_seconds": 5.006,
+    "api_errors": 0,
+    "gate_counts": {
+      "proceed": 9,
+      "wait": 0,
+      "replan": 0
+    },
+    "grasp_failures": 0,
+    "completed": [
+      "tomato sauce"
+    ],
+    "planner": "omnijev-0.8b-kk",
+    "reflex": "omnijev-0.8b-kk",
+    "assistance": [
+      "simulator object labels and poses",
+      "object height grasp verification",
+      "placement sensor",
+      "official success evaluator"
+    ],
+    "controller": {
+      "hz": 20,
+      "gain": 9,
+      "speed_clip": 0.7,
+      "grasp_z": 0.48,
+      "release_z": 0.59
+    },
+    "limits": {
+      "plans": 4,
+      "gate_waits": 4,
+      "steps": 2400
+    }
+  }
+]

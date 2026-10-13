@@ -1,0 +1,20 @@
+[
+  {
+    "seed": 1,
+    "complete_comparison": true,
+    "video": "comparison_seed1.mp4",
+    "frames": 524,
+    "width": 1536,
+    "height": 816,
+    "fps": 20
+  },
+  {
+    "seed": 7,
+    "complete_comparison": true,
+    "video": "comparison_seed7.mp4",
+    "frames": 524,
+    "width": 1536,
+    "height": 816,
+    "fps": 20
+  }
+]

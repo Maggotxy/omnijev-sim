@@ -1,0 +1,3 @@
+# Preserve executed benchmark source bytes across Windows/Linux checkouts.
+jev_benchmark/*.py text eol=lf
+tests/*.py text eol=lf

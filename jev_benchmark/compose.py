@@ -7,7 +7,7 @@ import imageio.v2 as imageio
 import numpy as np
 from PIL import Image, ImageDraw, ImageEnhance
 
-from .run_suite import MODES, TITLES, IMG, FPS, font
+from .run_suite import MODES, IMG, FPS, font, title
 
 
 def verify_pairing(results):
@@ -29,11 +29,11 @@ def unavailable(mode, result, initial):
     if initial is not None:
         canvas.paste(ImageEnhance.Brightness(Image.fromarray(initial)).enhance(0.25), (0, 64))
     d = ImageDraw.Draw(canvas)
-    d.text((16, 14), TITLES[mode], fill=(200, 210, 225), font=font(25))
+    d.text((16, 14), title(mode, result.get("planner")), fill=(200, 210, 225), font=font(22))
     d.rectangle((24, 210, 488, 370), fill=(21, 28, 42), outline=(110, 120, 140), width=2)
     d.text((45, 236), "NOT RUN", fill=(255, 197, 114), font=font(32))
     d.text((45, 290), result["status"], fill=(230, 233, 241), font=font(20))
-    code = "HTTP 404: R2 model unavailable" if "HTTP 404" in result.get("error", "") else "See result.json for the API error"
+    code = "HTTP 404: model unavailable" if "HTTP 404" in result.get("error", "") else "See result.json for the API error"
     d.text((32, 606), code, fill=(230, 233, 241), font=font(19))
     d.text((32, 644), "No episode / no success-rate sample", fill=(160, 172, 190), font=font(18))
     return np.asarray(canvas)
@@ -63,7 +63,7 @@ def compose(root, seed):
                 canvas = Image.new("RGB", (IMG * 3, 816), (9, 14, 23))
                 d = ImageDraw.Draw(canvas)
                 d.text((22, 8), "LIBERO-10 | Two objects into basket | Shared perception + control", fill=(238, 243, 251), font=font(25))
-                status = "Paired comparison" if complete else "PARTIAL EVIDENCE: R2 access required for the full comparison"
+                status = "Paired comparison" if complete else "PARTIAL EVIDENCE: some models could not run"
                 d.text((22, 45), f"{status} | seed {seed} | simulation-time playback at 1x", fill=(170, 185, 207), font=font(18))
                 for col, mode in enumerate(MODES):
                     if mode in readers and index < counts[mode]:

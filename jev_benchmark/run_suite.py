@@ -19,9 +19,9 @@ from PIL import Image, ImageDraw, ImageFont
 
 from .clients import Gemini, Omni, redact
 
-MODES = ("r2", "r2_omni", "omni")
-TITLES = {"r2": "Gemini R2", "r2_omni": "R2 + OmniJev reflex", "omni": "OmniJev"}
-POLICIES = {"r2": ("gemini", "gemini"), "r2_omni": ("gemini", "omni"), "omni": ("omni", "omni")}
+MODES = ("gemini", "gemini_omni", "omni")
+TITLES = {"gemini": "Gemini", "gemini_omni": "Gemini + OmniJev", "omni": "OmniJev"}
+POLICIES = {"gemini": ("gemini", "gemini"), "gemini_omni": ("gemini", "omni"), "omni": ("omni", "omni")}
 IMG, FPS = 512, 20
 FONT_PATH = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
 
@@ -37,12 +37,21 @@ def sha(value):
     return hashlib.sha256(np.asarray(value, dtype="<f8").tobytes()).hexdigest()
 
 
-def panel(frame, mode, phase, target, sim_s, calls, decision, success=None):
+def title(mode, planner_model=None):
+    if mode == "omni":
+        return TITLES[mode]
+    names = {"gemini-2.5-flash": "Gemini 2.5 Flash", "gemini-robotics-er-2-preview": "Gemini Robotics ER2"}
+    name = names.get(planner_model, planner_model or "Gemini")
+    return name if mode == "gemini" else name + " + OmniJev"
+
+
+def panel(frame, mode, phase, target, sim_s, calls, decision, success=None, planner_model=None):
     canvas = Image.new("RGB", (IMG, 736), (15, 20, 30))
     canvas.paste(Image.fromarray(frame), (0, 64))
     draw = ImageDraw.Draw(canvas)
-    color = {"r2": (122, 182, 255), "r2_omni": (135, 223, 180), "omni": (250, 195, 108)}[mode]
-    draw.text((16, 10), TITLES[mode], fill=color, font=font(25))
+    color = {"gemini": (122, 182, 255), "gemini_omni": (135, 223, 180), "omni": (250, 195, 108)}[mode]
+    heading = title(mode, planner_model)
+    draw.text((16, 10), heading, fill=color, font=font(22 if len(heading) > 23 else 25))
     draw.text((16, 43), "Shared simulator poses + OSC skills | 20 Hz", fill=(180, 190, 202), font=font(14))
     rows = [f"Phase: {phase}", f"Target: {target}",
             f"Sim {sim_s:.2f}s | API calls {calls}", f"Model gate: {decision}"]
@@ -123,7 +132,8 @@ class Episode:
                                        "phase": self.phase, "action": action.tolist(), "eef": self.eef().tolist(),
                                        "official_success": success}) + "\n")
         self.writer.append_data(panel(self.frame(), self.mode, self.phase, self.target,
-                                      float(self.sim.data.time) - self.start_sim, self.calls(), self.decision))
+                                      float(self.sim.data.time) - self.start_sim, self.calls(), self.decision,
+                                      planner_model=self.planner.model))
         if self.steps % 100 == 0:
             print(f"{self.mode} seed={self.seed} steps={self.steps} phase={self.phase}", flush=True)
         if self.steps >= self.args.max_steps:
@@ -239,7 +249,8 @@ class Episode:
         finally:
             success = bool(self.env.check_success())
             final = panel(self.frame(), self.mode, status, self.target,
-                          float(self.sim.data.time) - self.start_sim, self.calls(), self.decision, success)
+                          float(self.sim.data.time) - self.start_sim, self.calls(), self.decision, success,
+                          planner_model=self.planner.model)
             for _ in range(FPS * 2):
                 self.writer.append_data(final)
             Image.fromarray(final).save(self.output / "final.png")
@@ -300,7 +311,8 @@ def main():
             blocked = [key for key in POLICIES[mode] if not availability[key]["available"]]
             if blocked:
                 result = {"mode": mode, "seed": seed, "status": "unavailable", "success": None,
-                          "error": availability[blocked[0]]["error"], "init_index": args.init_index}
+                          "error": availability[blocked[0]]["error"], "init_index": args.init_index,
+                          "planner": clients[POLICIES[mode][0]].model, "reflex": clients[POLICIES[mode][1]].model}
                 (output / "result.json").write_text(json.dumps(result, indent=2))
             else:
                 try:

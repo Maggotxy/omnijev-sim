@@ -84,12 +84,12 @@ class ControlContracts(unittest.TestCase):
         row = {"mode": "omni", "seed": 1, "init_index": 0, "task_name": "test", "limits": {},
                "initial_state_sha256": "one", "settled_state_sha256": "one", "controller": {"hz": 20}}
         with self.assertRaises(ValueError):
-            verify_pairing([row, {**row, "mode": "r2", "initial_state_sha256": "two"}])
-        self.assertFalse(verify_pairing([row, {"mode": "r2", "status": "unavailable"}]))
-        self.assertTrue(verify_pairing([row, {**row, "mode": "r2"}, {**row, "mode": "r2_omni"}]))
+            verify_pairing([row, {**row, "mode": "gemini", "initial_state_sha256": "two"}])
+        self.assertFalse(verify_pairing([row, {"mode": "gemini", "status": "unavailable"}]))
+        self.assertTrue(verify_pairing([row, {**row, "mode": "gemini"}, {**row, "mode": "gemini_omni"}]))
         for change in ({"seed": 7}, {"task_name": "another"}):
             with self.assertRaises(ValueError):
-                verify_pairing([row, {**row, "mode": "r2", **change}])
+                verify_pairing([row, {**row, "mode": "gemini", **change}])
         with self.assertRaises(ValueError):
             verify_pairing([row, row])
         with self.assertRaises(ValueError):
@@ -97,7 +97,7 @@ class ControlContracts(unittest.TestCase):
 
     def test_policy_roles(self):
         from jev_benchmark.run_suite import POLICIES
-        self.assertEqual(POLICIES, {"r2": ("gemini", "gemini"), "r2_omni": ("gemini", "omni"), "omni": ("omni", "omni")})
+        self.assertEqual(POLICIES, {"gemini": ("gemini", "gemini"), "gemini_omni": ("gemini", "omni"), "omni": ("omni", "omni")})
 
 
 if __name__ == "__main__":

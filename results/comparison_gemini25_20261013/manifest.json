@@ -1,0 +1,26 @@
+{
+  "source_sha256": {
+    "__init__.py": "94a1a7cd5eed352d9da740cbb37c35586f49ef3b1436106e1a6ba69e5b43b53b",
+    "check_controller.py": "0a75cf85e50677bf7b5e418213bef7f76b92b490f8219d3ca708bbefe9c63ddd",
+    "run_suite.py": "039c3dae4efd2e7d5157c1df8e05a5dd9f0c1ec40c17950f3d23ddc767ec175b",
+    "clients.py": "ca3cf466626d025b4eeb973099ba4ace035ca98210da8a1e71e12baef830dcb6",
+    "compose.py": "34f98782c768d0fc528759cf8803a72481dedd5d990a6bc47e4153b7c7fa80e3"
+  },
+  "arguments": {
+    "out": "out/comparison_gemini25_20261013",
+    "modes": [
+      "gemini",
+      "gemini_omni",
+      "omni"
+    ],
+    "seeds": [
+      1,
+      7
+    ],
+    "task_idx": 0,
+    "init_index": 0,
+    "max_plans": 4,
+    "max_gate_waits": 4,
+    "max_steps": 2400
+  }
+}

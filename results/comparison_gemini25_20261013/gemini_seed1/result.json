@@ -1,0 +1,47 @@
+{
+  "mode": "gemini",
+  "seed": 1,
+  "init_index": 0,
+  "task_name": "LIVING_ROOM_SCENE2_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket",
+  "task": "put both the alphabet soup and the tomato sauce in the basket",
+  "status": "plan_budget",
+  "success": false,
+  "model_done": false,
+  "error": null,
+  "initial_state_sha256": "747b653b2ca1feeae8f3bd994880ce743730993ea5ce4bd003623e877f26b3bd",
+  "settled_state_sha256": "e2aec41d9990d94f3e48cf60d411e36f052128a014c6ba48290a1067f9d551ff",
+  "final_state_sha256": "1e04c5718f4202c04644b668ae4fcc2fcd24748c6b228801f3550ceb7a50d31f",
+  "sim_seconds": 22.9,
+  "wall_seconds": 166.042,
+  "control_steps": 458,
+  "api_calls": 18,
+  "api_seconds": 104.095,
+  "api_errors": 0,
+  "gate_counts": {
+    "proceed": 10,
+    "wait": 0,
+    "replan": 4
+  },
+  "grasp_failures": 0,
+  "completed": [],
+  "planner": "gemini-2.5-flash",
+  "reflex": "gemini-2.5-flash",
+  "assistance": [
+    "simulator object labels and poses",
+    "object height grasp verification",
+    "placement sensor",
+    "official success evaluator"
+  ],
+  "controller": {
+    "hz": 20,
+    "gain": 9,
+    "speed_clip": 0.7,
+    "grasp_z": 0.48,
+    "release_z": 0.59
+  },
+  "limits": {
+    "plans": 4,
+    "gate_waits": 4,
+    "steps": 2400
+  }
+}

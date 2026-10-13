@@ -97,7 +97,7 @@ class Gemini(Client):
     def __init__(self, trace=None):
         super().__init__(trace)
         self.base = os.environ.get("GEMINI_BASE", "https://generativelanguage.googleapis.com").rstrip("/")
-        self.model = os.environ.get("GEMINI_MODEL", "gemini-robotics-er-2-preview")
+        self.model = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
         self.key = os.environ.get("GEMINI_API_KEY", "")
         self.protocol = os.environ.get("GEMINI_PROTOCOL", "generateContent")
         if "streaming" in self.model:

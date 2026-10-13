@@ -1,0 +1,246 @@
+API Gemini preflight
+API result 200 1.02s
+API Omni preflight
+API result 200 0.08s
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /opt/omnijev-sim/miniconda3/envs/libero/lib/python3.10/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[Warning]: datasets path /opt/LIBERO/libero/libero/../datasets does not exist!
+[Warning]: datasets path /opt/LIBERO/libero/libero/../datasets does not exist!
+API Gemini plan
+API result 200 10.03s
+API Gemini gate
+API result 200 3.12s
+API Gemini gate
+API result 200 4.25s
+API Gemini gate
+API result 200 3.97s
+API Gemini gate
+API result 200 8.92s
+gemini seed=1 steps=100 phase=LIFT
+API Gemini gate
+API result 200 4.06s
+API Gemini plan
+API result 200 5.25s
+API Gemini gate
+API result 200 4.35s
+API Gemini gate
+API result 200 3.73s
+API Gemini gate
+API result 200 10.84s
+gemini seed=1 steps=200 phase=RECOVER
+API Gemini plan
+API result 200 8.20s
+API Gemini gate
+API result 200 9.39s
+API Gemini gate
+API result 200 4.94s
+API Gemini gate
+API result 200 4.71s
+gemini seed=1 steps=300 phase=RECOVER
+API Gemini plan
+API result 200 6.72s
+API Gemini gate
+API result 200 3.10s
+API Gemini gate
+API result 200 4.08s
+gemini seed=1 steps=400 phase=DESCEND
+API Gemini gate
+API result 200 4.44s
+{"mode": "gemini", "seed": 1, "init_index": 0, "task_name": "LIVING_ROOM_SCENE2_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket", "task": "put both the alphabet soup and the tomato sauce in the basket", "status": "plan_budget", "success": false, "model_done": false, "error": null, "initial_state_sha256": "747b653b2ca1feeae8f3bd994880ce743730993ea5ce4bd003623e877f26b3bd", "settled_state_sha256": "e2aec41d9990d94f3e48cf60d411e36f052128a014c6ba48290a1067f9d551ff", "final_state_sha256": "1e04c5718f4202c04644b668ae4fcc2fcd24748c6b228801f3550ceb7a50d31f", "sim_seconds": 22.9, "wall_seconds": 166.042, "control_steps": 458, "api_calls": 18, "api_seconds": 104.095, "api_errors": 0, "gate_counts": {"proceed": 10, "wait": 0, "replan": 4}, "grasp_failures": 0, "completed": [], "planner": "gemini-2.5-flash", "reflex": "gemini-2.5-flash", "assistance": ["simulator object labels and poses", "object height grasp verification", "placement sensor", "official success evaluator"], "controller": {"hz": 20, "gain": 9, "speed_clip": 0.7, "grasp_z": 0.48, "release_z": 0.59}, "limits": {"plans": 4, "gate_waits": 4, "steps": 2400}}
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[Warning]: datasets path /opt/LIBERO/libero/libero/../datasets does not exist!
+[Warning]: datasets path /opt/LIBERO/libero/libero/../datasets does not exist!
+API Gemini plan
+API result 200 10.03s
+API Omni gate
+API result 200 0.95s
+API Omni gate
+API result 200 0.37s
+API Omni gate
+API result 200 0.36s
+API Omni gate
+API result 200 0.63s
+gemini_omni seed=1 steps=100 phase=LIFT
+API Omni gate
+API result 200 0.36s
+API Omni gate
+API result 200 0.66s
+API Omni gate
+API result 200 0.71s
+gemini_omni seed=1 steps=200 phase=RELEASE
+API Gemini plan
+API result 200 9.29s
+API Omni gate
+API result 200 0.36s
+API Omni gate
+API result 200 0.36s
+gemini_omni seed=1 steps=300 phase=DESCEND
+API Omni gate
+API result 200 0.36s
+API Omni gate
+API result 200 0.37s
+API Omni gate
+API result 200 0.36s
+gemini_omni seed=1 steps=400 phase=CARRY
+API Omni gate
+API result 200 0.36s
+API Omni gate
+API result 200 0.36s
+{"mode": "gemini_omni", "seed": 1, "init_index": 0, "task_name": "LIVING_ROOM_SCENE2_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket", "task": "put both the alphabet soup and the tomato sauce in the basket", "status": "success", "success": true, "model_done": false, "error": null, "initial_state_sha256": "747b653b2ca1feeae8f3bd994880ce743730993ea5ce4bd003623e877f26b3bd", "settled_state_sha256": "e2aec41d9990d94f3e48cf60d411e36f052128a014c6ba48290a1067f9d551ff", "final_state_sha256": "ea9d88ca10269c568ef77b1f5c80cecf18a106265fac77f12303f0fafa4f337f", "sim_seconds": 24.2, "wall_seconds": 94.024, "control_steps": 484, "api_calls": 16, "api_seconds": 25.921, "api_errors": 0, "gate_counts": {"proceed": 14, "wait": 0, "replan": 0}, "grasp_failures": 0, "completed": ["tomato sauce", "alphabet soup"], "planner": "gemini-2.5-flash", "reflex": "omnijev-0.8b-kk", "assistance": ["simulator object labels and poses", "object height grasp verification", "placement sensor", "official success evaluator"], "controller": {"hz": 20, "gain": 9, "speed_clip": 0.7, "grasp_z": 0.48, "release_z": 0.59}, "limits": {"plans": 4, "gate_waits": 4, "steps": 2400}}
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[Warning]: datasets path /opt/LIBERO/libero/libero/../datasets does not exist!
+[Warning]: datasets path /opt/LIBERO/libero/libero/../datasets does not exist!
+API Omni plan_target
+API result 200 0.35s
+API Omni plan_object
+API result 200 0.52s
+API Omni gate
+API result 200 0.36s
+API Omni gate
+API result 200 0.37s
+API Omni gate
+API result 200 0.36s
+API Omni gate
+API result 200 0.36s
+omni seed=1 steps=100 phase=LIFT
+API Omni gate
+API result 200 0.37s
+API Omni gate
+API result 200 0.37s
+API Omni gate
+API result 200 0.35s
+omni seed=1 steps=200 phase=RELEASE
+API Omni plan_target
+API result 200 0.35s
+API Omni plan_object
+API result 200 0.52s
+API Omni gate
+API result 200 0.36s
+API Omni gate
+API result 200 0.35s
+omni seed=1 steps=300 phase=DESCEND
+omni seed=1 steps=400 phase=DESCEND
+{"mode": "omni", "seed": 1, "init_index": 0, "task_name": "LIVING_ROOM_SCENE2_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket", "task": "put both the alphabet soup and the tomato sauce in the basket", "status": "stopped", "success": false, "model_done": false, "error": "servo_timeout", "initial_state_sha256": "747b653b2ca1feeae8f3bd994880ce743730993ea5ce4bd003623e877f26b3bd", "settled_state_sha256": "e2aec41d9990d94f3e48cf60d411e36f052128a014c6ba48290a1067f9d551ff", "final_state_sha256": "ac315d54c552cbe71ffd60f747118bbc613ca9b7254447b0c5dbf2d9fd54b553", "sim_seconds": 20.3, "wall_seconds": 62.0, "control_steps": 406, "api_calls": 13, "api_seconds": 4.993, "api_errors": 0, "gate_counts": {"proceed": 9, "wait": 0, "replan": 0}, "grasp_failures": 0, "completed": ["tomato sauce"], "planner": "omnijev-0.8b-kk", "reflex": "omnijev-0.8b-kk", "assistance": ["simulator object labels and poses", "object height grasp verification", "placement sensor", "official success evaluator"], "controller": {"hz": 20, "gain": 9, "speed_clip": 0.7, "grasp_z": 0.48, "release_z": 0.59}, "limits": {"plans": 4, "gate_waits": 4, "steps": 2400}}
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[Warning]: datasets path /opt/LIBERO/libero/libero/../datasets does not exist!
+[Warning]: datasets path /opt/LIBERO/libero/libero/../datasets does not exist!
+API Gemini plan
+API result 200 6.16s
+API Gemini gate
+API result 200 3.25s
+API Gemini gate
+API result 200 4.45s
+API Gemini gate
+API result 200 4.60s
+gemini seed=7 steps=100 phase=RECOVER
+API Gemini plan
+API result 200 4.09s
+API Gemini gate
+API result 200 5.03s
+API Gemini gate
+API result 200 5.68s
+API Gemini gate
+API result 200 7.03s
+gemini seed=7 steps=200 phase=RECOVER
+API Gemini plan
+API result 200 4.76s
+API Gemini gate
+API result 200 3.53s
+API Gemini gate
+API result 200 2.85s
+API Gemini gate
+API result 200 8.57s
+API Gemini plan
+API result 200 8.14s
+API Gemini gate
+API result 200 5.58s
+gemini seed=7 steps=300 phase=APPROACH
+API Gemini gate
+API result 200 3.32s
+API Gemini gate
+API result 200 3.42s
+API Gemini gate
+API result 200 3.34s
+API Gemini gate
+API result 200 5.04s
+gemini seed=7 steps=400 phase=RECOVER
+{"mode": "gemini", "seed": 7, "init_index": 0, "task_name": "LIVING_ROOM_SCENE2_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket", "task": "put both the alphabet soup and the tomato sauce in the basket", "status": "plan_budget", "success": false, "model_done": false, "error": null, "initial_state_sha256": "747b653b2ca1feeae8f3bd994880ce743730993ea5ce4bd003623e877f26b3bd", "settled_state_sha256": "3c65da4a71ec161112a427f68f741b29e12bd39e7f82a73460e59917669c0332", "final_state_sha256": "49f7cd25ff1a12ac4e84673542a7fee9bfad68b9b112efc78b92d1455758d8fc", "sim_seconds": 20.7, "wall_seconds": 145.612, "control_steps": 414, "api_calls": 18, "api_seconds": 88.817, "api_errors": 0, "gate_counts": {"proceed": 10, "wait": 0, "replan": 4}, "grasp_failures": 0, "completed": [], "planner": "gemini-2.5-flash", "reflex": "gemini-2.5-flash", "assistance": ["simulator object labels and poses", "object height grasp verification", "placement sensor", "official success evaluator"], "controller": {"hz": 20, "gain": 9, "speed_clip": 0.7, "grasp_z": 0.48, "release_z": 0.59}, "limits": {"plans": 4, "gate_waits": 4, "steps": 2400}}
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[Warning]: datasets path /opt/LIBERO/libero/libero/../datasets does not exist!
+[Warning]: datasets path /opt/LIBERO/libero/libero/../datasets does not exist!
+API Gemini plan
+API result 200 10.52s
+API Omni gate
+API result 200 0.35s
+API Omni gate
+API result 200 0.37s
+API Omni gate
+API result 200 0.36s
+API Omni gate
+API result 200 0.38s
+gemini_omni seed=7 steps=100 phase=LIFT
+API Omni gate
+API result 200 0.38s
+API Omni gate
+API result 200 0.36s
+API Omni gate
+API result 200 0.35s
+gemini_omni seed=7 steps=200 phase=RELEASE
+API Gemini plan
+API result 200 8.51s
+API Omni gate
+API result 200 0.37s
+API Omni gate
+API result 200 0.37s
+gemini_omni seed=7 steps=300 phase=DESCEND
+API Omni gate
+API result 200 0.36s
+API Omni gate
+API result 200 0.35s
+API Omni gate
+API result 200 0.36s
+gemini_omni seed=7 steps=400 phase=CARRY
+API Omni gate
+API result 200 0.36s
+API Omni gate
+API result 200 0.36s
+{"mode": "gemini_omni", "seed": 7, "init_index": 0, "task_name": "LIVING_ROOM_SCENE2_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket", "task": "put both the alphabet soup and the tomato sauce in the basket", "status": "success", "success": true, "model_done": false, "error": null, "initial_state_sha256": "747b653b2ca1feeae8f3bd994880ce743730993ea5ce4bd003623e877f26b3bd", "settled_state_sha256": "3c65da4a71ec161112a427f68f741b29e12bd39e7f82a73460e59917669c0332", "final_state_sha256": "2364c0a1c71f2f25658704fc03c4d48f343d6712d7a4f6eebcf928dd558b212f", "sim_seconds": 24.2, "wall_seconds": 90.455, "control_steps": 484, "api_calls": 16, "api_seconds": 24.103, "api_errors": 0, "gate_counts": {"proceed": 14, "wait": 0, "replan": 0}, "grasp_failures": 0, "completed": ["tomato sauce", "alphabet soup"], "planner": "gemini-2.5-flash", "reflex": "omnijev-0.8b-kk", "assistance": ["simulator object labels and poses", "object height grasp verification", "placement sensor", "official success evaluator"], "controller": {"hz": 20, "gain": 9, "speed_clip": 0.7, "grasp_z": 0.48, "release_z": 0.59}, "limits": {"plans": 4, "gate_waits": 4, "steps": 2400}}
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[Warning]: datasets path /opt/LIBERO/libero/libero/../datasets does not exist!
+[Warning]: datasets path /opt/LIBERO/libero/libero/../datasets does not exist!
+API Omni plan_target
+API result 200 0.36s
+API Omni plan_object
+API result 200 0.52s
+API Omni gate
+API result 200 0.36s
+API Omni gate
+API result 200 0.36s
+API Omni gate
+API result 200 0.36s
+API Omni gate
+API result 200 0.36s
+omni seed=7 steps=100 phase=LIFT
+API Omni gate
+API result 200 0.37s
+API Omni gate
+API result 200 0.39s
+API Omni gate
+API result 200 0.35s
+omni seed=7 steps=200 phase=RELEASE
+API Omni plan_target
+API result 200 0.34s
+API Omni plan_object
+API result 200 0.52s
+API Omni gate
+API result 200 0.37s
+API Omni gate
+API result 200 0.35s
+omni seed=7 steps=300 phase=DESCEND
+omni seed=7 steps=400 phase=DESCEND
+{"mode": "omni", "seed": 7, "init_index": 0, "task_name": "LIVING_ROOM_SCENE2_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket", "task": "put both the alphabet soup and the tomato sauce in the basket", "status": "stopped", "success": false, "model_done": false, "error": "servo_timeout", "initial_state_sha256": "747b653b2ca1feeae8f3bd994880ce743730993ea5ce4bd003623e877f26b3bd", "settled_state_sha256": "3c65da4a71ec161112a427f68f741b29e12bd39e7f82a73460e59917669c0332", "final_state_sha256": "d54908db4ae5f8583953e157a7ba37faea68d5837dc95fe0f723545123eabea1", "sim_seconds": 20.3, "wall_seconds": 60.41, "control_steps": 406, "api_calls": 13, "api_seconds": 5.006, "api_errors": 0, "gate_counts": {"proceed": 9, "wait": 0, "replan": 0}, "grasp_failures": 0, "completed": ["tomato sauce"], "planner": "omnijev-0.8b-kk", "reflex": "omnijev-0.8b-kk", "assistance": ["simulator object labels and poses", "object height grasp verification", "placement sensor", "official success evaluator"], "controller": {"hz": 20, "gain": 9, "speed_clip": 0.7, "grasp_z": 0.48, "release_z": 0.59}, "limits": {"plans": 4, "gate_waits": 4, "steps": 2400}}
