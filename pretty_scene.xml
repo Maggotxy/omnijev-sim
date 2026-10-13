@@ -1,0 +1,88 @@
+<mujoco model="omnijev_pretty_scene">
+  <include file="panda.xml"/>
+
+  <visual>
+    <map znear="0.01"/>
+    <global offwidth="1280" offheight="1280"/>
+    <headlight diffuse="0.35 0.35 0.35" ambient="0.35 0.35 0.38" specular="0.05 0.05 0.05"/>
+    <quality shadowsize="4096" offsamples="4"/>
+  </visual>
+
+  <asset>
+    <texture type="skybox" builtin="gradient" rgb1="0.45 0.60 0.85" rgb2="0.08 0.10 0.16"
+             width="512" height="512"/>
+    <texture name="wood" type="2d" file="tex_wood.png"/>
+    <texture name="tiles" type="2d" file="tex_tiles.png"/>
+    <texture name="walltex" type="2d" file="tex_wall.png"/>
+    <material name="wood_mat" texture="wood" texrepeat="1 1"
+              specular="0.45" shininess="0.35"/>
+    <material name="tiles_mat" texture="tiles" texrepeat="6 6"
+              specular="0.3" shininess="0.25"/>
+    <material name="wall_mat" texture="walltex" texrepeat="1 1" specular="0.05"/>
+    <material name="red_mat" rgba="0.78 0.10 0.10 1" specular="0.65" shininess="0.5"/>
+    <material name="blue_mat" rgba="0.12 0.25 0.90 1" specular="0.65" shininess="0.5"/>
+    <material name="green_zone_mat" rgba="0.08 0.75 0.18 1" specular="0.3"
+              emission="0.25"/>
+    <material name="blue_zone_mat" rgba="0.10 0.25 0.90 1" specular="0.3"
+              emission="0.25"/>
+    <material name="metal_mat" rgba="0.35 0.36 0.38 1" specular="0.8" shininess="0.7"/>
+  </asset>
+
+  <worldbody>
+    <!-- floor + back walls for depth -->
+    <geom name="floor" type="plane" size="6 6 0.1" material="tiles_mat"/>
+    <geom name="wall_back" type="plane" pos="0 1.8 1.2" quat="0.7071 0.7071 0 0"
+          size="6 3 0.1" material="wall_mat"/>
+    <geom name="wall_left" type="plane" pos="-1.2 0 1.2" quat="0.7071 0 0.7071 0"
+          size="6 3 0.1" material="wall_mat"/>
+
+    <!-- lighting: warm key with shadows + cool fill + rim -->
+    <light name="key" pos="0.9 -0.9 2.1" dir="-0.25 0.3 -1" directional="false"
+           diffuse="1.05 1.0 0.92" specular="0.4 0.4 0.4" castshadow="true"
+           attenuation="0.3 0.1 0.05"/>
+    <light name="fill" pos="1.8 0.9 1.4" dir="-0.6 -0.3 -0.5" directional="false"
+           diffuse="0.45 0.5 0.6" specular="0.15 0.15 0.15" castshadow="false"/>
+    <light name="rim" pos="-0.4 -0.4 1.9" dir="0.25 0.1 -1" directional="false"
+           diffuse="0.5 0.45 0.4" specular="0.2 0.2 0.2" castshadow="false"/>
+
+    <!-- table in front of the robot (wood top + metal legs) -->
+    <body name="table" pos="0.55 0 0.4">
+      <geom name="table_top" type="box" size="0.35 0.5 0.02" pos="0 0 0"
+            material="wood_mat" condim="4"/>
+      <geom name="table_leg1" type="cylinder" size="0.02 0.2" pos="-0.30 -0.45 -0.22" material="metal_mat"/>
+      <geom name="table_leg2" type="cylinder" size="0.02 0.2" pos="0.30 -0.45 -0.22" material="metal_mat"/>
+      <geom name="table_leg3" type="cylinder" size="0.02 0.2" pos="-0.30 0.45 -0.22" material="metal_mat"/>
+      <geom name="table_leg4" type="cylinder" size="0.02 0.2" pos="0.30 0.45 -0.22" material="metal_mat"/>
+    </body>
+
+    <!-- target object: red cube (7cm) -->
+    <body name="cube_red" pos="0.55 -0.12 0.455">
+      <freejoint name="cube_red_joint"/>
+      <geom name="cube_red_geom" type="box" size="0.035 0.035 0.035"
+            material="red_mat" condim="4" mass="0.10" friction="1.0 0.05 0.01"/>
+      <site name="cube_red_site" pos="0 0 0" size="0.001" rgba="0 0 0 0"/>
+    </body>
+
+    <!-- blue cube -->
+    <body name="cube_blue" pos="0.62 0.10 0.455">
+      <freejoint name="cube_blue_joint"/>
+      <geom name="cube_blue_geom" type="box" size="0.035 0.035 0.035"
+            material="blue_mat" condim="4" mass="0.10" friction="1.0 0.05 0.01"/>
+    </body>
+
+    <!-- placement targets: glowing rings -->
+    <body name="target_zone" pos="0.48 0.22 0.421">
+      <geom name="target_zone_geom" type="cylinder" size="0.07 0.001"
+            material="green_zone_mat" contype="0" conaffinity="0"/>
+    </body>
+    <body name="target_zone_blue" pos="0.68 -0.18 0.421">
+      <geom name="target_zone_blue_geom" type="cylinder" size="0.07 0.001"
+            material="blue_zone_mat" contype="0" conaffinity="0"/>
+    </body>
+
+    <!-- model camera (unchanged viewpoint; decisions stay comparable) -->
+    <camera name="agentview" pos="1.35 -0.55 1.05" xyaxes="0.45 0.89 0 -0.42 0.21 0.88" fovy="55"/>
+    <!-- cinematic 16:9 beauty camera for the video -->
+    <camera name="beauty" pos="1.55 -1.0 0.95" xyaxes="0.707 0.707 0 -0.219 0.219 0.933" fovy="45"/>
+  </worldbody>
+</mujoco>

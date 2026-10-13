@@ -1,0 +1,836 @@
+{
+ "task": "Pick up the red cube and put it on the green circle.",
+ "seed": 7,
+ "mode": "hybrid_v6",
+ "success": true,
+ "ticks": 33,
+ "wall_s": 38.7,
+ "api_calls": 66,
+ "log": [
+  {
+   "tick": 0,
+   "phase": "REACH",
+   "action": "track:C3",
+   "refine_sim": false,
+   "tgt_cell": "C3",
+   "p_tgt": 0.764,
+   "p": {
+    "grasp": 0.4953,
+    "release": 0.4076,
+    "done": 0.0604
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.395,
+    0.0,
+    0.563
+   ],
+   "cube": [
+    0.545,
+    0.024,
+    0.455
+   ]
+  },
+  {
+   "tick": 1,
+   "phase": "APPROACH",
+   "action": "refine(sim)",
+   "refine_sim": true,
+   "tgt_cell": "C3",
+   "p_tgt": 0.563,
+   "p": {
+    "grasp": 0.6805,
+    "release": 0.5074,
+    "done": 0.0672
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.627,
+    -0.027,
+    0.579
+   ],
+   "cube": [
+    0.545,
+    0.024,
+    0.455
+   ]
+  },
+  {
+   "tick": 2,
+   "phase": "LIFT",
+   "action": "GRASP(p=0.71)",
+   "refine_sim": true,
+   "tgt_cell": "C3",
+   "p_tgt": 0.753,
+   "p": {
+    "grasp": 0.7129,
+    "release": 0.5615,
+    "done": 0.061
+   },
+   "gt_holding": true,
+   "success": false,
+   "tip": [
+    0.543,
+    0.025,
+    0.579
+   ],
+   "cube": [
+    0.545,
+    0.024,
+    0.455
+   ]
+  },
+  {
+   "tick": 3,
+   "phase": "CARRY",
+   "action": "lift",
+   "refine_sim": true,
+   "tgt_cell": "D3",
+   "p_tgt": 0.615,
+   "p": {
+    "grasp": 0.7467,
+    "release": 0.4052,
+    "done": 0.0643
+   },
+   "gt_holding": true,
+   "success": false,
+   "tip": [
+    0.549,
+    0.023,
+    0.523
+   ],
+   "cube": [
+    0.549,
+    0.023,
+    0.503
+   ]
+  },
+  {
+   "tick": 4,
+   "phase": "CARRY",
+   "action": "carry:D3",
+   "refine_sim": false,
+   "tgt_cell": "D3",
+   "p_tgt": 0.602,
+   "p": {
+    "grasp": 0.7555,
+    "release": 0.6581,
+    "done": 0.0728
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.551,
+    0.023,
+    0.669
+   ],
+   "cube": [
+    0.558,
+    0.023,
+    0.65
+   ]
+  },
+  {
+   "tick": 5,
+   "phase": "REACH",
+   "action": "DROPPED",
+   "refine_sim": false,
+   "tgt_cell": "D3",
+   "p_tgt": 0.521,
+   "p": {
+    "grasp": 0.5023,
+    "release": 0.3708,
+    "done": 0.0618
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.744,
+    0.218,
+    0.672
+   ],
+   "cube": [
+    0.734,
+    0.227,
+    0.461
+   ]
+  },
+  {
+   "tick": 6,
+   "phase": "REACH",
+   "action": "track:D3",
+   "refine_sim": false,
+   "tgt_cell": "D3",
+   "p_tgt": 0.85,
+   "p": {
+    "grasp": 0.5023,
+    "release": 0.3708,
+    "done": 0.0618
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.744,
+    0.218,
+    0.672
+   ],
+   "cube": [
+    0.734,
+    0.227,
+    0.461
+   ]
+  },
+  {
+   "tick": 7,
+   "phase": "APPROACH",
+   "action": "refine(sim)",
+   "refine_sim": true,
+   "tgt_cell": "D3",
+   "p_tgt": 0.798,
+   "p": {
+    "grasp": 0.5871,
+    "release": 0.3958,
+    "done": 0.058
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.748,
+    0.223,
+    0.58
+   ],
+   "cube": [
+    0.715,
+    0.211,
+    0.455
+   ]
+  },
+  {
+   "tick": 8,
+   "phase": "REACH",
+   "action": "GRASP_SHAKE_FAIL",
+   "refine_sim": true,
+   "tgt_cell": "D3",
+   "p_tgt": 0.853,
+   "p": {
+    "grasp": 0.5748,
+    "release": 0.4919,
+    "done": 0.0589
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.711,
+    0.209,
+    0.578
+   ],
+   "cube": [
+    0.715,
+    0.211,
+    0.455
+   ]
+  },
+  {
+   "tick": 9,
+   "phase": "REACH",
+   "action": "track:D3",
+   "refine_sim": false,
+   "tgt_cell": "D3",
+   "p_tgt": 0.823,
+   "p": {
+    "grasp": 0.361,
+    "release": 0.3345,
+    "done": 0.0651
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.721,
+    0.211,
+    0.525
+   ],
+   "cube": [
+    0.635,
+    0.245,
+    0.455
+   ]
+  },
+  {
+   "tick": 10,
+   "phase": "APPROACH",
+   "action": "refine(sim)",
+   "refine_sim": true,
+   "tgt_cell": "D3",
+   "p_tgt": 0.851,
+   "p": {
+    "grasp": 0.5367,
+    "release": 0.3594,
+    "done": 0.0593
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.752,
+    0.223,
+    0.579
+   ],
+   "cube": [
+    0.635,
+    0.245,
+    0.455
+   ]
+  },
+  {
+   "tick": 11,
+   "phase": "LIFT",
+   "action": "GRASP(p=0.71)",
+   "refine_sim": true,
+   "tgt_cell": "D3",
+   "p_tgt": 0.852,
+   "p": {
+    "grasp": 0.7111,
+    "release": 0.6668,
+    "done": 0.0632
+   },
+   "gt_holding": true,
+   "success": false,
+   "tip": [
+    0.636,
+    0.242,
+    0.578
+   ],
+   "cube": [
+    0.635,
+    0.245,
+    0.455
+   ]
+  },
+  {
+   "tick": 12,
+   "phase": "CARRY",
+   "action": "lift",
+   "refine_sim": true,
+   "tgt_cell": "D3",
+   "p_tgt": 0.725,
+   "p": {
+    "grasp": 0.6872,
+    "release": 0.6614,
+    "done": 0.0644
+   },
+   "gt_holding": true,
+   "success": false,
+   "tip": [
+    0.641,
+    0.247,
+    0.536
+   ],
+   "cube": [
+    0.68,
+    0.267,
+    0.532
+   ]
+  },
+  {
+   "tick": 13,
+   "phase": "CARRY",
+   "action": "carry:D3",
+   "refine_sim": false,
+   "tgt_cell": "D3",
+   "p_tgt": 0.755,
+   "p": {
+    "grasp": 0.7408,
+    "release": 0.6282,
+    "done": 0.0728
+   },
+   "gt_holding": true,
+   "success": false,
+   "tip": [
+    0.643,
+    0.248,
+    0.684
+   ],
+   "cube": [
+    0.684,
+    0.268,
+    0.693
+   ]
+  },
+  {
+   "tick": 14,
+   "phase": "PLACE",
+   "action": "carry:D3",
+   "refine_sim": true,
+   "tgt_cell": "D3",
+   "p_tgt": 0.765,
+   "p": {
+    "grasp": 0.559,
+    "release": 0.5531,
+    "done": 0.0637
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.744,
+    0.225,
+    0.687
+   ],
+   "cube": [
+    0.78,
+    0.24,
+    0.706
+   ]
+  },
+  {
+   "tick": 15,
+   "phase": "REACH",
+   "action": "DROPPED",
+   "refine_sim": false,
+   "tgt_cell": "D3",
+   "p_tgt": 0.731,
+   "p": {
+    "grasp": 0.3499,
+    "release": 0.2454,
+    "done": 0.0562
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.452,
+    0.278,
+    0.685
+   ],
+   "cube": [
+    0.749,
+    0.321,
+    0.455
+   ]
+  },
+  {
+   "tick": 16,
+   "phase": "REACH",
+   "action": "track:D3",
+   "refine_sim": false,
+   "tgt_cell": "D3",
+   "p_tgt": 0.774,
+   "p": {
+    "grasp": 0.3499,
+    "release": 0.2454,
+    "done": 0.0562
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.452,
+    0.278,
+    0.685
+   ],
+   "cube": [
+    0.749,
+    0.321,
+    0.455
+   ]
+  },
+  {
+   "tick": 17,
+   "phase": "APPROACH",
+   "action": "refine(sim)",
+   "refine_sim": true,
+   "tgt_cell": "D3",
+   "p_tgt": 0.772,
+   "p": {
+    "grasp": 0.7963,
+    "release": 0.6315,
+    "done": 0.0608
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.751,
+    0.223,
+    0.58
+   ],
+   "cube": [
+    0.749,
+    0.321,
+    0.455
+   ]
+  },
+  {
+   "tick": 18,
+   "phase": "REACH",
+   "action": "GRASP_SHAKE_FAIL",
+   "refine_sim": true,
+   "tgt_cell": "D3",
+   "p_tgt": 0.82,
+   "p": {
+    "grasp": 0.4098,
+    "release": 0.343,
+    "done": 0.0494
+   },
+   "gt_holding": true,
+   "success": false,
+   "tip": [
+    0.748,
+    0.322,
+    0.581
+   ],
+   "cube": [
+    0.749,
+    0.321,
+    0.455
+   ]
+  },
+  {
+   "tick": 19,
+   "phase": "REACH",
+   "action": "track:D3",
+   "refine_sim": false,
+   "tgt_cell": "D3",
+   "p_tgt": 0.769,
+   "p": {
+    "grasp": 0.7384,
+    "release": 0.3604,
+    "done": 0.0594
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.752,
+    0.323,
+    0.518
+   ],
+   "cube": [
+    0.767,
+    0.237,
+    0.455
+   ]
+  },
+  {
+   "tick": 20,
+   "phase": "APPROACH",
+   "action": "refine(sim)",
+   "refine_sim": true,
+   "tgt_cell": "D3",
+   "p_tgt": 0.795,
+   "p": {
+    "grasp": 0.6543,
+    "release": 0.4952,
+    "done": 0.0592
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.752,
+    0.221,
+    0.581
+   ],
+   "cube": [
+    0.786,
+    0.166,
+    0.455
+   ]
+  },
+  {
+   "tick": 21,
+   "phase": "LIFT",
+   "action": "GRASP(p=0.51)",
+   "refine_sim": true,
+   "tgt_cell": "D3",
+   "p_tgt": 0.866,
+   "p": {
+    "grasp": 0.5094,
+    "release": 0.3298,
+    "done": 0.0554
+   },
+   "gt_holding": true,
+   "success": false,
+   "tip": [
+    0.785,
+    0.166,
+    0.583
+   ],
+   "cube": [
+    0.787,
+    0.165,
+    0.455
+   ]
+  },
+  {
+   "tick": 22,
+   "phase": "CARRY",
+   "action": "lift",
+   "refine_sim": true,
+   "tgt_cell": "D3",
+   "p_tgt": 0.603,
+   "p": {
+    "grasp": 0.6622,
+    "release": 0.4949,
+    "done": 0.069
+   },
+   "gt_holding": true,
+   "success": false,
+   "tip": [
+    0.785,
+    0.167,
+    0.523
+   ],
+   "cube": [
+    0.786,
+    0.169,
+    0.501
+   ]
+  },
+  {
+   "tick": 23,
+   "phase": "CARRY",
+   "action": "carry:D3",
+   "refine_sim": false,
+   "tgt_cell": "D3",
+   "p_tgt": 0.765,
+   "p": {
+    "grasp": 0.6764,
+    "release": 0.5242,
+    "done": 0.062
+   },
+   "gt_holding": true,
+   "success": false,
+   "tip": [
+    0.786,
+    0.167,
+    0.672
+   ],
+   "cube": [
+    0.789,
+    0.171,
+    0.637
+   ]
+  },
+  {
+   "tick": 24,
+   "phase": "PLACE",
+   "action": "carry:D3",
+   "refine_sim": true,
+   "tgt_cell": "D3",
+   "p_tgt": 0.661,
+   "p": {
+    "grasp": 0.6595,
+    "release": 0.6728,
+    "done": 0.0709
+   },
+   "gt_holding": true,
+   "success": false,
+   "tip": [
+    0.754,
+    0.216,
+    0.672
+   ],
+   "cube": [
+    0.754,
+    0.219,
+    0.636
+   ]
+  },
+  {
+   "tick": 25,
+   "phase": "PLACE",
+   "action": "lower",
+   "refine_sim": true,
+   "tgt_cell": "D3",
+   "p_tgt": 0.785,
+   "p": {
+    "grasp": 0.386,
+    "release": 0.5609,
+    "done": 0.0709
+   },
+   "gt_holding": true,
+   "success": true,
+   "tip": [
+    0.452,
+    0.277,
+    0.671
+   ],
+   "cube": [
+    0.45,
+    0.276,
+    0.643
+   ]
+  },
+  {
+   "tick": 26,
+   "phase": "PLACE",
+   "action": "gate_release:0.44",
+   "refine_sim": false,
+   "tgt_cell": "D3",
+   "p_tgt": 0.575,
+   "p": {
+    "grasp": 0.186,
+    "release": 0.439,
+    "done": 0.0744
+   },
+   "gt_holding": true,
+   "success": true,
+   "tip": [
+    0.441,
+    0.279,
+    0.497
+   ],
+   "cube": [
+    0.43,
+    0.273,
+    0.471
+   ]
+  },
+  {
+   "tick": 27,
+   "phase": "PLACE",
+   "action": "gate_release:0.44",
+   "refine_sim": false,
+   "tgt_cell": "D3",
+   "p_tgt": 0.575,
+   "p": {
+    "grasp": 0.186,
+    "release": 0.439,
+    "done": 0.0744
+   },
+   "gt_holding": true,
+   "success": true,
+   "tip": [
+    0.441,
+    0.279,
+    0.497
+   ],
+   "cube": [
+    0.43,
+    0.273,
+    0.471
+   ]
+  },
+  {
+   "tick": 28,
+   "phase": "PLACE",
+   "action": "gate_release:0.44",
+   "refine_sim": false,
+   "tgt_cell": "D3",
+   "p_tgt": 0.575,
+   "p": {
+    "grasp": 0.186,
+    "release": 0.439,
+    "done": 0.0744
+   },
+   "gt_holding": true,
+   "success": true,
+   "tip": [
+    0.441,
+    0.279,
+    0.497
+   ],
+   "cube": [
+    0.43,
+    0.273,
+    0.471
+   ]
+  },
+  {
+   "tick": 29,
+   "phase": "PLACE",
+   "action": "gate_release:0.44",
+   "refine_sim": false,
+   "tgt_cell": "D3",
+   "p_tgt": 0.575,
+   "p": {
+    "grasp": 0.186,
+    "release": 0.439,
+    "done": 0.0744
+   },
+   "gt_holding": true,
+   "success": true,
+   "tip": [
+    0.441,
+    0.279,
+    0.497
+   ],
+   "cube": [
+    0.43,
+    0.273,
+    0.471
+   ]
+  },
+  {
+   "tick": 30,
+   "phase": "PLACE",
+   "action": "gate_release:0.44",
+   "refine_sim": false,
+   "tgt_cell": "D3",
+   "p_tgt": 0.575,
+   "p": {
+    "grasp": 0.186,
+    "release": 0.439,
+    "done": 0.0744
+   },
+   "gt_holding": true,
+   "success": true,
+   "tip": [
+    0.441,
+    0.279,
+    0.497
+   ],
+   "cube": [
+    0.43,
+    0.273,
+    0.471
+   ]
+  },
+  {
+   "tick": 31,
+   "phase": "PLACE",
+   "action": "gate_release:0.44",
+   "refine_sim": false,
+   "tgt_cell": "D3",
+   "p_tgt": 0.575,
+   "p": {
+    "grasp": 0.186,
+    "release": 0.439,
+    "done": 0.0744
+   },
+   "gt_holding": true,
+   "success": true,
+   "tip": [
+    0.441,
+    0.279,
+    0.497
+   ],
+   "cube": [
+    0.43,
+    0.273,
+    0.471
+   ]
+  },
+  {
+   "tick": 32,
+   "phase": "RETREAT",
+   "action": "RELEASE(p=0.44)",
+   "refine_sim": false,
+   "tgt_cell": "D3",
+   "p_tgt": 0.575,
+   "p": {
+    "grasp": 0.186,
+    "release": 0.439,
+    "done": 0.0744
+   },
+   "gt_holding": false,
+   "success": true,
+   "tip": [
+    0.441,
+    0.279,
+    0.497
+   ],
+   "cube": [
+    0.43,
+    0.273,
+    0.471
+   ]
+  }
+ ]
+}

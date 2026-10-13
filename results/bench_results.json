@@ -1,0 +1,272 @@
+{
+ "suiteA": [
+  {
+   "cell": "B3",
+   "omnijev": "B3",
+   "omnijev_p": 0.83,
+   "stepfun": "B3",
+   "stepfun_raw": "The red cube is in cell **B3**. \n\n\\boxed{B3}",
+   "omnijev_ok": true,
+   "stepfun_ok": true
+  },
+  {
+   "cell": "B3",
+   "omnijev": "B3",
+   "omnijev_p": 0.643,
+   "stepfun": "B3",
+   "stepfun_raw": "The red cube is in cell **B3**. \n\n\\boxed{B3}",
+   "omnijev_ok": true,
+   "stepfun_ok": true
+  },
+  {
+   "cell": "B3",
+   "omnijev": "B3",
+   "omnijev_p": 0.449,
+   "stepfun": "B3",
+   "stepfun_raw": "The red cube is in cell **B3**. \n\n\\boxed{B3}",
+   "omnijev_ok": true,
+   "stepfun_ok": true
+  },
+  {
+   "cell": "C3",
+   "omnijev": "C3",
+   "omnijev_p": 0.334,
+   "stepfun": "C3",
+   "stepfun_raw": "The red cube is in cell **C3**.\n\n\\boxed{C3}",
+   "omnijev_ok": true,
+   "stepfun_ok": true
+  },
+  {
+   "cell": "B3",
+   "omnijev": "C3",
+   "omnijev_p": 0.825,
+   "stepfun": "B3",
+   "stepfun_raw": "The red cube is in cell **B3**. \n\n\\boxed{B3}",
+   "omnijev_ok": false,
+   "stepfun_ok": true
+  },
+  {
+   "cell": "C3",
+   "omnijev": "C3",
+   "omnijev_p": 0.892,
+   "stepfun": "C3",
+   "stepfun_raw": "The red cube is in cell **C3**. \n\n\\boxed{C3}",
+   "omnijev_ok": true,
+   "stepfun_ok": true
+  },
+  {
+   "cell": "C3",
+   "omnijev": "C3",
+   "omnijev_p": 0.928,
+   "stepfun": "C3",
+   "stepfun_raw": "The red cube is in cell **C3**. \n\n\\boxed{C3}",
+   "omnijev_ok": true,
+   "stepfun_ok": true
+  },
+  {
+   "cell": "C3",
+   "omnijev": "C3",
+   "omnijev_p": 0.584,
+   "stepfun": "C3",
+   "stepfun_raw": "C3",
+   "omnijev_ok": true,
+   "stepfun_ok": true
+  },
+  {
+   "cell": "C2",
+   "omnijev": "C3",
+   "omnijev_p": 0.774,
+   "stepfun": "C3",
+   "stepfun_raw": "The red cube is in cell **C3**. \n\n\\boxed{C3}",
+   "omnijev_ok": false,
+   "stepfun_ok": false
+  },
+  {
+   "cell": "C3",
+   "omnijev": "C3",
+   "omnijev_p": 0.787,
+   "stepfun": "C3",
+   "stepfun_raw": "The red cube is located in cell **C3**.\n\n\\boxed{C3}",
+   "omnijev_ok": true,
+   "stepfun_ok": true
+  },
+  {
+   "cell": "C3",
+   "omnijev": "D3",
+   "omnijev_p": 0.556,
+   "stepfun": "C3",
+   "stepfun_raw": "The red cube is in cell **C3**. \n\n\\boxed{C3}",
+   "omnijev_ok": false,
+   "stepfun_ok": true
+  },
+  {
+   "cell": "D3",
+   "omnijev": "D3",
+   "omnijev_p": 0.626,
+   "stepfun": "D3",
+   "stepfun_raw": "The red cube is in cell **D3**.\n\n\\boxed{D3}",
+   "omnijev_ok": true,
+   "stepfun_ok": true
+  },
+  {
+   "cell": "C2",
+   "omnijev": "D3",
+   "omnijev_p": 0.417,
+   "stepfun": "C3",
+   "stepfun_raw": "The red cube is located in cell **C3**.\n\n\\boxed{C3}",
+   "omnijev_ok": false,
+   "stepfun_ok": false
+  },
+  {
+   "cell": "C2",
+   "omnijev": "D3",
+   "omnijev_p": 0.856,
+   "stepfun": "D3",
+   "stepfun_raw": "The red cube is in cell **D3**.\n\n\\boxed{D3}",
+   "omnijev_ok": false,
+   "stepfun_ok": false
+  },
+  {
+   "cell": "D3",
+   "omnijev": "D3",
+   "omnijev_p": 0.823,
+   "stepfun": "D3",
+   "stepfun_raw": "The red cube is in cell **D3**. \n\n\\boxed{D3}",
+   "omnijev_ok": true,
+   "stepfun_ok": true
+  },
+  {
+   "cell": "D3",
+   "omnijev": "D3",
+   "omnijev_p": 0.625,
+   "stepfun": "D3",
+   "stepfun_raw": "The red cube is in cell **D3**. \n\n\\boxed{D3}",
+   "omnijev_ok": true,
+   "stepfun_ok": true
+  }
+ ],
+ "suiteB": [
+  {
+   "scenario": "grasp_now",
+   "truth": true,
+   "omnijev_p": 0.076,
+   "omnijev_yes": false,
+   "stepfun_yes": true,
+   "stepfun_raw": "YES"
+  },
+  {
+   "scenario": "grasp_now_bare",
+   "truth": true,
+   "omnijev_p": 0.563,
+   "omnijev_yes": true,
+   "stepfun_yes": true,
+   "stepfun_raw": "YES"
+  },
+  {
+   "scenario": "grasp_far",
+   "truth": false,
+   "omnijev_p": 0.329,
+   "omnijev_yes": false,
+   "stepfun_yes": false,
+   "stepfun_raw": "NO"
+  },
+  {
+   "scenario": "holding",
+   "truth": false,
+   "omnijev_p": 0.735,
+   "omnijev_yes": true,
+   "stepfun_yes": true,
+   "stepfun_raw": "YES"
+  },
+  {
+   "scenario": "not_holding",
+   "truth": false,
+   "omnijev_p": 0.728,
+   "omnijev_yes": true,
+   "stepfun_yes": true,
+   "stepfun_raw": "YES"
+  },
+  {
+   "scenario": "done",
+   "truth": true,
+   "omnijev_p": 0.066,
+   "omnijev_yes": false,
+   "stepfun_yes": false,
+   "stepfun_raw": "NO. The red cube is already on the green"
+  },
+  {
+   "scenario": "not_done",
+   "truth": false,
+   "omnijev_p": 0.074,
+   "omnijev_yes": false,
+   "stepfun_yes": false,
+   "stepfun_raw": "NO. The red cube is currently located on"
+  }
+ ],
+ "latency": {
+  "omnijev": [
+   0.66,
+   0.64,
+   0.65,
+   0.64,
+   0.63,
+   0.64,
+   0.65,
+   0.63,
+   0.64,
+   0.65,
+   0.66,
+   0.65,
+   0.64,
+   0.64,
+   0.65,
+   0.65,
+   0.26,
+   0.27,
+   0.28,
+   0.27,
+   0.29,
+   0.27,
+   0.27
+  ],
+  "stepfun": [
+   0.85,
+   0.9,
+   0.85,
+   0.89,
+   0.86,
+   0.87,
+   0.86,
+   0.62,
+   0.87,
+   0.89,
+   0.89,
+   0.85,
+   0.85,
+   0.89,
+   0.94,
+   0.88,
+   0.6,
+   0.54,
+   0.56,
+   0.55,
+   0.61,
+   2.52,
+   1.65
+  ]
+ },
+ "summary": {
+  "localization_acc": {
+   "omnijev": "11/16",
+   "stepfun": "13/16"
+  },
+  "decision_acc": {
+   "omnijev": "3/7",
+   "stepfun": "4/7"
+  },
+  "latency_mean_s": {
+   "omnijev": 0.53,
+   "stepfun": 0.9
+  }
+ }
+}

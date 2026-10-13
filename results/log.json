@@ -1,0 +1,759 @@
+{
+ "task": "Pick up the red cube and put it on the green circle.",
+ "seed": 1,
+ "success": false,
+ "ticks": 30,
+ "wall_s": 22.5,
+ "log": [
+  {
+   "tick": 0,
+   "action": "move:left",
+   "dir": "left",
+   "p": {
+    "grasp": 0.5862,
+    "release": 0.4972,
+    "hold": 0.9568,
+    "done": 0.0988
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.38,
+    0.057,
+    0.621
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ],
+   "api_ms": "457.2",
+   "wall_ask_s": 0.57
+  },
+  {
+   "tick": 1,
+   "action": "GRASP",
+   "dir": "down",
+   "p": {
+    "grasp": 0.6861,
+    "release": 0.5471,
+    "hold": 0.9489,
+    "done": 0.0865
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.38,
+    0.057,
+    0.619
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ],
+   "api_ms": "447.4",
+   "wall_ask_s": 0.54
+  },
+  {
+   "tick": 2,
+   "action": "move:down",
+   "dir": "down",
+   "p": {
+    "grasp": 0.6107,
+    "release": 0.4952,
+    "hold": 0.945,
+    "done": 0.0801
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.378,
+    0.057,
+    0.559
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ],
+   "api_ms": "447.4",
+   "wall_ask_s": 0.54
+  },
+  {
+   "tick": 3,
+   "action": "move:down",
+   "dir": "down",
+   "p": {
+    "grasp": 0.6812,
+    "release": 0.5495,
+    "hold": 0.9525,
+    "done": 0.1169
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.379,
+    0.057,
+    0.531
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ],
+   "api_ms": "444.5",
+   "wall_ask_s": 0.54
+  },
+  {
+   "tick": 4,
+   "action": "move:down",
+   "dir": "down",
+   "p": {
+    "grasp": 0.7493,
+    "release": 0.6129,
+    "hold": 0.955,
+    "done": 0.1072
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.385,
+    0.06,
+    0.531
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ],
+   "api_ms": "449.5",
+   "wall_ask_s": 0.55
+  },
+  {
+   "tick": 5,
+   "action": "move:down",
+   "dir": "down",
+   "p": {
+    "grasp": 0.7187,
+    "release": 0.6072,
+    "hold": 0.9524,
+    "done": 0.1064
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.391,
+    0.063,
+    0.531
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ],
+   "api_ms": "445.9",
+   "wall_ask_s": 0.54
+  },
+  {
+   "tick": 6,
+   "action": "move:down",
+   "dir": "down",
+   "p": {
+    "grasp": 0.7656,
+    "release": 0.6272,
+    "hold": 0.9611,
+    "done": 0.1275
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.396,
+    0.066,
+    0.531
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ],
+   "api_ms": "445.2",
+   "wall_ask_s": 0.54
+  },
+  {
+   "tick": 7,
+   "action": "move:down",
+   "dir": "down",
+   "p": {
+    "grasp": 0.6883,
+    "release": 0.5821,
+    "hold": 0.9518,
+    "done": 0.1282
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.4,
+    0.068,
+    0.531
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ],
+   "api_ms": "446.7",
+   "wall_ask_s": 0.54
+  },
+  {
+   "tick": 8,
+   "action": "move:down",
+   "dir": "down",
+   "p": {
+    "grasp": 0.7008,
+    "release": 0.5778,
+    "hold": 0.957,
+    "done": 0.1353
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.403,
+    0.071,
+    0.531
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ],
+   "api_ms": "447.1",
+   "wall_ask_s": 0.54
+  },
+  {
+   "tick": 9,
+   "action": "move:down",
+   "dir": "down",
+   "p": {
+    "grasp": 0.685,
+    "release": 0.5652,
+    "hold": 0.9569,
+    "done": 0.1381
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.407,
+    0.074,
+    0.531
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ],
+   "api_ms": "444.6",
+   "wall_ask_s": 0.54
+  },
+  {
+   "tick": 10,
+   "action": "move:down",
+   "dir": "down",
+   "p": {
+    "grasp": 0.5982,
+    "release": 0.4594,
+    "hold": 0.9504,
+    "done": 0.093
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.41,
+    0.077,
+    0.531
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ],
+   "api_ms": "445.3",
+   "wall_ask_s": 0.54
+  },
+  {
+   "tick": 11,
+   "action": "move:left",
+   "dir": "left",
+   "p": {
+    "grasp": 0.587,
+    "release": 0.4381,
+    "hold": 0.9454,
+    "done": 0.0862
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.404,
+    0.113,
+    0.526
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ],
+   "api_ms": "445.6",
+   "wall_ask_s": 0.55
+  },
+  {
+   "tick": 12,
+   "action": "move:down",
+   "dir": "down",
+   "p": {
+    "grasp": 0.6746,
+    "release": 0.614,
+    "hold": 0.9413,
+    "done": 0.1055
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.407,
+    0.116,
+    0.525
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ],
+   "api_ms": "452.0",
+   "wall_ask_s": 0.55
+  },
+  {
+   "tick": 13,
+   "action": "move:down",
+   "dir": "down",
+   "p": {
+    "grasp": 0.6811,
+    "release": 0.5952,
+    "hold": 0.9535,
+    "done": 0.1115
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.411,
+    0.117,
+    0.523
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ],
+   "api_ms": "454.2",
+   "wall_ask_s": 0.55
+  },
+  {
+   "tick": 14,
+   "action": "move:down",
+   "dir": "down",
+   "p": {
+    "grasp": 0.6767,
+    "release": 0.6164,
+    "hold": 0.9417,
+    "done": 0.1328
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.415,
+    0.114,
+    0.52
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ],
+   "api_ms": "450.7",
+   "wall_ask_s": 0.55
+  },
+  {
+   "tick": 15,
+   "action": "move:down",
+   "dir": "down",
+   "p": {
+    "grasp": 0.7137,
+    "release": 0.6718,
+    "hold": 0.9394,
+    "done": 0.1443
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.416,
+    0.115,
+    0.52
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ],
+   "api_ms": "448.9",
+   "wall_ask_s": 0.54
+  },
+  {
+   "tick": 16,
+   "action": "move:down",
+   "dir": "down",
+   "p": {
+    "grasp": 0.7069,
+    "release": 0.6541,
+    "hold": 0.9279,
+    "done": 0.1347
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.416,
+    0.116,
+    0.521
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ],
+   "api_ms": "524.0",
+   "wall_ask_s": 0.62
+  },
+  {
+   "tick": 17,
+   "action": "move:down",
+   "dir": "down",
+   "p": {
+    "grasp": 0.7159,
+    "release": 0.6701,
+    "hold": 0.9342,
+    "done": 0.1554
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.416,
+    0.118,
+    0.521
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ],
+   "api_ms": "526.4",
+   "wall_ask_s": 0.62
+  },
+  {
+   "tick": 18,
+   "action": "move:down",
+   "dir": "down",
+   "p": {
+    "grasp": 0.7272,
+    "release": 0.6925,
+    "hold": 0.9362,
+    "done": 0.1575
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.416,
+    0.12,
+    0.521
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ],
+   "api_ms": "492.2",
+   "wall_ask_s": 0.59
+  },
+  {
+   "tick": 19,
+   "action": "RELEASE",
+   "dir": "down",
+   "p": {
+    "grasp": 0.7512,
+    "release": 0.7122,
+    "hold": 0.9286,
+    "done": 0.1363
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.416,
+    0.12,
+    0.521
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ],
+   "api_ms": "449.0",
+   "wall_ask_s": 0.54
+  },
+  {
+   "tick": 20,
+   "action": "move:down",
+   "dir": "down",
+   "p": {
+    "grasp": 0.7388,
+    "release": 0.7104,
+    "hold": 0.9386,
+    "done": 0.1402
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.415,
+    0.122,
+    0.521
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ],
+   "api_ms": "443.8",
+   "wall_ask_s": 0.54
+  },
+  {
+   "tick": 21,
+   "action": "move:down",
+   "dir": "down",
+   "p": {
+    "grasp": 0.7306,
+    "release": 0.6929,
+    "hold": 0.9327,
+    "done": 0.1305
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.415,
+    0.125,
+    0.521
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ],
+   "api_ms": "449.4",
+   "wall_ask_s": 0.54
+  },
+  {
+   "tick": 22,
+   "action": "move:down",
+   "dir": "down",
+   "p": {
+    "grasp": 0.7309,
+    "release": 0.6984,
+    "hold": 0.9348,
+    "done": 0.152
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.414,
+    0.128,
+    0.522
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ],
+   "api_ms": "442.5",
+   "wall_ask_s": 0.54
+  },
+  {
+   "tick": 23,
+   "action": "move:down",
+   "dir": "down",
+   "p": {
+    "grasp": 0.7575,
+    "release": 0.6823,
+    "hold": 0.9368,
+    "done": 0.1657
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.414,
+    0.131,
+    0.522
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ],
+   "api_ms": "443.8",
+   "wall_ask_s": 0.54
+  },
+  {
+   "tick": 24,
+   "action": "move:down",
+   "dir": "down",
+   "p": {
+    "grasp": 0.7523,
+    "release": 0.6933,
+    "hold": 0.9339,
+    "done": 0.2
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.413,
+    0.134,
+    0.522
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ],
+   "api_ms": "445.3",
+   "wall_ask_s": 0.54
+  },
+  {
+   "tick": 25,
+   "action": "GRASP",
+   "dir": "down",
+   "p": {
+    "grasp": 0.7567,
+    "release": 0.6717,
+    "hold": 0.929,
+    "done": 0.1424
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.413,
+    0.135,
+    0.522
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ],
+   "api_ms": "443.9",
+   "wall_ask_s": 0.54
+  },
+  {
+   "tick": 26,
+   "action": "move:down",
+   "dir": "down",
+   "p": {
+    "grasp": 0.7267,
+    "release": 0.6512,
+    "hold": 0.928,
+    "done": 0.1199
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.412,
+    0.138,
+    0.522
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ],
+   "api_ms": "454.0",
+   "wall_ask_s": 0.55
+  },
+  {
+   "tick": 27,
+   "action": "move:down",
+   "dir": "down",
+   "p": {
+    "grasp": 0.7256,
+    "release": 0.7014,
+    "hold": 0.9302,
+    "done": 0.1615
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.412,
+    0.142,
+    0.522
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ],
+   "api_ms": "448.0",
+   "wall_ask_s": 0.54
+  },
+  {
+   "tick": 28,
+   "action": "move:down",
+   "dir": "down",
+   "p": {
+    "grasp": 0.7188,
+    "release": 0.6841,
+    "hold": 0.9343,
+    "done": 0.1359
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.412,
+    0.145,
+    0.523
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ],
+   "api_ms": "444.3",
+   "wall_ask_s": 0.54
+  },
+  {
+   "tick": 29,
+   "action": "move:down",
+   "dir": "down",
+   "p": {
+    "grasp": 0.7278,
+    "release": 0.698,
+    "hold": 0.9404,
+    "done": 0.1626
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.411,
+    0.149,
+    0.523
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ],
+   "api_ms": "449.0",
+   "wall_ask_s": 0.56
+  }
+ ]
+}

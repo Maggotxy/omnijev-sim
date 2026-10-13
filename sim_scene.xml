@@ -1,0 +1,59 @@
+<mujoco model="omnijev_sim_scene">
+  <include file="panda.xml"/>
+
+  <visual>
+    <map znear="0.01"/>
+    <global offwidth="1024" offheight="1024"/>
+    <headlight diffuse="0.8 0.8 0.8" ambient="0.55 0.55 0.55" specular="0.1 0.1 0.1"/>
+  </visual>
+
+  <worldbody>
+    <!-- extra illumination: bright key light over the table + fill -->
+    <light name="key" pos="0.6 0 1.8" dir="-0.2 0 -1" directional="false"
+           diffuse="1.0 1.0 1.0" specular="0.2 0.2 0.2" castshadow="false"/>
+    <light name="fill" pos="1.6 -1.2 1.2" dir="-0.6 0.5 -0.6" directional="false"
+           diffuse="0.6 0.6 0.6" specular="0.1 0.1 0.1" castshadow="false"/>
+
+    <!-- table in front of the robot -->
+    <body name="table" pos="0.55 0 0.4">
+      <geom name="table_top" type="box" size="0.35 0.5 0.02" pos="0 0 0"
+            rgba="0.55 0.40 0.28 1" condim="4"/>
+      <geom name="table_leg1" type="cylinder" size="0.02 0.2" pos="-0.30 -0.45 -0.22" rgba="0.3 0.3 0.3 1"/>
+      <geom name="table_leg2" type="cylinder" size="0.02 0.2" pos="0.30 -0.45 -0.22" rgba="0.3 0.3 0.3 1"/>
+      <geom name="table_leg3" type="cylinder" size="0.02 0.2" pos="-0.30 0.45 -0.22" rgba="0.3 0.3 0.3 1"/>
+      <geom name="table_leg4" type="cylinder" size="0.02 0.2" pos="0.30 0.45 -0.22" rgba="0.3 0.3 0.3 1"/>
+    </body>
+
+    <!-- target object: red cube (7cm: easier for model + gripper) -->
+    <body name="cube_red" pos="0.55 -0.12 0.455">
+      <freejoint name="cube_red_joint"/>
+      <geom name="cube_red_geom" type="box" size="0.035 0.035 0.035"
+            rgba="0.85 0.15 0.15 1" condim="4" mass="0.10"
+            friction="1.0 0.05 0.01"/>
+      <site name="cube_red_site" pos="0 0 0" size="0.001" rgba="0 0 0 0"/>
+    </body>
+
+    <!-- distractor: blue cube -->
+    <body name="cube_blue" pos="0.62 0.10 0.455">
+      <freejoint name="cube_blue_joint"/>
+      <geom name="cube_blue_geom" type="box" size="0.035 0.035 0.035"
+            rgba="0.15 0.25 0.85 1" condim="4" mass="0.10"
+            friction="1.0 0.05 0.01"/>
+    </body>
+
+    <!-- placement target: green ring zone -->
+    <body name="target_zone" pos="0.48 0.22 0.421">
+      <geom name="target_zone_geom" type="cylinder" size="0.07 0.001"
+            rgba="0.1 0.8 0.2 0.9" contype="0" conaffinity="0"/>
+    </body>
+
+    <!-- second placement target: blue ring zone -->
+    <body name="target_zone_blue" pos="0.68 -0.18 0.421">
+      <geom name="target_zone_blue_geom" type="cylinder" size="0.07 0.001"
+            rgba="0.15 0.3 0.95 0.9" contype="0" conaffinity="0"/>
+    </body>
+
+    <!-- fixed agent camera -->
+    <camera name="agentview" pos="1.35 -0.55 1.05" xyaxes="0.45 0.89 0 -0.42 0.21 0.88" fovy="55"/>
+  </worldbody>
+</mujoco>

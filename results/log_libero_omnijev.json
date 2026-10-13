@@ -1,0 +1,3146 @@
+{
+ "task": "put both the alphabet soup and the tomato sauce in the basket",
+ "task_name": "LIVING_ROOM_SCENE2_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket",
+ "success": true,
+ "decisions": 98,
+ "sim_seconds": 39.6,
+ "wall_s": 392.3,
+ "log": [
+  {
+   "d": 1,
+   "t": 0.4,
+   "phase": "POINT",
+   "tgt": "cell r1c1",
+   "p_tgt": 0.322,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.664,
+   "holding": 0.186,
+   "done": 0.052,
+   "progress": "just started",
+   "eef": [
+    -0.058,
+    0.0,
+    0.681
+   ],
+   "gt_success": false,
+   "ee_px": [
+    256.0,
+    156.1
+   ],
+   "tgt_px": [
+    166.5,
+    203.1
+   ],
+   "px_err": 101.1,
+   "vel": [
+    -0.826,
+    -0.544,
+    0.147
+   ]
+  },
+  {
+   "d": 2,
+   "t": 0.8,
+   "phase": "POINT",
+   "tgt": "cell r1c1",
+   "p_tgt": 0.425,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.58,
+   "holding": 0.163,
+   "done": 0.06,
+   "progress": "just started",
+   "eef": [
+    -0.125,
+    -0.05,
+    0.704
+   ],
+   "gt_success": false,
+   "ee_px": [
+    215.0,
+    117.0
+   ],
+   "tgt_px": [
+    167.8,
+    199.6
+   ],
+   "px_err": 95.1,
+   "vel": [
+    -0.867,
+    -0.492,
+    0.083
+   ]
+  },
+  {
+   "d": 3,
+   "t": 1.2,
+   "phase": "POINT",
+   "tgt": "cell r1c1",
+   "p_tgt": 0.386,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.633,
+   "holding": 0.153,
+   "done": 0.06,
+   "progress": "just started",
+   "eef": [
+    -0.216,
+    -0.1,
+    0.712
+   ],
+   "gt_success": false,
+   "ee_px": [
+    181.8,
+    88.7
+   ],
+   "tgt_px": [
+    169.2,
+    197.6
+   ],
+   "px_err": 109.6,
+   "vel": [
+    -0.796,
+    -0.414,
+    0.079
+   ]
+  },
+  {
+   "d": 4,
+   "t": 1.6,
+   "phase": "DESCEND",
+   "tgt": "cell r1c1",
+   "p_tgt": 0.397,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.606,
+   "holding": 0.137,
+   "done": 0.057,
+   "progress": "just started",
+   "eef": [
+    -0.302,
+    -0.14,
+    0.717
+   ],
+   "gt_success": false,
+   "ee_px": [
+    159.9,
+    67.9
+   ],
+   "tgt_px": [
+    172.8,
+    197.2
+   ],
+   "px_err": 129.9,
+   "vel": [
+    0.166,
+    0.153,
+    0.107
+   ]
+  },
+  {
+   "d": 5,
+   "t": 2.0,
+   "phase": "DESCEND",
+   "tgt": "cell r1c1",
+   "p_tgt": 0.342,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.609,
+   "holding": 0.141,
+   "done": 0.065,
+   "progress": "just started",
+   "eef": [
+    -0.314,
+    -0.122,
+    0.71
+   ],
+   "gt_success": false,
+   "ee_px": [
+    173.4,
+    70.0
+   ],
+   "tgt_px": [
+    173.2,
+    197.5
+   ],
+   "px_err": 127.5,
+   "vel": [
+    0.037,
+    -0.024,
+    -0.448
+   ]
+  },
+  {
+   "d": 6,
+   "t": 2.4,
+   "phase": "DESCEND",
+   "tgt": "cell r1c1",
+   "p_tgt": 0.467,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.63,
+   "holding": 0.139,
+   "done": 0.059,
+   "progress": "just started",
+   "eef": [
+    -0.312,
+    -0.123,
+    0.67
+   ],
+   "gt_success": false,
+   "ee_px": [
+    174.5,
+    97.4
+   ],
+   "tgt_px": [
+    173.1,
+    195.0
+   ],
+   "px_err": 97.6,
+   "vel": [
+    0.017,
+    -0.03,
+    -0.449
+   ]
+  },
+  {
+   "d": 7,
+   "t": 2.8,
+   "phase": "DESCEND",
+   "tgt": "cell r1c1",
+   "p_tgt": 0.584,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.599,
+   "holding": 0.174,
+   "done": 0.064,
+   "progress": "just started",
+   "eef": [
+    -0.3,
+    -0.135,
+    0.636
+   ],
+   "gt_success": false,
+   "ee_px": [
+    167.4,
+    121.9
+   ],
+   "tgt_px": [
+    171.4,
+    194.4
+   ],
+   "px_err": 72.6,
+   "vel": [
+    -0.02,
+    -0.011,
+    -0.449
+   ]
+  },
+  {
+   "d": 8,
+   "t": 3.2,
+   "phase": "DESCEND",
+   "tgt": "cell r1c1",
+   "p_tgt": 0.739,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.579,
+   "holding": 0.197,
+   "done": 0.051,
+   "progress": "just started",
+   "eef": [
+    -0.29,
+    -0.146,
+    0.6
+   ],
+   "gt_success": false,
+   "ee_px": [
+    161.3,
+    146.4
+   ],
+   "tgt_px": [
+    168.6,
+    190.5
+   ],
+   "px_err": 44.7,
+   "vel": [
+    -0.113,
+    0.002,
+    -0.436
+   ]
+  },
+  {
+   "d": 9,
+   "t": 3.6,
+   "phase": "DESCEND",
+   "tgt": "cell r1c1",
+   "p_tgt": 0.359,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.566,
+   "holding": 0.178,
+   "done": 0.06,
+   "progress": "just started",
+   "eef": [
+    -0.289,
+    -0.156,
+    0.564
+   ],
+   "gt_success": false,
+   "ee_px": [
+    156.7,
+    168.1
+   ],
+   "tgt_px": [
+    170.4,
+    195.3
+   ],
+   "px_err": 30.4,
+   "vel": [
+    -0.074,
+    0.081,
+    -0.436
+   ]
+  },
+  {
+   "d": 10,
+   "t": 4.0,
+   "phase": "DESCEND",
+   "tgt": "cell r1c1",
+   "p_tgt": 0.451,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.558,
+   "holding": 0.333,
+   "done": 0.057,
+   "progress": "just started",
+   "eef": [
+    -0.288,
+    -0.157,
+    0.525
+   ],
+   "gt_success": false,
+   "ee_px": [
+    157.9,
+    191.0
+   ],
+   "tgt_px": [
+    170.4,
+    199.7
+   ],
+   "px_err": 15.2,
+   "vel": [
+    0.005,
+    0.174,
+    -0.415
+   ]
+  },
+  {
+   "d": 11,
+   "t": 4.4,
+   "phase": "DESCEND",
+   "tgt": "cell r2c0",
+   "p_tgt": 0.425,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.538,
+   "holding": 0.335,
+   "done": 0.049,
+   "progress": "just started",
+   "eef": [
+    -0.286,
+    -0.145,
+    0.484
+   ],
+   "gt_success": false,
+   "ee_px": [
+    167.5,
+    214.7
+   ],
+   "tgt_px": [
+    119.2,
+    242.6
+   ],
+   "px_err": 55.8,
+   "vel": [
+    0.421,
+    -0.159,
+    -0.011
+   ]
+  },
+  {
+   "d": 12,
+   "t": 4.8,
+   "phase": "DESCEND",
+   "tgt": "cell r2c0",
+   "p_tgt": 0.837,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.54,
+   "holding": 0.299,
+   "done": 0.071,
+   "progress": "just started",
+   "eef": [
+    -0.274,
+    -0.138,
+    0.472
+   ],
+   "gt_success": false,
+   "ee_px": [
+    171.2,
+    224.8
+   ],
+   "tgt_px": [
+    92.6,
+    266.5
+   ],
+   "px_err": 89.0,
+   "vel": [
+    0.412,
+    -0.181,
+    0.019
+   ]
+  },
+  {
+   "d": 13,
+   "t": 5.2,
+   "phase": "DESCEND",
+   "tgt": "cell r2c0",
+   "p_tgt": 0.806,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.501,
+   "holding": 0.253,
+   "done": 0.065,
+   "progress": "just started",
+   "eef": [
+    -0.264,
+    -0.141,
+    0.469
+   ],
+   "gt_success": false,
+   "ee_px": [
+    169.0,
+    228.6
+   ],
+   "tgt_px": [
+    80.0,
+    278.6
+   ],
+   "px_err": 102.1,
+   "vel": [
+    0.413,
+    -0.178,
+    0.021
+   ]
+  },
+  {
+   "d": 14,
+   "t": 5.6,
+   "phase": "DESCEND",
+   "tgt": "cell r2c0",
+   "p_tgt": 0.735,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.525,
+   "holding": 0.29,
+   "done": 0.064,
+   "progress": "just started",
+   "eef": [
+    -0.266,
+    -0.142,
+    0.467
+   ],
+   "gt_success": false,
+   "ee_px": [
+    168.3,
+    229.7
+   ],
+   "tgt_px": [
+    73.7,
+    284.3
+   ],
+   "px_err": 109.2,
+   "vel": [
+    0.414,
+    -0.174,
+    0.025
+   ]
+  },
+  {
+   "d": 15,
+   "t": 6.0,
+   "phase": "DESCEND",
+   "tgt": "cell r2c0",
+   "p_tgt": 0.734,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.543,
+   "holding": 0.273,
+   "done": 0.063,
+   "progress": "just started",
+   "eef": [
+    -0.266,
+    -0.144,
+    0.465
+   ],
+   "gt_success": false,
+   "ee_px": [
+    167.3,
+    230.4
+   ],
+   "tgt_px": [
+    71.0,
+    290.7
+   ],
+   "px_err": 113.6,
+   "vel": [
+    0.419,
+    -0.161,
+    0.027
+   ]
+  },
+  {
+   "d": 16,
+   "t": 6.4,
+   "phase": "DESCEND",
+   "tgt": "cell r2c0",
+   "p_tgt": 0.619,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.571,
+   "holding": 0.282,
+   "done": 0.066,
+   "progress": "just started",
+   "eef": [
+    -0.266,
+    -0.145,
+    0.464
+   ],
+   "gt_success": false,
+   "ee_px": [
+    166.8,
+    231.0
+   ],
+   "tgt_px": [
+    70.5,
+    295.6
+   ],
+   "px_err": 115.9,
+   "vel": [
+    0.423,
+    -0.151,
+    0.028
+   ]
+  },
+  {
+   "d": 17,
+   "t": 6.8,
+   "phase": "DESCEND",
+   "tgt": "cell r2c0",
+   "p_tgt": 0.616,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.549,
+   "holding": 0.255,
+   "done": 0.064,
+   "progress": "just started",
+   "eef": [
+    -0.266,
+    -0.145,
+    0.463
+   ],
+   "gt_success": false,
+   "ee_px": [
+    166.8,
+    231.6
+   ],
+   "tgt_px": [
+    70.4,
+    298.5
+   ],
+   "px_err": 117.4,
+   "vel": [
+    0.425,
+    -0.145,
+    0.029
+   ]
+  },
+  {
+   "d": 18,
+   "t": 7.2,
+   "phase": "DESCEND",
+   "tgt": "cell r2c0",
+   "p_tgt": 0.61,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.559,
+   "holding": 0.278,
+   "done": 0.061,
+   "progress": "just started",
+   "eef": [
+    -0.266,
+    -0.144,
+    0.462
+   ],
+   "gt_success": false,
+   "ee_px": [
+    167.4,
+    232.2
+   ],
+   "tgt_px": [
+    70.0,
+    300.9
+   ],
+   "px_err": 119.2,
+   "vel": [
+    0.426,
+    -0.143,
+    0.03
+   ]
+  },
+  {
+   "d": 19,
+   "t": 7.6,
+   "phase": "GRASP_WAIT",
+   "tgt": "cell r2c0",
+   "p_tgt": 0.649,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.555,
+   "holding": 0.306,
+   "done": 0.062,
+   "progress": "just started",
+   "eef": [
+    -0.266,
+    -0.143,
+    0.461
+   ],
+   "gt_success": false,
+   "ee_px": [
+    168.0,
+    232.8
+   ],
+   "tgt_px": [
+    69.4,
+    298.8
+   ],
+   "px_err": 118.7,
+   "vel": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "d": 20,
+   "t": 8.0,
+   "phase": "GRASP_WAIT",
+   "tgt": "cell r2c0",
+   "p_tgt": 0.637,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.552,
+   "holding": 0.276,
+   "done": 0.048,
+   "progress": "just started",
+   "eef": [
+    -0.27,
+    -0.141,
+    0.46
+   ],
+   "gt_success": false,
+   "ee_px": [
+    169.3,
+    231.9
+   ],
+   "tgt_px": [
+    69.4,
+    298.8
+   ],
+   "px_err": 120.3,
+   "vel": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "d": 21,
+   "t": 8.4,
+   "phase": "GRASP_WAIT",
+   "tgt": "cell r2c0",
+   "p_tgt": 0.73,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.571,
+   "holding": 0.293,
+   "done": 0.056,
+   "progress": "just started",
+   "eef": [
+    -0.27,
+    -0.141,
+    0.46
+   ],
+   "gt_success": false,
+   "ee_px": [
+    169.5,
+    231.9
+   ],
+   "tgt_px": [
+    69.4,
+    298.8
+   ],
+   "px_err": 120.4,
+   "vel": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "d": 22,
+   "t": 8.8,
+   "phase": "VERIFY",
+   "tgt": "cell r2c0",
+   "p_tgt": 0.803,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.575,
+   "holding": 0.316,
+   "done": 0.052,
+   "progress": "just started",
+   "eef": [
+    -0.27,
+    -0.141,
+    0.46
+   ],
+   "gt_success": false,
+   "ee_px": [
+    169.7,
+    231.9
+   ],
+   "tgt_px": [
+    69.4,
+    298.8
+   ],
+   "px_err": 120.6,
+   "vel": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "d": 23,
+   "t": 9.2,
+   "phase": "VERIFY",
+   "tgt": "cell r2c3",
+   "p_tgt": 0.926,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.562,
+   "holding": 0.346,
+   "done": 0.042,
+   "progress": "just started",
+   "eef": [
+    -0.27,
+    -0.141,
+    0.46
+   ],
+   "gt_success": false,
+   "ee_px": [
+    169.8,
+    231.9
+   ],
+   "tgt_px": [
+    69.4,
+    298.8
+   ],
+   "px_err": 120.7,
+   "vel": [
+    0.0,
+    0.0,
+    0.5
+   ]
+  },
+  {
+   "d": 24,
+   "t": 9.6,
+   "phase": "VERIFY",
+   "tgt": "cell r2c3",
+   "p_tgt": 0.895,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.55,
+   "holding": 0.344,
+   "done": 0.046,
+   "progress": "just started",
+   "eef": [
+    -0.274,
+    -0.155,
+    0.485
+   ],
+   "gt_success": false,
+   "ee_px": [
+    159.9,
+    217.1
+   ],
+   "tgt_px": [
+    69.4,
+    298.8
+   ],
+   "px_err": 122.0,
+   "vel": [
+    0.0,
+    0.0,
+    0.5
+   ]
+  },
+  {
+   "d": 25,
+   "t": 10.0,
+   "phase": "POINT",
+   "tgt": "cell r2c3",
+   "p_tgt": 0.912,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.536,
+   "holding": 0.279,
+   "done": 0.046,
+   "progress": "just started",
+   "eef": [
+    -0.287,
+    -0.178,
+    0.511
+   ],
+   "gt_success": false,
+   "ee_px": [
+    145.3,
+    199.6
+   ],
+   "tgt_px": [
+    69.4,
+    298.8
+   ],
+   "px_err": 124.9,
+   "vel": [
+    0.0,
+    0.0,
+    0.5
+   ]
+  },
+  {
+   "d": 26,
+   "t": 10.4,
+   "phase": "POINT",
+   "tgt": "cell r2c0",
+   "p_tgt": 0.707,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.537,
+   "holding": 0.12,
+   "done": 0.049,
+   "progress": "just started",
+   "eef": [
+    -0.298,
+    -0.179,
+    0.559
+   ],
+   "gt_success": false,
+   "ee_px": [
+    143.2,
+    168.7
+   ],
+   "tgt_px": [
+    69.4,
+    298.8
+   ],
+   "px_err": 149.6,
+   "vel": [
+    0.734,
+    0.106,
+    0.671
+   ]
+  },
+  {
+   "d": 27,
+   "t": 10.8,
+   "phase": "POINT",
+   "tgt": "cell r2c0",
+   "p_tgt": 0.727,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.578,
+   "holding": 0.222,
+   "done": 0.056,
+   "progress": "just started",
+   "eef": [
+    -0.247,
+    -0.157,
+    0.617
+   ],
+   "gt_success": false,
+   "ee_px": [
+    149.0,
+    146.7
+   ],
+   "tgt_px": [
+    69.4,
+    298.8
+   ],
+   "px_err": 171.7,
+   "vel": [
+    0.77,
+    0.021,
+    0.638
+   ]
+  },
+  {
+   "d": 28,
+   "t": 11.2,
+   "phase": "POINT",
+   "tgt": "cell r2c0",
+   "p_tgt": 0.7,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.556,
+   "holding": 0.184,
+   "done": 0.047,
+   "progress": "just started",
+   "eef": [
+    -0.17,
+    -0.147,
+    0.681
+   ],
+   "gt_success": false,
+   "ee_px": [
+    143.5,
+    122.7
+   ],
+   "tgt_px": [
+    69.4,
+    298.8
+   ],
+   "px_err": 191.1,
+   "vel": [
+    0.478,
+    -0.065,
+    0.39
+   ]
+  },
+  {
+   "d": 29,
+   "t": 11.6,
+   "phase": "DESCEND",
+   "tgt": "cell r2c0",
+   "p_tgt": 0.602,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.622,
+   "holding": 0.144,
+   "done": 0.053,
+   "progress": "just started",
+   "eef": [
+    -0.113,
+    -0.153,
+    0.728
+   ],
+   "gt_success": false,
+   "ee_px": [
+    127.2,
+    101.6
+   ],
+   "tgt_px": [
+    69.4,
+    298.8
+   ],
+   "px_err": 205.5,
+   "vel": [
+    -0.197,
+    -0.011,
+    -0.154
+   ]
+  },
+  {
+   "d": 30,
+   "t": 12.0,
+   "phase": "DESCEND",
+   "tgt": "cell r2c0",
+   "p_tgt": 0.634,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.609,
+   "holding": 0.128,
+   "done": 0.05,
+   "progress": "just started",
+   "eef": [
+    -0.114,
+    -0.159,
+    0.728
+   ],
+   "gt_success": false,
+   "ee_px": [
+    122.4,
+    101.4
+   ],
+   "tgt_px": [
+    69.4,
+    298.8
+   ],
+   "px_err": 204.4,
+   "vel": [
+    -0.016,
+    0.01,
+    -0.45
+   ]
+  },
+  {
+   "d": 31,
+   "t": 12.4,
+   "phase": "DESCEND",
+   "tgt": "cell r2c0",
+   "p_tgt": 0.737,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.588,
+   "holding": 0.213,
+   "done": 0.054,
+   "progress": "just started",
+   "eef": [
+    -0.118,
+    -0.157,
+    0.682
+   ],
+   "gt_success": false,
+   "ee_px": [
+    128.5,
+    136.4
+   ],
+   "tgt_px": [
+    69.4,
+    298.8
+   ],
+   "px_err": 172.9,
+   "vel": [
+    -0.009,
+    0.009,
+    -0.45
+   ]
+  },
+  {
+   "d": 32,
+   "t": 12.8,
+   "phase": "DESCEND",
+   "tgt": "cell r2c0",
+   "p_tgt": 0.883,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.566,
+   "holding": 0.233,
+   "done": 0.058,
+   "progress": "just started",
+   "eef": [
+    -0.122,
+    -0.155,
+    0.633
+   ],
+   "gt_success": false,
+   "ee_px": [
+    134.8,
+    171.7
+   ],
+   "tgt_px": [
+    69.4,
+    298.8
+   ],
+   "px_err": 143.0,
+   "vel": [
+    -0.001,
+    0.005,
+    -0.45
+   ]
+  },
+  {
+   "d": 33,
+   "t": 13.2,
+   "phase": "DESCEND",
+   "tgt": "cell r2c0",
+   "p_tgt": 0.819,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.548,
+   "holding": 0.242,
+   "done": 0.071,
+   "progress": "just started",
+   "eef": [
+    -0.124,
+    -0.154,
+    0.585
+   ],
+   "gt_success": false,
+   "ee_px": [
+    139.8,
+    204.7
+   ],
+   "tgt_px": [
+    69.4,
+    298.8
+   ],
+   "px_err": 117.6,
+   "vel": [
+    0.006,
+    0.002,
+    -0.45
+   ]
+  },
+  {
+   "d": 34,
+   "t": 13.6,
+   "phase": "DESCEND",
+   "tgt": "cell r2c0",
+   "p_tgt": 0.829,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.558,
+   "holding": 0.372,
+   "done": 0.044,
+   "progress": "just started",
+   "eef": [
+    -0.125,
+    -0.153,
+    0.537
+   ],
+   "gt_success": false,
+   "ee_px": [
+    144.0,
+    235.7
+   ],
+   "tgt_px": [
+    69.4,
+    298.8
+   ],
+   "px_err": 97.7,
+   "vel": [
+    0.019,
+    -0.003,
+    -0.45
+   ]
+  },
+  {
+   "d": 35,
+   "t": 14.0,
+   "phase": "GRASP_WAIT",
+   "tgt": "cell r2c0",
+   "p_tgt": 0.611,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.581,
+   "holding": 0.302,
+   "done": 0.042,
+   "progress": "just started",
+   "eef": [
+    -0.125,
+    -0.152,
+    0.489
+   ],
+   "gt_success": false,
+   "ee_px": [
+    148.0,
+    265.4
+   ],
+   "tgt_px": [
+    69.4,
+    298.8
+   ],
+   "px_err": 85.4,
+   "vel": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "d": 36,
+   "t": 14.4,
+   "phase": "GRASP_WAIT",
+   "tgt": "cell r2c0",
+   "p_tgt": 0.601,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.593,
+   "holding": 0.329,
+   "done": 0.043,
+   "progress": "just started",
+   "eef": [
+    -0.129,
+    -0.154,
+    0.482
+   ],
+   "gt_success": false,
+   "ee_px": [
+    147.7,
+    267.7
+   ],
+   "tgt_px": [
+    69.4,
+    298.8
+   ],
+   "px_err": 84.3,
+   "vel": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "d": 37,
+   "t": 14.8,
+   "phase": "GRASP_WAIT",
+   "tgt": "cell r2c0",
+   "p_tgt": 0.526,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.597,
+   "holding": 0.305,
+   "done": 0.043,
+   "progress": "just started",
+   "eef": [
+    -0.129,
+    -0.154,
+    0.482
+   ],
+   "gt_success": false,
+   "ee_px": [
+    147.7,
+    267.7
+   ],
+   "tgt_px": [
+    69.4,
+    298.8
+   ],
+   "px_err": 84.3,
+   "vel": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "d": 38,
+   "t": 15.2,
+   "phase": "VERIFY",
+   "tgt": "cell r2c0",
+   "p_tgt": 0.519,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.586,
+   "holding": 0.299,
+   "done": 0.051,
+   "progress": "just started",
+   "eef": [
+    -0.13,
+    -0.154,
+    0.482
+   ],
+   "gt_success": false,
+   "ee_px": [
+    147.6,
+    267.7
+   ],
+   "tgt_px": [
+    69.4,
+    298.8
+   ],
+   "px_err": 84.2,
+   "vel": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "d": 39,
+   "t": 15.6,
+   "phase": "VERIFY",
+   "tgt": "cell r2c3",
+   "p_tgt": 0.922,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.603,
+   "holding": 0.313,
+   "done": 0.038,
+   "progress": "just started",
+   "eef": [
+    -0.13,
+    -0.155,
+    0.482
+   ],
+   "gt_success": false,
+   "ee_px": [
+    147.0,
+    267.5
+   ],
+   "tgt_px": [
+    69.4,
+    298.8
+   ],
+   "px_err": 83.7,
+   "vel": [
+    0.0,
+    0.0,
+    0.5
+   ]
+  },
+  {
+   "d": 40,
+   "t": 16.0,
+   "phase": "VERIFY",
+   "tgt": "cell r2c3",
+   "p_tgt": 0.895,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.571,
+   "holding": 0.451,
+   "done": 0.04,
+   "progress": "just started",
+   "eef": [
+    -0.136,
+    -0.156,
+    0.526
+   ],
+   "gt_success": false,
+   "ee_px": [
+    144.0,
+    238.1
+   ],
+   "tgt_px": [
+    69.4,
+    298.8
+   ],
+   "px_err": 96.2,
+   "vel": [
+    0.0,
+    0.0,
+    0.5
+   ]
+  },
+  {
+   "d": 41,
+   "t": 16.4,
+   "phase": "POINT",
+   "tgt": "cell r2c3",
+   "p_tgt": 0.857,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.542,
+   "holding": 0.448,
+   "done": 0.052,
+   "progress": "just started",
+   "eef": [
+    -0.139,
+    -0.155,
+    0.578
+   ],
+   "gt_success": false,
+   "ee_px": [
+    141.6,
+    203.9
+   ],
+   "tgt_px": [
+    69.4,
+    298.8
+   ],
+   "px_err": 119.2,
+   "vel": [
+    0.0,
+    0.0,
+    0.5
+   ]
+  },
+  {
+   "d": 42,
+   "t": 16.8,
+   "phase": "POINT",
+   "tgt": "cell r2c3",
+   "p_tgt": 0.881,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.559,
+   "holding": 0.443,
+   "done": 0.045,
+   "progress": "just started",
+   "eef": [
+    -0.142,
+    -0.154,
+    0.63
+   ],
+   "gt_success": false,
+   "ee_px": [
+    138.7,
+    167.7
+   ],
+   "tgt_px": [
+    69.4,
+    298.8
+   ],
+   "px_err": 148.3,
+   "vel": [
+    0.302,
+    0.931,
+    0.203
+   ]
+  },
+  {
+   "d": 43,
+   "t": 17.2,
+   "phase": "POINT",
+   "tgt": "cell r2c3",
+   "p_tgt": 0.894,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.541,
+   "holding": 0.415,
+   "done": 0.051,
+   "progress": "just started",
+   "eef": [
+    -0.118,
+    -0.064,
+    0.651
+   ],
+   "gt_success": false,
+   "ee_px": [
+    205.4,
+    159.8
+   ],
+   "tgt_px": [
+    69.4,
+    298.8
+   ],
+   "px_err": 194.5,
+   "vel": [
+    0.317,
+    0.928,
+    0.197
+   ]
+  },
+  {
+   "d": 44,
+   "t": 17.6,
+   "phase": "POINT",
+   "tgt": "cell r2c3",
+   "p_tgt": 0.891,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.497,
+   "holding": 0.371,
+   "done": 0.049,
+   "progress": "just started",
+   "eef": [
+    -0.093,
+    0.036,
+    0.668
+   ],
+   "gt_success": false,
+   "ee_px": [
+    285.7,
+    155.6
+   ],
+   "tgt_px": [
+    69.4,
+    298.8
+   ],
+   "px_err": 259.4,
+   "vel": [
+    0.346,
+    0.914,
+    0.213
+   ]
+  },
+  {
+   "d": 45,
+   "t": 18.0,
+   "phase": "POINT",
+   "tgt": "cell r2c3",
+   "p_tgt": 0.888,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.626,
+   "holding": 0.334,
+   "done": 0.06,
+   "progress": "just started",
+   "eef": [
+    -0.064,
+    0.133,
+    0.685
+   ],
+   "gt_success": false,
+   "ee_px": [
+    371.0,
+    151.0
+   ],
+   "tgt_px": [
+    69.4,
+    298.8
+   ],
+   "px_err": 335.9,
+   "vel": [
+    0.39,
+    0.889,
+    0.241
+   ]
+  },
+  {
+   "d": 46,
+   "t": 18.4,
+   "phase": "POINT",
+   "tgt": "cell r2c3",
+   "p_tgt": 0.922,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.611,
+   "holding": 0.277,
+   "done": 0.067,
+   "progress": "less than halfway",
+   "eef": [
+    -0.03,
+    0.225,
+    0.706
+   ],
+   "gt_success": false,
+   "ee_px": [
+    462.5,
+    145.5
+   ],
+   "tgt_px": [
+    69.4,
+    298.8
+   ],
+   "px_err": 422.0,
+   "vel": [
+    0.221,
+    0.354,
+    0.143
+   ]
+  },
+  {
+   "d": 47,
+   "t": 18.8,
+   "phase": "DESCEND",
+   "tgt": "cell r2c3",
+   "p_tgt": 0.93,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.658,
+   "holding": 0.225,
+   "done": 0.066,
+   "progress": "just started",
+   "eef": [
+    -0.002,
+    0.271,
+    0.725
+   ],
+   "gt_success": false,
+   "ee_px": [
+    517.3,
+    138.3
+   ],
+   "tgt_px": [
+    69.4,
+    298.8
+   ],
+   "px_err": 475.8,
+   "vel": [
+    -0.116,
+    -0.201,
+    -0.093
+   ]
+  },
+  {
+   "d": 48,
+   "t": 19.2,
+   "phase": "DESCEND",
+   "tgt": "cell r2c3",
+   "p_tgt": 0.911,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.675,
+   "holding": 0.199,
+   "done": 0.068,
+   "progress": "just started",
+   "eef": [
+    0.001,
+    0.264,
+    0.728
+   ],
+   "gt_success": false,
+   "ee_px": [
+    512.4,
+    136.0
+   ],
+   "tgt_px": [
+    69.4,
+    298.8
+   ],
+   "px_err": 472.0,
+   "vel": [
+    -0.026,
+    -0.01,
+    -0.449
+   ]
+  },
+  {
+   "d": 49,
+   "t": 19.6,
+   "phase": "DESCEND",
+   "tgt": "cell r2c3",
+   "p_tgt": 0.943,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.591,
+   "holding": 0.208,
+   "done": 0.073,
+   "progress": "more than halfway",
+   "eef": [
+    -0.002,
+    0.26,
+    0.684
+   ],
+   "gt_success": false,
+   "ee_px": [
+    498.8,
+    173.9
+   ],
+   "tgt_px": [
+    69.4,
+    298.8
+   ],
+   "px_err": 447.3,
+   "vel": [
+    -0.023,
+    0.002,
+    -0.449
+   ]
+  },
+  {
+   "d": 50,
+   "t": 20.0,
+   "phase": "DESCEND",
+   "tgt": "cell r2c3",
+   "p_tgt": 0.953,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.611,
+   "holding": 0.272,
+   "done": 0.1,
+   "progress": "almost done",
+   "eef": [
+    -0.007,
+    0.259,
+    0.635
+   ],
+   "gt_success": false,
+   "ee_px": [
+    486.6,
+    212.5
+   ],
+   "tgt_px": [
+    69.4,
+    298.8
+   ],
+   "px_err": 426.0,
+   "vel": [
+    -0.001,
+    0.018,
+    -0.45
+   ]
+  },
+  {
+   "d": 51,
+   "t": 20.4,
+   "phase": "GRASP_WAIT",
+   "tgt": "cell r2c3",
+   "p_tgt": 0.916,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.591,
+   "holding": 0.305,
+   "done": 0.216,
+   "progress": "almost done",
+   "eef": [
+    -0.009,
+    0.259,
+    0.586
+   ],
+   "gt_success": false,
+   "ee_px": [
+    478.3,
+    248.6
+   ],
+   "tgt_px": [
+    69.4,
+    298.8
+   ],
+   "px_err": 412.0,
+   "vel": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "d": 52,
+   "t": 20.8,
+   "phase": "GRASP_WAIT",
+   "tgt": "cell r2c3",
+   "p_tgt": 0.902,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.633,
+   "holding": 0.288,
+   "done": 0.135,
+   "progress": "almost done",
+   "eef": [
+    -0.011,
+    0.26,
+    0.582
+   ],
+   "gt_success": false,
+   "ee_px": [
+    478.1,
+    251.5
+   ],
+   "tgt_px": [
+    69.4,
+    298.8
+   ],
+   "px_err": 411.4,
+   "vel": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "d": 53,
+   "t": 21.2,
+   "phase": "GRASP_WAIT",
+   "tgt": "cell r2c3",
+   "p_tgt": 0.908,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.635,
+   "holding": 0.265,
+   "done": 0.147,
+   "progress": "almost done",
+   "eef": [
+    -0.011,
+    0.26,
+    0.581
+   ],
+   "gt_success": false,
+   "ee_px": [
+    478.2,
+    251.6
+   ],
+   "tgt_px": [
+    69.4,
+    298.8
+   ],
+   "px_err": 411.6,
+   "vel": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "d": 54,
+   "t": 21.6,
+   "phase": "POINT",
+   "tgt": "cell r2c3",
+   "p_tgt": 0.919,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.656,
+   "holding": 0.285,
+   "done": 0.165,
+   "progress": "almost done",
+   "eef": [
+    -0.011,
+    0.261,
+    0.581
+   ],
+   "gt_success": false,
+   "ee_px": [
+    478.4,
+    251.6
+   ],
+   "tgt_px": [
+    69.4,
+    298.8
+   ],
+   "px_err": 411.8,
+   "vel": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "d": 55,
+   "t": 22.0,
+   "phase": "POINT",
+   "tgt": "cell r2c1",
+   "p_tgt": 0.344,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.623,
+   "holding": 0.25,
+   "done": 0.118,
+   "progress": "almost done",
+   "eef": [
+    -0.011,
+    0.261,
+    0.581
+   ],
+   "gt_success": false,
+   "ee_px": [
+    478.6,
+    251.6
+   ],
+   "tgt_px": [
+    166.4,
+    279.0
+   ],
+   "px_err": 313.4,
+   "vel": [
+    -0.118,
+    -0.932,
+    0.343
+   ]
+  },
+  {
+   "d": 56,
+   "t": 22.4,
+   "phase": "POINT",
+   "tgt": "cell r2c2",
+   "p_tgt": 0.311,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.593,
+   "holding": 0.25,
+   "done": 0.08,
+   "progress": "more than halfway",
+   "eef": [
+    -0.017,
+    0.181,
+    0.62
+   ],
+   "gt_success": false,
+   "ee_px": [
+    414.1,
+    219.7
+   ],
+   "tgt_px": [
+    234.4,
+    280.7
+   ],
+   "px_err": 189.7,
+   "vel": [
+    -0.162,
+    -0.891,
+    0.424
+   ]
+  },
+  {
+   "d": 57,
+   "t": 22.8,
+   "phase": "DESCEND",
+   "tgt": "cell r2c2",
+   "p_tgt": 0.532,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.585,
+   "holding": 0.233,
+   "done": 0.051,
+   "progress": "less than halfway",
+   "eef": [
+    -0.039,
+    0.087,
+    0.662
+   ],
+   "gt_success": false,
+   "ee_px": [
+    331.8,
+    178.5
+   ],
+   "tgt_px": [
+    268.7,
+    278.2
+   ],
+   "px_err": 118.1,
+   "vel": [
+    -0.222,
+    -0.7,
+    0.578
+   ]
+  },
+  {
+   "d": 58,
+   "t": 23.2,
+   "phase": "DESCEND",
+   "tgt": "cell r2c1",
+   "p_tgt": 0.358,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.565,
+   "holding": 0.185,
+   "done": 0.036,
+   "progress": "just started",
+   "eef": [
+    -0.068,
+    0.011,
+    0.718
+   ],
+   "gt_success": false,
+   "ee_px": [
+    265.4,
+    122.4
+   ],
+   "tgt_px": [
+    223.4,
+    281.4
+   ],
+   "px_err": 164.5,
+   "vel": [
+    0.027,
+    -0.097,
+    -0.439
+   ]
+  },
+  {
+   "d": 59,
+   "t": 23.6,
+   "phase": "DESCEND",
+   "tgt": "cell r2c2",
+   "p_tgt": 0.45,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.603,
+   "holding": 0.133,
+   "done": 0.043,
+   "progress": "just started",
+   "eef": [
+    -0.07,
+    -0.006,
+    0.679
+   ],
+   "gt_success": false,
+   "ee_px": [
+    251.0,
+    153.7
+   ],
+   "tgt_px": [
+    265.6,
+    280.4
+   ],
+   "px_err": 127.6,
+   "vel": [
+    0.032,
+    0.041,
+    -0.447
+   ]
+  },
+  {
+   "d": 60,
+   "t": 24.0,
+   "phase": "DESCEND",
+   "tgt": "cell r2c2",
+   "p_tgt": 0.369,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.563,
+   "holding": 0.174,
+   "done": 0.051,
+   "progress": "just started",
+   "eef": [
+    -0.068,
+    -0.003,
+    0.632
+   ],
+   "gt_success": false,
+   "ee_px": [
+    253.3,
+    191.3
+   ],
+   "tgt_px": [
+    286.5,
+    279.2
+   ],
+   "px_err": 94.0,
+   "vel": [
+    0.026,
+    0.122,
+    -0.432
+   ]
+  },
+  {
+   "d": 61,
+   "t": 24.4,
+   "phase": "DESCEND",
+   "tgt": "cell r2c2",
+   "p_tgt": 0.402,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.566,
+   "holding": 0.134,
+   "done": 0.061,
+   "progress": "just started",
+   "eef": [
+    -0.066,
+    0.008,
+    0.586
+   ],
+   "gt_success": false,
+   "ee_px": [
+    262.7,
+    225.5
+   ],
+   "tgt_px": [
+    295.9,
+    281.7
+   ],
+   "px_err": 65.2,
+   "vel": [
+    0.049,
+    0.169,
+    -0.414
+   ]
+  },
+  {
+   "d": 62,
+   "t": 24.8,
+   "phase": "DESCEND",
+   "tgt": "cell r2c1",
+   "p_tgt": 0.406,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.575,
+   "holding": 0.326,
+   "done": 0.029,
+   "progress": "just started",
+   "eef": [
+    -0.062,
+    0.025,
+    0.541
+   ],
+   "gt_success": false,
+   "ee_px": [
+    275.8,
+    257.5
+   ],
+   "tgt_px": [
+    235.2,
+    283.4
+   ],
+   "px_err": 48.1,
+   "vel": [
+    0.074,
+    -0.288,
+    -0.338
+   ]
+  },
+  {
+   "d": 63,
+   "t": 25.2,
+   "phase": "DESCEND",
+   "tgt": "cell r2c1",
+   "p_tgt": 0.559,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.61,
+   "holding": 0.387,
+   "done": 0.033,
+   "progress": "just started",
+   "eef": [
+    -0.052,
+    0.005,
+    0.509
+   ],
+   "gt_success": false,
+   "ee_px": [
+    259.8,
+    282.7
+   ],
+   "tgt_px": [
+    203.7,
+    282.5
+   ],
+   "px_err": 56.1,
+   "vel": [
+    0.003,
+    -0.417,
+    -0.169
+   ]
+  },
+  {
+   "d": 64,
+   "t": 25.6,
+   "phase": "DESCEND",
+   "tgt": "cell r1c1",
+   "p_tgt": 0.205,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.596,
+   "holding": 0.347,
+   "done": 0.042,
+   "progress": "just started",
+   "eef": [
+    -0.049,
+    -0.036,
+    0.491
+   ],
+   "gt_success": false,
+   "ee_px": [
+    228.1,
+    295.4
+   ],
+   "tgt_px": [
+    196.5,
+    238.8
+   ],
+   "px_err": 64.8,
+   "vel": [
+    -0.411,
+    -0.179,
+    -0.041
+   ]
+  },
+  {
+   "d": 65,
+   "t": 26.0,
+   "phase": "GRASP_WAIT",
+   "tgt": "cell r2c2",
+   "p_tgt": 0.32,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.662,
+   "holding": 0.248,
+   "done": 0.046,
+   "progress": "just started",
+   "eef": [
+    -0.082,
+    -0.059,
+    0.489
+   ],
+   "gt_success": false,
+   "ee_px": [
+    212.4,
+    282.2
+   ],
+   "tgt_px": [
+    253.6,
+    270.1
+   ],
+   "px_err": 42.9,
+   "vel": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "d": 66,
+   "t": 26.4,
+   "phase": "GRASP_WAIT",
+   "tgt": "cell r2c2",
+   "p_tgt": 0.339,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.595,
+   "holding": 0.222,
+   "done": 0.056,
+   "progress": "just started",
+   "eef": [
+    -0.091,
+    -0.06,
+    0.486
+   ],
+   "gt_success": false,
+   "ee_px": [
+    211.8,
+    280.3
+   ],
+   "tgt_px": [
+    253.6,
+    270.1
+   ],
+   "px_err": 43.0,
+   "vel": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "d": 67,
+   "t": 26.8,
+   "phase": "GRASP_WAIT",
+   "tgt": "cell r2c2",
+   "p_tgt": 0.308,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.605,
+   "holding": 0.24,
+   "done": 0.052,
+   "progress": "just started",
+   "eef": [
+    -0.092,
+    -0.06,
+    0.486
+   ],
+   "gt_success": false,
+   "ee_px": [
+    211.9,
+    280.2
+   ],
+   "tgt_px": [
+    253.6,
+    270.1
+   ],
+   "px_err": 43.0,
+   "vel": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "d": 68,
+   "t": 27.2,
+   "phase": "VERIFY",
+   "tgt": "cell r2c2",
+   "p_tgt": 0.331,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.619,
+   "holding": 0.252,
+   "done": 0.058,
+   "progress": "just started",
+   "eef": [
+    -0.092,
+    -0.06,
+    0.486
+   ],
+   "gt_success": false,
+   "ee_px": [
+    211.8,
+    280.2
+   ],
+   "tgt_px": [
+    253.6,
+    270.1
+   ],
+   "px_err": 43.0,
+   "vel": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "d": 69,
+   "t": 27.6,
+   "phase": "VERIFY",
+   "tgt": "cell r2c3",
+   "p_tgt": 0.938,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.606,
+   "holding": 0.282,
+   "done": 0.047,
+   "progress": "just started",
+   "eef": [
+    -0.092,
+    -0.06,
+    0.486
+   ],
+   "gt_success": false,
+   "ee_px": [
+    211.8,
+    280.2
+   ],
+   "tgt_px": [
+    253.6,
+    270.1
+   ],
+   "px_err": 43.0,
+   "vel": [
+    0.0,
+    0.0,
+    0.5
+   ]
+  },
+  {
+   "d": 70,
+   "t": 28.0,
+   "phase": "VERIFY",
+   "tgt": "cell r2c3",
+   "p_tgt": 0.931,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.593,
+   "holding": 0.291,
+   "done": 0.038,
+   "progress": "just started",
+   "eef": [
+    -0.096,
+    -0.061,
+    0.532
+   ],
+   "gt_success": false,
+   "ee_px": [
+    210.2,
+    249.6
+   ],
+   "tgt_px": [
+    253.6,
+    270.1
+   ],
+   "px_err": 48.0,
+   "vel": [
+    0.0,
+    0.0,
+    0.5
+   ]
+  },
+  {
+   "d": 71,
+   "t": 28.4,
+   "phase": "VERIFY",
+   "tgt": "cell r2c3",
+   "p_tgt": 0.94,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.561,
+   "holding": 0.285,
+   "done": 0.05,
+   "progress": "just started",
+   "eef": [
+    -0.099,
+    -0.061,
+    0.584
+   ],
+   "gt_success": false,
+   "ee_px": [
+    209.0,
+    214.2
+   ],
+   "tgt_px": [
+    253.6,
+    270.1
+   ],
+   "px_err": 71.5,
+   "vel": [
+    0.0,
+    0.0,
+    0.5
+   ]
+  },
+  {
+   "d": 72,
+   "t": 28.8,
+   "phase": "POINT",
+   "tgt": "cell r2c3",
+   "p_tgt": 0.932,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.588,
+   "holding": 0.18,
+   "done": 0.052,
+   "progress": "just started",
+   "eef": [
+    -0.101,
+    -0.061,
+    0.636
+   ],
+   "gt_success": false,
+   "ee_px": [
+    207.6,
+    176.5
+   ],
+   "tgt_px": [
+    253.6,
+    270.1
+   ],
+   "px_err": 104.3,
+   "vel": [
+    0.0,
+    0.0,
+    0.5
+   ]
+  },
+  {
+   "d": 73,
+   "t": 29.2,
+   "phase": "POINT",
+   "tgt": "cell r2c1",
+   "p_tgt": 0.291,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.578,
+   "holding": 0.161,
+   "done": 0.046,
+   "progress": "just started",
+   "eef": [
+    -0.104,
+    -0.061,
+    0.688
+   ],
+   "gt_success": false,
+   "ee_px": [
+    205.9,
+    136.4
+   ],
+   "tgt_px": [
+    253.6,
+    270.1
+   ],
+   "px_err": 141.9,
+   "vel": [
+    0.038,
+    0.97,
+    0.24
+   ]
+  },
+  {
+   "d": 74,
+   "t": 29.6,
+   "phase": "POINT",
+   "tgt": "cell r2c1",
+   "p_tgt": 0.421,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.575,
+   "holding": 0.197,
+   "done": 0.036,
+   "progress": "just started",
+   "eef": [
+    -0.103,
+    0.031,
+    0.714
+   ],
+   "gt_success": false,
+   "ee_px": [
+    282.6,
+    115.3
+   ],
+   "tgt_px": [
+    253.6,
+    270.1
+   ],
+   "px_err": 157.5,
+   "vel": [
+    0.044,
+    0.387,
+    0.057
+   ]
+  },
+  {
+   "d": 75,
+   "t": 30.0,
+   "phase": "DESCEND",
+   "tgt": "cell r2c1",
+   "p_tgt": 0.457,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.596,
+   "holding": 0.195,
+   "done": 0.054,
+   "progress": "just started",
+   "eef": [
+    -0.101,
+    0.079,
+    0.72
+   ],
+   "gt_success": false,
+   "ee_px": [
+    322.7,
+    111.0
+   ],
+   "tgt_px": [
+    253.6,
+    270.1
+   ],
+   "px_err": 173.5,
+   "vel": [
+    0.069,
+    -0.24,
+    -0.005
+   ]
+  },
+  {
+   "d": 76,
+   "t": 30.4,
+   "phase": "DESCEND",
+   "tgt": "cell r2c1",
+   "p_tgt": 0.449,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.576,
+   "holding": 0.219,
+   "done": 0.049,
+   "progress": "just started",
+   "eef": [
+    -0.094,
+    0.06,
+    0.72
+   ],
+   "gt_success": false,
+   "ee_px": [
+    307.6,
+    112.8
+   ],
+   "tgt_px": [
+    253.6,
+    270.1
+   ],
+   "px_err": 166.3,
+   "vel": [
+    -0.009,
+    0.019,
+    -0.45
+   ]
+  },
+  {
+   "d": 77,
+   "t": 30.8,
+   "phase": "DESCEND",
+   "tgt": "cell r2c1",
+   "p_tgt": 0.299,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.572,
+   "holding": 0.208,
+   "done": 0.05,
+   "progress": "just started",
+   "eef": [
+    -0.092,
+    0.059,
+    0.679
+   ],
+   "gt_success": false,
+   "ee_px": [
+    305.4,
+    147.0
+   ],
+   "tgt_px": [
+    253.6,
+    270.1
+   ],
+   "px_err": 133.6,
+   "vel": [
+    -0.015,
+    0.024,
+    -0.449
+   ]
+  },
+  {
+   "d": 78,
+   "t": 31.2,
+   "phase": "DESCEND",
+   "tgt": "cell r2c1",
+   "p_tgt": 0.457,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.57,
+   "holding": 0.217,
+   "done": 0.049,
+   "progress": "just started",
+   "eef": [
+    -0.095,
+    0.061,
+    0.631
+   ],
+   "gt_success": false,
+   "ee_px": [
+    305.4,
+    182.3
+   ],
+   "tgt_px": [
+    253.6,
+    270.1
+   ],
+   "px_err": 101.9,
+   "vel": [
+    -0.012,
+    0.026,
+    -0.449
+   ]
+  },
+  {
+   "d": 79,
+   "t": 31.6,
+   "phase": "DESCEND",
+   "tgt": "cell r2c1",
+   "p_tgt": 0.396,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.533,
+   "holding": 0.212,
+   "done": 0.062,
+   "progress": "just started",
+   "eef": [
+    -0.097,
+    0.064,
+    0.583
+   ],
+   "gt_success": false,
+   "ee_px": [
+    305.4,
+    215.3
+   ],
+   "tgt_px": [
+    253.6,
+    270.1
+   ],
+   "px_err": 75.4,
+   "vel": [
+    -0.006,
+    0.028,
+    -0.449
+   ]
+  },
+  {
+   "d": 80,
+   "t": 32.0,
+   "phase": "DESCEND",
+   "tgt": "cell r2c1",
+   "p_tgt": 0.502,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.523,
+   "holding": 0.323,
+   "done": 0.049,
+   "progress": "just started",
+   "eef": [
+    -0.099,
+    0.066,
+    0.535
+   ],
+   "gt_success": false,
+   "ee_px": [
+    305.7,
+    246.4
+   ],
+   "tgt_px": [
+    253.6,
+    270.1
+   ],
+   "px_err": 57.2,
+   "vel": [
+    0.003,
+    0.032,
+    -0.449
+   ]
+  },
+  {
+   "d": 81,
+   "t": 32.4,
+   "phase": "GRASP_WAIT",
+   "tgt": "cell r2c1",
+   "p_tgt": 0.363,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.603,
+   "holding": 0.318,
+   "done": 0.052,
+   "progress": "just started",
+   "eef": [
+    -0.101,
+    0.069,
+    0.487
+   ],
+   "gt_success": false,
+   "ee_px": [
+    306.1,
+    275.9
+   ],
+   "tgt_px": [
+    253.6,
+    270.1
+   ],
+   "px_err": 52.8,
+   "vel": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "d": 82,
+   "t": 32.8,
+   "phase": "GRASP_WAIT",
+   "tgt": "cell r2c1",
+   "p_tgt": 0.437,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.629,
+   "holding": 0.392,
+   "done": 0.049,
+   "progress": "just started",
+   "eef": [
+    -0.104,
+    0.07,
+    0.482
+   ],
+   "gt_success": false,
+   "ee_px": [
+    306.6,
+    278.0
+   ],
+   "tgt_px": [
+    253.6,
+    270.1
+   ],
+   "px_err": 53.6,
+   "vel": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "d": 83,
+   "t": 33.2,
+   "phase": "GRASP_WAIT",
+   "tgt": "cell r2c1",
+   "p_tgt": 0.402,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.63,
+   "holding": 0.388,
+   "done": 0.049,
+   "progress": "just started",
+   "eef": [
+    -0.104,
+    0.07,
+    0.482
+   ],
+   "gt_success": false,
+   "ee_px": [
+    306.7,
+    277.9
+   ],
+   "tgt_px": [
+    253.6,
+    270.1
+   ],
+   "px_err": 53.7,
+   "vel": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "d": 84,
+   "t": 33.6,
+   "phase": "VERIFY",
+   "tgt": "cell r2c1",
+   "p_tgt": 0.455,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.621,
+   "holding": 0.406,
+   "done": 0.045,
+   "progress": "just started",
+   "eef": [
+    -0.104,
+    0.07,
+    0.482
+   ],
+   "gt_success": false,
+   "ee_px": [
+    306.8,
+    277.9
+   ],
+   "tgt_px": [
+    253.6,
+    270.1
+   ],
+   "px_err": 53.7,
+   "vel": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "d": 85,
+   "t": 34.0,
+   "phase": "VERIFY",
+   "tgt": "cell r2c3",
+   "p_tgt": 0.961,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.604,
+   "holding": 0.374,
+   "done": 0.042,
+   "progress": "just started",
+   "eef": [
+    -0.104,
+    0.07,
+    0.482
+   ],
+   "gt_success": false,
+   "ee_px": [
+    306.7,
+    277.8
+   ],
+   "tgt_px": [
+    253.6,
+    270.1
+   ],
+   "px_err": 53.6,
+   "vel": [
+    0.0,
+    0.0,
+    0.5
+   ]
+  },
+  {
+   "d": 86,
+   "t": 34.4,
+   "phase": "VERIFY",
+   "tgt": "cell r2c3",
+   "p_tgt": 0.97,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.57,
+   "holding": 0.339,
+   "done": 0.05,
+   "progress": "just started",
+   "eef": [
+    -0.109,
+    0.071,
+    0.528
+   ],
+   "gt_success": false,
+   "ee_px": [
+    308.4,
+    247.6
+   ],
+   "tgt_px": [
+    253.6,
+    270.1
+   ],
+   "px_err": 59.2,
+   "vel": [
+    0.0,
+    0.0,
+    0.5
+   ]
+  },
+  {
+   "d": 87,
+   "t": 34.8,
+   "phase": "POINT",
+   "tgt": "cell r2c3",
+   "p_tgt": 0.959,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.529,
+   "holding": 0.411,
+   "done": 0.071,
+   "progress": "just started",
+   "eef": [
+    -0.111,
+    0.071,
+    0.58
+   ],
+   "gt_success": false,
+   "ee_px": [
+    309.8,
+    212.7
+   ],
+   "tgt_px": [
+    253.6,
+    270.1
+   ],
+   "px_err": 80.3,
+   "vel": [
+    0.0,
+    0.0,
+    0.5
+   ]
+  },
+  {
+   "d": 88,
+   "t": 35.2,
+   "phase": "POINT",
+   "tgt": "cell r2c3",
+   "p_tgt": 0.971,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.558,
+   "holding": 0.469,
+   "done": 0.058,
+   "progress": "just started",
+   "eef": [
+    -0.114,
+    0.07,
+    0.631
+   ],
+   "gt_success": false,
+   "ee_px": [
+    311.2,
+    175.7
+   ],
+   "tgt_px": [
+    253.6,
+    270.1
+   ],
+   "px_err": 110.6,
+   "vel": [
+    0.452,
+    0.809,
+    0.377
+   ]
+  },
+  {
+   "d": 89,
+   "t": 35.6,
+   "phase": "POINT",
+   "tgt": "cell r2c3",
+   "p_tgt": 0.97,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.604,
+   "holding": 0.313,
+   "done": 0.091,
+   "progress": "just started",
+   "eef": [
+    -0.084,
+    0.145,
+    0.663
+   ],
+   "gt_success": false,
+   "ee_px": [
+    376.7,
+    161.9
+   ],
+   "tgt_px": [
+    253.6,
+    270.1
+   ],
+   "px_err": 163.9,
+   "vel": [
+    0.511,
+    0.771,
+    0.38
+   ]
+  },
+  {
+   "d": 90,
+   "t": 36.0,
+   "phase": "POINT",
+   "tgt": "cell r2c3",
+   "p_tgt": 0.96,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.555,
+   "holding": 0.311,
+   "done": 0.1,
+   "progress": "more than halfway",
+   "eef": [
+    -0.038,
+    0.225,
+    0.698
+   ],
+   "gt_success": false,
+   "ee_px": [
+    459.0,
+    149.1
+   ],
+   "tgt_px": [
+    253.6,
+    270.1
+   ],
+   "px_err": 238.4,
+   "vel": [
+    0.301,
+    0.357,
+    0.217
+   ]
+  },
+  {
+   "d": 91,
+   "t": 36.4,
+   "phase": "DESCEND",
+   "tgt": "cell r2c3",
+   "p_tgt": 0.979,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.633,
+   "holding": 0.246,
+   "done": 0.072,
+   "progress": "less than halfway",
+   "eef": [
+    -0.0,
+    0.269,
+    0.726
+   ],
+   "gt_success": false,
+   "ee_px": [
+    516.4,
+    137.6
+   ],
+   "tgt_px": [
+    253.6,
+    270.1
+   ],
+   "px_err": 294.3,
+   "vel": [
+    -0.143,
+    -0.167,
+    -0.119
+   ]
+  },
+  {
+   "d": 92,
+   "t": 36.8,
+   "phase": "DESCEND",
+   "tgt": "cell r2c3",
+   "p_tgt": 0.973,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.621,
+   "holding": 0.218,
+   "done": 0.075,
+   "progress": "more than halfway",
+   "eef": [
+    0.002,
+    0.266,
+    0.729
+   ],
+   "gt_success": false,
+   "ee_px": [
+    515.2,
+    135.5
+   ],
+   "tgt_px": [
+    253.6,
+    270.1
+   ],
+   "px_err": 294.2,
+   "vel": [
+    -0.03,
+    -0.016,
+    -0.449
+   ]
+  },
+  {
+   "d": 93,
+   "t": 37.2,
+   "phase": "DESCEND",
+   "tgt": "cell r2c3",
+   "p_tgt": 0.973,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.625,
+   "holding": 0.26,
+   "done": 0.099,
+   "progress": "almost done",
+   "eef": [
+    -0.001,
+    0.263,
+    0.686
+   ],
+   "gt_success": false,
+   "ee_px": [
+    501.5,
+    173.3
+   ],
+   "tgt_px": [
+    253.6,
+    270.1
+   ],
+   "px_err": 266.2,
+   "vel": [
+    -0.027,
+    -0.008,
+    -0.449
+   ]
+  },
+  {
+   "d": 94,
+   "t": 37.6,
+   "phase": "DESCEND",
+   "tgt": "cell r2c3",
+   "p_tgt": 0.953,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.599,
+   "holding": 0.226,
+   "done": 0.182,
+   "progress": "almost done",
+   "eef": [
+    -0.007,
+    0.26,
+    0.636
+   ],
+   "gt_success": false,
+   "ee_px": [
+    487.9,
+    211.8
+   ],
+   "tgt_px": [
+    253.6,
+    270.1
+   ],
+   "px_err": 241.5,
+   "vel": [
+    -0.005,
+    0.009,
+    -0.45
+   ]
+  },
+  {
+   "d": 95,
+   "t": 38.0,
+   "phase": "GRASP_WAIT",
+   "tgt": "cell r2c3",
+   "p_tgt": 0.936,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.646,
+   "holding": 0.302,
+   "done": 0.23,
+   "progress": "almost done",
+   "eef": [
+    -0.009,
+    0.259,
+    0.587
+   ],
+   "gt_success": false,
+   "ee_px": [
+    478.5,
+    247.9
+   ],
+   "tgt_px": [
+    253.6,
+    270.1
+   ],
+   "px_err": 226.0,
+   "vel": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "d": 96,
+   "t": 38.4,
+   "phase": "GRASP_WAIT",
+   "tgt": "cell r2c3",
+   "p_tgt": 0.959,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.662,
+   "holding": 0.315,
+   "done": 0.224,
+   "progress": "almost done",
+   "eef": [
+    -0.011,
+    0.26,
+    0.583
+   ],
+   "gt_success": false,
+   "ee_px": [
+    478.1,
+    250.8
+   ],
+   "tgt_px": [
+    253.6,
+    270.1
+   ],
+   "px_err": 225.3,
+   "vel": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "d": 97,
+   "t": 38.8,
+   "phase": "GRASP_WAIT",
+   "tgt": "cell r2c3",
+   "p_tgt": 0.957,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.653,
+   "holding": 0.308,
+   "done": 0.218,
+   "progress": "almost done",
+   "eef": [
+    -0.011,
+    0.26,
+    0.582
+   ],
+   "gt_success": false,
+   "ee_px": [
+    478.2,
+    250.9
+   ],
+   "tgt_px": [
+    253.6,
+    270.1
+   ],
+   "px_err": 225.4,
+   "vel": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "d": 98,
+   "t": 39.2,
+   "phase": "FINISH",
+   "tgt": "cell r2c3",
+   "p_tgt": 0.964,
+   "grip": "keep the gripper as it is",
+   "grip_p": 0.673,
+   "holding": 0.292,
+   "done": 0.241,
+   "progress": "almost done",
+   "eef": [
+    -0.011,
+    0.261,
+    0.582
+   ],
+   "gt_success": false,
+   "ee_px": [
+    478.4,
+    250.9
+   ],
+   "tgt_px": [
+    253.6,
+    270.1
+   ],
+   "px_err": 225.6,
+   "vel": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  }
+ ]
+}

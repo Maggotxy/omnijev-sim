@@ -1,0 +1,432 @@
+{
+ "task": "Pick up the red cube and place it on the green circle, then pick up the blue cube and place it on the blue circle.",
+ "seed": 1,
+ "backend": "omnijev",
+ "success": true,
+ "ticks": 28,
+ "wall_s": 276.2,
+ "api_calls": 56,
+ "api_latency_mean": 0.58,
+ "log": [
+  {
+   "tick": 1,
+   "subtask": 0,
+   "phase": "REACH",
+   "action": "track:C3",
+   "refine_sim": false,
+   "tgt_cell": "C3",
+   "p_tgt": 0.77,
+   "p": {
+    "grasp": 0.221,
+    "release": 0.286,
+    "done": 0.052
+   },
+   "in_zone": false
+  },
+  {
+   "tick": 2,
+   "subtask": 0,
+   "phase": "APPROACH",
+   "action": "refine(sim)",
+   "refine_sim": true,
+   "tgt_cell": "C3",
+   "p_tgt": 0.772,
+   "p": {
+    "grasp": 0.259,
+    "release": 0.354,
+    "done": 0.056
+   },
+   "in_zone": false
+  },
+  {
+   "tick": 3,
+   "subtask": 0,
+   "phase": "APPROACH",
+   "action": "gate_grasp:0.29",
+   "refine_sim": true,
+   "tgt_cell": "C3",
+   "p_tgt": 0.69,
+   "p": {
+    "grasp": 0.292,
+    "release": 0.378,
+    "done": 0.058
+   },
+   "in_zone": false
+  },
+  {
+   "tick": 4,
+   "subtask": 0,
+   "phase": "APPROACH",
+   "action": "gate_grasp:0.38",
+   "refine_sim": true,
+   "tgt_cell": "C3",
+   "p_tgt": 0.773,
+   "p": {
+    "grasp": 0.382,
+    "release": 0.501,
+    "done": 0.064
+   },
+   "in_zone": false
+  },
+  {
+   "tick": 5,
+   "subtask": 0,
+   "phase": "APPROACH",
+   "action": "gate_grasp:0.38",
+   "refine_sim": true,
+   "tgt_cell": "C3",
+   "p_tgt": 0.773,
+   "p": {
+    "grasp": 0.382,
+    "release": 0.501,
+    "done": 0.064
+   },
+   "in_zone": false
+  },
+  {
+   "tick": 6,
+   "subtask": 0,
+   "phase": "APPROACH",
+   "action": "gate_grasp:0.38",
+   "refine_sim": true,
+   "tgt_cell": "C3",
+   "p_tgt": 0.773,
+   "p": {
+    "grasp": 0.382,
+    "release": 0.501,
+    "done": 0.064
+   },
+   "in_zone": false
+  },
+  {
+   "tick": 7,
+   "subtask": 0,
+   "phase": "APPROACH",
+   "action": "gate_grasp:0.38",
+   "refine_sim": true,
+   "tgt_cell": "C3",
+   "p_tgt": 0.773,
+   "p": {
+    "grasp": 0.382,
+    "release": 0.501,
+    "done": 0.064
+   },
+   "in_zone": false
+  },
+  {
+   "tick": 8,
+   "subtask": 0,
+   "phase": "APPROACH",
+   "action": "gate_grasp:0.38",
+   "refine_sim": true,
+   "tgt_cell": "C3",
+   "p_tgt": 0.773,
+   "p": {
+    "grasp": 0.382,
+    "release": 0.501,
+    "done": 0.064
+   },
+   "in_zone": false
+  },
+  {
+   "tick": 9,
+   "subtask": 0,
+   "phase": "LIFT",
+   "action": "GRASP(p=0.38)",
+   "refine_sim": true,
+   "tgt_cell": "C3",
+   "p_tgt": 0.773,
+   "p": {
+    "grasp": 0.382,
+    "release": 0.501,
+    "done": 0.064
+   },
+   "in_zone": false
+  },
+  {
+   "tick": 10,
+   "subtask": 0,
+   "phase": "CARRY",
+   "action": "lift",
+   "refine_sim": true,
+   "tgt_cell": "D3",
+   "p_tgt": 0.627,
+   "p": {
+    "grasp": 0.42,
+    "release": 0.471,
+    "done": 0.06
+   },
+   "in_zone": false
+  },
+  {
+   "tick": 11,
+   "subtask": 0,
+   "phase": "CARRY",
+   "action": "carry:D3",
+   "refine_sim": false,
+   "tgt_cell": "D3",
+   "p_tgt": 0.689,
+   "p": {
+    "grasp": 0.343,
+    "release": 0.477,
+    "done": 0.056
+   },
+   "in_zone": false
+  },
+  {
+   "tick": 12,
+   "subtask": 0,
+   "phase": "PLACE",
+   "action": "carry:D3",
+   "refine_sim": true,
+   "tgt_cell": "D3",
+   "p_tgt": 0.69,
+   "p": {
+    "grasp": 0.561,
+    "release": 0.585,
+    "done": 0.057
+   },
+   "in_zone": false
+  },
+  {
+   "tick": 13,
+   "subtask": 0,
+   "phase": "PLACE",
+   "action": "lower",
+   "refine_sim": true,
+   "tgt_cell": "D3",
+   "p_tgt": 0.47,
+   "p": {
+    "grasp": 0.364,
+    "release": 0.606,
+    "done": 0.055
+   },
+   "in_zone": false
+  },
+  {
+   "tick": 14,
+   "subtask": 0,
+   "phase": "RETREAT",
+   "action": "RELEASE(p=0.74)",
+   "refine_sim": false,
+   "tgt_cell": "D3",
+   "p_tgt": 0.615,
+   "p": {
+    "grasp": 0.701,
+    "release": 0.738,
+    "done": 0.071
+   },
+   "in_zone": true
+  },
+  {
+   "tick": 15,
+   "subtask": 1,
+   "phase": "REACH",
+   "action": "track:D3",
+   "refine_sim": false,
+   "tgt_cell": "D3",
+   "p_tgt": 0.658,
+   "p": {
+    "grasp": 0.641,
+    "release": 0.526,
+    "done": 0.074
+   },
+   "in_zone": false
+  },
+  {
+   "tick": 16,
+   "subtask": 1,
+   "phase": "APPROACH",
+   "action": "refine(sim)",
+   "refine_sim": true,
+   "tgt_cell": "D3",
+   "p_tgt": 0.727,
+   "p": {
+    "grasp": 0.466,
+    "release": 0.495,
+    "done": 0.074
+   },
+   "in_zone": false
+  },
+  {
+   "tick": 17,
+   "subtask": 1,
+   "phase": "LIFT",
+   "action": "GRASP(p=0.64)",
+   "refine_sim": true,
+   "tgt_cell": "D3",
+   "p_tgt": 0.733,
+   "p": {
+    "grasp": 0.644,
+    "release": 0.639,
+    "done": 0.064
+   },
+   "in_zone": false
+  },
+  {
+   "tick": 18,
+   "subtask": 1,
+   "phase": "CARRY",
+   "action": "lift",
+   "refine_sim": true,
+   "tgt_cell": "C3",
+   "p_tgt": 0.443,
+   "p": {
+    "grasp": 0.624,
+    "release": 0.594,
+    "done": 0.051
+   },
+   "in_zone": false
+  },
+  {
+   "tick": 19,
+   "subtask": 1,
+   "phase": "CARRY",
+   "action": "carry:C3",
+   "refine_sim": false,
+   "tgt_cell": "C3",
+   "p_tgt": 0.375,
+   "p": {
+    "grasp": 0.311,
+    "release": 0.313,
+    "done": 0.085
+   },
+   "in_zone": false
+  },
+  {
+   "tick": 20,
+   "subtask": 1,
+   "phase": "PLACE",
+   "action": "carry:C3",
+   "refine_sim": true,
+   "tgt_cell": "C3",
+   "p_tgt": 0.562,
+   "p": {
+    "grasp": 0.588,
+    "release": 0.565,
+    "done": 0.096
+   },
+   "in_zone": false
+  },
+  {
+   "tick": 21,
+   "subtask": 1,
+   "phase": "PLACE",
+   "action": "lower",
+   "refine_sim": true,
+   "tgt_cell": "C3",
+   "p_tgt": 0.682,
+   "p": {
+    "grasp": 0.21,
+    "release": 0.306,
+    "done": 0.061
+   },
+   "in_zone": false
+  },
+  {
+   "tick": 22,
+   "subtask": 1,
+   "phase": "PLACE",
+   "action": "gate_release:0.43",
+   "refine_sim": false,
+   "tgt_cell": "C3",
+   "p_tgt": 0.308,
+   "p": {
+    "grasp": 0.381,
+    "release": 0.431,
+    "done": 0.162
+   },
+   "in_zone": true
+  },
+  {
+   "tick": 23,
+   "subtask": 1,
+   "phase": "PLACE",
+   "action": "gate_release:0.43",
+   "refine_sim": false,
+   "tgt_cell": "C3",
+   "p_tgt": 0.308,
+   "p": {
+    "grasp": 0.381,
+    "release": 0.431,
+    "done": 0.162
+   },
+   "in_zone": true
+  },
+  {
+   "tick": 24,
+   "subtask": 1,
+   "phase": "PLACE",
+   "action": "gate_release:0.43",
+   "refine_sim": false,
+   "tgt_cell": "C3",
+   "p_tgt": 0.308,
+   "p": {
+    "grasp": 0.381,
+    "release": 0.431,
+    "done": 0.162
+   },
+   "in_zone": true
+  },
+  {
+   "tick": 25,
+   "subtask": 1,
+   "phase": "PLACE",
+   "action": "gate_release:0.43",
+   "refine_sim": false,
+   "tgt_cell": "C3",
+   "p_tgt": 0.308,
+   "p": {
+    "grasp": 0.381,
+    "release": 0.431,
+    "done": 0.162
+   },
+   "in_zone": true
+  },
+  {
+   "tick": 26,
+   "subtask": 1,
+   "phase": "PLACE",
+   "action": "gate_release:0.43",
+   "refine_sim": false,
+   "tgt_cell": "C3",
+   "p_tgt": 0.308,
+   "p": {
+    "grasp": 0.381,
+    "release": 0.431,
+    "done": 0.162
+   },
+   "in_zone": true
+  },
+  {
+   "tick": 27,
+   "subtask": 1,
+   "phase": "PLACE",
+   "action": "gate_release:0.43",
+   "refine_sim": false,
+   "tgt_cell": "C3",
+   "p_tgt": 0.308,
+   "p": {
+    "grasp": 0.381,
+    "release": 0.431,
+    "done": 0.162
+   },
+   "in_zone": true
+  },
+  {
+   "tick": 28,
+   "subtask": 1,
+   "phase": "RETREAT",
+   "action": "RELEASE(p=0.43)",
+   "refine_sim": false,
+   "tgt_cell": "C3",
+   "p_tgt": 0.308,
+   "p": {
+    "grasp": 0.381,
+    "release": 0.431,
+    "done": 0.162
+   },
+   "in_zone": true
+  }
+ ]
+}

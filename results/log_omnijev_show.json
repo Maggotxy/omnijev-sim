@@ -1,0 +1,5 @@
+{
+ "task": "Pick up the red cube and place it on the green circle, then pick up the blue cube and place it on the blue circle.",
+ "seed": 1,
+ "backend": "omnijev",
+ "success": 

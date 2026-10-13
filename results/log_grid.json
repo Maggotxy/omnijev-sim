@@ -1,0 +1,970 @@
+{
+ "task": "Pick up the red cube and put it on the green circle.",
+ "seed": 1,
+ "mode": "grid",
+ "success": false,
+ "ticks": 40,
+ "wall_s": 41.4,
+ "log": [
+  {
+   "tick": 0,
+   "phase": "REACH",
+   "action": "descend",
+   "g_cell": "C3",
+   "t_cell": "C3",
+   "p": {
+    "grasp": 0.5235,
+    "release": 0.3468,
+    "done": 0.0628
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.37,
+    0.0,
+    0.544
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 1,
+   "phase": "REACH",
+   "action": "track:C3->D3",
+   "g_cell": "C3",
+   "t_cell": "D3",
+   "p": {
+    "grasp": 0.5703,
+    "release": 0.3437,
+    "done": 0.0688
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.392,
+    0.064,
+    0.539
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 2,
+   "phase": "REACH",
+   "action": "track:C3->B3",
+   "g_cell": "C3",
+   "t_cell": "B3",
+   "p": {
+    "grasp": 0.5399,
+    "release": 0.3509,
+    "done": 0.0786
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.362,
+    0.008,
+    0.538
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 3,
+   "phase": "REACH",
+   "action": "track:C3->D3",
+   "g_cell": "C3",
+   "t_cell": "D3",
+   "p": {
+    "grasp": 0.6604,
+    "release": 0.3953,
+    "done": 0.0661
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.384,
+    0.071,
+    0.536
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 4,
+   "phase": "REACH",
+   "action": "track:C2->C3",
+   "g_cell": "C2",
+   "t_cell": "C3",
+   "p": {
+    "grasp": 0.5299,
+    "release": 0.3768,
+    "done": 0.0773
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.438,
+    0.036,
+    0.532
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 5,
+   "phase": "REACH",
+   "action": "track:C3->D3",
+   "g_cell": "C3",
+   "t_cell": "D3",
+   "p": {
+    "grasp": 0.6659,
+    "release": 0.4685,
+    "done": 0.08
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.461,
+    0.098,
+    0.532
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 6,
+   "phase": "REACH",
+   "action": "descend",
+   "g_cell": "C3",
+   "t_cell": "C3",
+   "p": {
+    "grasp": 0.5516,
+    "release": 0.3901,
+    "done": 0.0758
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.457,
+    0.099,
+    0.531
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 7,
+   "phase": "REACH",
+   "action": "descend",
+   "g_cell": "C3",
+   "t_cell": "C3",
+   "p": {
+    "grasp": 0.5748,
+    "release": 0.3652,
+    "done": 0.0735
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.451,
+    0.1,
+    0.529
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 8,
+   "phase": "REACH",
+   "action": "GRASP_MISS",
+   "g_cell": "C3",
+   "t_cell": "C3",
+   "p": {
+    "grasp": 0.625,
+    "release": 0.3884,
+    "done": 0.0732
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.47,
+    0.104,
+    0.527
+   ],
+   "cube": [
+    0.523,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 9,
+   "phase": "REACH",
+   "action": "descend",
+   "g_cell": "C3",
+   "t_cell": "C3",
+   "p": {
+    "grasp": 0.4715,
+    "release": 0.28,
+    "done": 0.0668
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.476,
+    0.106,
+    0.519
+   ],
+   "cube": [
+    0.541,
+    0.041,
+    0.441
+   ]
+  },
+  {
+   "tick": 10,
+   "phase": "REACH",
+   "action": "descend",
+   "g_cell": "C3",
+   "t_cell": "C3",
+   "p": {
+    "grasp": 0.4688,
+    "release": 0.2301,
+    "done": 0.0596
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.506,
+    0.113,
+    0.487
+   ],
+   "cube": [
+    0.606,
+    0.051,
+    0.443
+   ]
+  },
+  {
+   "tick": 11,
+   "phase": "REACH",
+   "action": "track:D3->C3",
+   "g_cell": "D3",
+   "t_cell": "C3",
+   "p": {
+    "grasp": 0.2989,
+    "release": 0.094,
+    "done": 0.0664
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.498,
+    0.071,
+    0.486
+   ],
+   "cube": [
+    0.608,
+    0.042,
+    0.442
+   ]
+  },
+  {
+   "tick": 12,
+   "phase": "REACH",
+   "action": "track:D3->C3",
+   "g_cell": "D3",
+   "t_cell": "C3",
+   "p": {
+    "grasp": 0.5284,
+    "release": 0.3257,
+    "done": 0.0785
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.472,
+    0.014,
+    0.486
+   ],
+   "cube": [
+    0.61,
+    0.02,
+    0.442
+   ]
+  },
+  {
+   "tick": 13,
+   "phase": "REACH",
+   "action": "GRASP_MISS",
+   "g_cell": "C3",
+   "t_cell": "C3",
+   "p": {
+    "grasp": 0.7684,
+    "release": 0.6024,
+    "done": 0.1072
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.47,
+    0.004,
+    0.486
+   ],
+   "cube": [
+    0.61,
+    0.02,
+    0.442
+   ]
+  },
+  {
+   "tick": 14,
+   "phase": "REACH",
+   "action": "GRASP_MISS",
+   "g_cell": "C3",
+   "t_cell": "C3",
+   "p": {
+    "grasp": 0.6395,
+    "release": 0.4343,
+    "done": 0.085
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.47,
+    0.002,
+    0.486
+   ],
+   "cube": [
+    0.61,
+    0.02,
+    0.442
+   ]
+  },
+  {
+   "tick": 15,
+   "phase": "REACH",
+   "action": "GRASP_MISS",
+   "g_cell": "C3",
+   "t_cell": "C3",
+   "p": {
+    "grasp": 0.6899,
+    "release": 0.5137,
+    "done": 0.0901
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.469,
+    0.001,
+    0.486
+   ],
+   "cube": [
+    0.61,
+    0.02,
+    0.442
+   ]
+  },
+  {
+   "tick": 16,
+   "phase": "REACH",
+   "action": "GRASP_MISS",
+   "g_cell": "C3",
+   "t_cell": "C3",
+   "p": {
+    "grasp": 0.6417,
+    "release": 0.4946,
+    "done": 0.0895
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.469,
+    0.001,
+    0.486
+   ],
+   "cube": [
+    0.61,
+    0.02,
+    0.442
+   ]
+  },
+  {
+   "tick": 17,
+   "phase": "REACH",
+   "action": "GRASP_MISS",
+   "g_cell": "C3",
+   "t_cell": "C3",
+   "p": {
+    "grasp": 0.6534,
+    "release": 0.4995,
+    "done": 0.0939
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.469,
+    0.001,
+    0.486
+   ],
+   "cube": [
+    0.61,
+    0.02,
+    0.442
+   ]
+  },
+  {
+   "tick": 18,
+   "phase": "REACH",
+   "action": "GRASP_MISS",
+   "g_cell": "C3",
+   "t_cell": "C3",
+   "p": {
+    "grasp": 0.6364,
+    "release": 0.4867,
+    "done": 0.0954
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.468,
+    0.001,
+    0.486
+   ],
+   "cube": [
+    0.61,
+    0.02,
+    0.442
+   ]
+  },
+  {
+   "tick": 19,
+   "phase": "REACH",
+   "action": "GRASP_MISS",
+   "g_cell": "C3",
+   "t_cell": "C3",
+   "p": {
+    "grasp": 0.6315,
+    "release": 0.478,
+    "done": 0.0962
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.468,
+    0.0,
+    0.486
+   ],
+   "cube": [
+    0.61,
+    0.02,
+    0.442
+   ]
+  },
+  {
+   "tick": 20,
+   "phase": "REACH",
+   "action": "GRASP_MISS",
+   "g_cell": "C3",
+   "t_cell": "C3",
+   "p": {
+    "grasp": 0.645,
+    "release": 0.4907,
+    "done": 0.0981
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.468,
+    0.0,
+    0.486
+   ],
+   "cube": [
+    0.61,
+    0.02,
+    0.442
+   ]
+  },
+  {
+   "tick": 21,
+   "phase": "REACH",
+   "action": "GRASP_MISS",
+   "g_cell": "C3",
+   "t_cell": "C3",
+   "p": {
+    "grasp": 0.6562,
+    "release": 0.4858,
+    "done": 0.0927
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.467,
+    0.0,
+    0.486
+   ],
+   "cube": [
+    0.61,
+    0.02,
+    0.442
+   ]
+  },
+  {
+   "tick": 22,
+   "phase": "REACH",
+   "action": "GRASP_MISS",
+   "g_cell": "C3",
+   "t_cell": "C3",
+   "p": {
+    "grasp": 0.6605,
+    "release": 0.4789,
+    "done": 0.0905
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.467,
+    0.0,
+    0.486
+   ],
+   "cube": [
+    0.61,
+    0.02,
+    0.442
+   ]
+  },
+  {
+   "tick": 23,
+   "phase": "REACH",
+   "action": "GRASP_MISS",
+   "g_cell": "C3",
+   "t_cell": "C3",
+   "p": {
+    "grasp": 0.658,
+    "release": 0.4822,
+    "done": 0.093
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.467,
+    0.0,
+    0.486
+   ],
+   "cube": [
+    0.61,
+    0.02,
+    0.442
+   ]
+  },
+  {
+   "tick": 24,
+   "phase": "REACH",
+   "action": "GRASP_MISS",
+   "g_cell": "C3",
+   "t_cell": "C3",
+   "p": {
+    "grasp": 0.6651,
+    "release": 0.49,
+    "done": 0.0944
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.467,
+    0.0,
+    0.486
+   ],
+   "cube": [
+    0.61,
+    0.02,
+    0.442
+   ]
+  },
+  {
+   "tick": 25,
+   "phase": "REACH",
+   "action": "GRASP_MISS",
+   "g_cell": "C3",
+   "t_cell": "C3",
+   "p": {
+    "grasp": 0.6531,
+    "release": 0.501,
+    "done": 0.0944
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.466,
+    0.0,
+    0.486
+   ],
+   "cube": [
+    0.61,
+    0.02,
+    0.442
+   ]
+  },
+  {
+   "tick": 26,
+   "phase": "REACH",
+   "action": "GRASP_MISS",
+   "g_cell": "C3",
+   "t_cell": "C3",
+   "p": {
+    "grasp": 0.6554,
+    "release": 0.498,
+    "done": 0.0907
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.466,
+    0.0,
+    0.486
+   ],
+   "cube": [
+    0.61,
+    0.02,
+    0.442
+   ]
+  },
+  {
+   "tick": 27,
+   "phase": "REACH",
+   "action": "GRASP_MISS",
+   "g_cell": "C3",
+   "t_cell": "C3",
+   "p": {
+    "grasp": 0.6764,
+    "release": 0.5507,
+    "done": 0.0963
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.466,
+    0.0,
+    0.486
+   ],
+   "cube": [
+    0.61,
+    0.02,
+    0.442
+   ]
+  },
+  {
+   "tick": 28,
+   "phase": "REACH",
+   "action": "GRASP_MISS",
+   "g_cell": "C3",
+   "t_cell": "C3",
+   "p": {
+    "grasp": 0.6624,
+    "release": 0.5224,
+    "done": 0.0944
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.466,
+    0.0,
+    0.486
+   ],
+   "cube": [
+    0.61,
+    0.02,
+    0.442
+   ]
+  },
+  {
+   "tick": 29,
+   "phase": "REACH",
+   "action": "GRASP_MISS",
+   "g_cell": "C3",
+   "t_cell": "C3",
+   "p": {
+    "grasp": 0.6709,
+    "release": 0.5091,
+    "done": 0.0935
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.465,
+    0.0,
+    0.486
+   ],
+   "cube": [
+    0.61,
+    0.02,
+    0.442
+   ]
+  },
+  {
+   "tick": 30,
+   "phase": "REACH",
+   "action": "GRASP_MISS",
+   "g_cell": "C3",
+   "t_cell": "C3",
+   "p": {
+    "grasp": 0.6582,
+    "release": 0.4901,
+    "done": 0.09
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.465,
+    0.0,
+    0.486
+   ],
+   "cube": [
+    0.61,
+    0.02,
+    0.442
+   ]
+  },
+  {
+   "tick": 31,
+   "phase": "REACH",
+   "action": "GRASP_MISS",
+   "g_cell": "C3",
+   "t_cell": "C3",
+   "p": {
+    "grasp": 0.6459,
+    "release": 0.4806,
+    "done": 0.0921
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.465,
+    0.0,
+    0.486
+   ],
+   "cube": [
+    0.61,
+    0.02,
+    0.442
+   ]
+  },
+  {
+   "tick": 32,
+   "phase": "REACH",
+   "action": "GRASP_MISS",
+   "g_cell": "C3",
+   "t_cell": "C3",
+   "p": {
+    "grasp": 0.6561,
+    "release": 0.4968,
+    "done": 0.0923
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.465,
+    0.0,
+    0.486
+   ],
+   "cube": [
+    0.61,
+    0.02,
+    0.442
+   ]
+  },
+  {
+   "tick": 33,
+   "phase": "REACH",
+   "action": "GRASP_MISS",
+   "g_cell": "C3",
+   "t_cell": "C3",
+   "p": {
+    "grasp": 0.6451,
+    "release": 0.4872,
+    "done": 0.0898
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.465,
+    0.0,
+    0.486
+   ],
+   "cube": [
+    0.61,
+    0.02,
+    0.442
+   ]
+  },
+  {
+   "tick": 34,
+   "phase": "REACH",
+   "action": "GRASP_MISS",
+   "g_cell": "C3",
+   "t_cell": "C3",
+   "p": {
+    "grasp": 0.6338,
+    "release": 0.474,
+    "done": 0.0887
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.464,
+    0.0,
+    0.486
+   ],
+   "cube": [
+    0.61,
+    0.02,
+    0.442
+   ]
+  },
+  {
+   "tick": 35,
+   "phase": "REACH",
+   "action": "GRASP_MISS",
+   "g_cell": "C3",
+   "t_cell": "C3",
+   "p": {
+    "grasp": 0.6455,
+    "release": 0.4695,
+    "done": 0.0902
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.464,
+    0.0,
+    0.486
+   ],
+   "cube": [
+    0.61,
+    0.02,
+    0.442
+   ]
+  },
+  {
+   "tick": 36,
+   "phase": "REACH",
+   "action": "GRASP_MISS",
+   "g_cell": "C3",
+   "t_cell": "C3",
+   "p": {
+    "grasp": 0.6235,
+    "release": 0.4586,
+    "done": 0.0903
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.464,
+    0.0,
+    0.486
+   ],
+   "cube": [
+    0.61,
+    0.02,
+    0.442
+   ]
+  },
+  {
+   "tick": 37,
+   "phase": "REACH",
+   "action": "GRASP_MISS",
+   "g_cell": "C3",
+   "t_cell": "C3",
+   "p": {
+    "grasp": 0.6151,
+    "release": 0.4643,
+    "done": 0.0898
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.464,
+    0.0,
+    0.486
+   ],
+   "cube": [
+    0.61,
+    0.02,
+    0.442
+   ]
+  },
+  {
+   "tick": 38,
+   "phase": "REACH",
+   "action": "GRASP_MISS",
+   "g_cell": "C3",
+   "t_cell": "C3",
+   "p": {
+    "grasp": 0.6308,
+    "release": 0.4585,
+    "done": 0.0853
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.464,
+    0.0,
+    0.486
+   ],
+   "cube": [
+    0.61,
+    0.02,
+    0.442
+   ]
+  },
+  {
+   "tick": 39,
+   "phase": "REACH",
+   "action": "GRASP_MISS",
+   "g_cell": "C3",
+   "t_cell": "C3",
+   "p": {
+    "grasp": 0.6272,
+    "release": 0.4549,
+    "done": 0.0857
+   },
+   "gt_holding": false,
+   "success": false,
+   "ee": [
+    0.464,
+    0.0,
+    0.486
+   ],
+   "cube": [
+    0.61,
+    0.02,
+    0.442
+   ]
+  }
+ ]
+}

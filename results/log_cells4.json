@@ -1,0 +1,1760 @@
+{
+ "task": "Pick up the red cube and put it on the green circle.",
+ "seed": 1,
+ "mode": "cells_v2",
+ "success": false,
+ "ticks": 70,
+ "wall_s": 81.6,
+ "log": [
+  {
+   "tick": 0,
+   "phase": "REACH",
+   "action": "track:C2->C3",
+   "tgt_cell": "C3",
+   "tip_cell": "C2",
+   "p_tgt": 0.865,
+   "p": {
+    "grasp": 0.4865,
+    "release": 0.2916,
+    "done": 0.0592
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.395,
+    0.0,
+    0.563
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 1,
+   "phase": "REACH",
+   "action": "track:C2->C3",
+   "tgt_cell": "C3",
+   "tip_cell": "C2",
+   "p_tgt": 0.863,
+   "p": {
+    "grasp": 0.4947,
+    "release": 0.3826,
+    "done": 0.0632
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.464,
+    -0.015,
+    0.566
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 2,
+   "phase": "REACH",
+   "action": "track:C2->C3",
+   "tgt_cell": "C3",
+   "tip_cell": "C2",
+   "p_tgt": 0.843,
+   "p": {
+    "grasp": 0.49,
+    "release": 0.404,
+    "done": 0.0655
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.535,
+    -0.028,
+    0.569
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 3,
+   "phase": "CENTER",
+   "action": "aligned",
+   "tgt_cell": "C3",
+   "tip_cell": "C3",
+   "p_tgt": 0.823,
+   "p": {
+    "grasp": 0.5297,
+    "release": 0.2811,
+    "done": 0.0674
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.604,
+    -0.04,
+    0.571
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 4,
+   "phase": "CENTER",
+   "action": "center:B1->C2(0.58)",
+   "tgt_cell": "C3",
+   "tip_cell": "C3",
+   "p_tgt": 0.814,
+   "p": {
+    "grasp": 0.4942,
+    "release": 0.3168,
+    "done": 0.0659
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.605,
+    -0.04,
+    0.571
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 5,
+   "phase": "CENTER",
+   "action": "center:C1->C2(0.51)",
+   "tgt_cell": "C3",
+   "tip_cell": "C3",
+   "p_tgt": 0.751,
+   "p": {
+    "grasp": 0.2941,
+    "release": 0.1403,
+    "done": 0.053
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.59,
+    0.033,
+    0.545
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 6,
+   "phase": "CENTER",
+   "action": "center:C1->C2(0.66)",
+   "tgt_cell": "C3",
+   "tip_cell": "C2",
+   "p_tgt": 0.838,
+   "p": {
+    "grasp": 0.3946,
+    "release": 0.408,
+    "done": 0.0642
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.593,
+    0.066,
+    0.618
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 7,
+   "phase": "DESCEND",
+   "action": "center:C1->C2(0.69)",
+   "tgt_cell": "C3",
+   "tip_cell": "C2",
+   "p_tgt": 0.836,
+   "p": {
+    "grasp": 0.3908,
+    "release": 0.478,
+    "done": 0.0638
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.593,
+    0.066,
+    0.618
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 8,
+   "phase": "DESCEND",
+   "action": "descend",
+   "tgt_cell": "C3",
+   "tip_cell": "C2",
+   "p_tgt": 0.837,
+   "p": {
+    "grasp": 0.3813,
+    "release": 0.4713,
+    "done": 0.0641
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.593,
+    0.066,
+    0.618
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 9,
+   "phase": "DESCEND",
+   "action": "descend",
+   "tgt_cell": "C3",
+   "tip_cell": "C2",
+   "p_tgt": 0.89,
+   "p": {
+    "grasp": 0.1711,
+    "release": 0.0438,
+    "done": 0.0557
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.582,
+    0.065,
+    0.54
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 10,
+   "phase": "DESCEND",
+   "action": "descend",
+   "tgt_cell": "C3",
+   "tip_cell": "C3",
+   "p_tgt": 0.625,
+   "p": {
+    "grasp": 0.3231,
+    "release": 0.2002,
+    "done": 0.0655
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.57,
+    0.064,
+    0.473
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 11,
+   "phase": "DESCEND",
+   "action": "descend",
+   "tgt_cell": "C3",
+   "tip_cell": "C3",
+   "p_tgt": 0.702,
+   "p": {
+    "grasp": 0.3237,
+    "release": 0.2101,
+    "done": 0.063
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.572,
+    0.065,
+    0.473
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 12,
+   "phase": "DESCEND",
+   "action": "wait_grasp:0.32",
+   "tgt_cell": "C3",
+   "tip_cell": "C3",
+   "p_tgt": 0.753,
+   "p": {
+    "grasp": 0.3156,
+    "release": 0.2131,
+    "done": 0.0648
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.576,
+    0.066,
+    0.471
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 13,
+   "phase": "DESCEND",
+   "action": "wait_grasp:0.01",
+   "tgt_cell": "D3",
+   "tip_cell": "C3",
+   "p_tgt": 0.476,
+   "p": {
+    "grasp": 0.0144,
+    "release": 0.014,
+    "done": 0.0387
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.593,
+    0.067,
+    0.47
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 14,
+   "phase": "DESCEND",
+   "action": "wait_grasp:0.05",
+   "tgt_cell": "C3",
+   "tip_cell": "C3",
+   "p_tgt": 0.778,
+   "p": {
+    "grasp": 0.0548,
+    "release": 0.0356,
+    "done": 0.041
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.628,
+    0.07,
+    0.466
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 15,
+   "phase": "DESCEND",
+   "action": "wait_grasp:0.46",
+   "tgt_cell": "C3",
+   "tip_cell": "C3",
+   "p_tgt": 0.658,
+   "p": {
+    "grasp": 0.4577,
+    "release": 0.3291,
+    "done": 0.064
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.649,
+    0.073,
+    0.461
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 16,
+   "phase": "DESCEND",
+   "action": "wait_grasp:0.39",
+   "tgt_cell": "C3",
+   "tip_cell": "C3",
+   "p_tgt": 0.677,
+   "p": {
+    "grasp": 0.3919,
+    "release": 0.3094,
+    "done": 0.0625
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.65,
+    0.073,
+    0.461
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 17,
+   "phase": "DESCEND",
+   "action": "wait_grasp:0.35",
+   "tgt_cell": "C3",
+   "tip_cell": "C3",
+   "p_tgt": 0.657,
+   "p": {
+    "grasp": 0.3538,
+    "release": 0.2729,
+    "done": 0.0591
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.65,
+    0.073,
+    0.461
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 18,
+   "phase": "DESCEND",
+   "action": "wait_grasp:0.35",
+   "tgt_cell": "C3",
+   "tip_cell": "C3",
+   "p_tgt": 0.656,
+   "p": {
+    "grasp": 0.3492,
+    "release": 0.2555,
+    "done": 0.0602
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.65,
+    0.073,
+    0.461
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 19,
+   "phase": "DESCEND",
+   "action": "wait_grasp:0.35",
+   "tgt_cell": "C3",
+   "tip_cell": "C3",
+   "p_tgt": 0.66,
+   "p": {
+    "grasp": 0.354,
+    "release": 0.2624,
+    "done": 0.0597
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.65,
+    0.073,
+    0.461
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 20,
+   "phase": "DESCEND",
+   "action": "wait_grasp:0.33",
+   "tgt_cell": "C3",
+   "tip_cell": "C3",
+   "p_tgt": 0.671,
+   "p": {
+    "grasp": 0.3277,
+    "release": 0.2128,
+    "done": 0.0588
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.65,
+    0.073,
+    0.461
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 21,
+   "phase": "REACH",
+   "action": "GRASP_MISS",
+   "tgt_cell": "C3",
+   "tip_cell": "C3",
+   "p_tgt": 0.677,
+   "p": {
+    "grasp": 0.3657,
+    "release": 0.2785,
+    "done": 0.0614
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.65,
+    0.073,
+    0.461
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 22,
+   "phase": "CENTER",
+   "action": "aligned",
+   "tgt_cell": "C3",
+   "tip_cell": "C3",
+   "p_tgt": 0.639,
+   "p": {
+    "grasp": 0.3381,
+    "release": 0.2304,
+    "done": 0.059
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.65,
+    0.074,
+    0.461
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 23,
+   "phase": "CENTER",
+   "action": "center:C2->C2(0.52)",
+   "tgt_cell": "C3",
+   "tip_cell": "C3",
+   "p_tgt": 0.663,
+   "p": {
+    "grasp": 0.3519,
+    "release": 0.3101,
+    "done": 0.059
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.65,
+    0.074,
+    0.461
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 24,
+   "phase": "DESCEND",
+   "action": "center:C2->C2(0.52)",
+   "tgt_cell": "C3",
+   "tip_cell": "C3",
+   "p_tgt": 0.674,
+   "p": {
+    "grasp": 0.3707,
+    "release": 0.308,
+    "done": 0.0583
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.65,
+    0.074,
+    0.461
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 25,
+   "phase": "DESCEND",
+   "action": "wait_grasp:0.37",
+   "tgt_cell": "C3",
+   "tip_cell": "C3",
+   "p_tgt": 0.669,
+   "p": {
+    "grasp": 0.3685,
+    "release": 0.2942,
+    "done": 0.0583
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.65,
+    0.074,
+    0.461
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 26,
+   "phase": "DESCEND",
+   "action": "wait_grasp:0.38",
+   "tgt_cell": "C3",
+   "tip_cell": "C3",
+   "p_tgt": 0.658,
+   "p": {
+    "grasp": 0.3759,
+    "release": 0.2986,
+    "done": 0.0579
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.65,
+    0.074,
+    0.461
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 27,
+   "phase": "DESCEND",
+   "action": "wait_grasp:0.35",
+   "tgt_cell": "C3",
+   "tip_cell": "C3",
+   "p_tgt": 0.658,
+   "p": {
+    "grasp": 0.354,
+    "release": 0.2705,
+    "done": 0.0571
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.65,
+    0.074,
+    0.461
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 28,
+   "phase": "DESCEND",
+   "action": "wait_grasp:0.36",
+   "tgt_cell": "C3",
+   "tip_cell": "C3",
+   "p_tgt": 0.639,
+   "p": {
+    "grasp": 0.3629,
+    "release": 0.2719,
+    "done": 0.0575
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.65,
+    0.074,
+    0.461
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 29,
+   "phase": "DESCEND",
+   "action": "wait_grasp:0.38",
+   "tgt_cell": "C3",
+   "tip_cell": "C3",
+   "p_tgt": 0.665,
+   "p": {
+    "grasp": 0.3786,
+    "release": 0.2928,
+    "done": 0.0569
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.65,
+    0.074,
+    0.461
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 30,
+   "phase": "DESCEND",
+   "action": "wait_grasp:0.37",
+   "tgt_cell": "C3",
+   "tip_cell": "C3",
+   "p_tgt": 0.656,
+   "p": {
+    "grasp": 0.3718,
+    "release": 0.2962,
+    "done": 0.0559
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.65,
+    0.074,
+    0.461
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 31,
+   "phase": "DESCEND",
+   "action": "wait_grasp:0.38",
+   "tgt_cell": "C3",
+   "tip_cell": "C3",
+   "p_tgt": 0.68,
+   "p": {
+    "grasp": 0.3803,
+    "release": 0.3209,
+    "done": 0.0569
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.65,
+    0.074,
+    0.461
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 32,
+   "phase": "DESCEND",
+   "action": "wait_grasp:0.37",
+   "tgt_cell": "C3",
+   "tip_cell": "C3",
+   "p_tgt": 0.676,
+   "p": {
+    "grasp": 0.368,
+    "release": 0.3036,
+    "done": 0.0567
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.65,
+    0.074,
+    0.461
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 33,
+   "phase": "DESCEND",
+   "action": "wait_grasp:0.37",
+   "tgt_cell": "C3",
+   "tip_cell": "C3",
+   "p_tgt": 0.663,
+   "p": {
+    "grasp": 0.3732,
+    "release": 0.2978,
+    "done": 0.0571
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.65,
+    0.074,
+    0.461
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 34,
+   "phase": "REACH",
+   "action": "GRASP_MISS",
+   "tgt_cell": "C3",
+   "tip_cell": "C3",
+   "p_tgt": 0.631,
+   "p": {
+    "grasp": 0.3662,
+    "release": 0.2875,
+    "done": 0.0573
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.65,
+    0.074,
+    0.461
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 35,
+   "phase": "CENTER",
+   "action": "aligned",
+   "tgt_cell": "C3",
+   "tip_cell": "C3",
+   "p_tgt": 0.666,
+   "p": {
+    "grasp": 0.3794,
+    "release": 0.302,
+    "done": 0.0589
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.65,
+    0.074,
+    0.461
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 36,
+   "phase": "CENTER",
+   "action": "center:C2->C2(0.52)",
+   "tgt_cell": "C3",
+   "tip_cell": "C3",
+   "p_tgt": 0.665,
+   "p": {
+    "grasp": 0.3744,
+    "release": 0.3025,
+    "done": 0.0589
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.65,
+    0.074,
+    0.461
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 37,
+   "phase": "DESCEND",
+   "action": "center:C2->C2(0.52)",
+   "tgt_cell": "C3",
+   "tip_cell": "C3",
+   "p_tgt": 0.662,
+   "p": {
+    "grasp": 0.3725,
+    "release": 0.2997,
+    "done": 0.0588
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.65,
+    0.074,
+    0.461
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 38,
+   "phase": "DESCEND",
+   "action": "wait_grasp:0.37",
+   "tgt_cell": "C3",
+   "tip_cell": "C3",
+   "p_tgt": 0.659,
+   "p": {
+    "grasp": 0.3741,
+    "release": 0.2999,
+    "done": 0.0589
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.65,
+    0.074,
+    0.461
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 39,
+   "phase": "DESCEND",
+   "action": "wait_grasp:0.37",
+   "tgt_cell": "C3",
+   "tip_cell": "C3",
+   "p_tgt": 0.658,
+   "p": {
+    "grasp": 0.3713,
+    "release": 0.2941,
+    "done": 0.0589
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.65,
+    0.074,
+    0.461
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 40,
+   "phase": "DESCEND",
+   "action": "wait_grasp:0.37",
+   "tgt_cell": "C3",
+   "tip_cell": "C3",
+   "p_tgt": 0.645,
+   "p": {
+    "grasp": 0.3715,
+    "release": 0.3022,
+    "done": 0.0593
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.65,
+    0.074,
+    0.461
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 41,
+   "phase": "DESCEND",
+   "action": "wait_grasp:0.38",
+   "tgt_cell": "C3",
+   "tip_cell": "C3",
+   "p_tgt": 0.648,
+   "p": {
+    "grasp": 0.3768,
+    "release": 0.3076,
+    "done": 0.0591
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.65,
+    0.074,
+    0.461
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 42,
+   "phase": "DESCEND",
+   "action": "wait_grasp:0.37",
+   "tgt_cell": "C3",
+   "tip_cell": "C3",
+   "p_tgt": 0.64,
+   "p": {
+    "grasp": 0.3734,
+    "release": 0.3064,
+    "done": 0.0593
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.65,
+    0.074,
+    0.461
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 43,
+   "phase": "DESCEND",
+   "action": "wait_grasp:0.38",
+   "tgt_cell": "C3",
+   "tip_cell": "C3",
+   "p_tgt": 0.639,
+   "p": {
+    "grasp": 0.3782,
+    "release": 0.3036,
+    "done": 0.0591
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.65,
+    0.074,
+    0.461
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 44,
+   "phase": "DESCEND",
+   "action": "wait_grasp:0.38",
+   "tgt_cell": "C3",
+   "tip_cell": "C3",
+   "p_tgt": 0.643,
+   "p": {
+    "grasp": 0.3755,
+    "release": 0.2912,
+    "done": 0.0589
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.65,
+    0.074,
+    0.461
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 45,
+   "phase": "DESCEND",
+   "action": "wait_grasp:0.38",
+   "tgt_cell": "C3",
+   "tip_cell": "C3",
+   "p_tgt": 0.644,
+   "p": {
+    "grasp": 0.3756,
+    "release": 0.2903,
+    "done": 0.0589
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.65,
+    0.074,
+    0.461
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 46,
+   "phase": "DESCEND",
+   "action": "wait_grasp:0.38",
+   "tgt_cell": "C3",
+   "tip_cell": "C3",
+   "p_tgt": 0.639,
+   "p": {
+    "grasp": 0.3818,
+    "release": 0.2945,
+    "done": 0.0589
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.65,
+    0.074,
+    0.461
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 47,
+   "phase": "REACH",
+   "action": "GRASP_MISS",
+   "tgt_cell": "C3",
+   "tip_cell": "C3",
+   "p_tgt": 0.644,
+   "p": {
+    "grasp": 0.3833,
+    "release": 0.303,
+    "done": 0.0597
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.65,
+    0.074,
+    0.461
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 48,
+   "phase": "CENTER",
+   "action": "aligned",
+   "tgt_cell": "C3",
+   "tip_cell": "C3",
+   "p_tgt": 0.642,
+   "p": {
+    "grasp": 0.3602,
+    "release": 0.2842,
+    "done": 0.0607
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.65,
+    0.074,
+    0.461
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 49,
+   "phase": "CENTER",
+   "action": "center:C2->C2(0.53)",
+   "tgt_cell": "C3",
+   "tip_cell": "C3",
+   "p_tgt": 0.651,
+   "p": {
+    "grasp": 0.361,
+    "release": 0.2807,
+    "done": 0.0608
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.65,
+    0.074,
+    0.461
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 50,
+   "phase": "DESCEND",
+   "action": "center:C2->C2(0.53)",
+   "tgt_cell": "C3",
+   "tip_cell": "C3",
+   "p_tgt": 0.646,
+   "p": {
+    "grasp": 0.3664,
+    "release": 0.2924,
+    "done": 0.0611
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.65,
+    0.074,
+    0.461
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 51,
+   "phase": "DESCEND",
+   "action": "wait_grasp:0.37",
+   "tgt_cell": "C3",
+   "tip_cell": "C3",
+   "p_tgt": 0.644,
+   "p": {
+    "grasp": 0.3651,
+    "release": 0.2934,
+    "done": 0.0622
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.65,
+    0.074,
+    0.461
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 52,
+   "phase": "DESCEND",
+   "action": "wait_grasp:0.38",
+   "tgt_cell": "C3",
+   "tip_cell": "C3",
+   "p_tgt": 0.662,
+   "p": {
+    "grasp": 0.3778,
+    "release": 0.2933,
+    "done": 0.0615
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.65,
+    0.074,
+    0.461
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 53,
+   "phase": "DESCEND",
+   "action": "wait_grasp:0.37",
+   "tgt_cell": "C3",
+   "tip_cell": "C3",
+   "p_tgt": 0.665,
+   "p": {
+    "grasp": 0.3689,
+    "release": 0.2818,
+    "done": 0.0602
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.65,
+    0.074,
+    0.461
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 54,
+   "phase": "DESCEND",
+   "action": "wait_grasp:0.37",
+   "tgt_cell": "C3",
+   "tip_cell": "C3",
+   "p_tgt": 0.674,
+   "p": {
+    "grasp": 0.3686,
+    "release": 0.2857,
+    "done": 0.0595
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.65,
+    0.074,
+    0.461
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 55,
+   "phase": "DESCEND",
+   "action": "wait_grasp:0.36",
+   "tgt_cell": "C3",
+   "tip_cell": "C3",
+   "p_tgt": 0.682,
+   "p": {
+    "grasp": 0.3605,
+    "release": 0.2682,
+    "done": 0.0591
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.65,
+    0.074,
+    0.461
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 56,
+   "phase": "DESCEND",
+   "action": "wait_grasp:0.36",
+   "tgt_cell": "C3",
+   "tip_cell": "C3",
+   "p_tgt": 0.685,
+   "p": {
+    "grasp": 0.3604,
+    "release": 0.2667,
+    "done": 0.0587
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.65,
+    0.074,
+    0.461
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 57,
+   "phase": "DESCEND",
+   "action": "wait_grasp:0.36",
+   "tgt_cell": "C3",
+   "tip_cell": "C3",
+   "p_tgt": 0.697,
+   "p": {
+    "grasp": 0.3626,
+    "release": 0.2627,
+    "done": 0.0587
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.65,
+    0.074,
+    0.461
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 58,
+   "phase": "DESCEND",
+   "action": "wait_grasp:0.36",
+   "tgt_cell": "C3",
+   "tip_cell": "C3",
+   "p_tgt": 0.692,
+   "p": {
+    "grasp": 0.3602,
+    "release": 0.2817,
+    "done": 0.0595
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.65,
+    0.074,
+    0.461
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 59,
+   "phase": "DESCEND",
+   "action": "wait_grasp:0.36",
+   "tgt_cell": "C3",
+   "tip_cell": "C3",
+   "p_tgt": 0.683,
+   "p": {
+    "grasp": 0.3582,
+    "release": 0.2847,
+    "done": 0.0598
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.65,
+    0.074,
+    0.461
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 60,
+   "phase": "REACH",
+   "action": "GRASP_MISS",
+   "tgt_cell": "C3",
+   "tip_cell": "C3",
+   "p_tgt": 0.684,
+   "p": {
+    "grasp": 0.3651,
+    "release": 0.284,
+    "done": 0.0603
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.65,
+    0.074,
+    0.461
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 61,
+   "phase": "CENTER",
+   "action": "aligned",
+   "tgt_cell": "C3",
+   "tip_cell": "C3",
+   "p_tgt": 0.638,
+   "p": {
+    "grasp": 0.4023,
+    "release": 0.3031,
+    "done": 0.0606
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.65,
+    0.074,
+    0.461
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 62,
+   "phase": "CENTER",
+   "action": "center:C2->C2(0.52)",
+   "tgt_cell": "C3",
+   "tip_cell": "C3",
+   "p_tgt": 0.654,
+   "p": {
+    "grasp": 0.4067,
+    "release": 0.3037,
+    "done": 0.061
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.65,
+    0.074,
+    0.461
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 63,
+   "phase": "DESCEND",
+   "action": "center:C2->C2(0.52)",
+   "tgt_cell": "C3",
+   "tip_cell": "C3",
+   "p_tgt": 0.653,
+   "p": {
+    "grasp": 0.3934,
+    "release": 0.3027,
+    "done": 0.0601
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.65,
+    0.074,
+    0.461
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 64,
+   "phase": "DESCEND",
+   "action": "wait_grasp:0.39",
+   "tgt_cell": "C3",
+   "tip_cell": "C3",
+   "p_tgt": 0.638,
+   "p": {
+    "grasp": 0.3924,
+    "release": 0.294,
+    "done": 0.0611
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.65,
+    0.074,
+    0.461
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 65,
+   "phase": "DESCEND",
+   "action": "wait_grasp:0.39",
+   "tgt_cell": "C3",
+   "tip_cell": "C3",
+   "p_tgt": 0.634,
+   "p": {
+    "grasp": 0.3867,
+    "release": 0.2808,
+    "done": 0.0609
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.65,
+    0.074,
+    0.461
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 66,
+   "phase": "DESCEND",
+   "action": "wait_grasp:0.38",
+   "tgt_cell": "C3",
+   "tip_cell": "C3",
+   "p_tgt": 0.644,
+   "p": {
+    "grasp": 0.3826,
+    "release": 0.278,
+    "done": 0.0608
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.65,
+    0.074,
+    0.461
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 67,
+   "phase": "DESCEND",
+   "action": "wait_grasp:0.38",
+   "tgt_cell": "C3",
+   "tip_cell": "C3",
+   "p_tgt": 0.643,
+   "p": {
+    "grasp": 0.3805,
+    "release": 0.2845,
+    "done": 0.0606
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.65,
+    0.074,
+    0.461
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 68,
+   "phase": "DESCEND",
+   "action": "wait_grasp:0.35",
+   "tgt_cell": "C3",
+   "tip_cell": "C3",
+   "p_tgt": 0.641,
+   "p": {
+    "grasp": 0.3491,
+    "release": 0.2515,
+    "done": 0.0601
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.65,
+    0.074,
+    0.461
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  },
+  {
+   "tick": 69,
+   "phase": "DESCEND",
+   "action": "wait_grasp:0.36",
+   "tgt_cell": "C3",
+   "tip_cell": "C3",
+   "p_tgt": 0.645,
+   "p": {
+    "grasp": 0.3564,
+    "release": 0.2761,
+    "done": 0.0594
+   },
+   "gt_holding": false,
+   "success": false,
+   "tip": [
+    0.65,
+    0.074,
+    0.461
+   ],
+   "cube": [
+    0.522,
+    0.038,
+    0.442
+   ]
+  }
+ ]
+}
