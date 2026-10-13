@@ -11,16 +11,19 @@
 - [实验设计与感知边界](docs/reflex-design.md)
 - [Gemini 3.8 Flash 接口实测](docs/model-selection.md)
 - [最终交互操作验收证据](results/reflex_runtime_ui_release_20261013/qa_receipt.json)
+- [v0.1.0 下载包与独立启动说明](docs/release-v0.1.0.md) · [GitHub Releases](https://github.com/Maggotxy/omnijev-sim/releases)
 
 ```bash
 pip install -r requirements-reflex.txt
 export MUJOCO_GL=osmesa
+export OMNIJEV_BASE=your_authorized_systemone_base_url
 export OMNIJEV_KEY=your_authorized_key
+export GEMINI_BASE=https://g.92.run
 export GEMINI_API_KEY=your_authorized_relay_key
 python -m jev_reflex.live --out out/reflex_interactive --port 8790
 ```
 
-Linux 下启动后访问 <http://127.0.0.1:8790>。Windows 连接当前 bxj 部署可运行 `scripts/open-reflex.ps1`。最新六组配对中，视觉大脑组到目标 4/6、纯 OmniJev 2/6，采集到命令中位约 0.89 秒；两组各记录到一次事件后匹配的新命令。模型仍会误判、超时和漏掉干扰，当前数据未建立可靠的通用反射能力。
+Linux 下启动后访问 <http://127.0.0.1:8790>。远程运行时，可自行用 SSH 转发该本地端口；下载包的安装、凭证配置和两组实验命令见[发布说明](docs/release-v0.1.0.md)。最新六组配对中，视觉大脑组到目标 4/6、纯 OmniJev 2/6，采集到命令中位约 0.89 秒；两组各记录到一次事件后匹配的新命令。模型仍会误判、超时和漏掉干扰，当前数据未建立可靠的通用反射能力。
 
 > **Unofficial research demo.** 模型读取当前仿真画面，输出选择或概率；运动由经典控制器执行。历史抓放实验使用仿真位姿辅助，并按仿真时间回放。新连续反射实验的模型输入仅含画面、触觉与当前动作，录像按真实墙钟回放；两套结果各自记录限制。
 

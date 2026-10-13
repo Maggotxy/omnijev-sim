@@ -13,7 +13,7 @@
 
 ## 实时交互
 
-部署在 bxj 的 `/opt/LIBERO`，网页仅监听 `127.0.0.1:8790`。Windows 运行 `scripts/open-reflex.ps1` 建立 SSH 转发，然后打开 [实时仿真](http://127.0.0.1:8790/)。空闲时不运行物理或请求模型。
+网页仅监听 `127.0.0.1:8790`。按照下方命令启动后打开 [实时仿真](http://127.0.0.1:8790/)。如果运行在远程主机，使用 `ssh -N -L 8790:127.0.0.1:8790 YOUR_SSH_HOST` 转发端口。空闲时不运行物理或请求模型。
 
 1. 选择纯 OmniJev 或视觉大脑＋OmniJev，点击**启动仿真**。
 2. 随时伸入人手、引入黄色滑动物体、挪动绿色目标或遮挡相机。**切换随机干扰**持续产生随机间隔的变化；不同类型可以重叠。
@@ -55,7 +55,7 @@ Linux / Python 3.10 使用以下命令；需要 OSMesa 系统库。Panda 资源�
 ```bash
 pip install -r requirements-reflex.txt
 export MUJOCO_GL=osmesa
-export OMNIJEV_BASE=http://39.106.166.185:6004
+export OMNIJEV_BASE=your_authorized_systemone_base_url
 export OMNIJEV_MODEL=omnijev-0.8b-kk
 export OMNIJEV_KEY=your_authorized_key
 export GEMINI_BASE=https://g.92.run
