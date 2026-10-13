@@ -1,0 +1,51 @@
+{
+  "mode": "controller_check",
+  "seed": 1,
+  "init_index": 0,
+  "task_name": "LIVING_ROOM_SCENE2_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket",
+  "task": "put both the alphabet soup and the tomato sauce in the basket",
+  "status": "success",
+  "success": true,
+  "model_done": false,
+  "error": null,
+  "initial_state_sha256": "747b653b2ca1feeae8f3bd994880ce743730993ea5ce4bd003623e877f26b3bd",
+  "settled_state_sha256": "e2aec41d9990d94f3e48cf60d411e36f052128a014c6ba48290a1067f9d551ff",
+  "final_state_sha256": "ea9d88ca10269c568ef77b1f5c80cecf18a106265fac77f12303f0fafa4f337f",
+  "sim_seconds": 24.2,
+  "wall_seconds": 66.883,
+  "control_steps": 484,
+  "api_calls": 0,
+  "api_seconds": 0,
+  "api_errors": 0,
+  "gate_counts": {
+    "proceed": 14,
+    "wait": 0,
+    "replan": 0
+  },
+  "grasp_failures": 0,
+  "completed": [
+    "tomato sauce",
+    "alphabet soup"
+  ],
+  "planner": "scripted-controller-test",
+  "reflex": "scripted-controller-test",
+  "assistance": [
+    "simulator object labels and poses",
+    "object height grasp verification",
+    "placement sensor",
+    "official success evaluator"
+  ],
+  "controller": {
+    "hz": 20,
+    "gain": 9,
+    "speed_clip": 0.7,
+    "grasp_z": 0.48,
+    "release_z": 0.59
+  },
+  "limits": {
+    "plans": 3,
+    "gate_waits": 1,
+    "steps": 2400
+  },
+  "model_evidence": false
+}

@@ -1,0 +1,18 @@
+# Observed working Python 3.10 environment on 2026-10-13.
+# Install LIBERO separately from commit 8f1084e3132a39270c3a13ebe37270a43ece2a01.
+# MuJoCo also requires the system OSMesa library for headless rendering.
+numpy==1.23.5
+mujoco==2.3.7
+robosuite==1.4.0
+Pillow==12.3.0
+imageio==2.38.0
+imageio-ffmpeg==0.6.0
+opencv-python==4.11.0.86
+bddl==1.0.1
+easydict==1.13
+gym==0.25.2
+cloudpickle==3.1.2
+matplotlib==3.10.9
+future==1.0.0
+termcolor==3.3.0
+torch==2.14.1

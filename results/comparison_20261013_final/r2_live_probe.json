@@ -1,0 +1,9 @@
+{
+  "model": "gemini-robotics-er-2-streaming-preview",
+  "transport": "Live API websocket",
+  "available": false,
+  "opcode": 8,
+  "close_code": 1011,
+  "reason": "[global] Publisher model `projects/[REDACTED]/locations/global/publishers/google/models/gemini-robotics-",
+  "elapsed_s": 7.668
+}

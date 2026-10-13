@@ -1,0 +1,26 @@
+{
+  "source_sha256": {
+    "__init__.py": "94a1a7cd5eed352d9da740cbb37c35586f49ef3b1436106e1a6ba69e5b43b53b",
+    "check_controller.py": "0a75cf85e50677bf7b5e418213bef7f76b92b490f8219d3ca708bbefe9c63ddd",
+    "run_suite.py": "02738826da6f95c1c81596a17dfe2aa224cd8afa6e4da94e18abd59e90c8bb58",
+    "clients.py": "8a38b7ffdf24689153320a2bd5606b33d63eac2e15ac3319cfb545a57ec3af37",
+    "compose.py": "f41ab2fcb7174c22d24d62d25d95529d121bef3c3c86410841020d99c0189e15"
+  },
+  "arguments": {
+    "out": "out/comparison_20261013_final",
+    "modes": [
+      "r2",
+      "r2_omni",
+      "omni"
+    ],
+    "seeds": [
+      1,
+      7
+    ],
+    "task_idx": 0,
+    "init_index": 0,
+    "max_plans": 4,
+    "max_gate_waits": 4,
+    "max_steps": 2400
+  }
+}

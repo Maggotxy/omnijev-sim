@@ -1,0 +1,132 @@
+[
+  {
+    "mode": "r2",
+    "seed": 1,
+    "status": "unavailable",
+    "success": null,
+    "error": "HTTP 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"Publisher model `projects/[REDACTED]/locations/asia-southeast1/publishers/google/models/gemini-robotics-er-2-preview` was not found or your project does not have access to it. Ensure you are using a valid model name and that the model is available in the specified region. For more information, see: https://docs.cloud.google.com/gemini-enterprise-agent-platform/resources/locations.\",\n    \"status\": \"NOT_FOUND\"\n  }\n}\n",
+    "init_index": 0
+  },
+  {
+    "mode": "r2_omni",
+    "seed": 1,
+    "status": "unavailable",
+    "success": null,
+    "error": "HTTP 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"Publisher model `projects/[REDACTED]/locations/asia-southeast1/publishers/google/models/gemini-robotics-er-2-preview` was not found or your project does not have access to it. Ensure you are using a valid model name and that the model is available in the specified region. For more information, see: https://docs.cloud.google.com/gemini-enterprise-agent-platform/resources/locations.\",\n    \"status\": \"NOT_FOUND\"\n  }\n}\n",
+    "init_index": 0
+  },
+  {
+    "mode": "omni",
+    "seed": 1,
+    "init_index": 0,
+    "task_name": "LIVING_ROOM_SCENE2_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket",
+    "task": "put both the alphabet soup and the tomato sauce in the basket",
+    "status": "stopped",
+    "success": false,
+    "model_done": false,
+    "error": "servo_timeout",
+    "initial_state_sha256": "747b653b2ca1feeae8f3bd994880ce743730993ea5ce4bd003623e877f26b3bd",
+    "settled_state_sha256": "e2aec41d9990d94f3e48cf60d411e36f052128a014c6ba48290a1067f9d551ff",
+    "final_state_sha256": "ac315d54c552cbe71ffd60f747118bbc613ca9b7254447b0c5dbf2d9fd54b553",
+    "sim_seconds": 20.3,
+    "wall_seconds": 62.372,
+    "control_steps": 406,
+    "api_calls": 13,
+    "api_seconds": 5.107,
+    "api_errors": 0,
+    "gate_counts": {
+      "proceed": 9,
+      "wait": 0,
+      "replan": 0
+    },
+    "grasp_failures": 0,
+    "completed": [
+      "tomato sauce"
+    ],
+    "planner": "omnijev-0.8b-kk",
+    "reflex": "omnijev-0.8b-kk",
+    "assistance": [
+      "simulator object labels and poses",
+      "object height grasp verification",
+      "placement sensor",
+      "official success evaluator"
+    ],
+    "controller": {
+      "hz": 20,
+      "gain": 9,
+      "speed_clip": 0.7,
+      "grasp_z": 0.48,
+      "release_z": 0.59
+    },
+    "limits": {
+      "plans": 4,
+      "gate_waits": 4,
+      "steps": 2400
+    }
+  },
+  {
+    "mode": "r2",
+    "seed": 7,
+    "status": "unavailable",
+    "success": null,
+    "error": "HTTP 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"Publisher model `projects/[REDACTED]/locations/asia-southeast1/publishers/google/models/gemini-robotics-er-2-preview` was not found or your project does not have access to it. Ensure you are using a valid model name and that the model is available in the specified region. For more information, see: https://docs.cloud.google.com/gemini-enterprise-agent-platform/resources/locations.\",\n    \"status\": \"NOT_FOUND\"\n  }\n}\n",
+    "init_index": 0
+  },
+  {
+    "mode": "r2_omni",
+    "seed": 7,
+    "status": "unavailable",
+    "success": null,
+    "error": "HTTP 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"Publisher model `projects/[REDACTED]/locations/asia-southeast1/publishers/google/models/gemini-robotics-er-2-preview` was not found or your project does not have access to it. Ensure you are using a valid model name and that the model is available in the specified region. For more information, see: https://docs.cloud.google.com/gemini-enterprise-agent-platform/resources/locations.\",\n    \"status\": \"NOT_FOUND\"\n  }\n}\n",
+    "init_index": 0
+  },
+  {
+    "mode": "omni",
+    "seed": 7,
+    "init_index": 0,
+    "task_name": "LIVING_ROOM_SCENE2_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket",
+    "task": "put both the alphabet soup and the tomato sauce in the basket",
+    "status": "stopped",
+    "success": false,
+    "model_done": false,
+    "error": "servo_timeout",
+    "initial_state_sha256": "747b653b2ca1feeae8f3bd994880ce743730993ea5ce4bd003623e877f26b3bd",
+    "settled_state_sha256": "3c65da4a71ec161112a427f68f741b29e12bd39e7f82a73460e59917669c0332",
+    "final_state_sha256": "d54908db4ae5f8583953e157a7ba37faea68d5837dc95fe0f723545123eabea1",
+    "sim_seconds": 20.3,
+    "wall_seconds": 63.945,
+    "control_steps": 406,
+    "api_calls": 13,
+    "api_seconds": 5.057,
+    "api_errors": 0,
+    "gate_counts": {
+      "proceed": 9,
+      "wait": 0,
+      "replan": 0
+    },
+    "grasp_failures": 0,
+    "completed": [
+      "tomato sauce"
+    ],
+    "planner": "omnijev-0.8b-kk",
+    "reflex": "omnijev-0.8b-kk",
+    "assistance": [
+      "simulator object labels and poses",
+      "object height grasp verification",
+      "placement sensor",
+      "official success evaluator"
+    ],
+    "controller": {
+      "hz": 20,
+      "gain": 9,
+      "speed_clip": 0.7,
+      "grasp_z": 0.48,
+      "release_z": 0.59
+    },
+    "limits": {
+      "plans": 4,
+      "gate_waits": 4,
+      "steps": 2400
+    }
+  }
+]
