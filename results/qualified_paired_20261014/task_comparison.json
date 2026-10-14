@@ -1,0 +1,169 @@
+{
+  "phase": "paired",
+  "episodes": 18,
+  "cases": {
+    "quiet:701": {
+      "vlm": {
+        "successes": 2,
+        "runs": 3,
+        "completion_median_wall_s": 23.389004999771714,
+        "recovery_median_wall_s": 23.389004999771714,
+        "first_dwell_median_wall_s": 11.013656359165907,
+        "watchdog_fraction": 0.39444444444444443,
+        "brain_errors": 1,
+        "cerebellum_errors": 0,
+        "human_contact_peak_N": 0,
+        "object_contact_peak_N": 0
+      },
+      "vlm_omni": {
+        "successes": 3,
+        "runs": 3,
+        "completion_median_wall_s": 16.413752840831876,
+        "recovery_median_wall_s": 16.413752840831876,
+        "first_dwell_median_wall_s": 10.714806608855724,
+        "watchdog_fraction": 0.04814814814814815,
+        "brain_errors": 1,
+        "cerebellum_errors": 0,
+        "human_contact_peak_N": 0,
+        "object_contact_peak_N": 0
+      }
+    },
+    "target_jump:719": {
+      "vlm": {
+        "successes": 2,
+        "runs": 3,
+        "completion_median_wall_s": 29.314537819474936,
+        "recovery_median_wall_s": 16.648402992635965,
+        "first_dwell_median_wall_s": 29.314537819474936,
+        "watchdog_fraction": 0.4652777777777778,
+        "brain_errors": 2,
+        "cerebellum_errors": 0,
+        "human_contact_peak_N": 0,
+        "object_contact_peak_N": 0
+      },
+      "vlm_omni": {
+        "successes": 3,
+        "runs": 3,
+        "completion_median_wall_s": 21.864734893664718,
+        "recovery_median_wall_s": 9.2006018999964,
+        "first_dwell_median_wall_s": 21.864734893664718,
+        "watchdog_fraction": 0.025925925925925925,
+        "brain_errors": 0,
+        "cerebellum_errors": 0,
+        "human_contact_peak_N": 0,
+        "object_contact_peak_N": 0
+      }
+    },
+    "occlusion_brief:743": {
+      "vlm": {
+        "successes": 3,
+        "runs": 3,
+        "completion_median_wall_s": 24.06440087221563,
+        "recovery_median_wall_s": 11.449996195733547,
+        "first_dwell_median_wall_s": 14.565235573798418,
+        "watchdog_fraction": 0.274537037037037,
+        "brain_errors": 0,
+        "cerebellum_errors": 0,
+        "human_contact_peak_N": 0,
+        "object_contact_peak_N": 0
+      },
+      "vlm_omni": {
+        "successes": 2,
+        "runs": 3,
+        "completion_median_wall_s": 33.34006720595062,
+        "recovery_median_wall_s": 20.726360969245434,
+        "first_dwell_median_wall_s": 14.564864045009017,
+        "watchdog_fraction": 0.02361111111111111,
+        "brain_errors": 3,
+        "cerebellum_errors": 0,
+        "human_contact_peak_N": 0,
+        "object_contact_peak_N": 0
+      }
+    }
+  },
+  "pairs": [
+    {
+      "case_id": "quiet:701",
+      "repeat": 1,
+      "brain_success": true,
+      "mixed_success": true,
+      "mixed_seconds_saved": 14.79966432414949,
+      "brain_dir": "repeat1/quiet_seed701_vlm",
+      "mixed_dir": "repeat1/quiet_seed701_vlm_omni"
+    },
+    {
+      "case_id": "quiet:701",
+      "repeat": 2,
+      "brain_success": true,
+      "mixed_success": true,
+      "mixed_seconds_saved": 4.600450338795781,
+      "brain_dir": "repeat2/quiet_seed701_vlm",
+      "mixed_dir": "repeat2/quiet_seed701_vlm_omni"
+    },
+    {
+      "case_id": "quiet:701",
+      "repeat": 3,
+      "brain_success": false,
+      "mixed_success": true,
+      "mixed_seconds_saved": null,
+      "brain_dir": "repeat3/quiet_seed701_vlm",
+      "mixed_dir": "repeat3/quiet_seed701_vlm_omni"
+    },
+    {
+      "case_id": "target_jump:719",
+      "repeat": 1,
+      "brain_success": true,
+      "mixed_success": true,
+      "mixed_seconds_saved": 4.949849406257272,
+      "brain_dir": "repeat1/target_jump_seed719_vlm",
+      "mixed_dir": "repeat1/target_jump_seed719_vlm_omni"
+    },
+    {
+      "case_id": "target_jump:719",
+      "repeat": 2,
+      "brain_success": true,
+      "mixed_success": true,
+      "mixed_seconds_saved": 8.100800158455968,
+      "brain_dir": "repeat2/target_jump_seed719_vlm",
+      "mixed_dir": "repeat2/target_jump_seed719_vlm_omni"
+    },
+    {
+      "case_id": "target_jump:719",
+      "repeat": 3,
+      "brain_success": false,
+      "mixed_success": true,
+      "mixed_seconds_saved": null,
+      "brain_dir": "repeat3/target_jump_seed719_vlm",
+      "mixed_dir": "repeat3/target_jump_seed719_vlm_omni"
+    },
+    {
+      "case_id": "occlusion_brief:743",
+      "repeat": 1,
+      "brain_success": true,
+      "mixed_success": true,
+      "mixed_seconds_saved": -5.5498424507677555,
+      "brain_dir": "repeat1/occlusion_brief_seed743_vlm",
+      "mixed_dir": "repeat1/occlusion_brief_seed743_vlm_omni"
+    },
+    {
+      "case_id": "occlusion_brief:743",
+      "repeat": 2,
+      "brain_success": true,
+      "mixed_success": false,
+      "mixed_seconds_saved": null,
+      "brain_dir": "repeat2/occlusion_brief_seed743_vlm",
+      "mixed_dir": "repeat2/occlusion_brief_seed743_vlm_omni"
+    },
+    {
+      "case_id": "occlusion_brief:743",
+      "repeat": 3,
+      "brain_success": true,
+      "mixed_success": true,
+      "mixed_seconds_saved": -9.851455420255661,
+      "brain_dir": "repeat3/occlusion_brief_seed743_vlm",
+      "mixed_dir": "repeat3/occlusion_brief_seed743_vlm_omni"
+    }
+  ],
+  "speed_scope": "Positive paired seconds saved means faster final retained task completion; only pairs with both successes have a speed difference. All failures stay in case counts.",
+  "analysis_sha256": "d28e3948900b60b5a5c1b6e1ecda1fdadadad81aa0a61dde2780d4307d1002d6"
+}

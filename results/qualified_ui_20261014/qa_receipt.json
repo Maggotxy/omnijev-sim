@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "kind": "compact-product-qa",
+  "formal_run": false,
+  "release_readiness": "UNASSESSED",
+  "created_at": "2026-10-14T18:58:08.514315+08:00",
+  "profile": "targeted-regression",
+  "result": "PASS",
+  "target": "Retained-completion result in pure-brain interactive simulation",
+  "environment": "bxj /opt/LIBERO; Python 3.10; MuJoCo 2.3.7; OSMesa; loopback8790 via SSH; Codex in-app browser",
+  "source_identity": "Delivery manifest matches 13 runtime modules and UI snapshot; experimental control/scoring AST equivalence recorded",
+  "authorization_boundary": "User-authorized simulation changes, real model evaluation and public evidence packaging",
+  "action": "Start pure brain in browser, observe saved stable completion, reload and verify result retained",
+  "input": "Pure visual brain, seed701, 36 seconds; native reset regression and repeated paired tasks",
+  "expected": "No Omni client in pure mode; actual brain-driven motion; stable-completion result persisted after refresh",
+  "actual": "UI reports stable completion, 0.8cm goal error and zero displayed speed; raw result confirms success, 0 Omni calls and 7 brain returns; refreshed page retains result",
+  "evidence_root": "D:\\Development\\jev\\omnijev-sim",
+  "evidence": [
+    {
+      "path": "results/qualified_ui_20261014/before.png",
+      "sha256": "519169329a160f314005bde0567f4dce6125d7e4890999ed504553bd59902328",
+      "size_bytes": 134917
+    },
+    {
+      "path": "results/qualified_ui_20261014/after.png",
+      "sha256": "7357b9a41ca0b819de1ae07ad1f5e8154519cea505b7ea4e87970b748a941130",
+      "size_bytes": 244622
+    },
+    {
+      "path": "results/qualified_ui_20261014/readback.png",
+      "sha256": "817164cc13b40d448e55c7542eaf9eef5bfd9a7d4dd5763f71f3a43fd683f286",
+      "size_bytes": 245971
+    },
+    {
+      "path": "results/qualified_ui_20261014/readback.json",
+      "sha256": "6eb47dbfe02dad4da4c2cfa32e16a96021ff3c80b79bab688edb3d3048ffc700",
+      "size_bytes": 3871
+    },
+    {
+      "path": "results/qualified_ui_20261014/manifest.json",
+      "sha256": "18bbfd869597c3952accfccb84c801aa18a36be89f6d31108abcc18ea9d9fe11",
+      "size_bytes": 3395
+    },
+    {
+      "path": "results/qualified_paired_20261014/mechanism_tests_at_delivery.log",
+      "sha256": "101c51eda023999fb6884631b09de2a3852188572164eb4b5c7158280193823b",
+      "size_bytes": 5019
+    }
+  ],
+  "direct_test": {
+    "command": "PANDA_ASSET_ROOT=/opt/LIBERO/resources/panda MUJOCO_GL=osmesa python -m unittest discover -s tests -p test_reflex*.py -v",
+    "result": "PASS"
+  },
+  "adjacent_result": "PASS",
+  "persistence_result": "PASS",
+  "unverified_boundary": "Scoped UI and mechanism regression. Formal task outcomes are a separate 18-episode comparison; no general reflex or production-readiness claim.",
+  "hard_fail_candidates": []
+}

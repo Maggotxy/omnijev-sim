@@ -22,6 +22,7 @@ from .bank import ReflexBank, ReflexMemory, signature
 from .brain import VisualBrain
 from .control import choose_motor
 from .motion import motion_responses
+from .completion import task_completion
 
 FPS = 20
 
@@ -46,7 +47,7 @@ def panel(frame, view, mode, sim_s, wall_s, action, age, sensors, metrics, event
     action_color = (255, 198, 107) if action == "watchdog_hold" else color
     d.text((20, 586), f"MOTOR: {action_label} ({motor_source}) | obs age: {age if age is not None else '--'}", fill=action_color, font=font(20))
     d.text((20, 632), f"Touch: {sensors['touch_normal_force_N']} N | contact: human {metrics['human_contact_N']:.1f} N, object {metrics['object_contact_N']:.1f} N", fill=(216, 224, 237), font=font(16))
-    d.text((20, 662), f"Goal error: {metrics['goal_distance_m']*100:.1f} cm | disturbance: {event} | reaction: {last_reaction}", fill=(248, 200, 117), font=font(16))
+    d.text((20, 662), f"Goal error: {metrics['goal_distance_m']*100:.1f} cm | disturbance: {event} | latest new reply: {last_reaction}", fill=(248, 200, 117), font=font(16))
     d.text((20, 692), f"Reflex bank v{bank_version} | brain: {brain_status or 'shared initial intention'} | camera + robot feedback", fill=(155, 169, 190), font=font(13))
     return np.asarray(canvas)
 
@@ -109,6 +110,8 @@ def reactions(scenario, applied, horizon=None):
 def episode(args, scenario, mode, output, live=None):
     output.mkdir(parents=True)
     world = World(args.asset_root, scenario, args.image_size)
+    if mode in ("vlm", "vlm_omni"):
+        world.await_visual_plan()
     rng = np.random.default_rng(scenario.seed + 901)
     (output/"scene.xml").write_text(world.xml)
     (output/"scenario.json").write_text(json.dumps(scenario.serializable(), indent=2))
@@ -202,7 +205,8 @@ def episode(args, scenario, mode, output, live=None):
                         pending.append(entry)
                 motor_wall_s = time.monotonic()-start
                 action, speed_scale, motor_source, selected_record = choose_motor(motor_wall_s, mailbox, brain_mailbox, reflex_enabled, bool(brain))
-                motor = world.motor(action, speed_scale)
+                command_id = (motor_source, selected_record["sequence"]) if selected_record else None
+                motor = world.motor(action, speed_scale, command_id)
                 for entry in pending+brain_pending:
                     entry["applied_wall_s"] = motor_wall_s
                     entry["observation_age_s"] = motor_wall_s-entry["observed_wall_s"]
@@ -317,7 +321,7 @@ def episode(args, scenario, mode, output, live=None):
                     stream.write(json.dumps(entry)+"\n")
         final_metrics = world.evaluate()
         Image.fromarray(panel(frame, view, mode, float(world.data.time-world.zero), elapsed, action, None,
-                              sensors, final_metrics, "finished", last_reaction)).save(output/"final.png")
+                              sensors, final_metrics, "finished", last_reaction, brain_status=brain_status, bank_version=bank.version, motor_source=motor_source)).save(output/"final.png")
         world.close()
     prefix = states if scenario.kind == "quiet" else [s for s in states if s["sim_s"] < scenario.onset]
     result = {"mode": mode, "scenario": scenario.kind, "seed": scenario.seed,
@@ -338,7 +342,7 @@ def episode(args, scenario, mode, output, live=None):
               "video_wall_sample_seconds": recorder.timestamps,
               "sensor_boundary": "policy: camera + physical touch + retrieved robot feedback; archive also records joint position/velocity/torque",
               "model": os.environ.get("OMNIJEV_MODEL", "omnijev-0.8b-kk") if worker else None,
-              "nominal_motor_plan": "shared initial reach; camera-calibrated model image points may update intention",
+              "nominal_motor_plan": "brain modes start holding proprioceptive pose; model image point defines reach; each local nudge is 1.5cm once per reply",
               "brain_model": os.environ.get("GEMINI_MODEL", "gemini-3.8-flash") if brain else None,
               "brain_results": len(brain_applications), "brain_accepted": sum(r["accepted"] for r in brain_applications),
               "brain_errors": sum("error" in r for r in brain_applications), "macro_plan_changes": macro_changes,
@@ -347,7 +351,8 @@ def episode(args, scenario, mode, output, live=None):
                                    "command_ttl_s": args.command_ttl, "joint_ranges": True,
                                    "max_brain_age_s": getattr(args, "max_brain_age", 8),
                                    "brain_command_ttl_s": getattr(args, "brain_command_ttl", 10)},
-              "watchdog_ticks": actions["watchdog_hold"]}
+              "watchdog_ticks": actions["watchdog_hold"],
+              "task_completion": task_completion(states, scenario)}
     if live:
         result["interactive"] = True
         result["summary_scope"] = "Event summary covers the final scene epoch; all operator events and resets remain in interactive_events.jsonl"

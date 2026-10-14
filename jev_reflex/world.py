@@ -127,6 +127,8 @@ class World:
         self.rotation = self.data.site_xmat[self.tool].reshape(3, 3).copy()
         self.origin = self.position()
         self.offset = np.zeros(3)
+        self.lateral_commands = set()
+        self.vision_initialized = False
         self.plan_goal = np.asarray(scenario.nominal_goal).copy()
         self.plan_version = 0
         self.last_action = None
@@ -145,7 +147,8 @@ class World:
             getattr(self.data, name)[:] = value
         self.qref = self.initial_arrays["ctrl"][:7].copy()
         self.offset[:] = 0
-        self.plan_goal = np.asarray(self.scenario.nominal_goal).copy()
+        self.lateral_commands.clear()
+        self.plan_goal = self.origin.copy() if self.vision_initialized else np.asarray(self.scenario.nominal_goal).copy()
         self.plan_version += 1
         self.last_action = self.reflex_anchor = self.slider_kicked_at = None
         self.slider_introduced, self.hand_started_at = 0, None
@@ -195,6 +198,12 @@ class World:
     def position(self):
         return self.data.site_xpos[self.tool].copy()
 
+    def await_visual_plan(self):
+        """Hold the proprioceptive start pose until a model supplies a target."""
+        self.vision_initialized = True
+        self.plan_goal = self.position().copy()
+        self.offset[:] = 0
+
     def apply_visual_plan(self, xy):
         """Camera-ray calibration of a MODEL-selected image point; no target truth."""
         cid = mujoco.mj_name2id(self.model, mujoco.mjtObj.mjOBJ_CAMERA, "overhead")
@@ -211,8 +220,9 @@ class World:
         changed = bool(np.linalg.norm(goal-self.plan_goal) > .025)
         if changed:
             self.plan_goal = goal
-            self.offset[:] = 0
             self.plan_version += 1
+        # Absolute visual plans supersede local calibration offsets, even in the deadband.
+        self.offset[:] = 0
         return {"changed": changed, "selected_pixel_xy": xy, "calibrated_goal_m": goal.tolist(),
                 "workspace_clipped": bool(not np.allclose(point[:2], goal[:2])), "plan_version": self.plan_version}
 
@@ -272,19 +282,22 @@ class World:
             occlusion = [obscurer.get("camera_block_x", .49), .9+(obscurer.get("camera_block_y", 0)-.9)*ramp, 1.02]
         self.data.mocap_pos[self.model.body_mocapid[self.occluder]] = occlusion
 
-    def motor(self, action, speed_scale=1):
+    def motor(self, action, speed_scale=1, command_id=None):
         # A shared initial reach is the "brain" command. It never follows object truth.
         prior_offset = self.offset.copy()
-        if action == "left":
-            self.offset[1] -= .055*DT
-        elif action == "right":
-            self.offset[1] += .055*DT
-        self.offset = np.clip(self.offset, [-.1, -.22, 0], [.1, .22, .16])
+        fresh_nudge = (command_id not in self.lateral_commands if command_id is not None else action != self.last_action)
+        if action in ("left", "right") and fresh_nudge:
+            self.offset[1] += -.015 if action == "left" else .015
+            if command_id is not None:
+                self.lateral_commands.add(command_id)
+        self.offset = np.clip(self.offset, [-.1, -.08, 0], [.1, .08, .16])
         goal = self.plan_goal + self.offset
         nominal = (goal-self.position()) * 1.4
         nominal *= min(1, .065/max(np.linalg.norm(nominal), 1e-9))
         speed_scale = float(np.clip(speed_scale, .25, 1))
         velocity = nominal.copy()*speed_scale
+        if np.linalg.norm(goal-self.position()) < .008:
+            velocity[:] = 0
         if action != self.last_action and action in ("retreat", "lift"):
             self.reflex_anchor = self.position() + (np.array([-.06, 0, .04]) if action == "retreat" else np.array([0, 0, .08]))
         if action in ("retreat", "lift"):

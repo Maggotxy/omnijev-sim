@@ -1,0 +1,155 @@
+[
+  {
+    "file": "comparison_quiet_seed701_repeat1.mp4",
+    "frames": 721,
+    "fps": 20,
+    "size": [
+      1920,
+      800
+    ],
+    "sha256": "52c901619b126396018bfeec7a07fec2b0376c419c1fe57aa676d4485919a836",
+    "case_id": "quiet:701",
+    "repeat": 1,
+    "brain_success": true,
+    "mixed_success": true,
+    "mixed_seconds_saved": 14.79966432414949,
+    "brain_dir": "repeat1/quiet_seed701_vlm",
+    "mixed_dir": "repeat1/quiet_seed701_vlm_omni"
+  },
+  {
+    "file": "comparison_quiet_seed701_repeat2.mp4",
+    "frames": 721,
+    "fps": 20,
+    "size": [
+      1920,
+      800
+    ],
+    "sha256": "c174b5555e8a6f1596302a8db8e7f9b3b1d167b9c65d6b6c8e1ef7af4b4d84ec",
+    "case_id": "quiet:701",
+    "repeat": 2,
+    "brain_success": true,
+    "mixed_success": true,
+    "mixed_seconds_saved": 4.600450338795781,
+    "brain_dir": "repeat2/quiet_seed701_vlm",
+    "mixed_dir": "repeat2/quiet_seed701_vlm_omni"
+  },
+  {
+    "file": "comparison_quiet_seed701_repeat3.mp4",
+    "frames": 721,
+    "fps": 20,
+    "size": [
+      1920,
+      800
+    ],
+    "sha256": "8d70298383dd33fccd24837297d20874c8dc07e7e044a418659058a688fbdbaa",
+    "case_id": "quiet:701",
+    "repeat": 3,
+    "brain_success": false,
+    "mixed_success": true,
+    "mixed_seconds_saved": null,
+    "brain_dir": "repeat3/quiet_seed701_vlm",
+    "mixed_dir": "repeat3/quiet_seed701_vlm_omni"
+  },
+  {
+    "file": "comparison_target_jump_seed719_repeat1.mp4",
+    "frames": 721,
+    "fps": 20,
+    "size": [
+      1920,
+      800
+    ],
+    "sha256": "9023fa32930761ec1994050b8ac2aaea96a833670e8bb019fd4947d4e6d20936",
+    "case_id": "target_jump:719",
+    "repeat": 1,
+    "brain_success": true,
+    "mixed_success": true,
+    "mixed_seconds_saved": 4.949849406257272,
+    "brain_dir": "repeat1/target_jump_seed719_vlm",
+    "mixed_dir": "repeat1/target_jump_seed719_vlm_omni"
+  },
+  {
+    "file": "comparison_target_jump_seed719_repeat2.mp4",
+    "frames": 721,
+    "fps": 20,
+    "size": [
+      1920,
+      800
+    ],
+    "sha256": "cdfbcae7658fdf7e6da7fac449ed6ebc3e388420269a562f32bb8b79385baf57",
+    "case_id": "target_jump:719",
+    "repeat": 2,
+    "brain_success": true,
+    "mixed_success": true,
+    "mixed_seconds_saved": 8.100800158455968,
+    "brain_dir": "repeat2/target_jump_seed719_vlm",
+    "mixed_dir": "repeat2/target_jump_seed719_vlm_omni"
+  },
+  {
+    "file": "comparison_target_jump_seed719_repeat3.mp4",
+    "frames": 721,
+    "fps": 20,
+    "size": [
+      1920,
+      800
+    ],
+    "sha256": "babf4b738970bb91d37a7db15f94da3eab85643f80e68cc85a8ea2d82a49a0a9",
+    "case_id": "target_jump:719",
+    "repeat": 3,
+    "brain_success": false,
+    "mixed_success": true,
+    "mixed_seconds_saved": null,
+    "brain_dir": "repeat3/target_jump_seed719_vlm",
+    "mixed_dir": "repeat3/target_jump_seed719_vlm_omni"
+  },
+  {
+    "file": "comparison_occlusion_brief_seed743_repeat1.mp4",
+    "frames": 721,
+    "fps": 20,
+    "size": [
+      1920,
+      800
+    ],
+    "sha256": "ba8f70c60b8f0ff69234bdbf834bf974d3c8f3755c017a580a7cd5a2b66d0783",
+    "case_id": "occlusion_brief:743",
+    "repeat": 1,
+    "brain_success": true,
+    "mixed_success": true,
+    "mixed_seconds_saved": -5.5498424507677555,
+    "brain_dir": "repeat1/occlusion_brief_seed743_vlm",
+    "mixed_dir": "repeat1/occlusion_brief_seed743_vlm_omni"
+  },
+  {
+    "file": "comparison_occlusion_brief_seed743_repeat2.mp4",
+    "frames": 721,
+    "fps": 20,
+    "size": [
+      1920,
+      800
+    ],
+    "sha256": "67fef776d85c34f3e44b23feb4ae9657fbf279e0a36b7159627f95d1bd53f283",
+    "case_id": "occlusion_brief:743",
+    "repeat": 2,
+    "brain_success": true,
+    "mixed_success": false,
+    "mixed_seconds_saved": null,
+    "brain_dir": "repeat2/occlusion_brief_seed743_vlm",
+    "mixed_dir": "repeat2/occlusion_brief_seed743_vlm_omni"
+  },
+  {
+    "file": "comparison_occlusion_brief_seed743_repeat3.mp4",
+    "frames": 721,
+    "fps": 20,
+    "size": [
+      1920,
+      800
+    ],
+    "sha256": "834a56b5a76200e573b217e58b2e7c4c232283393436de6ff41411742f5c108a",
+    "case_id": "occlusion_brief:743",
+    "repeat": 3,
+    "brain_success": true,
+    "mixed_success": true,
+    "mixed_seconds_saved": -9.851455420255661,
+    "brain_dir": "repeat3/occlusion_brief_seed743_vlm",
+    "mixed_dir": "repeat3/occlusion_brief_seed743_vlm_omni"
+  }
+]

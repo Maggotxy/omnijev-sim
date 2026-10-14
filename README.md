@@ -1,18 +1,19 @@
 # OmniJev Brain–Cerebellum Robot Simulation
 
-主对比为 **纯视觉大脑** 与 **视觉大脑＋OmniJev 小脑**。两组使用同一个 Gemini 3.8 Flash 大脑和相同有界动作；组合组额外使用 OmniJev 做快速局部条件判断。持续 MuJoCo 物理中可以加入人手、自由物体、目标移动和短暂遮挡，查看模型何时答复、谁实际下达动作、机械臂何时减速或退让。模型权重固定。
+先验证 **纯视觉大脑** 能够完成具体案例，再比较加入 **OmniJev 小脑** 后的成功率与稳定完成时间。两组使用同一个 Gemini 3.8 Flash 大脑和相同有界动作；组合组额外使用 OmniJev 做局部条件判断。持续 MuJoCo 物理中可以加入人手、自由物体、目标移动和短暂遮挡，查看模型何时答复、谁实际下达动作、机械臂何时减速或退让。模型权重固定。
 
 ## 连续反射仿真
 
 物理以 500 Hz 运行，电机控制为 20 Hz，模型和渲染异步处理最新观察。推理期间世界继续运动；过期软件保护与模型动作分别显示和统计。Panda 资源已随仓库提供，这个模块不依赖 LIBERO 或本地模型权重。
 
 - [启动方法与实时交互说明](docs/reflex.md)
-- [大脑／大脑＋小脑的实验设计](docs/brain-comparison-design.md)
-- [最新 30 轮速度、实际运动与失败报告](docs/brain-comparison-results-20261014.md)
+- [纯大脑初筛与冻结配对设计](docs/qualified-cases-design.md)
+- [最新：15 轮初筛与 18 轮正式对比](docs/qualified-cases-results-20261014.md)
+- [上一版 30 轮速度与失败诊断](docs/brain-comparison-results-20261014.md)
 - [上一轮配对结果与全部失败](docs/reflex-runtime-results-20261013.md)
 - [Gemini 3.8 Flash 接口实测](docs/model-selection.md)
-- [最终交互操作验收证据](results/brain_comparison_ui_release_20261014/qa_receipt.json)
-- [v0.2.0 下载包与独立启动说明](docs/release-v0.2.0.md) · [GitHub Releases](https://github.com/Maggotxy/omnijev-sim/releases)
+- [最终交互操作验收证据](results/qualified_ui_20261014/qa_receipt.json)
+- [v0.3.0 下载包与独立启动说明](docs/release-v0.3.0.md) · [GitHub Releases](https://github.com/Maggotxy/omnijev-sim/releases)
 
 ```bash
 pip install -r requirements-reflex.txt
@@ -26,7 +27,7 @@ python -m jev_reflex.live --out out/reflex_interactive --port 8790
 
 Linux 下启动后访问 <http://127.0.0.1:8790>，选择“纯视觉大脑”或“视觉大脑＋OmniJev”。远程运行时，可自行用 SSH 转发该本地端口。模型可能误判、超时或漏掉干扰；实际命令来源、软件保持和机械实测运动分别记录，速度优势由配对证据判断。
 
-最新 30 轮中，包含缓存重新生效的动作转换命令采集到应用中位为纯大脑 **4.99 秒**、组合组 **0.89 秒**；软件保持占比为 **33.03%／2.26%**。更快更新未转化为更快的事件匹配反应：目标方向匹配新动作 **3/3／2/3**，近手、横穿、短遮挡均 **0/9**，最终到目标 **1/15／2/15**。完整失败、源码和真实墙钟视频见[报告](docs/brain-comparison-results-20261014.md)。
+最新初筛中，静态目标、目标移动、短遮挡三个精确案例各通过纯大脑 **3/3** 次；另外两个候选各 **2/3**，全部保留。随后独立完成 18 轮配对：纯大脑稳定完成 **7/9**，组合组 **8/9**。双方均成功的配对中，组合组在静态目标、目标移动分别早 **9.70 秒、6.53 秒**稳定完成，在短遮挡中晚 **7.70 秒**（每项均为两对的时间差中位数）。完整视频、失败和首次到达／持续保持的区别见[报告](docs/qualified-cases-results-20261014.md)。
 
 > **Unofficial research demo.** 模型读取当前仿真画面，输出选择或概率；运动由经典控制器执行。历史抓放实验使用仿真位姿辅助，并按仿真时间回放。新连续反射实验的模型输入仅含画面、触觉与当前动作，录像按真实墙钟回放；两套结果各自记录限制。
 

@@ -9,7 +9,7 @@ Gemini 3.8 Flash 作为视觉大脑，独立或与 OmniJev 局部决策小脑组
 | `vlm` | Gemini 3.8 Flash 看图更新目标，并选择有界动作 | 同一个视觉大脑 |
 | `vlm_omni` | 相同视觉大脑与动作能力 | 额外使用独立 OmniJev 小脑 |
 
-大脑返回归一化图像点，固定相机标定把这个**模型选择的点**投射到桌面。控制器不读取绿色目标真值来追踪目标。两组共享初始状态、环境随机事件和电机原语；真实轨迹会因动作不同而分开。[当前实验设计](brain-comparison-design.md)定义动作仲裁和速度口径。
+大脑返回归一化图像点，固定相机标定把这个**模型选择的点**投射到桌面。大脑模式先保持机器人自身初始位置，收到视觉目标后再执行到达。控制器不读取绿色目标真值来追踪目标。两组共享初始状态、环境随机事件和电机原语；真实轨迹会因动作不同而分开。[当前实验设计](qualified-cases-design.md)定义先验证纯大脑、再冻结配对的方式和任务速度口径。
 
 ## 实时交互
 
@@ -40,13 +40,15 @@ Gemini 3.8 Flash 作为视觉大脑，独立或与 OmniJev 局部决策小脑组
 | 小脑 | 实际服务 `omnijev-0.8b-kk`；条件 `noul`、候选 `choice`、危险等级 `score` 一次批量返回 |
 | 大脑 | g.92.run 原生 Gemini 接口，`gemini-3.8-flash`，low thinking，直接选择动作并更新任务目标；完成一轮后处理最新观察 |
 | 命令有效期 | 小脑接收答复时采集年龄上限 1.2 秒，可执行至采集后 1.4 秒；大脑分别为 8 秒和 10 秒；实际采用的命令来源单独记录 |
-| 动作原语 | 继续、刹停、局部退让约 6 cm 并抬高 4 cm、抬起约 8 cm、左右修正；关节限位分别记录 |
+| 动作原语 | 继续、刹停、局部退让约 6 cm 并抬高 4 cm、抬起约 8 cm、每条左右答复单次修正 1.5 cm；局部偏移上限 8 cm，关节限位分别记录 |
 
 条件概率超过该条件的阈值且模型仲裁置信度超过 0.12，才执行选中的反射。否则继续当前任务意图；危险评分连续调节速度。条件与候选共享同一帧、同一次批量请求，候选不是读取本轮返回概率后进行第二次推理。
 
 二元条件保持简短。检索经验进入动作仲裁和视觉大脑；每条经验保存开始/结束触力、实际位移、期间发生的动作和世代。它们是测量关联，不能把 0.6 秒内的反馈归因到某个单独动作。大脑只能修改已有条件或阈值，操作者可以新增条件；所有修改有来源与版本。
 
 小脑、大脑、相机、录像使用独立线程。录像按真实墙钟 20 fps 采样，记录模型等待期间的持续物理。经典控制器、有界动作和过期保护分别报告。
+
+绝对视觉计划会清除已有局部偏移；距模型计划点 8 mm 内保持已有关节参考。每条微调命令按模型来源与答复序号去重，缓存重新生效不会再次累加偏移。停止保存后，页面显示是否达到连续稳定保持标准。
 
 ## 复跑
 
@@ -64,12 +66,12 @@ export GEMINI_API_KEY=your_authorized_relay_key
 
 PANDA_ASSET_ROOT="$PWD/resources/panda" python -m unittest discover -s tests -p 'test_reflex*.py' -v
 
-# 串行执行，按 seed 交换组别顺序；交互页面保持空闲
-python scripts/run-serial-reflex.py --out out/reflex_runtime --seeds 541 577 613 --seconds 26 --scenarios quiet hand_close slider_fast occlusion_brief target_jump
-python scripts/analyze-runtime.py out/reflex_runtime
-python scripts/analyze-brain-motion.py out/reflex_runtime
-python scripts/replay-command-selections.py out/reflex_runtime
-python scripts/compose-brain-comparison.py out/reflex_runtime
+# 先仅用纯大脑重复筛选，再以相同案例重新配对；交互页面保持空闲
+python scripts/run-qualified-comparison.py --phase screen --out out/screen --seconds 36 --repeats 3 --cases quiet:701 target_jump:719 occlusion_brief:743
+python scripts/merge-qualified-cases.py --inputs out/screen --out out/selection.json
+python scripts/run-qualified-comparison.py --phase paired --out out/paired --repeats 3 --qualification out/selection.json
+python scripts/analyze-qualified-cases.py out/paired
+python scripts/compose-qualified-cases.py out/paired
 
 # 独立交互使用
 python -m jev_reflex.live --out out/reflex_interactive --port 8790
@@ -82,7 +84,8 @@ python -m jev_reflex.live --out out/reflex_interactive --port 8790
 各轮保存场景 XML、随机参数、控制轨迹、模型可见原始答复、发送 JPEG 及哈希、条件版本、检索反馈、大脑目标更新与真实墙钟录像。分析器核对配对、源码及输入图像身份。无干扰人手条件的负例概率单独报告；这种负例检查不代表包含正例的完整校准。
 
 - [早期 24 轮云端反射结果](reflex-results-20261013.md)，保留原执行源码快照。
-- [最新大脑／大脑＋小脑配对报告](brain-comparison-results-20261014.md)与[最终交互验收](../results/brain_comparison_ui_release_20261014/qa_receipt.json)。
+- [最新已验证案例配对报告](qualified-cases-results-20261014.md)与[最终交互验收](../results/qualified_ui_20261014/qa_receipt.json)。
+- [上一版大脑／大脑＋小脑配对报告](brain-comparison-results-20261014.md)。
 - [上一轮小脑／大脑＋小脑配对报告](reflex-runtime-results-20261013.md)。
 - [资源来源与许可证](../resources/panda/SOURCE.md)。
 

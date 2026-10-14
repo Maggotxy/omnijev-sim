@@ -1,0 +1,50 @@
+test_busy_inference_does_not_block_submission_and_skips_old_frames (test_reflex.ReflexTests) ... ok
+test_freshness_uses_capture_time_not_arrival_time (test_reflex.ReflexTests) ... ok
+test_future_same_kind_event_does_not_hide_current_event (test_reflex.ReflexTests) ... ok
+test_model_stop_decision_takes_priority_over_spatial_correction (test_reflex.ReflexTests) ... ok
+test_nominal_startup_window_is_bounded_and_separately_named (test_reflex.ReflexTests) ... ok
+test_older_reply_cannot_override_newer_command (test_reflex.ReflexTests) ... ok
+test_rejects_invalid_and_nonfinite_actions (test_reflex.ReflexTests) ... ok
+test_saved_seed_reproduces_disturbance_without_policy_state (test_reflex.ReflexTests) ... ok
+test_scene_reset_invalidates_inflight_reply (test_reflex.ReflexTests) ... ok
+test_bank_transaction_is_atomic_and_versions_real_updates (test_reflex_bank.BankContracts) ... ok
+test_invalid_probabilities_and_abstained_choices_are_rejected (test_reflex_bank.BankContracts) ... ok
+test_memory_retains_intervening_actions_without_claiming_causality (test_reflex_bank.BankContracts) ... ok
+test_memory_retrieves_measured_completed_feedback_and_excludes_reset (test_reflex_bank.BankContracts) ... ok
+test_probability_and_arbitration_both_gate_the_declared_action (test_reflex_bank.BankContracts) ... ok
+test_runtime_authoring_adds_a_question_and_keeps_motor_vocabulary (test_reflex_bank.BankContracts) ... ok
+test_score_modulates_speed_without_selecting_an_action (test_reflex_bank.BankContracts) ... ok
+test_brain_updates_task_and_conditions_but_cannot_replace_motor_mapping (test_reflex_bank.BrainContracts) ... ok
+test_wrong_goal_and_invalid_pixels_are_rejected (test_reflex_bank.BrainContracts) ... ok
+test_commanded_brake_is_not_a_mechanical_stop (test_reflex_brain_comparison.BrainComparisonContracts) ... ok
+test_event_scoring_includes_selected_brain_commands_and_excludes_unselected (test_reflex_brain_comparison.BrainComparisonContracts) ... ok
+test_focused_events_are_seeded_and_do_not_track_robot (test_reflex_brain_comparison.BrainComparisonContracts) ... ok
+test_fresh_local_avoidance_overrides_brain_and_expired_local_does_not (test_reflex_brain_comparison.BrainComparisonContracts) ... ok
+test_hold_reference_does_not_follow_gravity_drift (test_reflex_brain_comparison.BrainComparisonContracts) ... ok
+test_motor_vocabulary_and_finite_numbers (test_reflex_brain_comparison.BrainComparisonContracts) ... ok
+test_new_explicit_clear_can_release_an_older_brain_stop (test_reflex_brain_comparison.BrainComparisonContracts) ... ok
+test_pure_brain_never_creates_an_omni_client_and_changes_real_motor (test_reflex_brain_comparison.BrainComparisonContracts) ... {"scenario": "quiet", "seed": 541, "mode": "vlm", "real_time_factor": 0.9999149874107636, "final_goal_reached": false, "peak_human_contact_N": 0, "peak_object_contact_N": 0, "accepted_results": 0}
+ok
+test_untriggered_local_continue_does_not_veto_brain_retreat (test_reflex_brain_comparison.BrainComparisonContracts) ... ok
+test_worker_timings_use_common_clock_origin (test_reflex_brain_comparison.BrainComparisonContracts) ... ok
+test_before_target_shift_is_not_task_completion (test_reflex_completion.CompletionTests) ... ok
+test_one_lateral_reply_is_bounded_and_cached_reply_cannot_repeat (test_reflex_completion.CompletionTests) ... ok
+test_transient_touch_does_not_count_as_retained_completion (test_reflex_completion.CompletionTests) ... ok
+test_visual_reset_holds_restored_pose_until_new_visual_plan (test_reflex_completion.CompletionTests) ... ok
+test_visual_start_holds_and_absolute_plan_clears_local_offset (test_reflex_completion.CompletionTests) ... ok
+test_future_scheduled_events_are_not_scored_as_missed_reactions (test_reflex_integration.RealTimeIntegration) ... ok
+test_hand_starts_outside_camera_and_exits_on_its_own_side (test_reflex_integration.RealTimeIntegration) ... ok
+test_new_slider_preserves_the_previous_free_object (test_reflex_integration.RealTimeIntegration) ... ok
+test_physics_advances_during_half_second_inference (test_reflex_integration.RealTimeIntegration) ... quiet seed=31 reflex sim=1.95 wall=1.95 action=brake
+{"scenario": "quiet", "seed": 31, "mode": "reflex", "real_time_factor": 0.9999267968854108, "final_goal_reached": false, "peak_human_contact_N": 0, "peak_object_contact_N": 0, "accepted_results": 3}
+ok
+test_retreat_is_local_and_nominal_motion_can_resume (test_reflex_integration.RealTimeIntegration) ... ok
+test_slow_brain_and_reflex_run_independently_of_physical_time (test_reflex_integration.RealTimeIntegration) ... quiet seed=31 vlm_omni sim=1.95 wall=1.95 action=continue
+{"scenario": "quiet", "seed": 31, "mode": "vlm_omni", "real_time_factor": 0.9999183911379913, "final_goal_reached": false, "peak_human_contact_N": 0, "peak_object_contact_N": 0, "accepted_results": 1}
+ok
+test_visual_plan_uses_camera_ray_and_never_tracks_target_truth (test_reflex_integration.RealTimeIntegration) ... ok
+
+----------------------------------------------------------------------
+Ran 40 tests in 37.986s
+
+OK

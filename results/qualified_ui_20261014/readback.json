@@ -1,0 +1,118 @@
+{
+  "state": {
+    "status": "finished",
+    "world_s": 35.94999999999919,
+    "wall_s": 35.95335587486625,
+    "action": "continue",
+    "model_enabled": false,
+    "motor_source": "brain",
+    "measured_eef_speed_m_s": 0.0,
+    "commanded_eef_speed_m_s": 0.0,
+    "brain_action": "continue",
+    "observation_age_s": 6.18,
+    "camera_age_s": 0.03882904537022114,
+    "group": "vlm",
+    "brain_status": "reach_target @ 34.8s",
+    "bank_version": 0,
+    "bank": {
+      "version": 0,
+      "reflexes": [
+        {
+          "id": "continue",
+          "action": "continue",
+          "threshold": 0.55,
+          "condition": "The view is clear and the gripper path is free."
+        },
+        {
+          "id": "brake",
+          "action": "brake",
+          "threshold": 0.75,
+          "condition": "The camera view is blocked or the touch force is above 10 N."
+        },
+        {
+          "id": "retreat",
+          "action": "retreat",
+          "threshold": 0.75,
+          "condition": "A human hand is close to the robot gripper."
+        },
+        {
+          "id": "lift",
+          "action": "lift",
+          "threshold": 0.75,
+          "condition": "A yellow object is close below the robot gripper."
+        },
+        {
+          "id": "left",
+          "action": "left",
+          "threshold": 0.65,
+          "condition": "The green or turquoise circular target pad is visibly to image-left of the blue outlined planned landing point."
+        },
+        {
+          "id": "right",
+          "action": "right",
+          "threshold": 0.65,
+          "condition": "The green or turquoise circular target pad is visibly to image-right of the blue outlined planned landing point."
+        }
+      ],
+      "arbitration_confidence": 0.12,
+      "score_levels": [
+        "clear and safe",
+        "minor concern",
+        "danger of collision",
+        "immediate emergency"
+      ]
+    },
+    "memory_entries": 5,
+    "reflex_candidate": null,
+    "reflex_gate": null,
+    "condition_probabilities": null,
+    "danger_score": null,
+    "human_contact_N": 0.0,
+    "object_contact_N": 0.0,
+    "human_contact_peak_N": 0.0,
+    "object_contact_peak_N": 0.0,
+    "human_contact_impulse_Ns": 0.0,
+    "object_contact_impulse_Ns": 0.0,
+    "goal_distance_m": 0.007824480213199416,
+    "goal_reached": true,
+    "eef_position_m": [
+      0.602366139844528,
+      0.07710503689236169,
+      0.5859579685758647
+    ],
+    "human_palm_to_gripper_m": 0.8311581700463717,
+    "nearest_slider_to_gripper_m": 2.056472062259512,
+    "auto": false,
+    "saved_path": "/opt/LIBERO/out/qualified_ui_20261014/session_1791975222629837498",
+    "final_goal_reached": true,
+    "task_completion": {
+      "success": true,
+      "criterion": "within 4cm XY / 5cm Z, speed < 0.015m/s continuously >=2s, retained through episode end after last event settles",
+      "reference_sim_s": 0.0,
+      "reference_wall_s": 0.0,
+      "first_dwell_wall_s": 9.163722336292267,
+      "retained_completion_wall_s": 9.163722336292267,
+      "recovery_wall_s": 9.163722336292267,
+      "terminal_dwell_s": 28.8,
+      "stable_ticks_after_reference": 576
+    },
+    "selected_group": "vlm"
+  },
+  "ui_result": {
+    "success": true,
+    "criterion": "within 4cm XY / 5cm Z, speed < 0.015m/s continuously >=2s, retained through episode end after last event settles",
+    "reference_sim_s": 0.0,
+    "reference_wall_s": 0.0,
+    "first_dwell_wall_s": 9.163722336292267,
+    "retained_completion_wall_s": 9.163722336292267,
+    "recovery_wall_s": 9.163722336292267,
+    "terminal_dwell_s": 28.8,
+    "stable_ticks_after_reference": 576
+  },
+  "mode": "vlm",
+  "omni_results": 0,
+  "brain_results": 7,
+  "rtf": 0.9999962569250823,
+  "source_identity": "delivery manifest matches current runtime",
+  "scope": "UI outcome display and saved-session readback; separate from paired comparison"
+}

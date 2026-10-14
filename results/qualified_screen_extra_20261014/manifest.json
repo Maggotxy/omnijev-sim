@@ -1,0 +1,35 @@
+{
+  "protocol": "qualified_brain_cases_v1",
+  "phase": "screen",
+  "cases": [
+    "hand_close:751",
+    "occlusion_brief:743"
+  ],
+  "repeats": 3,
+  "seconds": 36.0,
+  "source_sha256": {
+    "__init__.py": "96f68cb4dfa24854834eddd3b27b7982f6bcef9884e41d8f373b3004a21cb770",
+    "render.py": "75e666b03a0330c91efbc479ede1b2f1cfb94686c4f984b8d0230f1f4ea19e12",
+    "world.py": "0f5e3ff8dc33985d12226c849e28b8dc1d6448713f85d75e5461fb0f562ce823",
+    "motion.py": "ad5359bc1041e17282aa19594a002a1f58bad3c0f8f6ea96c64b6c04bb4e0756",
+    "scenario.py": "cd2144bf4ef6c1b820f819967db557f3db559f0b1b759f2ad9d53a752f54e672",
+    "bank.py": "db34a282096599c5ed7ba195a82cf92e4c36e83a6532dd5d5a884eb25e9bcc75",
+    "brain.py": "32ce3ee21f22cc32db1499b0be0802ca3bf2e270ac7c2d4ddc17172561e8051a",
+    "run.py": "0bf00fbed04aff8d5e4d7dccb355387e61d2ed0e9f243f8ff9bc98a3b165fff9",
+    "policy.py": "9021c7a4bdad19431a310bd9b243f13562a1ae7425ab15d122d3ab6f806d948b",
+    "control.py": "8bdf4ba21ef59ed4496af6f95400155d38ea700bff7d9a32a556095788c9bc20",
+    "compose.py": "4d10636329d56c52c15868f077f39471c79483081f69df60747c599b0c481d87",
+    "completion.py": "fd3c83aaa59e4c15e6076ec5da22718cea2dab8eec554c01926ae71f14eb7aaf",
+    "live.py": "f5057ad0f12e40fcfcb8374396fc03fd9c5ef473c1e5f4391e878dfc5806ba1c"
+  },
+  "driver_sha256": "3352cb146224223a4d20d2b18d72a358472b6f8273600659f7ffc96eb8fef999",
+  "model_policy": {
+    "brain": "gemini-3.8-flash",
+    "cerebellum": "omnijev-0.8b-kk",
+    "weights": "fixed",
+    "brain_interval": 0,
+    "frozen_bank": true
+  },
+  "selection_rule": "Each exact case must pass all 3 fresh brain-only screening repetitions; mixed outcomes never affect selection",
+  "qualification": null
+}
