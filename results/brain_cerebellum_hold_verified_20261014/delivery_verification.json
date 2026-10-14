@@ -1,0 +1,11 @@
+{
+  "runtime_modules": 12,
+  "runtime_identity": "matches final experiment and interactive source snapshots",
+  "driver_identity": "PASS",
+  "episodes": 30,
+  "paired_video_count": 15,
+  "video_byte_identity": "PASS",
+  "native_mechanism_tests": 35,
+  "qa_evidence_hashes": "PASS",
+  "scope": "source, delivered evidence and mechanism validation; model quality remains governed by the experimental report"
+}

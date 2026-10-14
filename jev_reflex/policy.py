@@ -57,6 +57,7 @@ class Observation:
     sensors: dict
     motor_action: str
     context: dict = None
+    clock_origin_monotonic: float = None
 
 
 class HTTPReflex:
@@ -146,8 +147,13 @@ class LatestWorker:
                     record.update(self.infer(observation))
                 except Exception as exc:
                     record["error"] = f"{type(exc).__name__}: {exc}"
-                record["inference_s"] = time.monotonic()-began
-                record["received_monotonic"] = time.monotonic()
+                ended = time.monotonic()
+                record["inference_s"] = ended-began
+                record["received_monotonic"] = ended
+                if observation.clock_origin_monotonic is not None:
+                    record["call_started_wall_s"] = began-observation.clock_origin_monotonic
+                    record["received_wall_s"] = ended-observation.clock_origin_monotonic
+                    record["capture_to_call_s"] = record["call_started_wall_s"]-observation.wall_s
                 trace.write(json.dumps(record)+"\n")
                 trace.flush()
                 with self.condition:

@@ -1,0 +1,152 @@
+[
+  {
+    "scenario": "hand_close",
+    "seed": 541,
+    "video": "comparison_hand_close_seed541.mp4",
+    "frames": 521,
+    "fps": 20,
+    "width": 1920,
+    "height": 800,
+    "duration_s": 26.05
+  },
+  {
+    "scenario": "hand_close",
+    "seed": 577,
+    "video": "comparison_hand_close_seed577.mp4",
+    "frames": 521,
+    "fps": 20,
+    "width": 1920,
+    "height": 800,
+    "duration_s": 26.05
+  },
+  {
+    "scenario": "hand_close",
+    "seed": 613,
+    "video": "comparison_hand_close_seed613.mp4",
+    "frames": 521,
+    "fps": 20,
+    "width": 1920,
+    "height": 800,
+    "duration_s": 26.05
+  },
+  {
+    "scenario": "occlusion_brief",
+    "seed": 541,
+    "video": "comparison_occlusion_brief_seed541.mp4",
+    "frames": 521,
+    "fps": 20,
+    "width": 1920,
+    "height": 800,
+    "duration_s": 26.05
+  },
+  {
+    "scenario": "occlusion_brief",
+    "seed": 577,
+    "video": "comparison_occlusion_brief_seed577.mp4",
+    "frames": 521,
+    "fps": 20,
+    "width": 1920,
+    "height": 800,
+    "duration_s": 26.05
+  },
+  {
+    "scenario": "occlusion_brief",
+    "seed": 613,
+    "video": "comparison_occlusion_brief_seed613.mp4",
+    "frames": 521,
+    "fps": 20,
+    "width": 1920,
+    "height": 800,
+    "duration_s": 26.05
+  },
+  {
+    "scenario": "quiet",
+    "seed": 541,
+    "video": "comparison_quiet_seed541.mp4",
+    "frames": 521,
+    "fps": 20,
+    "width": 1920,
+    "height": 800,
+    "duration_s": 26.05
+  },
+  {
+    "scenario": "quiet",
+    "seed": 577,
+    "video": "comparison_quiet_seed577.mp4",
+    "frames": 521,
+    "fps": 20,
+    "width": 1920,
+    "height": 800,
+    "duration_s": 26.05
+  },
+  {
+    "scenario": "quiet",
+    "seed": 613,
+    "video": "comparison_quiet_seed613.mp4",
+    "frames": 521,
+    "fps": 20,
+    "width": 1920,
+    "height": 800,
+    "duration_s": 26.05
+  },
+  {
+    "scenario": "slider_fast",
+    "seed": 541,
+    "video": "comparison_slider_fast_seed541.mp4",
+    "frames": 521,
+    "fps": 20,
+    "width": 1920,
+    "height": 800,
+    "duration_s": 26.05
+  },
+  {
+    "scenario": "slider_fast",
+    "seed": 577,
+    "video": "comparison_slider_fast_seed577.mp4",
+    "frames": 521,
+    "fps": 20,
+    "width": 1920,
+    "height": 800,
+    "duration_s": 26.05
+  },
+  {
+    "scenario": "slider_fast",
+    "seed": 613,
+    "video": "comparison_slider_fast_seed613.mp4",
+    "frames": 521,
+    "fps": 20,
+    "width": 1920,
+    "height": 800,
+    "duration_s": 26.05
+  },
+  {
+    "scenario": "target_jump",
+    "seed": 541,
+    "video": "comparison_target_jump_seed541.mp4",
+    "frames": 521,
+    "fps": 20,
+    "width": 1920,
+    "height": 800,
+    "duration_s": 26.05
+  },
+  {
+    "scenario": "target_jump",
+    "seed": 577,
+    "video": "comparison_target_jump_seed577.mp4",
+    "frames": 521,
+    "fps": 20,
+    "width": 1920,
+    "height": 800,
+    "duration_s": 26.05
+  },
+  {
+    "scenario": "target_jump",
+    "seed": 613,
+    "video": "comparison_target_jump_seed613.mp4",
+    "frames": 521,
+    "fps": 20,
+    "width": 1920,
+    "height": 800,
+    "duration_s": 26.05
+  }
+]

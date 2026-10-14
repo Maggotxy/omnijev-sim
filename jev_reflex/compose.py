@@ -14,7 +14,7 @@ def verify_pair(base, reflex):
     for key in ("scenario", "seed", "initial_state_sha256", "scenario_parameters", "nominal_motor_plan", "software_limits"):
         if base[key] != reflex[key]:
             raise ValueError(f"Pair mismatch: {key}")
-    if (base["mode"], reflex["mode"]) not in (("baseline", "reflex"), ("omni", "vlm_omni")):
+    if (base["mode"], reflex["mode"]) not in (("baseline", "reflex"), ("omni", "vlm_omni"), ("vlm", "vlm_omni")):
         raise ValueError("Unknown comparison pair")
 
 
@@ -32,13 +32,12 @@ def compose(root, kind, seed, modes=("baseline", "reflex")):
             for index in range(count):
                 im = Image.new("RGB", (1920, 800), (7, 12, 22))
                 draw = ImageDraw.Draw(im)
-                draw.text((20, 8), f"CONTINUOUS REFLEX | {kind} | seed {seed} | paired external disturbance", fill=(238, 244, 250), font=font(27))
-                reaction = next((r for r in results[1]["reactions"] if r["first_action"]), None)
-                summary = "No matched event response recorded in right panel"
-                if reaction:
-                    summary = (f"Model {reaction['first_action']} @ {reaction['first_model_reaction_sim_s']:.2f}s | "
-                               f"capture-to-motor {reaction['observation_to_motor_wall_s']*1000:.0f} ms")
-                draw.text((20, 46), f"Wall-time playback 1x | {summary}", fill=(137, 223, 179), font=font(21))
+                draw.text((20, 8), f"BRAIN / CEREBELLUM | {kind} | seed {seed} | paired external disturbance", fill=(238, 244, 250), font=font(27))
+                for column,result in enumerate(results):
+                    response=next((r for r in result["reactions"] if r["first_action"]),None)
+                    label="Brain only" if result["mode"]=="vlm" else "Brain + cerebellum" if result["mode"]=="vlm_omni" else result["mode"]
+                    measured=(f"{response.get('first_source','model')}:{response['first_action']} {response['response_from_onset_sim_s']:.2f}s after onset" if response else "no matched new event command")
+                    draw.text((20+column*960,46),f"1x wall time | {label} | {measured}",fill=(137,223,179),font=font(17))
                 for column, reader in enumerate(readers):
                     if index < counts[column]:
                         last[column] = reader.get_data(index)
@@ -65,7 +64,7 @@ def main():
     parser.add_argument("root", type=Path)
     args = parser.parse_args()
     summaries = json.loads((args.root/"summary.json").read_text())
-    modes = ("omni", "vlm_omni") if {r["mode"] for r in summaries} == {"omni", "vlm_omni"} else ("baseline", "reflex")
+    modes = ("vlm", "vlm_omni") if {r["mode"] for r in summaries} == {"vlm", "vlm_omni"} else ("omni", "vlm_omni") if {r["mode"] for r in summaries} == {"omni", "vlm_omni"} else ("baseline", "reflex")
     pairs = sorted({(r["scenario"], r["seed"]) for r in summaries})
     videos = [compose(args.root, kind, seed, modes) for kind, seed in pairs]
     (args.root/"videos.json").write_text(json.dumps(videos, indent=2))

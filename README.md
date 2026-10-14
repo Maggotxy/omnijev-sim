@@ -1,17 +1,18 @@
-# OmniJev Closed-Loop Robot Simulation
+# OmniJev Brain–Cerebellum Robot Simulation
 
-现有 OmniJev 充当局部决策小脑，g.92.run 的 Gemini 3.8 Flash 在后台充当视觉任务大脑。持续 MuJoCo 物理中可以伸入人手、引入自由物体、移动目标或遮挡相机，观察条件概率、动作仲裁和下一次电机控制。模型权重固定，自然语言条件、经验检索与阈值在运行时管理。
+主对比为 **纯视觉大脑** 与 **视觉大脑＋OmniJev 小脑**。两组使用同一个 Gemini 3.8 Flash 大脑和相同有界动作；组合组额外使用 OmniJev 做快速局部条件判断。持续 MuJoCo 物理中可以加入人手、自由物体、目标移动和短暂遮挡，查看模型何时答复、谁实际下达动作、机械臂何时减速或退让。模型权重固定。
 
 ## 连续反射仿真
 
 物理以 500 Hz 运行，电机控制为 20 Hz，模型和渲染异步处理最新观察。推理期间世界继续运动；过期软件保护与模型动作分别显示和统计。Panda 资源已随仓库提供，这个模块不依赖 LIBERO 或本地模型权重。
 
 - [启动方法与实时交互说明](docs/reflex.md)
-- [最新两组配对结果与全部失败](docs/reflex-runtime-results-20261013.md)
-- [实验设计与感知边界](docs/reflex-design.md)
+- [大脑／大脑＋小脑的实验设计](docs/brain-comparison-design.md)
+- [最新 30 轮速度、实际运动与失败报告](docs/brain-comparison-results-20261014.md)
+- [上一轮配对结果与全部失败](docs/reflex-runtime-results-20261013.md)
 - [Gemini 3.8 Flash 接口实测](docs/model-selection.md)
-- [最终交互操作验收证据](results/reflex_runtime_ui_release_20261013/qa_receipt.json)
-- [v0.1.0 下载包与独立启动说明](docs/release-v0.1.0.md) · [GitHub Releases](https://github.com/Maggotxy/omnijev-sim/releases)
+- [最终交互操作验收证据](results/brain_comparison_ui_release_20261014/qa_receipt.json)
+- [v0.2.0 下载包与独立启动说明](docs/release-v0.2.0.md) · [GitHub Releases](https://github.com/Maggotxy/omnijev-sim/releases)
 
 ```bash
 pip install -r requirements-reflex.txt
@@ -23,7 +24,9 @@ export GEMINI_API_KEY=your_authorized_relay_key
 python -m jev_reflex.live --out out/reflex_interactive --port 8790
 ```
 
-Linux 下启动后访问 <http://127.0.0.1:8790>。远程运行时，可自行用 SSH 转发该本地端口；下载包的安装、凭证配置和两组实验命令见[发布说明](docs/release-v0.1.0.md)。最新六组配对中，视觉大脑组到目标 4/6、纯 OmniJev 2/6，采集到命令中位约 0.89 秒；两组各记录到一次事件后匹配的新命令。模型仍会误判、超时和漏掉干扰，当前数据未建立可靠的通用反射能力。
+Linux 下启动后访问 <http://127.0.0.1:8790>，选择“纯视觉大脑”或“视觉大脑＋OmniJev”。远程运行时，可自行用 SSH 转发该本地端口。模型可能误判、超时或漏掉干扰；实际命令来源、软件保持和机械实测运动分别记录，速度优势由配对证据判断。
+
+最新 30 轮中，包含缓存重新生效的动作转换命令采集到应用中位为纯大脑 **4.99 秒**、组合组 **0.89 秒**；软件保持占比为 **33.03%／2.26%**。更快更新未转化为更快的事件匹配反应：目标方向匹配新动作 **3/3／2/3**，近手、横穿、短遮挡均 **0/9**，最终到目标 **1/15／2/15**。完整失败、源码和真实墙钟视频见[报告](docs/brain-comparison-results-20261014.md)。
 
 > **Unofficial research demo.** 模型读取当前仿真画面，输出选择或概率；运动由经典控制器执行。历史抓放实验使用仿真位姿辅助，并按仿真时间回放。新连续反射实验的模型输入仅含画面、触觉与当前动作，录像按真实墙钟回放；两套结果各自记录限制。
 

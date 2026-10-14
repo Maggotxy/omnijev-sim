@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "kind": "compact-product-qa",
+  "formal_run": false,
+  "release_readiness": "UNASSESSED",
+  "created_at": "2026-10-14T17:51:26.376504+08:00",
+  "profile": "targeted-regression",
+  "result": "PASS",
+  "target": "Brain-only and brain+cerebellum interactive controls",
+  "environment": "bxj /opt/LIBERO; Python 3.10.22; MuJoCo 2.3.7 OSMesa; localhost 8790 through SSH; Codex in-app browser",
+  "source_identity": "12 jev_reflex files match final experiment manifest and UI source_snapshot",
+  "authorization_boundary": "User-authorized simulation, fixed-weight model calls, reversible UI interactions and public evidence publication",
+  "action": "Start both modes; verify actual motor source; reject short condition; author valid condition; inject target movement; stop; reload",
+  "input": "vlm and vlm_omni; invalid short condition; approaching-hand condition with retreat action and 0.75 threshold",
+  "expected": "Pure mode has no Omni requests; mixed mode has real probability output; authored condition reaches requests; stop and reload retain saved state",
+  "actual": "Pure: 0 Omni and 19 brain returns. Mixed: 63 Omni and 7 brain returns. Authored condition appears in requests and probabilities; bank version 1; stopped state persists. Hold regression and 35 mechanism tests pass.",
+  "evidence_root": "D:\\Development\\jev\\omnijev-sim",
+  "evidence": [
+    {
+      "path": "results/brain_comparison_ui_release_20261014/pure_brain.png",
+      "sha256": "bddab110567920770d71db1f0e285e476a3c050e3b61a772a137c4f1b2ceaed0",
+      "size_bytes": 251588
+    },
+    {
+      "path": "results/brain_comparison_ui_release_20261014/invalid_condition.png",
+      "sha256": "2ae096385fba1968255c64ae019cbb0d6dedde7da79a15381abd815559047b4d",
+      "size_bytes": 251958
+    },
+    {
+      "path": "results/brain_comparison_ui_release_20261014/mixed_bank.png",
+      "sha256": "e71f938447dca712d01254a2528fc5fdcd9996d6385cc9777f89fb3b950b45e2",
+      "size_bytes": 260115
+    },
+    {
+      "path": "results/brain_comparison_ui_release_20261014/readback.png",
+      "sha256": "8d006d7a8294ae3acd05430d7db2ea0bff945eae6864d3ec9c8438ce0a2d242f",
+      "size_bytes": 263889
+    },
+    {
+      "path": "results/brain_comparison_ui_release_20261014/readback.json",
+      "sha256": "8dda6cd444a68898728f6a558808dd7e25b0c525e5c398a79ac336d5702591a9",
+      "size_bytes": 3989
+    },
+    {
+      "path": "results/brain_comparison_ui_release_20261014/manifest.json",
+      "sha256": "6003c1c673db7735b25de9b50cbef89dcea5cff99f85bb9a5432890ccc6c4b67",
+      "size_bytes": 1189
+    },
+    {
+      "path": "results/brain_cerebellum_hold_verified_20261014/brain_comparison_tests_hold_20261014.log",
+      "sha256": "f3189257aaf02bedd4d79a7682f1ca41d283f7302113957e4a73974df4c56c12",
+      "size_bytes": 4485
+    }
+  ],
+  "direct_test": {
+    "command": "PANDA_ASSET_ROOT=/opt/LIBERO/resources/panda MUJOCO_GL=osmesa python -m unittest discover -s tests -p test_reflex*.py -v",
+    "result": "PASS"
+  },
+  "adjacent_result": "PASS",
+  "persistence_result": "PASS",
+  "unverified_boundary": "UI and runtime mechanisms only. This receipt does not establish model correctness, biological equivalence, real-robot safety, general living-environment realism, or production readiness.",
+  "hard_fail_candidates": []
+}

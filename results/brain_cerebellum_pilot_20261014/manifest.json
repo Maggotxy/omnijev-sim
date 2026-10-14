@@ -1,0 +1,61 @@
+{
+  "protocol": "brain_cerebellum_comparison_v1",
+  "source_sha256": {
+    "__init__.py": "96f68cb4dfa24854834eddd3b27b7982f6bcef9884e41d8f373b3004a21cb770",
+    "render.py": "75e666b03a0330c91efbc479ede1b2f1cfb94686c4f984b8d0230f1f4ea19e12",
+    "world.py": "a2deedfe11bf4324dcfddf209c57551692602b1c4f32c22d0399161d72cb817e",
+    "motion.py": "ad5359bc1041e17282aa19594a002a1f58bad3c0f8f6ea96c64b6c04bb4e0756",
+    "scenario.py": "b543a9335f1485907530d228568ca05b593384ea4f5c8bd58fa222749d7c7ef6",
+    "bank.py": "db34a282096599c5ed7ba195a82cf92e4c36e83a6532dd5d5a884eb25e9bcc75",
+    "brain.py": "56475018523d21ed4cf93b11490621e9c5e265b9f3f5b368704081aa136f95f2",
+    "run.py": "058a7ee1c619309c0f8d2d564df85c6812188bdb07cbcc0833cd89fec5b8abe5",
+    "policy.py": "9021c7a4bdad19431a310bd9b243f13562a1ae7425ab15d122d3ab6f806d948b",
+    "control.py": "8bdf4ba21ef59ed4496af6f95400155d38ea700bff7d9a32a556095788c9bc20",
+    "compose.py": "5e2b0fdaa9f3cc19e6504f9fd6d46cdbf2b2baa2368f1689826762e2839e0a6f",
+    "live.py": "f5057ad0f12e40fcfcb8374396fc03fd9c5ef473c1e5f4391e878dfc5806ba1c"
+  },
+  "driver_sha256": "6d4aa45f0cd8e7fbf313c3d9b0d75746237057ca9c08d8f0ddf08298ad66b621",
+  "arguments": {
+    "seeds": [
+      503
+    ],
+    "seconds": 14.0,
+    "scenarios": [
+      "quiet",
+      "hand_close",
+      "occlusion_brief"
+    ],
+    "modes": [
+      "vlm",
+      "vlm_omni"
+    ],
+    "freeze_bank": true
+  },
+  "execution": "serial physics episodes, same continuous visual-brain request strategy, mode order reversed by seed",
+  "commands": [
+    [
+      "/opt/omnijev-sim/miniconda3/envs/libero/bin/python",
+      "-u",
+      "-m",
+      "jev_reflex.run",
+      "--out",
+      "/opt/LIBERO/out/brain_cerebellum_pilot_20261014/seed503",
+      "--scenarios",
+      "quiet",
+      "hand_close",
+      "occlusion_brief",
+      "--seeds",
+      "503",
+      "--modes",
+      "vlm",
+      "vlm_omni",
+      "--seconds",
+      "14.0",
+      "--image-size",
+      "320",
+      "--brain-interval",
+      "0",
+      "--freeze-bank"
+    ]
+  ]
+}

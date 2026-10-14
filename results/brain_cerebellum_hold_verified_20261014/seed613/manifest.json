@@ -1,0 +1,46 @@
+{
+  "source_sha256": {
+    "__init__.py": "96f68cb4dfa24854834eddd3b27b7982f6bcef9884e41d8f373b3004a21cb770",
+    "render.py": "75e666b03a0330c91efbc479ede1b2f1cfb94686c4f984b8d0230f1f4ea19e12",
+    "world.py": "ae28d67dc4404301bb67681900c121d43d2f1e2997bf44243048d77d54a89672",
+    "motion.py": "ad5359bc1041e17282aa19594a002a1f58bad3c0f8f6ea96c64b6c04bb4e0756",
+    "scenario.py": "cd2144bf4ef6c1b820f819967db557f3db559f0b1b759f2ad9d53a752f54e672",
+    "bank.py": "db34a282096599c5ed7ba195a82cf92e4c36e83a6532dd5d5a884eb25e9bcc75",
+    "brain.py": "56475018523d21ed4cf93b11490621e9c5e265b9f3f5b368704081aa136f95f2",
+    "run.py": "058a7ee1c619309c0f8d2d564df85c6812188bdb07cbcc0833cd89fec5b8abe5",
+    "policy.py": "9021c7a4bdad19431a310bd9b243f13562a1ae7425ab15d122d3ab6f806d948b",
+    "control.py": "8bdf4ba21ef59ed4496af6f95400155d38ea700bff7d9a32a556095788c9bc20",
+    "compose.py": "4d10636329d56c52c15868f077f39471c79483081f69df60747c599b0c481d87",
+    "live.py": "f5057ad0f12e40fcfcb8374396fc03fd9c5ef473c1e5f4391e878dfc5806ba1c"
+  },
+  "panda_xml_sha256": "397385372e1fb8d71832335fbece562ea51a46cd93e9a18076bc1d866654b5b3",
+  "arguments": {
+    "out": "/opt/LIBERO/out/brain_cerebellum_hold_verified_20261014/seed613",
+    "asset_root": "/opt/LIBERO/resources/panda",
+    "scenarios": [
+      "quiet",
+      "hand_close",
+      "slider_fast",
+      "occlusion_brief",
+      "target_jump"
+    ],
+    "seeds": [
+      613
+    ],
+    "modes": [
+      "vlm",
+      "vlm_omni"
+    ],
+    "seconds": 26.0,
+    "image_size": 320,
+    "render_hz": 8,
+    "api_timeout": 2,
+    "brain_timeout": 15,
+    "brain_interval": 0.0,
+    "max_brain_age": 8,
+    "brain_command_ttl": 10,
+    "freeze_bank": true,
+    "max_observation_age": 1.2,
+    "command_ttl": 1.4
+  }
+}

@@ -11,13 +11,13 @@ ACTIONS = ("continue", "brake", "retreat", "lift", "left", "right")
 LEVELS = ("clear and safe", "minor concern", "danger of collision", "immediate emergency")
 DEFAULTS = [
     {"id": "continue", "action": "continue", "threshold": .55,
-     "condition": "The camera view is clear and the robot gripper can continue its planned reach without an immediate obstacle."},
+     "condition": "The view is clear and the gripper path is free."},
     {"id": "brake", "action": "brake", "threshold": .75,
-     "condition": "The camera workspace is obscured, or the physical touch force exceeds 10 N during this open-gripper reach."},
+     "condition": "The camera view is blocked or the touch force is above 10 N."},
     {"id": "retreat", "action": "retreat", "threshold": .75,
-     "condition": "A separate human skin-colored hand or arm is very close to the robot gripper or entering its immediate path."},
+     "condition": "A human hand is close to the robot gripper."},
     {"id": "lift", "action": "lift", "threshold": .75,
-     "condition": "A solid yellow object blocks the robot gripper's immediate reach from below and lifting can avoid it."},
+     "condition": "A yellow object is close below the robot gripper."},
     {"id": "left", "action": "left", "threshold": .65,
      "condition": "The green or turquoise circular target pad is visibly to image-left of the blue outlined planned landing point."},
     {"id": "right", "action": "right", "threshold": .65,

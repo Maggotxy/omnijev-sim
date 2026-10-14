@@ -13,7 +13,7 @@ import urllib.request
 
 from PIL import Image
 
-from .bank import validate_update
+from .bank import ACTIONS, probability, signature, validate_update
 
 
 def validate_plan(plan, allowed_ids):
@@ -33,7 +33,14 @@ def validate_plan(plan, allowed_ids):
         if update.get("id") not in allowed_ids:
             raise ValueError("Brain cannot invent a motor reflex ID")
         validate_update(update)
-    return {"goal": "green_pad", "stage": plan["stage"], "target_visible": plan["target_visible"],
+    action = plan.get("action", "continue")
+    if action not in ACTIONS:
+        raise ValueError("Brain action outside shared motor vocabulary")
+    if any(isinstance(plan.get(k),bool) for k in ("confidence","danger_score")):
+        raise ValueError("Brain numeric fields cannot be booleans")
+    confidence = probability(plan.get("confidence", 1))
+    danger = probability(plan.get("danger_score", 0))
+    return {"action": action, "confidence": confidence, "danger_score": danger, "goal": "green_pad", "stage": plan["stage"], "target_visible": plan["target_visible"],
             "target_xy": [float(x) for x in point], "reflex_updates": updates}
 
 
@@ -58,17 +65,24 @@ class VisualBrain:
             (self.image_dir/f"{observation.sequence:06d}.jpg").write_bytes(data)
         context = observation.context or {}
         bank = context["bank"]
-        prompt = ("You are the slow visual task planner of a robot. The ONLY task is to reach and hover over the GREEN/TURQUOISE CIRCULAR PAD, keeping gripper open. "
-                  "YELLOW block is an obstacle and NEVER a goal. Blue outline is current planned landing point; orange outline is robot gripper. "
-                  "OmniJev independently handles immediate reflexes while you think. Do not prescribe torques or immediate evasive actions. "
-                  "Return goal green_pad, stage reach_target or wait_view, target_visible, and target_xy as normalized image [x,y] between0and1. "
-                  "If view is obscured retain wait_view; unavailable point may be [0.5,0.5] and is ignored. "
-                  "Use measured past feedback to clarify at most three existing reflex conditions or thresholds if needed; preserve each reflex's intended meaning. "
-                  "Thresholds must be between 0.5 and 0.98; condition text must be 5 to 600 characters. Empty updates are valid. "
-                  "Do not infer success of a past reflex solely from force decreasing. "
-                  f"Current reflex bank: {json.dumps(bank)}. Retrieved past feedback: {json.dumps(context.get('memories', []))}. "
-                  'Return JSON only: {"goal":"green_pad","stage":"reach_target","target_visible":true,"target_xy":[0.5,0.5],"reflex_updates":[]}.')
+        prompt = ("You control a robot with bounded motor primitives using ONLY this actual camera and robot touch feedback. "
+                  "The task is to reach and hover over the GREEN/TURQUOISE CIRCULAR PAD with the gripper open. "
+                  "YELLOW block is an obstacle, never a goal. Black gripper and white links are the robot. "
+                  "Blue outline is its planned landing point; orange outline is its gripper. "
+                  "Choose the immediate action: continue if clear; brake to stop for obscured view or contact; "
+                  "retreat from a nearby human hand; lift over a low obstacle; left/right correct target alignment. "
+                  "Also return target_visible and normalized image target_xy [x,y] for the GREEN PAD, "
+                  "stage reach_target or wait_view, confidence and danger_score in [0,1]. "
+                  "When target is invisible return wait_view and ignore its coordinates. "
+                  "Physical world continues while this request is in flight. Do not give torques or code. "
+                  f"Current motor {observation.motor_action}; physical touch {observation.sensors['touch_normal_force_N']} N. "
+                  f"Declared conditions: {json.dumps(bank)}. Past measured associations: {json.dumps(context.get('memories', []))}. "
+                  +( "Keep reflex_updates empty for this frozen-condition experiment. " if context.get("freeze_bank") else
+                     "You may clarify at most three existing reflex conditions/thresholds, preserving their meaning; empty updates are valid. ")
+                  +'Return JSON only with goal green_pad, stage, target_visible, target_xy, action, confidence, danger_score, reflex_updates.')
         schema = {"type": "OBJECT", "properties": {
+            "action": {"type": "STRING", "enum": list(ACTIONS)},
+            "confidence": {"type": "NUMBER"}, "danger_score": {"type": "NUMBER"},
             "goal": {"type": "STRING", "enum": ["green_pad"]},
             "stage": {"type": "STRING", "enum": ["reach_target", "wait_view"]},
             "target_visible": {"type": "BOOLEAN"},
@@ -76,7 +90,7 @@ class VisualBrain:
             "reflex_updates": {"type": "ARRAY", "items": {"type": "OBJECT", "properties": {
                 "id": {"type": "STRING", "enum": [r["id"] for r in bank["reflexes"]]},
                 "condition": {"type": "STRING"}, "threshold": {"type": "NUMBER"}}, "required": ["id"]}, "maxItems": 3}},
-            "required": ["goal", "stage", "target_visible", "target_xy", "reflex_updates"]}
+            "required": ["goal", "stage", "target_visible", "target_xy", "action", "confidence", "danger_score", "reflex_updates"]}
         generation = {"maxOutputTokens": 1024, "responseMimeType": "application/json", "responseSchema": schema,
                       "thinkingConfig": {"thinkingLevel": self.thinking}}
         body = {"contents": [{"role": "user", "parts": [{"inlineData": {"mimeType": "image/jpeg", "data": base64.b64encode(data).decode()}},
@@ -95,4 +109,8 @@ class VisualBrain:
         plan = validate_plan(json.loads(text), {r["id"] for r in bank["reflexes"]})
         return {"plan": plan, "response": {"text": text, "modelVersion": raw.get("modelVersion"), "usageMetadata": raw.get("usageMetadata")},
                 "requested_model": self.model, "served_model": raw.get("modelVersion"), "image_sha256": hashlib.sha256(data).hexdigest(),
-                "bank_version_at_observation": bank["version"], "thinking_level": self.thinking}
+                "bank_version_at_observation": bank["version"], "thinking_level": self.thinking,
+                "prompt": prompt, "observation_signature": signature(observation.frame, observation.sensors),
+                "bank_snapshot": bank, "retrieved_memories": context.get("memories", []),
+                "action": plan["action"], "probability": plan["confidence"], "danger_score": plan["danger_score"],
+                "speed_scale": 1-.45*plan["danger_score"], "source": "brain"}

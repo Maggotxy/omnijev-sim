@@ -20,6 +20,8 @@ from .render import RenderState, RenderWorker
 from .world import DT, World
 from .bank import ReflexBank, ReflexMemory, signature
 from .brain import VisualBrain
+from .control import choose_motor
+from .motion import motion_responses
 
 FPS = 20
 
@@ -28,11 +30,11 @@ def font(size):
     return ImageFont.truetype("C:/Windows/Fonts/arial.ttf" if os.name == "nt" else "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", size)
 
 
-def panel(frame, view, mode, sim_s, wall_s, action, age, sensors, metrics, event, last_reaction, camera_age=0, brain_status="", bank_version=0):
+def panel(frame, view, mode, sim_s, wall_s, action, age, sensors, metrics, event, last_reaction, camera_age=0, brain_status="", bank_version=0, motor_source=""):
     canvas = Image.new("RGB", (960, 720), (11, 17, 27))
     d = ImageDraw.Draw(canvas)
     color = (121, 228, 173) if mode != "baseline" else (169, 183, 205)
-    title = "VLM task brain + OmniJev reflex" if mode == "vlm_omni" else "OmniJev reflex" if mode != "baseline" else "Same motor plan | no model reflex"
+    title = "Visual brain only" if mode == "vlm" else "Visual brain + OmniJev cerebellum" if mode == "vlm_omni" else "OmniJev reflex" if mode != "baseline" else "Same motor plan | no model reflex"
     d.text((18, 12), title, fill=color, font=font(24))
     d.text((18, 49), f"World {sim_s:.2f}s | Wall {wall_s:.2f}s | camera age {camera_age:.2f}s | continuous physics", fill=(209, 220, 237), font=font(16))
     canvas.paste(Image.fromarray(view).resize((480, 480)), (0, 88))
@@ -42,7 +44,7 @@ def panel(frame, view, mode, sim_s, wall_s, action, age, sensors, metrics, event
     d.rectangle((10, 580, 950, 619), fill=(25, 39, 53))
     action_label = "WATCHDOG HOLD (software expiry)" if action == "watchdog_hold" else action.upper()
     action_color = (255, 198, 107) if action == "watchdog_hold" else color
-    d.text((20, 586), f"MOTOR: {action_label} | obs age: {age if age is not None else '--'}", fill=action_color, font=font(20))
+    d.text((20, 586), f"MOTOR: {action_label} ({motor_source}) | obs age: {age if age is not None else '--'}", fill=action_color, font=font(20))
     d.text((20, 632), f"Touch: {sensors['touch_normal_force_N']} N | contact: human {metrics['human_contact_N']:.1f} N, object {metrics['object_contact_N']:.1f} N", fill=(216, 224, 237), font=font(16))
     d.text((20, 662), f"Goal error: {metrics['goal_distance_m']*100:.1f} cm | disturbance: {event} | reaction: {last_reaction}", fill=(248, 200, 117), font=font(16))
     d.text((20, 692), f"Reflex bank v{bank_version} | brain: {brain_status or 'shared initial intention'} | camera + robot feedback", fill=(155, 169, 190), font=font(13))
@@ -98,7 +100,9 @@ def reactions(scenario, applied, horizon=None):
         output.append({**event, "first_model_reaction_sim_s": first["applied_sim_s"] if first else None,
                        "response_from_onset_sim_s": first["applied_sim_s"]-event["onset_sim_s"] if first else None,
                        "observation_to_motor_wall_s": first["observation_age_s"] if first else None,
-                       "first_action": first["action"] if first else None})
+                       "first_action": first["action"] if first else None,
+                       "first_source": first.get("source", "cerebellum") if first else None,
+                       "received_to_motor_wall_s": first.get("received_to_motor_s") if first else None})
     return output
 
 
@@ -128,12 +132,13 @@ def episode(args, scenario, mode, output, live=None):
     metrics = world.evaluate()
     initial_panel = panel(frame, view, mode, 0, 0, "continue", None, sensors, metrics, "none", "--")
     recorder = WallVideo(output/"episode.mp4", initial_panel)
-    worker = LatestWorker(HTTPReflex(args.api_timeout, output/"observations"), output/"api.jsonl") if mode != "baseline" else None
+    worker = LatestWorker(HTTPReflex(args.api_timeout, output/"observations"), output/"api.jsonl") if mode in ("reflex", "omni", "vlm_omni") else None
     brain = LatestWorker(VisualBrain(getattr(args, "brain_timeout", 15), output/"brain_observations"), output/"brain.jsonl",
                          close_timeout=getattr(args, "brain_timeout", 15)+2,
-                         minimum_interval=getattr(args, "brain_interval", 4)) if mode == "vlm_omni" else None
+                         minimum_interval=getattr(args, "brain_interval", 0)) if mode in ("vlm", "vlm_omni") else None
     mailbox = ActionMailbox(args.max_observation_age, args.command_ttl)
-    applied, states, actions = [], [], Counter()
+    brain_mailbox = ActionMailbox(getattr(args, "max_brain_age", 8), getattr(args, "brain_command_ttl", 10))
+    applied, motor_applied, states, actions = [], [], [], Counter()
     peak_human, peak_object, goal_ever, tick, sequence = 0, 0, False, 0, 1
     impulse_human, impulse_object = 0.0, 0.0
     start = time.monotonic()
@@ -154,15 +159,20 @@ def episode(args, scenario, mode, output, live=None):
                     if live.poll(world, bank):
                         mailbox.invalidate(sequence)
                         brain_min_sequence = sequence
+                        brain_mailbox.invalidate(sequence)
                         memory.reset_epoch()
                     scenario = world.scenario
+                brain_pending = []
                 if brain:
                     for record in brain.drain():
                         age = now-record["observed_wall_s"]
-                        accepted = bool("error" not in record and 0 <= age <= getattr(args, "max_brain_age", 12)
+                        accepted = bool("error" not in record and 0 <= age <= getattr(args, "max_brain_age", 8)
                                         and record["sequence"] >= brain_min_sequence and record["sequence"] > brain_last_sequence)
-                        entry = {**record, "accepted": accepted, "applied_sim_s": sim_s,
-                                 "applied_wall_s": now, "observation_age_s": age}
+                        entry = {**record, "source": "brain", "accepted": accepted, "applied_sim_s": sim_s,
+                                 "applied_wall_s": now, "observation_age_s": age,
+                                 "action": record.get("plan", {}).get("action", "continue")}
+                        if "received_wall_s" in record:
+                            entry["received_to_motor_s"] = now-record["received_wall_s"]
                         if accepted:
                             brain_last_sequence = record["sequence"]
                             plan = record["plan"]
@@ -172,37 +182,54 @@ def episode(args, scenario, mode, output, live=None):
                                 entry["motor_plan"] = world.apply_visual_plan(plan["target_xy"])
                                 changed = entry["motor_plan"]["changed"]
                                 macro_changes += int(changed)
-                            if record["bank_version_at_observation"] == bank.version:
+                            if not getattr(args, "freeze_bank", False) and record["bank_version_at_observation"] == bank.version:
                                 changed |= bank.update(plan["reflex_updates"], "visual_brain", sim_s)
                             if changed:
                                 mailbox.invalidate(sequence)
-                        brain_applications.append(entry)
-                        with open(output/"brain_applications.jsonl", "a", encoding="utf-8") as stream:
-                            stream.write(json.dumps(entry)+"\n")
+                            decision = {**record, "action": entry["action"],
+                                        "speed_scale": record.get("speed_scale", 1-.45*plan.get("danger_score", 0))}
+                            brain_mailbox.accept(decision, now)
+                        brain_pending.append(entry)
                 reflex_enabled = bool(worker and (live is None or live.enabled))
                 pending = []
                 if worker:
                     for record in worker.drain():
                         accepted = reflex_enabled and record.get("bank_version", bank.version) == bank.version and mailbox.accept(record, now)
-                        entry = {**record, "accepted": accepted, "applied_wall_s": now,
+                        entry = {**record, "source": "cerebellum", "accepted": accepted, "applied_wall_s": now,
                                  "applied_sim_s": sim_s, "observation_age_s": now-record["observed_wall_s"]}
+                        if "received_wall_s" in record:
+                            entry["received_to_motor_s"] = now-record["received_wall_s"]
                         pending.append(entry)
-                        if accepted and record["action"] != "continue":
-                            last_reaction = f"{record['action']} @ {sim_s:.2f}s"
-                action = mailbox.action(now) if reflex_enabled else "continue"
-                speed_scale = mailbox.record.get("speed_scale", 1) if reflex_enabled and mailbox.record and action != "watchdog_hold" else 1
+                motor_wall_s = time.monotonic()-start
+                action, speed_scale, motor_source, selected_record = choose_motor(motor_wall_s, mailbox, brain_mailbox, reflex_enabled, bool(brain))
                 motor = world.motor(action, speed_scale)
-                for entry in pending:
+                for entry in pending+brain_pending:
+                    entry["applied_wall_s"] = motor_wall_s
+                    entry["observation_age_s"] = motor_wall_s-entry["observed_wall_s"]
+                    if "received_wall_s" in entry:
+                        entry["received_to_motor_s"] = motor_wall_s-entry["received_wall_s"]
                     entry["action_transition"] = action != previous_action
-                    entry["motor_changed"] = bool(entry["accepted"] and entry.get("action") == action
-                                                  and mailbox.record["sequence"] == entry["sequence"]
+                    entry["motor_selected"] = bool(entry["accepted"] and entry["source"] == motor_source and selected_record
+                                                   and selected_record["sequence"] == entry["sequence"])
+                    entry["motor_changed"] = bool(entry["motor_selected"] and entry.get("action") == action
                                                   and entry["action_transition"]
                                                   and (np.linalg.norm(np.asarray(motor["applied_velocity"])-previous_velocity)>.005
                                                        or motor["plan_offset_changed"]))
-                    applied.append(entry)
-                    if entry["accepted"]:
+                    entry["actual_motor_action"] = action
+                    motor_applied.append(entry)
+                    if entry["motor_selected"]:
                         memory.remember(entry, sim_s, world.position(), world.data.sensordata)
-                    app_log.write(json.dumps(entry)+"\n")
+                        if action != "continue":
+                            last_reaction = f"{motor_source}:{action} @ {sim_s:.2f}s"
+                    with open(output/"motor_applications.jsonl", "a", encoding="utf-8") as stream:
+                        stream.write(json.dumps(entry)+"\n")
+                    if entry["source"] == "brain":
+                        brain_applications.append(entry)
+                        with open(output/"brain_applications.jsonl", "a", encoding="utf-8") as stream:
+                            stream.write(json.dumps(entry)+"\n")
+                    else:
+                        applied.append(entry)
+                        app_log.write(json.dumps(entry)+"\n")
                 before_position = world.position()
                 previous_action, previous_velocity = action, np.asarray(motor["applied_velocity"])
                 world.step()
@@ -215,8 +242,8 @@ def episode(args, scenario, mode, output, live=None):
                 impulse_object += metrics["object_contact_impulse_Ns"]
                 goal_ever |= metrics["goal_reached"]
                 actions[action] += 1
-                state = {"wall_s": now, "sim_s": float(world.data.time-world.zero), "action": action,
-                         "reflex_enabled": reflex_enabled,
+                state = {"wall_s": motor_wall_s, "measured_wall_s": time.monotonic()-start, "sim_s": float(world.data.time-world.zero), "action": action,
+                         "reflex_enabled": reflex_enabled, "motor_source": motor_source,
                          "reflex_bank_version": bank.version,
                          "brain_status": brain_status,
                          "measured_eef_velocity_m_s": ((world.position()-before_position)/DT).tolist(),
@@ -235,23 +262,26 @@ def episode(args, scenario, mode, output, live=None):
                 if packet and packet[0].sequence != last_camera_sequence:
                     captured, frame, view = packet
                     key = signature(frame, captured.sensors)
-                    context = {"bank": bank.snapshot(), "memories": memory.retrieve(key)}
+                    context = {"bank": bank.snapshot(), "memories": memory.retrieve(key), "freeze_bank": getattr(args, "freeze_bank", False)}
                     observation = Observation(captured.sequence, captured.sim_s, captured.wall_s,
-                                              frame, captured.sensors, captured.motor_action, context)
+                                              frame, captured.sensors, captured.motor_action, context, start)
                     if reflex_enabled and captured.sequence >= mailbox.min_sequence:
                         worker.submit(observation)
                     if brain and captured.sequence >= brain_min_sequence:
                         brain.submit(observation)
                     last_camera_sequence = captured.sequence
-                    age = round(now-mailbox.record["observed_wall_s"], 3) if mailbox.record else None
+                    age = round(now-selected_record["observed_wall_s"], 3) if selected_record else None
                     active = [e["kind"] for e in scenario.events() if e["onset_sim_s"] <= sim_s < e["end_sim_s"]]
-                    painted = panel(frame, view, mode if reflex_enabled else "baseline", sim_s, now, action, age,
+                    painted = panel(frame, view, mode if reflex_enabled or brain else "baseline", sim_s, now, action, age,
                                     captured.sensors, metrics, "+".join(active) or "none", last_reaction, now-captured.wall_s,
-                                    brain_status, bank.version)
+                                    brain_status, bank.version, motor_source)
                     recorder.update(painted)
                     if live:
                         live.update(painted, {"status": "running", "world_s": sim_s, "wall_s": now,
-                                              "action": action, "model_enabled": reflex_enabled,
+                                              "action": action, "model_enabled": reflex_enabled, "motor_source": motor_source,
+                                              "measured_eef_speed_m_s": float(np.linalg.norm(state["measured_eef_velocity_m_s"])),
+                                              "commanded_eef_speed_m_s": float(np.linalg.norm(motor["applied_velocity"])),
+                                              "brain_action": brain_mailbox.record.get("action") if brain_mailbox.record else None,
                                               "observation_age_s": age, "camera_age_s": now-captured.wall_s,
                                               "group": mode, "brain_status": brain_status, "bank_version": bank.version,
                                               "bank": bank.snapshot(), "memory_entries": len(memory.entries),
@@ -302,7 +332,9 @@ def episode(args, scenario, mode, output, live=None):
               "api_results": len(applied), "accepted_results": sum(r["accepted"] for r in applied),
               "api_errors": sum("error" in r for r in applied),
               "latency_wall_s": [r["inference_s"] for r in applied],
-              "reactions": reactions(scenario, applied, states[-1]["sim_s"]), "video_frames": len(recorder.timestamps),
+              "reactions": reactions(scenario, motor_applied, states[-1]["sim_s"]),
+              "motion_responses": motion_responses(scenario, motor_applied, states),
+              "motor_source_ticks": dict(Counter(s["motor_source"] for s in states)), "video_frames": len(recorder.timestamps),
               "video_wall_sample_seconds": recorder.timestamps,
               "sensor_boundary": "policy: camera + physical touch + retrieved robot feedback; archive also records joint position/velocity/torque",
               "model": os.environ.get("OMNIJEV_MODEL", "omnijev-0.8b-kk") if worker else None,
@@ -312,7 +344,9 @@ def episode(args, scenario, mode, output, live=None):
               "brain_errors": sum("error" in r for r in brain_applications), "macro_plan_changes": macro_changes,
               "reflex_bank_versions": bank.version, "memory_entries": len(memory.entries),
               "software_limits": {"max_observation_age_s": args.max_observation_age,
-                                   "command_ttl_s": args.command_ttl, "joint_ranges": True},
+                                   "command_ttl_s": args.command_ttl, "joint_ranges": True,
+                                   "max_brain_age_s": getattr(args, "max_brain_age", 8),
+                                   "brain_command_ttl_s": getattr(args, "brain_command_ttl", 10)},
               "watchdog_ticks": actions["watchdog_hold"]}
     if live:
         result["interactive"] = True
@@ -331,14 +365,16 @@ def main():
     parser.add_argument("--asset-root", type=Path, default=bundled if (bundled/"panda.xml").exists() else Path("/opt/omnijev-sim"))
     parser.add_argument("--scenarios", nargs="+", choices=KINDS, default=["hand", "slider", "target", "occlusion"])
     parser.add_argument("--seeds", nargs="+", type=int, default=[31, 73])
-    parser.add_argument("--modes", nargs="+", choices=["baseline", "reflex", "omni", "vlm_omni"], default=["omni", "vlm_omni"])
+    parser.add_argument("--modes", nargs="+", choices=["baseline", "reflex", "omni", "vlm", "vlm_omni"], default=["vlm", "vlm_omni"])
     parser.add_argument("--seconds", type=float, default=16)
     parser.add_argument("--image-size", type=int, default=384)
     parser.add_argument("--render-hz", type=float, default=8)
     parser.add_argument("--api-timeout", type=float, default=2)
     parser.add_argument("--brain-timeout", type=float, default=15)
-    parser.add_argument("--brain-interval", type=float, default=4)
-    parser.add_argument("--max-brain-age", type=float, default=12)
+    parser.add_argument("--brain-interval", type=float, default=0)
+    parser.add_argument("--max-brain-age", type=float, default=8)
+    parser.add_argument("--brain-command-ttl", type=float, default=10)
+    parser.add_argument("--freeze-bank", action="store_true")
     parser.add_argument("--max-observation-age", type=float, default=1.2)
     parser.add_argument("--command-ttl", type=float, default=1.4)
     args = parser.parse_args()

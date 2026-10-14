@@ -2,7 +2,8 @@
 from dataclasses import asdict, dataclass
 import numpy as np
 
-KINDS = ("hand", "slider", "target", "occlusion", "combined", "quiet")
+FOCUSED = {"hand_close": "hand", "slider_fast": "slider", "occlusion_brief": "occlusion", "target_jump": "target"}
+KINDS = ("hand", "slider", "target", "occlusion", "combined", "quiet", *FOCUSED)
 
 
 @dataclass(frozen=True)
@@ -24,6 +25,24 @@ class Scenario:
         if kind not in KINDS:
             raise ValueError("Unknown disturbance")
         rng = np.random.default_rng(seed)
+        if kind in FOCUSED:
+            actor = FOCUSED[kind]
+            onset = float(rng.uniform(10.5, 12.5))
+            duration = float(rng.uniform(5.5, 6.5)) if actor == "hand" else float(rng.uniform(1.8, 2.4)) if actor == "occlusion" else 20.0 if actor == "target" else 4.0
+            side = int(rng.choice([-1, 1]))
+            goal = (.61, float(rng.uniform(.07, .11)), .59)
+            params = {"side": side}
+            if actor == "hand":
+                params.update(x=float(rng.uniform(.62,.64)), z=float(rng.uniform(.63,.66)),
+                              near_y=goal[1]+float(rng.uniform(-.012,.012)), approach_fraction=.16)
+            elif actor == "slider":
+                params.update(x=float(rng.uniform(.58,.63)), speed_m_s=float(rng.uniform(.55,.85)), entry_y_m=.35)
+            elif actor == "occlusion":
+                params.update(camera_block_x=.49, camera_block_y=0)
+            else:
+                params.update(start_y=goal[1], end_y=float(np.clip(goal[1]+side*.15,-.22,.25)))
+            return cls(kind,seed,onset,duration,side,.15,float(rng.uniform(.12,.28)),
+                       float(rng.uniform(.12,.22)),float(rng.uniform(.8,1.05)),goal,((actor,onset,duration,params),))
         onset = float(rng.uniform(2.5, 3.7))
         duration = float(rng.uniform(3.8, 5.0))
         scenario = cls(kind, seed, onset,
@@ -66,7 +85,7 @@ class Scenario:
         return asdict(self)
 
     def contains(self, kind):
-        return self.kind == kind or self.kind == "combined"
+        return self.kind == kind or FOCUSED.get(self.kind) == kind or self.kind == "combined"
 
     def active(self, t, kind):
         event = self.event(kind, t)

@@ -13,23 +13,23 @@ import numpy as np
 from PIL import Image, ImageDraw
 
 from .run import episode, font
-from .scenario import Scenario
+from .scenario import FOCUSED, Scenario
 from .bank import validate_update
 
 HTML = """<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>OmniJev 条件反射仿真</title><style>
 *{box-sizing:border-box}body{margin:0;background:#0b111b;color:#e9f1fc;font:16px system-ui,sans-serif}main{max-width:1240px;margin:auto;padding:24px}h1{font-size:30px;margin:0 0 8px}p{color:#a9b9d0;line-height:1.7}section{background:#141f30;border:1px solid #25364b;border-radius:16px;padding:18px;margin:16px 0}.controls{display:flex;gap:10px;flex-wrap:wrap}button{border:1px solid #42617c;background:#203449;color:#f1f7fe;border-radius:9px;padding:12px 16px;font:inherit;cursor:pointer}button:hover{background:#2c4963}button:disabled{opacity:.4;cursor:wait}.primary{background:#236445;border-color:#66cfa1}.stop{background:#622b38;border-color:#c37289}img{width:100%;display:block;background:#0b111b;border-radius:12px}#status{font-size:19px;color:#8ce2b4}#msg{min-height:25px;color:#ffd391}.note{font-size:14px}#metrics{display:flex;gap:20px;flex-wrap:wrap;color:#a7c8ed}a{color:#89baf6}
-</style><main><h1>让小脑反射看得见</h1><p>启动后，机械臂按原计划伸向绿色目标。你可以随时改变环境，观察模型是否刹停、退让或修正；等待模型期间物理世界继续运行。</p>
-<section><div class="controls"><button class="primary" onclick="act('start')">启动仿真</button><button onclick="act('enable')">开启小脑反射</button><button onclick="act('disable')">关闭小脑反射</button><button class="stop" onclick="act('stop')">停止并保存</button><button onclick="act('omni')">选择纯 OmniJev</button><button onclick="act('vlm_omni')">选择视觉大脑＋OmniJev</button></div><p id="status">待启动</p><div id="metrics"></div><p id="cognition"></p><p id="judgment"></p><div id="reflexes" class="controls"></div></section>
+</style><main><h1>大脑与小脑：反应速度仿真</h1><p>选择纯视觉大脑或视觉大脑＋小脑。两组都有刹停、退让、抬起和修正能力；突发变化时观察谁实际下达命令、机械臂何时运动。等待模型期间物理世界继续运行。</p>
+<section><div class="controls"><button class="primary" onclick="act('start')">启动仿真</button><button id="reflexOn" onclick="act('enable')">开启小脑反射</button><button id="reflexOff" onclick="act('disable')">关闭小脑反射</button><button class="stop" onclick="act('stop')">停止并保存</button><button onclick="act('vlm')">选择纯视觉大脑</button><button onclick="act('vlm_omni')">选择视觉大脑＋OmniJev</button></div><p id="status">待启动</p><div id="metrics"></div><p id="cognition"></p><p id="judgment"></p><div id="reflexes" class="controls"></div></section>
 <img id="camera" src="/frame.jpg" alt="实时物理仿真与模型观察画面">
-<section><div class="controls"><button onclick="act('hand')">突然伸入人手</button><button onclick="act('slider')">推一下黄色物体</button><button onclick="act('target')">挪动绿色目标</button><button onclick="act('occlusion')">遮挡相机</button><button onclick="act('random')">切换随机干扰</button><button onclick="act('reset')">重置场景</button></div><p id="msg"></p>
+<section><div class="controls"><button onclick="act('hand_close')">人手靠近夹爪</button><button onclick="act('slider_fast')">物体快速横穿</button><button onclick="act('target_jump')">目标突然移位</button><button onclick="act('occlusion_brief')">短暂遮挡相机</button><button onclick="act('random')">切换随机干扰</button><button onclick="act('reset')">重置场景</button></div><p id="msg"></p>
 <p class="note">左侧是观察相机，右侧是模型实际看到的画面。橙圈来自机器人自身位置，蓝圈来自原运动计划。黄色 WATCHDOG HOLD 表示软件过期保护，不能算模型反射。每次环境干扰、模型答复、电机动作和真实接触都会保存。</p></section>
 <section><p>写一句反射条件，立即加入运行中的反射银行。</p><textarea id="condition" rows="3" style="width:100%;background:#0b111b;color:#e9f1fc;font:inherit;padding:12px;border:1px solid #42617c" placeholder="例如：有人手接近夹爪时，退回一小段"></textarea><div class="controls"><select id="reflexAction" style="font:inherit;padding:10px"><option value="retreat">退让</option><option value="brake">刹停</option><option value="lift">抬起</option><option value="left">向左修正</option><option value="right">向右修正</option></select><label>触发概率阈值 <input id="threshold" type="number" value="0.75" min="0.5" max="0.98" step="0.05" style="width:80px;padding:10px"></label><button onclick="addReflex()">加入反射</button></div></section>
-<p class="note">小脑使用现有云端 OmniJev 0.8B。视觉大脑使用 g.92.run 的 Gemini 3.8 Flash，后台规划期间物理与小脑继续运行。两组切换需先停止本轮。每轮最多运行 5 分钟；所有概率、条件更新、经验反馈和电机动作都保存。</p></main><script>
+<p class="note">小脑使用现有云端 OmniJev 0.8B。视觉大脑使用 g.92.run 的 Gemini 3.8 Flash，两组使用同一份视觉大脑指令，并允许它直接选择动作；组合组额外启用独立小脑。两组切换需先停止本轮。每轮最多运行 5 分钟；所有概率、条件更新、经验反馈和电机动作都保存。</p></main><script>
 async function act(kind){try{const r=await fetch('/command',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({kind})});const d=await r.json();document.getElementById('msg').textContent=d.message||d.error||kind}catch(e){document.getElementById('msg').textContent='连接中断：'+e.message}}
 async function addReflex(){try{const condition=document.getElementById('condition').value;const action=document.getElementById('reflexAction').value;const threshold=Number(document.getElementById('threshold').value);const r=await fetch('/command',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({kind:'reflex',updates:[{id:'custom_'+Date.now(),condition,action,threshold}]})});const d=await r.json();document.getElementById('msg').textContent=d.message||d.error}catch(e){document.getElementById('msg').textContent=e.message}}
 function renderJudgment(s){const p=s.condition_probabilities||{};document.getElementById('judgment').textContent='模型候选 '+(s.reflex_candidate||'等待当前观察')+' · 条件门控 '+(s.reflex_gate===true?'达到阈值':s.reflex_gate===false?'未触发':'等待答复')+' · 危险评分 '+(s.danger_score==null?'—':s.danger_score.toFixed(2));const box=document.getElementById('reflexes');box.replaceChildren();for(const r of (s.bank?.reflexes||[])){const card=document.createElement('div');card.style.cssText='flex:1 1 240px;padding:10px;background:#0b111b;border-radius:8px';const label=document.createElement('div');label.textContent=r.action+' · '+(p[r.id]==null?'—':p[r.id].toFixed(2))+' / 阈值 '+r.threshold.toFixed(2);const meter=document.createElement('meter');meter.min=0;meter.max=1;meter.value=p[r.id]||0;meter.style.width='100%';const condition=document.createElement('div');condition.textContent=r.condition;condition.style.cssText='font-size:12px;color:#a9b9d0;margin-top:5px';card.append(label,meter,condition);box.append(card)}}
-async function refresh(){try{const r=await fetch('/state');const s=await r.json();document.getElementById('status').textContent=(s.status==='running'?'正在运行':s.status==='loading'?'正在建立仿真':s.status==='finished'?'本轮已保存':'待启动')+' · '+(s.model_enabled?'小脑反射开启':'小脑反射关闭')+' · 动作 '+(s.action||'—');document.getElementById('metrics').textContent='世界 '+(s.world_s||0).toFixed(2)+' 秒　实际 '+(s.wall_s||0).toFixed(2)+' 秒　人手接触 '+(s.human_contact_N||0).toFixed(1)+' N　目标误差 '+((s.goal_distance_m||0)*100).toFixed(1)+' cm　'+(s.auto?'随机干扰开启':'');document.getElementById('cognition').textContent='组别 '+(s.selected_group||s.group||'—')+'　大脑 '+(s.brain_status||'共享初始意图')+'　反射银行版本 '+(s.bank_version||0)+'　经验 '+(s.memory_entries||0)+' 条';renderJudgment(s);document.getElementById('camera').src='/frame.jpg?t='+Date.now();if(s.error)document.getElementById('msg').textContent=s.error}catch(e){document.getElementById('status').textContent='仿真连接暂不可用'}setTimeout(refresh,200)}refresh();
+async function refresh(){try{const r=await fetch('/state');const s=await r.json();document.getElementById('status').textContent=(s.status==='running'?'正在运行':s.status==='loading'?'正在建立仿真':s.status==='finished'?'本轮已保存':'待启动')+' · '+(s.model_enabled?'小脑反射开启':'小脑反射关闭')+' · 动作 '+(s.action||'—')+' · 命令来源 '+(s.motor_source||'—');document.getElementById('reflexOn').disabled=s.selected_group==='vlm';document.getElementById('reflexOff').disabled=s.selected_group==='vlm';document.getElementById('metrics').textContent='世界 '+(s.world_s||0).toFixed(2)+' 秒　实际 '+(s.wall_s||0).toFixed(2)+' 秒　人手接触 '+(s.human_contact_N||0).toFixed(1)+' N　目标误差 '+((s.goal_distance_m||0)*100).toFixed(1)+' cm　实测速度 '+(s.measured_eef_speed_m_s||0).toFixed(3)+' m/s　'+(s.auto?'随机干扰开启':'');document.getElementById('cognition').textContent='组别 '+(s.selected_group||s.group||'—')+'　大脑 '+(s.brain_status||'共享初始意图')+'　反射银行版本 '+(s.bank_version||0)+'　经验 '+(s.memory_entries||0)+' 条';renderJudgment(s);document.getElementById('camera').src='/frame.jpg?t='+Date.now();if(s.error)document.getElementById('msg').textContent=s.error}catch(e){document.getElementById('status').textContent='仿真连接暂不可用'}setTimeout(refresh,200)}refresh();
 </script></html>"""
 
 
@@ -61,7 +61,7 @@ class LiveHooks:
             self.next_random = sim_s+float(self.rng.exponential(4)+1.5)
         for command in todo:
             kind = command["kind"]
-            if kind in ("hand", "slider", "target", "occlusion"):
+            if kind in ("hand", "slider", "target", "occlusion", *FOCUSED):
                 event = world.inject(kind, self.rng)
             elif kind == "enable":
                 self.enabled, invalidate = True, True
@@ -101,12 +101,12 @@ class Demo:
         self.counter = 0
 
     def command(self, kind, updates=None):
-        if kind in ("omni", "vlm_omni"):
+        if kind in ("omni", "vlm", "vlm_omni"):
             with self.lock:
                 if self.running:
                     return {"message": "先停止本轮，再切换实验组"}
                 self.args.mode = kind
-            return {"message": "下轮使用："+("纯 OmniJev" if kind == "omni" else "视觉大脑＋OmniJev")}
+            return {"message": "下轮使用："+("纯视觉大脑" if kind == "vlm" else "视觉大脑＋OmniJev" if kind == "vlm_omni" else "OmniJev")}
         if kind == "start":
             with self.lock:
                 if self.running:
@@ -185,7 +185,7 @@ def handler(demo):
                     raise ValueError("Invalid request size")
                 body = json.loads(self.rfile.read(length))
                 kind = body.get("kind")
-                if kind not in ("start", "stop", "enable", "disable", "hand", "slider", "target", "occlusion", "random", "reset", "reflex", "omni", "vlm_omni"):
+                if kind not in ("start", "stop", "enable", "disable", "hand", "slider", "target", "occlusion", "random", "reset", "reflex", "omni", "vlm", "vlm_omni", *FOCUSED):
                     raise ValueError("Unknown operation")
                 updates = body.get("updates")
                 if kind == "reflex":
@@ -208,14 +208,15 @@ def main():
     parser.add_argument("--port", type=int, default=8790)
     parser.add_argument("--seed", type=int, default=173)
     parser.add_argument("--seconds", type=float, default=300)
-    parser.add_argument("--mode", choices=["omni", "vlm_omni"], default="vlm_omni")
+    parser.add_argument("--mode", choices=["vlm", "vlm_omni"], default="vlm_omni")
     bundled = Path(__file__).resolve().parents[1]/"resources"/"panda"
     parser.add_argument("--asset-root", type=Path, default=bundled)
     args = parser.parse_args()
     args.out.mkdir(parents=True, exist_ok=True)
     args.image_size, args.api_timeout = 320, 2
     args.max_observation_age, args.command_ttl, args.render_hz = 1.2, 1.4, 8
-    args.brain_timeout, args.brain_interval, args.max_brain_age = 15, 4, 12
+    args.brain_timeout, args.brain_interval, args.max_brain_age, args.brain_command_ttl = 15, 0, 8, 10
+    args.freeze_bank = False
     server = ThreadingHTTPServer(("127.0.0.1", args.port), handler(Demo(args)))
     print(f"Interactive simulation ready: http://127.0.0.1:{args.port} (no model calls until Start)", flush=True)
     try:

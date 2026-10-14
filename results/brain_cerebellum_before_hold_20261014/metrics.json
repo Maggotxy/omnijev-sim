@@ -1,0 +1,1250 @@
+{
+  "episodes": 30,
+  "pairs": 15,
+  "groups": {
+    "vlm": {
+      "providers": {
+        "brain": {
+          "returned": 84,
+          "errors": 2,
+          "inference_p50_s": 4.9335294449701905,
+          "motor_selected": 63,
+          "motor_changed": 42,
+          "capture_to_motor_p50_s": 4.93460014462471,
+          "receive_to_motor_p50_s": 0.02756723389029503
+        },
+        "cerebellum": {
+          "returned": 0,
+          "errors": 0,
+          "inference_p50_s": null,
+          "motor_selected": 0,
+          "motor_changed": 0,
+          "capture_to_motor_p50_s": null,
+          "receive_to_motor_p50_s": null
+        }
+      },
+      "motor_sources": {
+        "brain": 63
+      },
+      "selected_capture_to_motor_p50_s": 4.93460014462471,
+      "changed_capture_to_motor_p50_s": 4.7915065716952085,
+      "matched_onset_to_command_p50_sim_s": 4.9315387494237,
+      "measured_motion_events": 1,
+      "command_to_motion_p50_sim_s": 0.24999999999986144,
+      "command_to_motion_p50_wall_s": 0.21320543065667152,
+      "episodes": 15,
+      "final_goal_count": 0,
+      "matched_events": 1,
+      "events": 12,
+      "api_results": 0,
+      "accepted_results": 0,
+      "api_errors": 0,
+      "error_types": {},
+      "inference_p50_s": null,
+      "inference_p95_s": null,
+      "capture_to_motor_p50_s": null,
+      "capture_to_motor_p95_s": null,
+      "mean_watchdog_fraction": 0.31346153846153846,
+      "brain_results": 84,
+      "brain_accepted": 63,
+      "brain_errors": 2,
+      "brain_inference_p50_s": 4.9335294449701905,
+      "macro_plan_changes": 16,
+      "bank_versions": 0,
+      "memory_entries": 63,
+      "requests_with_retrieval": 0,
+      "served_models": [],
+      "brain_served_models": [
+        "gemini-3.8-flash"
+      ]
+    },
+    "vlm_omni": {
+      "providers": {
+        "brain": {
+          "returned": 86,
+          "errors": 2,
+          "inference_p50_s": 4.959852906875312,
+          "motor_selected": 51,
+          "motor_changed": 39,
+          "capture_to_motor_p50_s": 4.633902180939913,
+          "receive_to_motor_p50_s": 0.026053529232740402
+        },
+        "cerebellum": {
+          "returned": 279,
+          "errors": 163,
+          "inference_p50_s": 2.0132040958851576,
+          "motor_selected": 70,
+          "motor_changed": 24,
+          "capture_to_motor_p50_s": 0.7859724629670382,
+          "receive_to_motor_p50_s": 0.02945015486329794
+        }
+      },
+      "motor_sources": {
+        "cerebellum": 70,
+        "brain": 51
+      },
+      "selected_capture_to_motor_p50_s": 0.836364783346653,
+      "changed_capture_to_motor_p50_s": 3.386988777667284,
+      "matched_onset_to_command_p50_sim_s": 4.294515961955639,
+      "measured_motion_events": 3,
+      "command_to_motion_p50_sim_s": 0.6500000000002171,
+      "command_to_motion_p50_wall_s": 0.6134257074445486,
+      "episodes": 15,
+      "final_goal_count": 1,
+      "matched_events": 3,
+      "events": 12,
+      "api_results": 279,
+      "accepted_results": 101,
+      "api_errors": 163,
+      "error_types": {
+        "TimeoutError: timed out": 157,
+        "URLError: <urlopen error timed out>": 6
+      },
+      "inference_p50_s": 2.0132040958851576,
+      "inference_p95_s": 2.0205823430791496,
+      "capture_to_motor_p50_s": 0.7861963324248791,
+      "capture_to_motor_p95_s": 0.8854700084775686,
+      "mean_watchdog_fraction": 0.2896153846153846,
+      "brain_results": 86,
+      "brain_accepted": 59,
+      "brain_errors": 2,
+      "brain_inference_p50_s": 4.959852906875312,
+      "macro_plan_changes": 15,
+      "bank_versions": 0,
+      "memory_entries": 121,
+      "requests_with_retrieval": 95,
+      "served_models": [
+        "omnijev-0.8b-kk"
+      ],
+      "brain_served_models": [
+        "gemini-3.8-flash"
+      ]
+    }
+  },
+  "pair_detail": [
+    {
+      "scenario": "hand_close",
+      "seed": 541,
+      "vlm": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.08060624871652373,
+        "peak_human_contact_N": 229.34947747612486,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 180.39879134340094,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 208,
+        "control_steps": 520,
+        "matched_events": 0,
+        "events": 1
+      },
+      "vlm_omni": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.11079387162990222,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 427,
+        "control_steps": 520,
+        "matched_events": 0,
+        "events": 1
+      }
+    },
+    {
+      "scenario": "hand_close",
+      "seed": 577,
+      "vlm": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.04823457105272521,
+        "peak_human_contact_N": 253.70762215239264,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 258.63572246882137,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 65,
+        "control_steps": 520,
+        "matched_events": 0,
+        "events": 1
+      },
+      "vlm_omni": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.11607319840041397,
+        "peak_human_contact_N": 210.83443102350316,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 185.63325270017455,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 69,
+        "control_steps": 520,
+        "matched_events": 0,
+        "events": 1
+      }
+    },
+    {
+      "scenario": "hand_close",
+      "seed": 613,
+      "vlm": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.1304634762861531,
+        "peak_human_contact_N": 220.58309620227448,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 244.5565301720504,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 302,
+        "control_steps": 520,
+        "matched_events": 0,
+        "events": 1
+      },
+      "vlm_omni": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.07831308399479282,
+        "peak_human_contact_N": 228.46603677500812,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 276.6223909667901,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 113,
+        "control_steps": 520,
+        "matched_events": 0,
+        "events": 1
+      }
+    },
+    {
+      "scenario": "occlusion_brief",
+      "seed": 541,
+      "vlm": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.04395759571745199,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 76,
+        "control_steps": 520,
+        "matched_events": 0,
+        "events": 1
+      },
+      "vlm_omni": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.16260509159803807,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 32,
+        "control_steps": 520,
+        "matched_events": 0,
+        "events": 1
+      }
+    },
+    {
+      "scenario": "occlusion_brief",
+      "seed": 577,
+      "vlm": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.03793346434730644,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 256,
+        "control_steps": 520,
+        "matched_events": 0,
+        "events": 1
+      },
+      "vlm_omni": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.17526634147142198,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 78,
+        "control_steps": 520,
+        "matched_events": 0,
+        "events": 1
+      }
+    },
+    {
+      "scenario": "occlusion_brief",
+      "seed": 613,
+      "vlm": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.03915481543180631,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 258,
+        "control_steps": 520,
+        "matched_events": 0,
+        "events": 1
+      },
+      "vlm_omni": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.035546877857665374,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 171,
+        "control_steps": 520,
+        "matched_events": 0,
+        "events": 1
+      }
+    },
+    {
+      "scenario": "quiet",
+      "seed": 541,
+      "vlm": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.014068862623378739,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 235,
+        "control_steps": 520,
+        "matched_events": 0,
+        "events": 0
+      },
+      "vlm_omni": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.018113634282928923,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 296,
+        "control_steps": 520,
+        "matched_events": 0,
+        "events": 0
+      }
+    },
+    {
+      "scenario": "quiet",
+      "seed": 577,
+      "vlm": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.22906928647046607,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 108,
+        "control_steps": 520,
+        "matched_events": 0,
+        "events": 0
+      },
+      "vlm_omni": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.23220494058654723,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 128,
+        "control_steps": 520,
+        "matched_events": 0,
+        "events": 0
+      }
+    },
+    {
+      "scenario": "quiet",
+      "seed": 613,
+      "vlm": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.20528890060858507,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 100,
+        "control_steps": 520,
+        "matched_events": 0,
+        "events": 0
+      },
+      "vlm_omni": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.24607548450635358,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 184,
+        "control_steps": 520,
+        "matched_events": 0,
+        "events": 0
+      }
+    },
+    {
+      "scenario": "slider_fast",
+      "seed": 541,
+      "vlm": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.05946638417526371,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 70.75935820852216,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 291.32427051683266,
+        "watchdog_ticks": 67,
+        "control_steps": 520,
+        "matched_events": 0,
+        "events": 1
+      },
+      "vlm_omni": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.14309553357472327,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 113,
+        "control_steps": 520,
+        "matched_events": 0,
+        "events": 1
+      }
+    },
+    {
+      "scenario": "slider_fast",
+      "seed": 577,
+      "vlm": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.0310937085761977,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 168,
+        "control_steps": 520,
+        "matched_events": 0,
+        "events": 1
+      },
+      "vlm_omni": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.2234734540681254,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 137,
+        "control_steps": 520,
+        "matched_events": 0,
+        "events": 1
+      }
+    },
+    {
+      "scenario": "slider_fast",
+      "seed": 613,
+      "vlm": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.1535688067904545,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 6.1759949423289715,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 1.1869735033444313,
+        "watchdog_ticks": 152,
+        "control_steps": 520,
+        "matched_events": 0,
+        "events": 1
+      },
+      "vlm_omni": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.07066447935599242,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 52,
+        "control_steps": 520,
+        "matched_events": 0,
+        "events": 1
+      }
+    },
+    {
+      "scenario": "target_jump",
+      "seed": 541,
+      "vlm": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.17932761835148742,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 43,
+        "control_steps": 520,
+        "matched_events": 1,
+        "events": 1
+      },
+      "vlm_omni": {
+        "final_goal_reached": true,
+        "final_goal_distance_m": 0.015802062235631853,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 90,
+        "control_steps": 520,
+        "matched_events": 1,
+        "events": 1
+      }
+    },
+    {
+      "scenario": "target_jump",
+      "seed": 577,
+      "vlm": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.36697338777869964,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 163,
+        "control_steps": 520,
+        "matched_events": 0,
+        "events": 1
+      },
+      "vlm_omni": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.08102260040482616,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 133,
+        "control_steps": 520,
+        "matched_events": 1,
+        "events": 1
+      }
+    },
+    {
+      "scenario": "target_jump",
+      "seed": 613,
+      "vlm": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.14745955196579846,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 244,
+        "control_steps": 520,
+        "matched_events": 0,
+        "events": 1
+      },
+      "vlm_omni": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.06582274104024839,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 236,
+        "control_steps": 520,
+        "matched_events": 1,
+        "events": 1
+      }
+    }
+  ],
+  "events_detail": [
+    {
+      "mode": "vlm",
+      "scenario": "hand_close",
+      "seed": 541,
+      "kind": "hand",
+      "onset_sim_s": 11.968461250577258,
+      "end_sim_s": 17.853466496742563,
+      "expected": [
+        "brake",
+        "retreat",
+        "lift"
+      ],
+      "side": -1,
+      "x": 0.6388190036870244,
+      "z": 0.6364177330406746,
+      "near_y": 0.09217797372013546,
+      "approach_fraction": 0.16,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null,
+      "first_source": null,
+      "received_to_motor_wall_s": null
+    },
+    {
+      "mode": "vlm_omni",
+      "scenario": "hand_close",
+      "seed": 541,
+      "kind": "hand",
+      "onset_sim_s": 11.968461250577258,
+      "end_sim_s": 17.853466496742563,
+      "expected": [
+        "brake",
+        "retreat",
+        "lift"
+      ],
+      "side": -1,
+      "x": 0.6388190036870244,
+      "z": 0.6364177330406746,
+      "near_y": 0.09217797372013546,
+      "approach_fraction": 0.16,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null,
+      "first_source": null,
+      "received_to_motor_wall_s": null
+    },
+    {
+      "mode": "vlm",
+      "scenario": "hand_close",
+      "seed": 577,
+      "kind": "hand",
+      "onset_sim_s": 11.805484038045762,
+      "end_sim_s": 17.33550937255795,
+      "expected": [
+        "brake",
+        "retreat",
+        "lift"
+      ],
+      "side": 1,
+      "x": 0.6303280759619256,
+      "z": 0.6460483884697907,
+      "near_y": 0.08019885550245505,
+      "approach_fraction": 0.16,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null,
+      "first_source": null,
+      "received_to_motor_wall_s": null
+    },
+    {
+      "mode": "vlm_omni",
+      "scenario": "hand_close",
+      "seed": 577,
+      "kind": "hand",
+      "onset_sim_s": 11.805484038045762,
+      "end_sim_s": 17.33550937255795,
+      "expected": [
+        "brake",
+        "retreat",
+        "lift"
+      ],
+      "side": 1,
+      "x": 0.6303280759619256,
+      "z": 0.6460483884697907,
+      "near_y": 0.08019885550245505,
+      "approach_fraction": 0.16,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null,
+      "first_source": null,
+      "received_to_motor_wall_s": null
+    },
+    {
+      "mode": "vlm",
+      "scenario": "hand_close",
+      "seed": 613,
+      "kind": "hand",
+      "onset_sim_s": 12.164848308245983,
+      "end_sim_s": 18.460679637402468,
+      "expected": [
+        "brake",
+        "retreat",
+        "lift"
+      ],
+      "side": 1,
+      "x": 0.6333915254369806,
+      "z": 0.6587936611209764,
+      "near_y": 0.0989707847911615,
+      "approach_fraction": 0.16,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null,
+      "first_source": null,
+      "received_to_motor_wall_s": null
+    },
+    {
+      "mode": "vlm_omni",
+      "scenario": "hand_close",
+      "seed": 613,
+      "kind": "hand",
+      "onset_sim_s": 12.164848308245983,
+      "end_sim_s": 18.460679637402468,
+      "expected": [
+        "brake",
+        "retreat",
+        "lift"
+      ],
+      "side": 1,
+      "x": 0.6333915254369806,
+      "z": 0.6587936611209764,
+      "near_y": 0.0989707847911615,
+      "approach_fraction": 0.16,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null,
+      "first_source": null,
+      "received_to_motor_wall_s": null
+    },
+    {
+      "mode": "vlm",
+      "scenario": "occlusion_brief",
+      "seed": 541,
+      "kind": "occlusion",
+      "onset_sim_s": 11.968461250577258,
+      "end_sim_s": 13.99946439827644,
+      "expected": [
+        "brake"
+      ],
+      "side": -1,
+      "camera_block_x": 0.49,
+      "camera_block_y": 0,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null,
+      "first_source": null,
+      "received_to_motor_wall_s": null
+    },
+    {
+      "mode": "vlm_omni",
+      "scenario": "occlusion_brief",
+      "seed": 541,
+      "kind": "occlusion",
+      "onset_sim_s": 11.968461250577258,
+      "end_sim_s": 13.99946439827644,
+      "expected": [
+        "brake"
+      ],
+      "side": -1,
+      "camera_block_x": 0.49,
+      "camera_block_y": 0,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null,
+      "first_source": null,
+      "received_to_motor_wall_s": null
+    },
+    {
+      "mode": "vlm",
+      "scenario": "occlusion_brief",
+      "seed": 577,
+      "kind": "occlusion",
+      "onset_sim_s": 11.805484038045762,
+      "end_sim_s": 13.623499238753077,
+      "expected": [
+        "brake"
+      ],
+      "side": 1,
+      "camera_block_x": 0.49,
+      "camera_block_y": 0,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null,
+      "first_source": null,
+      "received_to_motor_wall_s": null
+    },
+    {
+      "mode": "vlm_omni",
+      "scenario": "occlusion_brief",
+      "seed": 577,
+      "kind": "occlusion",
+      "onset_sim_s": 11.805484038045762,
+      "end_sim_s": 13.623499238753077,
+      "expected": [
+        "brake"
+      ],
+      "side": 1,
+      "camera_block_x": 0.49,
+      "camera_block_y": 0,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null,
+      "first_source": null,
+      "received_to_motor_wall_s": null
+    },
+    {
+      "mode": "vlm",
+      "scenario": "occlusion_brief",
+      "seed": 613,
+      "kind": "occlusion",
+      "onset_sim_s": 12.164848308245983,
+      "end_sim_s": 14.442347105739874,
+      "expected": [
+        "brake"
+      ],
+      "side": 1,
+      "camera_block_x": 0.49,
+      "camera_block_y": 0,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null,
+      "first_source": null,
+      "received_to_motor_wall_s": null
+    },
+    {
+      "mode": "vlm_omni",
+      "scenario": "occlusion_brief",
+      "seed": 613,
+      "kind": "occlusion",
+      "onset_sim_s": 12.164848308245983,
+      "end_sim_s": 14.442347105739874,
+      "expected": [
+        "brake"
+      ],
+      "side": 1,
+      "camera_block_x": 0.49,
+      "camera_block_y": 0,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null,
+      "first_source": null,
+      "received_to_motor_wall_s": null
+    },
+    {
+      "mode": "vlm",
+      "scenario": "slider_fast",
+      "seed": 541,
+      "kind": "slider",
+      "onset_sim_s": 11.968461250577258,
+      "end_sim_s": 15.968461250577258,
+      "expected": [
+        "brake",
+        "retreat",
+        "lift"
+      ],
+      "side": -1,
+      "x": 0.6079297161217811,
+      "speed_m_s": 0.832285055305365,
+      "entry_y_m": 0.35,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null,
+      "first_source": null,
+      "received_to_motor_wall_s": null
+    },
+    {
+      "mode": "vlm_omni",
+      "scenario": "slider_fast",
+      "seed": 541,
+      "kind": "slider",
+      "onset_sim_s": 11.968461250577258,
+      "end_sim_s": 15.968461250577258,
+      "expected": [
+        "brake",
+        "retreat",
+        "lift"
+      ],
+      "side": -1,
+      "x": 0.6079297161217811,
+      "speed_m_s": 0.832285055305365,
+      "entry_y_m": 0.35,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null,
+      "first_source": null,
+      "received_to_motor_wall_s": null
+    },
+    {
+      "mode": "vlm",
+      "scenario": "slider_fast",
+      "seed": 577,
+      "kind": "slider",
+      "onset_sim_s": 11.805484038045762,
+      "end_sim_s": 15.805484038045762,
+      "expected": [
+        "brake",
+        "retreat",
+        "lift"
+      ],
+      "side": 1,
+      "x": 0.5807636390879118,
+      "speed_m_s": 0.7049211394288843,
+      "entry_y_m": 0.35,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null,
+      "first_source": null,
+      "received_to_motor_wall_s": null
+    },
+    {
+      "mode": "vlm_omni",
+      "scenario": "slider_fast",
+      "seed": 577,
+      "kind": "slider",
+      "onset_sim_s": 11.805484038045762,
+      "end_sim_s": 15.805484038045762,
+      "expected": [
+        "brake",
+        "retreat",
+        "lift"
+      ],
+      "side": 1,
+      "x": 0.5807636390879118,
+      "speed_m_s": 0.7049211394288843,
+      "entry_y_m": 0.35,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null,
+      "first_source": null,
+      "received_to_motor_wall_s": null
+    },
+    {
+      "mode": "vlm",
+      "scenario": "slider_fast",
+      "seed": 613,
+      "kind": "slider",
+      "onset_sim_s": 12.164848308245983,
+      "end_sim_s": 16.164848308245983,
+      "expected": [
+        "brake",
+        "retreat",
+        "lift"
+      ],
+      "side": 1,
+      "x": 0.603457180009868,
+      "speed_m_s": 0.750872881554709,
+      "entry_y_m": 0.35,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null,
+      "first_source": null,
+      "received_to_motor_wall_s": null
+    },
+    {
+      "mode": "vlm_omni",
+      "scenario": "slider_fast",
+      "seed": 613,
+      "kind": "slider",
+      "onset_sim_s": 12.164848308245983,
+      "end_sim_s": 16.164848308245983,
+      "expected": [
+        "brake",
+        "retreat",
+        "lift"
+      ],
+      "side": 1,
+      "x": 0.603457180009868,
+      "speed_m_s": 0.750872881554709,
+      "entry_y_m": 0.35,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null,
+      "first_source": null,
+      "received_to_motor_wall_s": null
+    },
+    {
+      "mode": "vlm",
+      "scenario": "target_jump",
+      "seed": 541,
+      "kind": "target",
+      "onset_sim_s": 11.968461250577258,
+      "end_sim_s": 31.968461250577256,
+      "expected": [
+        "left"
+      ],
+      "side": -1,
+      "start_y": 0.08105000822854068,
+      "end_y": -0.06894999177145932,
+      "first_model_reaction_sim_s": 16.900000000000958,
+      "response_from_onset_sim_s": 4.9315387494237,
+      "observation_to_motor_wall_s": 4.885752577334642,
+      "first_action": "left",
+      "first_source": "brain",
+      "received_to_motor_wall_s": 0.0017037689685821533
+    },
+    {
+      "mode": "vlm_omni",
+      "scenario": "target_jump",
+      "seed": 541,
+      "kind": "target",
+      "onset_sim_s": 11.968461250577258,
+      "end_sim_s": 31.968461250577256,
+      "expected": [
+        "left"
+      ],
+      "side": -1,
+      "start_y": 0.08105000822854068,
+      "end_y": -0.06894999177145932,
+      "first_model_reaction_sim_s": 19.249999999999655,
+      "response_from_onset_sim_s": 7.281538749422397,
+      "observation_to_motor_wall_s": 3.9865854512900114,
+      "first_action": "left",
+      "first_source": "brain",
+      "received_to_motor_wall_s": 0.03212355636060238
+    },
+    {
+      "mode": "vlm",
+      "scenario": "target_jump",
+      "seed": 577,
+      "kind": "target",
+      "onset_sim_s": 11.805484038045762,
+      "end_sim_s": 31.805484038045762,
+      "expected": [
+        "right"
+      ],
+      "side": 1,
+      "start_y": 0.09527389895968974,
+      "end_y": 0.24527389895968973,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null,
+      "first_source": null,
+      "received_to_motor_wall_s": null
+    },
+    {
+      "mode": "vlm_omni",
+      "scenario": "target_jump",
+      "seed": 577,
+      "kind": "target",
+      "onset_sim_s": 11.805484038045762,
+      "end_sim_s": 31.805484038045762,
+      "expected": [
+        "right"
+      ],
+      "side": 1,
+      "start_y": 0.09527389895968974,
+      "end_y": 0.24527389895968973,
+      "first_model_reaction_sim_s": 16.1000000000014,
+      "response_from_onset_sim_s": 4.294515961955639,
+      "observation_to_motor_wall_s": 0.8363026324659586,
+      "first_action": "right",
+      "first_source": "cerebellum",
+      "received_to_motor_wall_s": 0.04508586786687374
+    },
+    {
+      "mode": "vlm",
+      "scenario": "target_jump",
+      "seed": 613,
+      "kind": "target",
+      "onset_sim_s": 12.164848308245983,
+      "end_sim_s": 32.16484830824598,
+      "expected": [
+        "right"
+      ],
+      "side": 1,
+      "start_y": 0.10025553384612516,
+      "end_y": 0.25,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null,
+      "first_source": null,
+      "received_to_motor_wall_s": null
+    },
+    {
+      "mode": "vlm_omni",
+      "scenario": "target_jump",
+      "seed": 613,
+      "kind": "target",
+      "onset_sim_s": 12.164848308245983,
+      "end_sim_s": 32.16484830824598,
+      "expected": [
+        "right"
+      ],
+      "side": 1,
+      "start_y": 0.10025553384612516,
+      "end_y": 0.25,
+      "first_model_reaction_sim_s": 13.250000000001428,
+      "response_from_onset_sim_s": 1.0851516917554456,
+      "observation_to_motor_wall_s": 0.7354242093861103,
+      "first_action": "right",
+      "first_source": "cerebellum",
+      "received_to_motor_wall_s": 0.005815012380480766
+    }
+  ],
+  "rtf_min": 0.9999515897603124,
+  "rtf_max": 0.9999967178149421,
+  "negative_calibration": {
+    "condition": "human-close retreat",
+    "label": 0,
+    "cohort": "quiet after 2s settling, initial condition unchanged; human outside camera",
+    "samples": 17,
+    "brier": 0.18372103294117648,
+    "ece_10bins": 0.41494117647058826,
+    "threshold_false_positive_fraction": 0,
+    "bins": [
+      {
+        "range": [
+          0.2,
+          0.3
+        ],
+        "count": 3,
+        "mean_p": 0.2678333333333333,
+        "observed_frequency": 0
+      },
+      {
+        "range": [
+          0.3,
+          0.4
+        ],
+        "count": 6,
+        "mean_p": 0.3681333333333333,
+        "observed_frequency": 0
+      },
+      {
+        "range": [
+          0.4,
+          0.5
+        ],
+        "count": 4,
+        "mean_p": 0.437425,
+        "observed_frequency": 0
+      },
+      {
+        "range": [
+          0.5,
+          0.6
+        ],
+        "count": 2,
+        "mean_p": 0.5386500000000001,
+        "observed_frequency": 0
+      },
+      {
+        "range": [
+          0.6,
+          0.7
+        ],
+        "count": 2,
+        "mean_p": 0.6073500000000001,
+        "observed_frequency": 0
+      }
+    ],
+    "detail": [
+      {
+        "mode": "vlm_omni",
+        "seed": 541,
+        "sequence": 62,
+        "p": 0.4007,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 541,
+        "sequence": 99,
+        "p": 0.3282,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 541,
+        "sequence": 121,
+        "p": 0.2782,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 541,
+        "sequence": 158,
+        "p": 0.2985,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 541,
+        "sequence": 179,
+        "p": 0.2268,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 577,
+        "sequence": 65,
+        "p": 0.4776,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 577,
+        "sequence": 70,
+        "p": 0.3317,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 577,
+        "sequence": 91,
+        "p": 0.4109,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 577,
+        "sequence": 145,
+        "p": 0.3927,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 577,
+        "sequence": 182,
+        "p": 0.6115,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 613,
+        "sequence": 27,
+        "p": 0.5464,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 613,
+        "sequence": 31,
+        "p": 0.5309,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 613,
+        "sequence": 53,
+        "p": 0.382,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 613,
+        "sequence": 90,
+        "p": 0.387,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 613,
+        "sequence": 111,
+        "p": 0.4605,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 613,
+        "sequence": 117,
+        "p": 0.3872,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 613,
+        "sequence": 203,
+        "p": 0.6032,
+        "tau": 0.75
+      }
+    ],
+    "scope": "negative-cohort false-alarm check; not balanced calibration; frames correlated"
+  }
+}

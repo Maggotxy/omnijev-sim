@@ -1,0 +1,4 @@
+scenario,seed,vlm_final_goal_reached,vlm_final_goal_distance_m,vlm_peak_human_contact_N,vlm_peak_object_contact_N,vlm_human_contact_impulse_Ns,vlm_object_contact_impulse_Ns,vlm_watchdog_ticks,vlm_control_steps,vlm_matched_events,vlm_events,vlm_omni_final_goal_reached,vlm_omni_final_goal_distance_m,vlm_omni_peak_human_contact_N,vlm_omni_peak_object_contact_N,vlm_omni_human_contact_impulse_Ns,vlm_omni_object_contact_impulse_Ns,vlm_omni_watchdog_ticks,vlm_omni_control_steps,vlm_omni_matched_events,vlm_omni_events
+hand_close,503,True,0.0020944749000083337,236.51695698110797,0,263.136670694855,0.0,56,280,0,1,True,0.03498997552476605,212.01185390544566,0,279.9185538322524,0.0,9,280,0,1
+occlusion_brief,503,False,0.0019942812998178065,0,0,0.0,0.0,118,280,0,1,False,0.01087467406147975,0,0,0.0,0.0,35,280,0,1
+quiet,503,False,0.03639403377574997,0,0,0.0,0.0,149,280,0,0,False,0.09901871900929685,0,0,0.0,0.0,3,280,0,0

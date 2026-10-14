@@ -1,0 +1,3 @@
+{"kind": "target", "sim_s": 14.650000000001896, "duration_s": 3.6392551294025113, "status": "injected", "start_y": 0.08087451677543905, "end_y": 0.23087451677543905, "source": "operator"}
+{"kind": "reflex", "sim_s": 29.049999999994224, "updates": [{"id": "custom_1791969404614", "condition": "An approaching human hand is close to the gripper.", "threshold": 0.75, "action": "retreat"}], "bank_version": 1, "source": "operator"}
+{"kind": "stop", "sim_s": 44.3000000000094, "source": "operator"}

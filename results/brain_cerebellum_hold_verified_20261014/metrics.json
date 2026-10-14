@@ -1,0 +1,1907 @@
+{
+  "episodes": 30,
+  "pairs": 15,
+  "groups": {
+    "vlm": {
+      "providers": {
+        "brain": {
+          "returned": 79,
+          "errors": 3,
+          "inference_p50_s": 4.747801832854748,
+          "motor_selected": 60,
+          "motor_changed": 43,
+          "capture_to_motor_p50_s": 4.836390295065939,
+          "receive_to_motor_p50_s": 0.022507986053824425
+        },
+        "cerebellum": {
+          "returned": 0,
+          "errors": 0,
+          "inference_p50_s": null,
+          "motor_selected": 0,
+          "motor_changed": 0,
+          "capture_to_motor_p50_s": null,
+          "receive_to_motor_p50_s": null
+        }
+      },
+      "motor_sources": {
+        "brain": 60
+      },
+      "selected_capture_to_motor_p50_s": 4.836390295065939,
+      "changed_capture_to_motor_p50_s": 4.98598107509315,
+      "matched_onset_to_command_p50_sim_s": 9.044515961953007,
+      "measured_motion_events": 3,
+      "command_to_motion_p50_sim_s": 0.349999999999806,
+      "command_to_motion_p50_wall_s": 0.31340082362294197,
+      "episodes": 15,
+      "final_goal_count": 1,
+      "matched_events": 3,
+      "events": 12,
+      "api_results": 0,
+      "accepted_results": 0,
+      "api_errors": 0,
+      "error_types": {},
+      "inference_p50_s": null,
+      "inference_p95_s": null,
+      "capture_to_motor_p50_s": null,
+      "capture_to_motor_p95_s": null,
+      "mean_watchdog_fraction": 0.3302564102564103,
+      "brain_results": 79,
+      "brain_accepted": 60,
+      "brain_errors": 3,
+      "brain_inference_p50_s": 4.747801832854748,
+      "macro_plan_changes": 19,
+      "bank_versions": 0,
+      "memory_entries": 60,
+      "requests_with_retrieval": 0,
+      "served_models": [],
+      "brain_served_models": [
+        "gemini-3.8-flash"
+      ]
+    },
+    "vlm_omni": {
+      "providers": {
+        "brain": {
+          "returned": 81,
+          "errors": 2,
+          "inference_p50_s": 4.80576173402369,
+          "motor_selected": 43,
+          "motor_changed": 25,
+          "capture_to_motor_p50_s": 4.786103079095483,
+          "receive_to_motor_p50_s": 0.02207011543214321
+        },
+        "cerebellum": {
+          "returned": 602,
+          "errors": 0,
+          "inference_p50_s": 0.6446103658527136,
+          "motor_selected": 327,
+          "motor_changed": 52,
+          "capture_to_motor_p50_s": 0.7866468988358974,
+          "receive_to_motor_p50_s": 0.030334683135151863
+        }
+      },
+      "motor_sources": {
+        "cerebellum": 327,
+        "brain": 43
+      },
+      "selected_capture_to_motor_p50_s": 0.7870144080370665,
+      "changed_capture_to_motor_p50_s": 0.8495242465287447,
+      "matched_onset_to_command_p50_sim_s": 9.414833826852592,
+      "measured_motion_events": 2,
+      "command_to_motion_p50_sim_s": 0.42499999999976446,
+      "command_to_motion_p50_wall_s": 0.3883527060970664,
+      "episodes": 15,
+      "final_goal_count": 2,
+      "matched_events": 2,
+      "events": 12,
+      "api_results": 602,
+      "accepted_results": 551,
+      "api_errors": 0,
+      "error_types": {},
+      "inference_p50_s": 0.6446103658527136,
+      "inference_p95_s": 0.6958101421594618,
+      "capture_to_motor_p50_s": 0.7865533512085676,
+      "capture_to_motor_p95_s": 0.8872749079018831,
+      "mean_watchdog_fraction": 0.022564102564102566,
+      "brain_results": 81,
+      "brain_accepted": 58,
+      "brain_errors": 2,
+      "brain_inference_p50_s": 4.80576173402369,
+      "macro_plan_changes": 19,
+      "bank_versions": 0,
+      "memory_entries": 370,
+      "requests_with_retrieval": 557,
+      "served_models": [
+        "omnijev-0.8b-kk"
+      ],
+      "brain_served_models": [
+        "gemini-3.8-flash"
+      ]
+    }
+  },
+  "pair_detail": [
+    {
+      "scenario": "hand_close",
+      "seed": 541,
+      "vlm": {
+        "final_goal_reached": true,
+        "final_goal_distance_m": 0.01384884786802165,
+        "peak_human_contact_N": 197.54461280346948,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 249.8383741768916,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 293,
+        "control_steps": 520,
+        "matched_events": 0,
+        "events": 1
+      },
+      "vlm_omni": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.06649647814167442,
+        "peak_human_contact_N": 197.56685200154408,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 221.84716290307628,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 37,
+        "control_steps": 520,
+        "matched_events": 0,
+        "events": 1
+      }
+    },
+    {
+      "scenario": "hand_close",
+      "seed": 577,
+      "vlm": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.09148700354897142,
+        "peak_human_contact_N": 177.1721937636285,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 263.03743642006515,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 212,
+        "control_steps": 520,
+        "matched_events": 0,
+        "events": 1
+      },
+      "vlm_omni": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.25024956617851846,
+        "peak_human_contact_N": 29.400342484360927,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 2.1897661464907596,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 10,
+        "control_steps": 520,
+        "matched_events": 0,
+        "events": 1
+      }
+    },
+    {
+      "scenario": "hand_close",
+      "seed": 613,
+      "vlm": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.08937584768310815,
+        "peak_human_contact_N": 169.1817586154353,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 322.15082436021675,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 114,
+        "control_steps": 520,
+        "matched_events": 0,
+        "events": 1
+      },
+      "vlm_omni": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.24584495805071174,
+        "peak_human_contact_N": 85.84802386190213,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 22.394277698187715,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 42,
+        "control_steps": 520,
+        "matched_events": 0,
+        "events": 1
+      }
+    },
+    {
+      "scenario": "occlusion_brief",
+      "seed": 541,
+      "vlm": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.2096615433112345,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 255,
+        "control_steps": 520,
+        "matched_events": 0,
+        "events": 1
+      },
+      "vlm_omni": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.063380493735558,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 1,
+        "control_steps": 520,
+        "matched_events": 0,
+        "events": 1
+      }
+    },
+    {
+      "scenario": "occlusion_brief",
+      "seed": 577,
+      "vlm": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.2498961887011325,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 230,
+        "control_steps": 520,
+        "matched_events": 0,
+        "events": 1
+      },
+      "vlm_omni": {
+        "final_goal_reached": true,
+        "final_goal_distance_m": 0.006728456733363597,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 17,
+        "control_steps": 520,
+        "matched_events": 0,
+        "events": 1
+      }
+    },
+    {
+      "scenario": "occlusion_brief",
+      "seed": 613,
+      "vlm": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.17849339456267707,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 32,
+        "control_steps": 520,
+        "matched_events": 0,
+        "events": 1
+      },
+      "vlm_omni": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.1547063750656732,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 1,
+        "control_steps": 520,
+        "matched_events": 0,
+        "events": 1
+      }
+    },
+    {
+      "scenario": "quiet",
+      "seed": 541,
+      "vlm": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.26407651067286436,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 153,
+        "control_steps": 520,
+        "matched_events": 0,
+        "events": 0
+      },
+      "vlm_omni": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.19161828975388895,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 11,
+        "control_steps": 520,
+        "matched_events": 0,
+        "events": 0
+      }
+    },
+    {
+      "scenario": "quiet",
+      "seed": 577,
+      "vlm": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.25054986890161296,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 177,
+        "control_steps": 520,
+        "matched_events": 0,
+        "events": 0
+      },
+      "vlm_omni": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.21604867932633617,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 12,
+        "control_steps": 520,
+        "matched_events": 0,
+        "events": 0
+      }
+    },
+    {
+      "scenario": "quiet",
+      "seed": 613,
+      "vlm": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.08854282612187057,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 181,
+        "control_steps": 520,
+        "matched_events": 0,
+        "events": 0
+      },
+      "vlm_omni": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.12754920179452917,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 1,
+        "control_steps": 520,
+        "matched_events": 0,
+        "events": 0
+      }
+    },
+    {
+      "scenario": "slider_fast",
+      "seed": 541,
+      "vlm": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.25058864815852944,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 100,
+        "control_steps": 520,
+        "matched_events": 0,
+        "events": 1
+      },
+      "vlm_omni": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.04329410462107265,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 7,
+        "control_steps": 520,
+        "matched_events": 0,
+        "events": 1
+      }
+    },
+    {
+      "scenario": "slider_fast",
+      "seed": 577,
+      "vlm": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.2546125451644028,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 205,
+        "control_steps": 520,
+        "matched_events": 0,
+        "events": 1
+      },
+      "vlm_omni": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.09703614721055231,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 17,
+        "control_steps": 520,
+        "matched_events": 0,
+        "events": 1
+      }
+    },
+    {
+      "scenario": "slider_fast",
+      "seed": 613,
+      "vlm": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.15894218971795415,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 82,
+        "control_steps": 520,
+        "matched_events": 0,
+        "events": 1
+      },
+      "vlm_omni": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.18952316085387969,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 1,
+        "control_steps": 520,
+        "matched_events": 0,
+        "events": 1
+      }
+    },
+    {
+      "scenario": "target_jump",
+      "seed": 541,
+      "vlm": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.18291297106056234,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 153,
+        "control_steps": 520,
+        "matched_events": 1,
+        "events": 1
+      },
+      "vlm_omni": {
+        "final_goal_reached": true,
+        "final_goal_distance_m": 0.0015876578389640563,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 5,
+        "control_steps": 520,
+        "matched_events": 0,
+        "events": 1
+      }
+    },
+    {
+      "scenario": "target_jump",
+      "seed": 577,
+      "vlm": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.13643324589547431,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 317,
+        "control_steps": 520,
+        "matched_events": 1,
+        "events": 1
+      },
+      "vlm_omni": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.21373430675893637,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 10,
+        "control_steps": 520,
+        "matched_events": 1,
+        "events": 1
+      }
+    },
+    {
+      "scenario": "target_jump",
+      "seed": 613,
+      "vlm": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.09395113525171812,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 72,
+        "control_steps": 520,
+        "matched_events": 1,
+        "events": 1
+      },
+      "vlm_omni": {
+        "final_goal_reached": false,
+        "final_goal_distance_m": 0.14816538595879689,
+        "peak_human_contact_N": 0,
+        "peak_object_contact_N": 0,
+        "human_contact_impulse_Ns": 0.0,
+        "object_contact_impulse_Ns": 0.0,
+        "watchdog_ticks": 4,
+        "control_steps": 520,
+        "matched_events": 1,
+        "events": 1
+      }
+    }
+  ],
+  "events_detail": [
+    {
+      "mode": "vlm",
+      "scenario": "hand_close",
+      "seed": 541,
+      "kind": "hand",
+      "onset_sim_s": 11.968461250577258,
+      "end_sim_s": 17.853466496742563,
+      "expected": [
+        "brake",
+        "retreat",
+        "lift"
+      ],
+      "side": -1,
+      "x": 0.6388190036870244,
+      "z": 0.6364177330406746,
+      "near_y": 0.09217797372013546,
+      "approach_fraction": 0.16,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null,
+      "first_source": null,
+      "received_to_motor_wall_s": null
+    },
+    {
+      "mode": "vlm_omni",
+      "scenario": "hand_close",
+      "seed": 541,
+      "kind": "hand",
+      "onset_sim_s": 11.968461250577258,
+      "end_sim_s": 17.853466496742563,
+      "expected": [
+        "brake",
+        "retreat",
+        "lift"
+      ],
+      "side": -1,
+      "x": 0.6388190036870244,
+      "z": 0.6364177330406746,
+      "near_y": 0.09217797372013546,
+      "approach_fraction": 0.16,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null,
+      "first_source": null,
+      "received_to_motor_wall_s": null
+    },
+    {
+      "mode": "vlm",
+      "scenario": "hand_close",
+      "seed": 577,
+      "kind": "hand",
+      "onset_sim_s": 11.805484038045762,
+      "end_sim_s": 17.33550937255795,
+      "expected": [
+        "brake",
+        "retreat",
+        "lift"
+      ],
+      "side": 1,
+      "x": 0.6303280759619256,
+      "z": 0.6460483884697907,
+      "near_y": 0.08019885550245505,
+      "approach_fraction": 0.16,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null,
+      "first_source": null,
+      "received_to_motor_wall_s": null
+    },
+    {
+      "mode": "vlm_omni",
+      "scenario": "hand_close",
+      "seed": 577,
+      "kind": "hand",
+      "onset_sim_s": 11.805484038045762,
+      "end_sim_s": 17.33550937255795,
+      "expected": [
+        "brake",
+        "retreat",
+        "lift"
+      ],
+      "side": 1,
+      "x": 0.6303280759619256,
+      "z": 0.6460483884697907,
+      "near_y": 0.08019885550245505,
+      "approach_fraction": 0.16,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null,
+      "first_source": null,
+      "received_to_motor_wall_s": null
+    },
+    {
+      "mode": "vlm",
+      "scenario": "hand_close",
+      "seed": 613,
+      "kind": "hand",
+      "onset_sim_s": 12.164848308245983,
+      "end_sim_s": 18.460679637402468,
+      "expected": [
+        "brake",
+        "retreat",
+        "lift"
+      ],
+      "side": 1,
+      "x": 0.6333915254369806,
+      "z": 0.6587936611209764,
+      "near_y": 0.0989707847911615,
+      "approach_fraction": 0.16,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null,
+      "first_source": null,
+      "received_to_motor_wall_s": null
+    },
+    {
+      "mode": "vlm_omni",
+      "scenario": "hand_close",
+      "seed": 613,
+      "kind": "hand",
+      "onset_sim_s": 12.164848308245983,
+      "end_sim_s": 18.460679637402468,
+      "expected": [
+        "brake",
+        "retreat",
+        "lift"
+      ],
+      "side": 1,
+      "x": 0.6333915254369806,
+      "z": 0.6587936611209764,
+      "near_y": 0.0989707847911615,
+      "approach_fraction": 0.16,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null,
+      "first_source": null,
+      "received_to_motor_wall_s": null
+    },
+    {
+      "mode": "vlm",
+      "scenario": "occlusion_brief",
+      "seed": 541,
+      "kind": "occlusion",
+      "onset_sim_s": 11.968461250577258,
+      "end_sim_s": 13.99946439827644,
+      "expected": [
+        "brake"
+      ],
+      "side": -1,
+      "camera_block_x": 0.49,
+      "camera_block_y": 0,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null,
+      "first_source": null,
+      "received_to_motor_wall_s": null
+    },
+    {
+      "mode": "vlm_omni",
+      "scenario": "occlusion_brief",
+      "seed": 541,
+      "kind": "occlusion",
+      "onset_sim_s": 11.968461250577258,
+      "end_sim_s": 13.99946439827644,
+      "expected": [
+        "brake"
+      ],
+      "side": -1,
+      "camera_block_x": 0.49,
+      "camera_block_y": 0,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null,
+      "first_source": null,
+      "received_to_motor_wall_s": null
+    },
+    {
+      "mode": "vlm",
+      "scenario": "occlusion_brief",
+      "seed": 577,
+      "kind": "occlusion",
+      "onset_sim_s": 11.805484038045762,
+      "end_sim_s": 13.623499238753077,
+      "expected": [
+        "brake"
+      ],
+      "side": 1,
+      "camera_block_x": 0.49,
+      "camera_block_y": 0,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null,
+      "first_source": null,
+      "received_to_motor_wall_s": null
+    },
+    {
+      "mode": "vlm_omni",
+      "scenario": "occlusion_brief",
+      "seed": 577,
+      "kind": "occlusion",
+      "onset_sim_s": 11.805484038045762,
+      "end_sim_s": 13.623499238753077,
+      "expected": [
+        "brake"
+      ],
+      "side": 1,
+      "camera_block_x": 0.49,
+      "camera_block_y": 0,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null,
+      "first_source": null,
+      "received_to_motor_wall_s": null
+    },
+    {
+      "mode": "vlm",
+      "scenario": "occlusion_brief",
+      "seed": 613,
+      "kind": "occlusion",
+      "onset_sim_s": 12.164848308245983,
+      "end_sim_s": 14.442347105739874,
+      "expected": [
+        "brake"
+      ],
+      "side": 1,
+      "camera_block_x": 0.49,
+      "camera_block_y": 0,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null,
+      "first_source": null,
+      "received_to_motor_wall_s": null
+    },
+    {
+      "mode": "vlm_omni",
+      "scenario": "occlusion_brief",
+      "seed": 613,
+      "kind": "occlusion",
+      "onset_sim_s": 12.164848308245983,
+      "end_sim_s": 14.442347105739874,
+      "expected": [
+        "brake"
+      ],
+      "side": 1,
+      "camera_block_x": 0.49,
+      "camera_block_y": 0,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null,
+      "first_source": null,
+      "received_to_motor_wall_s": null
+    },
+    {
+      "mode": "vlm",
+      "scenario": "slider_fast",
+      "seed": 541,
+      "kind": "slider",
+      "onset_sim_s": 11.968461250577258,
+      "end_sim_s": 15.968461250577258,
+      "expected": [
+        "brake",
+        "retreat",
+        "lift"
+      ],
+      "side": -1,
+      "x": 0.6079297161217811,
+      "speed_m_s": 0.832285055305365,
+      "entry_y_m": 0.35,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null,
+      "first_source": null,
+      "received_to_motor_wall_s": null
+    },
+    {
+      "mode": "vlm_omni",
+      "scenario": "slider_fast",
+      "seed": 541,
+      "kind": "slider",
+      "onset_sim_s": 11.968461250577258,
+      "end_sim_s": 15.968461250577258,
+      "expected": [
+        "brake",
+        "retreat",
+        "lift"
+      ],
+      "side": -1,
+      "x": 0.6079297161217811,
+      "speed_m_s": 0.832285055305365,
+      "entry_y_m": 0.35,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null,
+      "first_source": null,
+      "received_to_motor_wall_s": null
+    },
+    {
+      "mode": "vlm",
+      "scenario": "slider_fast",
+      "seed": 577,
+      "kind": "slider",
+      "onset_sim_s": 11.805484038045762,
+      "end_sim_s": 15.805484038045762,
+      "expected": [
+        "brake",
+        "retreat",
+        "lift"
+      ],
+      "side": 1,
+      "x": 0.5807636390879118,
+      "speed_m_s": 0.7049211394288843,
+      "entry_y_m": 0.35,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null,
+      "first_source": null,
+      "received_to_motor_wall_s": null
+    },
+    {
+      "mode": "vlm_omni",
+      "scenario": "slider_fast",
+      "seed": 577,
+      "kind": "slider",
+      "onset_sim_s": 11.805484038045762,
+      "end_sim_s": 15.805484038045762,
+      "expected": [
+        "brake",
+        "retreat",
+        "lift"
+      ],
+      "side": 1,
+      "x": 0.5807636390879118,
+      "speed_m_s": 0.7049211394288843,
+      "entry_y_m": 0.35,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null,
+      "first_source": null,
+      "received_to_motor_wall_s": null
+    },
+    {
+      "mode": "vlm",
+      "scenario": "slider_fast",
+      "seed": 613,
+      "kind": "slider",
+      "onset_sim_s": 12.164848308245983,
+      "end_sim_s": 16.164848308245983,
+      "expected": [
+        "brake",
+        "retreat",
+        "lift"
+      ],
+      "side": 1,
+      "x": 0.603457180009868,
+      "speed_m_s": 0.750872881554709,
+      "entry_y_m": 0.35,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null,
+      "first_source": null,
+      "received_to_motor_wall_s": null
+    },
+    {
+      "mode": "vlm_omni",
+      "scenario": "slider_fast",
+      "seed": 613,
+      "kind": "slider",
+      "onset_sim_s": 12.164848308245983,
+      "end_sim_s": 16.164848308245983,
+      "expected": [
+        "brake",
+        "retreat",
+        "lift"
+      ],
+      "side": 1,
+      "x": 0.603457180009868,
+      "speed_m_s": 0.750872881554709,
+      "entry_y_m": 0.35,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null,
+      "first_source": null,
+      "received_to_motor_wall_s": null
+    },
+    {
+      "mode": "vlm",
+      "scenario": "target_jump",
+      "seed": 541,
+      "kind": "target",
+      "onset_sim_s": 11.968461250577258,
+      "end_sim_s": 31.968461250577256,
+      "expected": [
+        "left"
+      ],
+      "side": -1,
+      "start_y": 0.08105000822854068,
+      "end_y": -0.06894999177145932,
+      "first_model_reaction_sim_s": 21.34999999999849,
+      "response_from_onset_sim_s": 9.381538749421233,
+      "observation_to_motor_wall_s": 6.087134318426251,
+      "first_action": "left",
+      "first_source": "brain",
+      "received_to_motor_wall_s": 0.005785556510090828
+    },
+    {
+      "mode": "vlm_omni",
+      "scenario": "target_jump",
+      "seed": 541,
+      "kind": "target",
+      "onset_sim_s": 11.968461250577258,
+      "end_sim_s": 31.968461250577256,
+      "expected": [
+        "left"
+      ],
+      "side": -1,
+      "start_y": 0.08105000822854068,
+      "end_y": -0.06894999177145932,
+      "first_model_reaction_sim_s": null,
+      "response_from_onset_sim_s": null,
+      "observation_to_motor_wall_s": null,
+      "first_action": null,
+      "first_source": null,
+      "received_to_motor_wall_s": null
+    },
+    {
+      "mode": "vlm",
+      "scenario": "target_jump",
+      "seed": 577,
+      "kind": "target",
+      "onset_sim_s": 11.805484038045762,
+      "end_sim_s": 31.805484038045762,
+      "expected": [
+        "right"
+      ],
+      "side": 1,
+      "start_y": 0.09527389895968974,
+      "end_y": 0.24527389895968973,
+      "first_model_reaction_sim_s": 20.84999999999877,
+      "response_from_onset_sim_s": 9.044515961953007,
+      "observation_to_motor_wall_s": 4.936050737276673,
+      "first_action": "right",
+      "first_source": "brain",
+      "received_to_motor_wall_s": 0.03151279129087925
+    },
+    {
+      "mode": "vlm_omni",
+      "scenario": "target_jump",
+      "seed": 577,
+      "kind": "target",
+      "onset_sim_s": 11.805484038045762,
+      "end_sim_s": 31.805484038045762,
+      "expected": [
+        "right"
+      ],
+      "side": 1,
+      "start_y": 0.09527389895968974,
+      "end_y": 0.24527389895968973,
+      "first_model_reaction_sim_s": 21.49999999999841,
+      "response_from_onset_sim_s": 9.694515961952646,
+      "observation_to_motor_wall_s": 0.9859944730997086,
+      "first_action": "right",
+      "first_source": "cerebellum",
+      "received_to_motor_wall_s": 0.002713751047849655
+    },
+    {
+      "mode": "vlm",
+      "scenario": "target_jump",
+      "seed": 613,
+      "kind": "target",
+      "onset_sim_s": 12.164848308245983,
+      "end_sim_s": 32.16484830824598,
+      "expected": [
+        "right"
+      ],
+      "side": 1,
+      "start_y": 0.10025553384612516,
+      "end_y": 0.25,
+      "first_model_reaction_sim_s": 17.900000000000404,
+      "response_from_onset_sim_s": 5.735151691754421,
+      "observation_to_motor_wall_s": 4.136291140690446,
+      "first_action": "right",
+      "first_source": "brain",
+      "received_to_motor_wall_s": 0.030957631766796112
+    },
+    {
+      "mode": "vlm_omni",
+      "scenario": "target_jump",
+      "seed": 613,
+      "kind": "target",
+      "onset_sim_s": 12.164848308245983,
+      "end_sim_s": 32.16484830824598,
+      "expected": [
+        "right"
+      ],
+      "side": 1,
+      "start_y": 0.10025553384612516,
+      "end_y": 0.25,
+      "first_model_reaction_sim_s": 21.29999999999852,
+      "response_from_onset_sim_s": 9.135151691752537,
+      "observation_to_motor_wall_s": 5.63691389746964,
+      "first_action": "right",
+      "first_source": "brain",
+      "received_to_motor_wall_s": 0.028869520872831345
+    }
+  ],
+  "rtf_min": 0.9996452563814286,
+  "rtf_max": 0.9999963592582332,
+  "negative_calibration": {
+    "condition": "human-close retreat",
+    "label": 0,
+    "cohort": "quiet after 2s settling, initial condition unchanged; human outside camera",
+    "samples": 110,
+    "brier": 0.30572938127272725,
+    "ece_10bins": 0.52976,
+    "threshold_false_positive_fraction": 0.15454545454545454,
+    "bins": [
+      {
+        "range": [
+          0.3,
+          0.4
+        ],
+        "count": 33,
+        "mean_p": 0.3548939393939394,
+        "observed_frequency": 0
+      },
+      {
+        "range": [
+          0.4,
+          0.5
+        ],
+        "count": 23,
+        "mean_p": 0.457495652173913,
+        "observed_frequency": 0
+      },
+      {
+        "range": [
+          0.5,
+          0.6
+        ],
+        "count": 16,
+        "mean_p": 0.5359125,
+        "observed_frequency": 0
+      },
+      {
+        "range": [
+          0.6,
+          0.7
+        ],
+        "count": 12,
+        "mean_p": 0.6395916666666667,
+        "observed_frequency": 0
+      },
+      {
+        "range": [
+          0.7,
+          0.8
+        ],
+        "count": 22,
+        "mean_p": 0.7514454545454545,
+        "observed_frequency": 0
+      },
+      {
+        "range": [
+          0.8,
+          0.9
+        ],
+        "count": 4,
+        "mean_p": 0.81455,
+        "observed_frequency": 0
+      }
+    ],
+    "detail": [
+      {
+        "mode": "vlm_omni",
+        "seed": 541,
+        "sequence": 20,
+        "p": 0.4651,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 541,
+        "sequence": 25,
+        "p": 0.4085,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 541,
+        "sequence": 31,
+        "p": 0.4751,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 541,
+        "sequence": 36,
+        "p": 0.3418,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 541,
+        "sequence": 41,
+        "p": 0.3373,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 541,
+        "sequence": 46,
+        "p": 0.3058,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 541,
+        "sequence": 51,
+        "p": 0.3559,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 541,
+        "sequence": 56,
+        "p": 0.3693,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 541,
+        "sequence": 61,
+        "p": 0.4798,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 541,
+        "sequence": 68,
+        "p": 0.4794,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 541,
+        "sequence": 75,
+        "p": 0.4706,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 541,
+        "sequence": 81,
+        "p": 0.5028,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 541,
+        "sequence": 86,
+        "p": 0.4928,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 541,
+        "sequence": 92,
+        "p": 0.5848,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 541,
+        "sequence": 97,
+        "p": 0.3271,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 541,
+        "sequence": 102,
+        "p": 0.3989,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 541,
+        "sequence": 107,
+        "p": 0.5314,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 541,
+        "sequence": 113,
+        "p": 0.4893,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 541,
+        "sequence": 118,
+        "p": 0.4973,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 541,
+        "sequence": 123,
+        "p": 0.6081,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 541,
+        "sequence": 128,
+        "p": 0.773,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 541,
+        "sequence": 133,
+        "p": 0.7713,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 541,
+        "sequence": 138,
+        "p": 0.8052,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 541,
+        "sequence": 143,
+        "p": 0.7666,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 541,
+        "sequence": 149,
+        "p": 0.8059,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 541,
+        "sequence": 154,
+        "p": 0.6959,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 541,
+        "sequence": 159,
+        "p": 0.7116,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 541,
+        "sequence": 164,
+        "p": 0.625,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 541,
+        "sequence": 169,
+        "p": 0.5483,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 541,
+        "sequence": 174,
+        "p": 0.4923,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 541,
+        "sequence": 180,
+        "p": 0.435,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 541,
+        "sequence": 185,
+        "p": 0.7327,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 541,
+        "sequence": 190,
+        "p": 0.7736,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 541,
+        "sequence": 195,
+        "p": 0.7191,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 541,
+        "sequence": 200,
+        "p": 0.6001,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 541,
+        "sequence": 205,
+        "p": 0.5116,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 577,
+        "sequence": 21,
+        "p": 0.6501,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 577,
+        "sequence": 25,
+        "p": 0.5456,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 577,
+        "sequence": 31,
+        "p": 0.5837,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 577,
+        "sequence": 36,
+        "p": 0.3172,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 577,
+        "sequence": 41,
+        "p": 0.3498,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 577,
+        "sequence": 46,
+        "p": 0.3435,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 577,
+        "sequence": 51,
+        "p": 0.3805,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 577,
+        "sequence": 57,
+        "p": 0.3536,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 577,
+        "sequence": 62,
+        "p": 0.3255,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 577,
+        "sequence": 67,
+        "p": 0.3483,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 577,
+        "sequence": 72,
+        "p": 0.3598,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 577,
+        "sequence": 77,
+        "p": 0.3646,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 577,
+        "sequence": 82,
+        "p": 0.3383,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 577,
+        "sequence": 87,
+        "p": 0.3587,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 577,
+        "sequence": 93,
+        "p": 0.3267,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 577,
+        "sequence": 98,
+        "p": 0.3797,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 577,
+        "sequence": 103,
+        "p": 0.3618,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 577,
+        "sequence": 108,
+        "p": 0.3743,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 577,
+        "sequence": 113,
+        "p": 0.3783,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 577,
+        "sequence": 119,
+        "p": 0.38,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 577,
+        "sequence": 124,
+        "p": 0.4172,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 577,
+        "sequence": 129,
+        "p": 0.3148,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 577,
+        "sequence": 134,
+        "p": 0.3398,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 577,
+        "sequence": 139,
+        "p": 0.3972,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 577,
+        "sequence": 145,
+        "p": 0.3409,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 577,
+        "sequence": 150,
+        "p": 0.3633,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 577,
+        "sequence": 155,
+        "p": 0.3817,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 577,
+        "sequence": 160,
+        "p": 0.5061,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 577,
+        "sequence": 165,
+        "p": 0.4074,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 577,
+        "sequence": 170,
+        "p": 0.4534,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 577,
+        "sequence": 175,
+        "p": 0.6187,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 577,
+        "sequence": 181,
+        "p": 0.5131,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 577,
+        "sequence": 186,
+        "p": 0.574,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 577,
+        "sequence": 191,
+        "p": 0.7232,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 577,
+        "sequence": 196,
+        "p": 0.7718,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 577,
+        "sequence": 201,
+        "p": 0.8446,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 577,
+        "sequence": 206,
+        "p": 0.7006,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 613,
+        "sequence": 21,
+        "p": 0.6711,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 613,
+        "sequence": 26,
+        "p": 0.7308,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 613,
+        "sequence": 31,
+        "p": 0.4388,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 613,
+        "sequence": 36,
+        "p": 0.3679,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 613,
+        "sequence": 41,
+        "p": 0.3655,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 613,
+        "sequence": 46,
+        "p": 0.5009,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 613,
+        "sequence": 51,
+        "p": 0.4797,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 613,
+        "sequence": 57,
+        "p": 0.4283,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 613,
+        "sequence": 62,
+        "p": 0.4702,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 613,
+        "sequence": 67,
+        "p": 0.4164,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 613,
+        "sequence": 72,
+        "p": 0.4796,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 613,
+        "sequence": 77,
+        "p": 0.6019,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 613,
+        "sequence": 82,
+        "p": 0.5289,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 613,
+        "sequence": 88,
+        "p": 0.4474,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 613,
+        "sequence": 93,
+        "p": 0.3637,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 613,
+        "sequence": 98,
+        "p": 0.5182,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 613,
+        "sequence": 103,
+        "p": 0.5887,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 613,
+        "sequence": 108,
+        "p": 0.527,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 613,
+        "sequence": 113,
+        "p": 0.4864,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 613,
+        "sequence": 119,
+        "p": 0.7406,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 613,
+        "sequence": 123,
+        "p": 0.7362,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 613,
+        "sequence": 129,
+        "p": 0.7556,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 613,
+        "sequence": 134,
+        "p": 0.798,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 613,
+        "sequence": 139,
+        "p": 0.7768,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 613,
+        "sequence": 144,
+        "p": 0.7549,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 613,
+        "sequence": 150,
+        "p": 0.7344,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 613,
+        "sequence": 155,
+        "p": 0.751,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 613,
+        "sequence": 159,
+        "p": 0.776,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 613,
+        "sequence": 165,
+        "p": 0.8025,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 613,
+        "sequence": 170,
+        "p": 0.6758,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 613,
+        "sequence": 175,
+        "p": 0.6266,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 613,
+        "sequence": 181,
+        "p": 0.5095,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 613,
+        "sequence": 186,
+        "p": 0.4124,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 613,
+        "sequence": 191,
+        "p": 0.6747,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 613,
+        "sequence": 196,
+        "p": 0.7593,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 613,
+        "sequence": 201,
+        "p": 0.7747,
+        "tau": 0.75
+      },
+      {
+        "mode": "vlm_omni",
+        "seed": 613,
+        "sequence": 206,
+        "p": 0.6271,
+        "tau": 0.75
+      }
+    ],
+    "scope": "negative-cohort false-alarm check; not balanced calibration; frames correlated"
+  }
+}

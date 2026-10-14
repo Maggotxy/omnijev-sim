@@ -25,7 +25,7 @@ def main():
     summary = json.loads((root/"summary.json").read_text())
     indexed = {(r["scenario"], r["seed"], r["mode"]): r for r in summary}
     assert len(indexed) == len(summary), "Duplicate identity"
-    modes = ("omni", "vlm_omni")
+    modes = ("vlm", "vlm_omni") if {r["mode"] for r in summary} == {"vlm", "vlm_omni"} else ("omni", "vlm_omni")
     pairs = sorted({(r["scenario"], r["seed"]) for r in summary})
     detail, events, negatives, groups = [], [], [], {}
     for kind, seed in pairs:
@@ -42,7 +42,7 @@ def main():
             events += [{"mode": mode, "scenario": kind, "seed": seed, **e} for e in r["reactions"]]
         detail.append(row)
     for mode in modes:
-        episodes = [r for r in summary if r["mode"] == mode]; apps, brain = [], []
+        episodes = [r for r in summary if r["mode"] == mode]; apps, brain, motor = [], [], []
         for r in episodes:
             d = root/f"{r['scenario']}_seed{r['seed']}_{mode}"
             a, b = rows(d/"applications.jsonl"), rows(d/"brain_applications.jsonl")
@@ -51,7 +51,7 @@ def main():
                     if record.get("image_sha256"):
                         image = d/folder/f"{record['sequence']:06d}.jpg"
                         assert hashlib.sha256(image.read_bytes()).hexdigest() == record["image_sha256"], image
-            apps += a; brain += b
+            apps += a; brain += b; motor += rows(d/"motor_applications.jsonl")
             if r["scenario"] == "quiet":
                 initial = next(x for x in json.loads((d/"initial_bank.json").read_text())["reflexes"] if x["id"] == "retreat")
                 for record in a:
@@ -59,7 +59,26 @@ def main():
                     if definition and definition["condition"] == initial["condition"] and record["observed_sim_s"] >= 2:
                         negatives.append({"mode": mode, "seed": r["seed"], "sequence": record["sequence"], "p": record["condition_probabilities"]["retreat"], "tau": definition["threshold"]})
         accepted = [a for a in apps if a["accepted"]]
-        groups[mode] = {"episodes": len(episodes), "final_goal_count": sum(r["final_goal_reached"] for r in episodes),
+        selected = [a for a in motor if a.get("motor_selected")]
+        changed = [a for a in selected if a.get("motor_changed")]
+        event_matches = [e for e in events if e["mode"] == mode and e["first_action"]]
+        mechanical = [m for r in episodes for m in r.get("motion_responses",[]) if m.get("command_to_motion_s") is not None]
+        provider = {}
+        for name, records in (("brain",brain),("cerebellum",apps)):
+            commands = [a for a in selected if a["source"] == name]
+            provider[name] = {"returned":len(records), "errors":sum("error" in a for a in records),
+                              "inference_p50_s":percentile([a["inference_s"] for a in records],.5),
+                              "motor_selected":len(commands), "motor_changed":sum(a.get("motor_changed",False) for a in commands),
+                              "capture_to_motor_p50_s":percentile([a["observation_age_s"] for a in commands],.5),
+                              "receive_to_motor_p50_s":percentile([a["received_to_motor_s"] for a in commands if "received_to_motor_s" in a],.5)}
+        groups[mode] = {"providers":provider,"motor_sources":dict(Counter(a["source"] for a in selected)),
+                        "selected_capture_to_motor_p50_s":percentile([a["observation_age_s"] for a in selected],.5),
+                        "changed_capture_to_motor_p50_s":percentile([a["observation_age_s"] for a in changed],.5),
+                        "matched_onset_to_command_p50_sim_s":percentile([e["response_from_onset_sim_s"] for e in event_matches],.5),
+                        "measured_motion_events":len(mechanical),
+                        "command_to_motion_p50_sim_s":percentile([m["command_to_motion_s"] for m in mechanical],.5),
+                        "command_to_motion_p50_wall_s":percentile([m["command_to_motion_wall_s"] for m in mechanical if "command_to_motion_wall_s" in m],.5),
+                        "episodes": len(episodes), "final_goal_count": sum(r["final_goal_reached"] for r in episodes),
                         "matched_events": sum(e["first_action"] is not None for e in events if e["mode"] == mode),
                         "events": sum(len(r["reactions"]) for r in episodes), "api_results": len(apps), "accepted_results": len(accepted),
                         "api_errors": sum("error" in a for a in apps), "error_types": dict(Counter(a["error"] for a in apps if "error" in a)),

@@ -154,6 +154,9 @@ class World:
 
     def inject(self, kind, rng):
         """Operator/environment action, never a policy input or a motor decision."""
+        from .scenario import FOCUSED
+        profile = kind if kind in FOCUSED else None
+        kind = FOCUSED.get(kind, kind)
         t = float(self.data.time-self.zero)
         if self.scenario.active(t, kind):
             return {"kind": kind, "sim_s": t, "status": "already_active"}
@@ -173,6 +176,17 @@ class World:
             delta = float(rng.choice([-1, 1]))*float(rng.uniform(.10, .16))
             params = {"start_y": y, "end_y": float(np.clip(y+delta, -.22, .25))}
         duration = float(rng.uniform(2.5, 4.8))
+        if profile == "hand_close":
+            params.update(x=.63,z=.645,near_y=.09,approach_fraction=.16)
+            duration=6.0
+        elif profile == "slider_fast":
+            params.update(x=.61,speed_m_s=.7,entry_y_m=.35)
+            duration=4.0
+        elif profile == "occlusion_brief":
+            params.update(camera_block_x=.49,camera_block_y=0)
+            duration=2.0
+        elif profile == "target_jump":
+            params["end_y"]=float(np.clip(params["start_y"]+float(rng.choice([-1,1]))*.15,-.22,.25))
         event = (kind, t, duration, params)
         self.scenario = replace(self.scenario, kind="combined", timings=self.scenario.timings+(event,),
                                 onset=self.scenario.timings[0][1] if self.scenario.timings else t)
@@ -225,7 +239,9 @@ class World:
             u = (t-event["onset_sim_s"]) / (event["end_sim_s"]-event["onset_sim_s"])
             # Smooth approach, dwell, retreat. No robot-state targeting.
             ramp = min(1, u/event.get("approach_fraction", .3), (1-u)/.2)
-            human_pos = [event.get("x", .56), event.get("side", s.side)*(.75-.72*max(0, ramp)), event.get("z", .64)]
+            home_y = event.get("side", s.side)*.75
+            near_y = event.get("near_y", event.get("side", s.side)*.03)
+            human_pos = [event.get("x", .56), home_y+(near_y-home_y)*max(0, ramp), event.get("z", .64)]
         self.data.mocap_pos[self.model.body_mocapid[self.human_driver]] = human_pos
         slider_event = s.event("slider", t)
         if s.active(t, "slider") and self.slider_kicked_at != slider_event["onset_sim_s"]:
@@ -276,10 +292,9 @@ class World:
             velocity *= min(1, .065*speed_scale/max(np.linalg.norm(velocity), 1e-9))
             if np.linalg.norm(self.reflex_anchor-self.position()) < .009:
                 velocity[:] = 0
-                self.qref = self.data.qpos[:7].copy()
         if action in ("brake", "watchdog_hold"):
             velocity[:] = 0
-            self.qref = self.data.qpos[:7].copy()
+            # Freeze the existing joint reference so gravity compensation is retained.
         self.last_action = action
         jp, jr = np.zeros((3, self.model.nv)), np.zeros((3, self.model.nv))
         mujoco.mj_jacSite(self.model, self.data, jp, jr, self.tool)
@@ -343,7 +358,9 @@ class World:
                 "human_contact_peak_N": self.tick_peak_human, "object_contact_peak_N": self.tick_peak_object,
                 "human_contact_impulse_Ns": self.tick_impulse_human, "object_contact_impulse_Ns": self.tick_impulse_object,
                 "goal_distance_m": distance, "goal_reached": bool(distance < .04 and abs(self.position()[2]-.59)<.05),
-                "eef_position_m": self.position().tolist()}
+                "eef_position_m": self.position().tolist(),
+                "human_palm_to_gripper_m": float(np.linalg.norm(self.data.xpos[self.human]+np.array([-.025,0,0])-self.position())),
+                "nearest_slider_to_gripper_m": float(min(np.linalg.norm(self.data.xpos[b]-self.position()) for b in self.sliders))}
 
     def close(self):
         if hasattr(self, "renderer"):
